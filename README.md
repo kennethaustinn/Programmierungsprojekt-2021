@@ -1,11 +1,11 @@
-# Programmierprojekt: <Digitalisierung in der Pflege>
+# Programmierprojekt: Digitalisierung in der Pflege
 
 * Teammitglieder:
-	1. <Paul Schult>
-	2. <Kenneth Austin>
-	3. <Ala Al-Khazzan>
+	1. Paul Schult
+	2. Kenneth Austin
+	3. Ala Al-Khazzan
 	4. <Name4>
-* Team: <2>
+* Team: 2
 * Semester: 
 
 Hier eine Kurzbeschreibung Ihres Projektes in 2-3 Sätzen
