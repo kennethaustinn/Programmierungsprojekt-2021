@@ -5,7 +5,7 @@
 	2. Kenneth Austin
 	3. Ala Al-Khazzan
 * Team: 2
-* Semester: 
+* Semester: SoSe 21
 
 Hier eine Kurzbeschreibung Ihres Projektes in 2-3 Sätzen
 
