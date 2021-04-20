@@ -6,7 +6,7 @@
 	3. <Name3>
 	4. <Name4>
 * Team: <Teamnummer>
-* Semester: Wintersemester 2020/2021
+* Semester: 
 
 Hier eine Kurzbeschreibung Ihres Projektes in 2-3 Sätzen
 
