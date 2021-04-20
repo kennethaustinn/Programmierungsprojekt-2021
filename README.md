@@ -1,11 +1,11 @@
-# Programmierprojekt: <Themenname>
+# Programmierprojekt: <Digitalisierung in der Pflege>
 
 * Teammitglieder:
-	1. <Name1>
-	2. <Name2>
-	3. <Name3>
+	1. <Paul Schult>
+	2. <Kenneth Austin>
+	3. <Ala Al-Khazzan>
 	4. <Name4>
-* Team: <Teamnummer>
+* Team: <2>
 * Semester: 
 
 Hier eine Kurzbeschreibung Ihres Projektes in 2-3 Sätzen
