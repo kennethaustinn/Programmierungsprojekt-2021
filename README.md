@@ -4,7 +4,6 @@
 	1. Paul Schult
 	2. Kenneth Austin
 	3. Ala Al-Khazzan
-	4. <Name4>
 * Team: 2
 * Semester: 
 
