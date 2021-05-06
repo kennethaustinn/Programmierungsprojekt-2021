@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5820783a78754afaa9e651714423175f" Name="Diagram1" ZoomLevel="75" >
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.Person" Width="1.5" PointX="5.125" PointY="2.125" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.Patient" Width="1.5" PointX="3.125" PointY="5.125" />
+        <InheritanceConnector EntityType="ERM_Ambulante_Pflege.Patient" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.Bio" Width="1.5" PointX="0.5" PointY="5.75" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.Home" Width="2.125" PointX="0.5" PointY="9.25" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.CaringRelatives" Width="1.5" PointX="0.5" PointY="12.125" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.PatientBio" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.HomePatient" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.HealthData" Width="1.5" PointX="5" PointY="9.375" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.Hospitaliations" Width="1.5" PointX="7.5" PointY="13.125" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.VitalParameters" Width="1.5" PointX="5.75" PointY="13.125" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.RiskValues" Width="1.5" PointX="9.375" PointY="13.125" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.Medication" Width="1.5" PointX="4" PointY="13.125" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.PatientHealthData" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.HealthDataHospitaliations" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.HealthDataVitalParameters" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.HealthDataRiskValues" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.HealthDataMedication" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.Worker" Width="1.5" PointX="7.875" PointY="4.375" />
+        <InheritanceConnector EntityType="ERM_Ambulante_Pflege.Worker" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.Doctor" Width="1.5" PointX="5.25" PointY="5.125" />
+        <InheritanceConnector EntityType="ERM_Ambulante_Pflege.Doctor" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.Caregiver" Width="1.5" PointX="12.625" PointY="6.375" />
+        <InheritanceConnector EntityType="ERM_Ambulante_Pflege.Caregiver" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.CareReport" Width="1.5" PointX="15.125" PointY="9.125" />
+        <EntityTypeShape EntityType="ERM_Ambulante_Pflege.ActionPlan" Width="1.5" PointX="11.75" PointY="10.375" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.PatientCaregiver" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.PatientDoctor" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.PatientCareReport" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.PatientActionPlan" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.CaregiverActionPlan" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.CaregiverCareReport" />
+        <AssociationConnector Association="ERM_Ambulante_Pflege.PatientCaringRelatives" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
