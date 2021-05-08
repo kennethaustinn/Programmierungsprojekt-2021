@@ -7,15 +7,12 @@ using System.Threading.Tasks;
 namespace CommonInterfaces
 {
 
-    public interface IDataManagerPatient
+    public interface IDataManager
     {
-
+        bool Update(); // darf nur Objekte von Person entgegennehmen
+        
     }
 
-    public interface IDataManagerUser
-    {
-
-    }
 
     public interface IUserManagement
     {
@@ -28,6 +25,7 @@ namespace CommonInterfaces
         bool LogOut();
 
         bool GetLoginStatus();
+
 
     }
 
