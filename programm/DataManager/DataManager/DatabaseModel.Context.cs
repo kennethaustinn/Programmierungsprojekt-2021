@@ -13,10 +13,10 @@ namespace DataManager
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ERM_Ambulante_PflegeContainer : DbContext
+    public partial class AmbulantCareDBContainer : DbContext
     {
-        public ERM_Ambulante_PflegeContainer()
-            : base("name=ERM_Ambulante_PflegeContainer")
+        public AmbulantCareDBContainer()
+            : base("name=AmbulantCareDBContainer")
         {
         }
     

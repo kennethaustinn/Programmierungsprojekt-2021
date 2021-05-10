@@ -559,72 +559,72 @@
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ERM_Ambulante_Pflege" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
-        <EntityContainer Name="ERM_Ambulante_PflegeContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="PersonSet" EntityType="ERM_Ambulante_Pflege.Person" />
-          <EntitySet Name="BioSet" EntityType="ERM_Ambulante_Pflege.Bio" />
-          <EntitySet Name="HomeSet" EntityType="ERM_Ambulante_Pflege.Home" />
-          <EntitySet Name="CaringRelativesSet" EntityType="ERM_Ambulante_Pflege.CaringRelatives" />
-          <AssociationSet Name="PatientBio" Association="ERM_Ambulante_Pflege.PatientBio">
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AmbulantCareDB" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="AmbulantCareDBContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PersonSet" EntityType="AmbulantCareDB.Person" />
+          <EntitySet Name="BioSet" EntityType="AmbulantCareDB.Bio" />
+          <EntitySet Name="HomeSet" EntityType="AmbulantCareDB.Home" />
+          <EntitySet Name="CaringRelativesSet" EntityType="AmbulantCareDB.CaringRelatives" />
+          <AssociationSet Name="PatientBio" Association="AmbulantCareDB.PatientBio">
             <End Role="Patient" EntitySet="PersonSet" />
             <End Role="Bio" EntitySet="BioSet" />
           </AssociationSet>
-          <AssociationSet Name="HomePatient" Association="ERM_Ambulante_Pflege.HomePatient">
+          <AssociationSet Name="HomePatient" Association="AmbulantCareDB.HomePatient">
             <End Role="Patient" EntitySet="PersonSet" />
             <End Role="Home" EntitySet="HomeSet" />
           </AssociationSet>
-          <EntitySet Name="HealthDataSet" EntityType="ERM_Ambulante_Pflege.HealthData" />
-          <EntitySet Name="HospitaliationsSet" EntityType="ERM_Ambulante_Pflege.Hospitaliations" />
-          <EntitySet Name="VitalParametersSet" EntityType="ERM_Ambulante_Pflege.VitalParameters" />
-          <EntitySet Name="RiskValuesSet" EntityType="ERM_Ambulante_Pflege.RiskValues" />
-          <EntitySet Name="MedicationSet" EntityType="ERM_Ambulante_Pflege.Medication" />
-          <AssociationSet Name="PatientHealthData" Association="ERM_Ambulante_Pflege.PatientHealthData">
+          <EntitySet Name="HealthDataSet" EntityType="AmbulantCareDB.HealthData" />
+          <EntitySet Name="HospitaliationsSet" EntityType="AmbulantCareDB.Hospitaliations" />
+          <EntitySet Name="VitalParametersSet" EntityType="AmbulantCareDB.VitalParameters" />
+          <EntitySet Name="RiskValuesSet" EntityType="AmbulantCareDB.RiskValues" />
+          <EntitySet Name="MedicationSet" EntityType="AmbulantCareDB.Medication" />
+          <AssociationSet Name="PatientHealthData" Association="AmbulantCareDB.PatientHealthData">
             <End Role="Patient" EntitySet="PersonSet" />
             <End Role="HealthData" EntitySet="HealthDataSet" />
           </AssociationSet>
-          <AssociationSet Name="HealthDataHospitaliations" Association="ERM_Ambulante_Pflege.HealthDataHospitaliations">
+          <AssociationSet Name="HealthDataHospitaliations" Association="AmbulantCareDB.HealthDataHospitaliations">
             <End Role="HealthData" EntitySet="HealthDataSet" />
             <End Role="Hospitaliations" EntitySet="HospitaliationsSet" />
           </AssociationSet>
-          <AssociationSet Name="HealthDataVitalParameters" Association="ERM_Ambulante_Pflege.HealthDataVitalParameters">
+          <AssociationSet Name="HealthDataVitalParameters" Association="AmbulantCareDB.HealthDataVitalParameters">
             <End Role="HealthData" EntitySet="HealthDataSet" />
             <End Role="VitalParameters" EntitySet="VitalParametersSet" />
           </AssociationSet>
-          <AssociationSet Name="HealthDataRiskValues" Association="ERM_Ambulante_Pflege.HealthDataRiskValues">
+          <AssociationSet Name="HealthDataRiskValues" Association="AmbulantCareDB.HealthDataRiskValues">
             <End Role="HealthData" EntitySet="HealthDataSet" />
             <End Role="RiskValues" EntitySet="RiskValuesSet" />
           </AssociationSet>
-          <AssociationSet Name="HealthDataMedication" Association="ERM_Ambulante_Pflege.HealthDataMedication">
+          <AssociationSet Name="HealthDataMedication" Association="AmbulantCareDB.HealthDataMedication">
             <End Role="HealthData" EntitySet="HealthDataSet" />
             <End Role="Medication" EntitySet="MedicationSet" />
           </AssociationSet>
-          <EntitySet Name="CareReportSet" EntityType="ERM_Ambulante_Pflege.CareReport" />
-          <EntitySet Name="ActionPlanSet" EntityType="ERM_Ambulante_Pflege.ActionPlan" />
-          <AssociationSet Name="PatientCaregiver" Association="ERM_Ambulante_Pflege.PatientCaregiver">
+          <EntitySet Name="CareReportSet" EntityType="AmbulantCareDB.CareReport" />
+          <EntitySet Name="ActionPlanSet" EntityType="AmbulantCareDB.ActionPlan" />
+          <AssociationSet Name="PatientCaregiver" Association="AmbulantCareDB.PatientCaregiver">
             <End Role="Patient" EntitySet="PersonSet" />
             <End Role="Caregiver" EntitySet="PersonSet" />
           </AssociationSet>
-          <AssociationSet Name="PatientDoctor" Association="ERM_Ambulante_Pflege.PatientDoctor">
+          <AssociationSet Name="PatientDoctor" Association="AmbulantCareDB.PatientDoctor">
             <End Role="Patient" EntitySet="PersonSet" />
             <End Role="Doctor" EntitySet="PersonSet" />
           </AssociationSet>
-          <AssociationSet Name="PatientCareReport" Association="ERM_Ambulante_Pflege.PatientCareReport">
+          <AssociationSet Name="PatientCareReport" Association="AmbulantCareDB.PatientCareReport">
             <End Role="Patient" EntitySet="PersonSet" />
             <End Role="CareReport" EntitySet="CareReportSet" />
           </AssociationSet>
-          <AssociationSet Name="PatientActionPlan" Association="ERM_Ambulante_Pflege.PatientActionPlan">
+          <AssociationSet Name="PatientActionPlan" Association="AmbulantCareDB.PatientActionPlan">
             <End Role="Patient" EntitySet="PersonSet" />
             <End Role="ActionPlan" EntitySet="ActionPlanSet" />
           </AssociationSet>
-          <AssociationSet Name="CaregiverActionPlan" Association="ERM_Ambulante_Pflege.CaregiverActionPlan">
+          <AssociationSet Name="CaregiverActionPlan" Association="AmbulantCareDB.CaregiverActionPlan">
             <End Role="Caregiver" EntitySet="PersonSet" />
             <End Role="ActionPlan" EntitySet="ActionPlanSet" />
           </AssociationSet>
-          <AssociationSet Name="CaregiverCareReport" Association="ERM_Ambulante_Pflege.CaregiverCareReport">
+          <AssociationSet Name="CaregiverCareReport" Association="AmbulantCareDB.CaregiverCareReport">
             <End Role="Caregiver" EntitySet="PersonSet" />
             <End Role="CareReport" EntitySet="CareReportSet" />
           </AssociationSet>
-          <AssociationSet Name="PatientCaringRelatives" Association="ERM_Ambulante_Pflege.PatientCaringRelatives">
+          <AssociationSet Name="PatientCaringRelatives" Association="AmbulantCareDB.PatientCaringRelatives">
             <End Role="Patient" EntitySet="PersonSet" />
             <End Role="CaringRelatives" EntitySet="CaringRelativesSet" />
           </AssociationSet>
@@ -639,7 +639,7 @@
           <Property Name="Gender" Type="String" Nullable="false" />
           <Property Name="Phone" Type="String" Nullable="false" />
         </EntityType>
-        <EntityType Name="Patient" BaseType="ERM_Ambulante_Pflege.Person" >
+        <EntityType Name="Patient" BaseType="AmbulantCareDB.Person" >
           <Property Name="BirthDate" Type="DateTime" Nullable="false" />
           <Property Name="Address" Type="String" Nullable="false" />
           <Property Name="Contactperson" Type="String" Nullable="false" />
@@ -648,15 +648,15 @@
           <Property Name="Height" Type="Int32" Nullable="false" />
           <Property Name="Weight" Type="Double" Nullable="false" />
           <Property Name="DegreeOfCare" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Bio" Relationship="ERM_Ambulante_Pflege.PatientBio" FromRole="Patient" ToRole="Bio" />
-          <NavigationProperty Name="Home" Relationship="ERM_Ambulante_Pflege.HomePatient" FromRole="Patient" ToRole="Home" />
-          <NavigationProperty Name="HealthData" Relationship="ERM_Ambulante_Pflege.PatientHealthData" FromRole="Patient" ToRole="HealthData" />
-          <NavigationProperty Name="Caregiver" Relationship="ERM_Ambulante_Pflege.PatientCaregiver" FromRole="Patient" ToRole="Caregiver" />
-          <NavigationProperty Name="Doctor" Relationship="ERM_Ambulante_Pflege.PatientDoctor" FromRole="Patient" ToRole="Doctor" />
-          <NavigationProperty Name="CareReport" Relationship="ERM_Ambulante_Pflege.PatientCareReport" FromRole="Patient" ToRole="CareReport" />
-          <NavigationProperty Name="ActionPlan" Relationship="ERM_Ambulante_Pflege.PatientActionPlan" FromRole="Patient" ToRole="ActionPlan" />
+          <NavigationProperty Name="Bio" Relationship="AmbulantCareDB.PatientBio" FromRole="Patient" ToRole="Bio" />
+          <NavigationProperty Name="Home" Relationship="AmbulantCareDB.HomePatient" FromRole="Patient" ToRole="Home" />
+          <NavigationProperty Name="HealthData" Relationship="AmbulantCareDB.PatientHealthData" FromRole="Patient" ToRole="HealthData" />
+          <NavigationProperty Name="Caregiver" Relationship="AmbulantCareDB.PatientCaregiver" FromRole="Patient" ToRole="Caregiver" />
+          <NavigationProperty Name="Doctor" Relationship="AmbulantCareDB.PatientDoctor" FromRole="Patient" ToRole="Doctor" />
+          <NavigationProperty Name="CareReport" Relationship="AmbulantCareDB.PatientCareReport" FromRole="Patient" ToRole="CareReport" />
+          <NavigationProperty Name="ActionPlan" Relationship="AmbulantCareDB.PatientActionPlan" FromRole="Patient" ToRole="ActionPlan" />
           <Property Name="PowerOfAttorney" Type="String" Nullable="false" />
-          <NavigationProperty Name="CaringRelatives" Relationship="ERM_Ambulante_Pflege.PatientCaringRelatives" FromRole="Patient" ToRole="CaringRelatives" />
+          <NavigationProperty Name="CaringRelatives" Relationship="AmbulantCareDB.PatientCaringRelatives" FromRole="Patient" ToRole="CaringRelatives" />
         </EntityType>
         <EntityType Name="Bio">
           <Key>
@@ -672,7 +672,7 @@
           <Property Name="Leisure" Type="String" Nullable="false" />
           <Property Name="Family_Members" Type="String" Nullable="false" />
           <Property Name="Languages" Type="String" Nullable="false" />
-          <NavigationProperty Name="Patient" Relationship="ERM_Ambulante_Pflege.PatientBio" FromRole="Bio" ToRole="Patient" />
+          <NavigationProperty Name="Patient" Relationship="AmbulantCareDB.PatientBio" FromRole="Bio" ToRole="Patient" />
         </EntityType>
         <EntityType Name="Home">
           <Key>
@@ -685,7 +685,7 @@
           <Property Name="Barrier_Free_Living_Area" Type="Boolean" Nullable="false" />
           <Property Name="Barrier_Free_Stairlift" Type="Boolean" Nullable="false" />
           <Property Name="Barrier_Free_Elevator" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Patient" Relationship="ERM_Ambulante_Pflege.HomePatient" FromRole="Home" ToRole="Patient" />
+          <NavigationProperty Name="Patient" Relationship="AmbulantCareDB.HomePatient" FromRole="Home" ToRole="Patient" />
         </EntityType>
         <EntityType Name="CaringRelatives">
           <Key>
@@ -696,16 +696,16 @@
           <Property Name="LivesInHousehold" Type="Boolean" Nullable="false" />
           <Property Name="VisitFrequency" Type="String" Nullable="false" />
           <Property Name="Activity" Type="String" Nullable="false" />
-          <NavigationProperty Name="Patient" Relationship="ERM_Ambulante_Pflege.PatientCaringRelatives" FromRole="CaringRelatives" ToRole="Patient" />
+          <NavigationProperty Name="Patient" Relationship="AmbulantCareDB.PatientCaringRelatives" FromRole="CaringRelatives" ToRole="Patient" />
           <Property Name="PatientPersonID" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="PatientBio">
-          <End Type="ERM_Ambulante_Pflege.Patient" Role="Patient" Multiplicity="1" />
-          <End Type="ERM_Ambulante_Pflege.Bio" Role="Bio" Multiplicity="1" />
+          <End Type="AmbulantCareDB.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="AmbulantCareDB.Bio" Role="Bio" Multiplicity="1" />
         </Association>
         <Association Name="HomePatient">
-          <End Type="ERM_Ambulante_Pflege.Patient" Role="Patient" Multiplicity="*" />
-          <End Type="ERM_Ambulante_Pflege.Home" Role="Home" Multiplicity="1" />
+          <End Type="AmbulantCareDB.Patient" Role="Patient" Multiplicity="*" />
+          <End Type="AmbulantCareDB.Home" Role="Home" Multiplicity="1" />
         </Association>
         <EntityType Name="HealthData">
           <Key>
@@ -714,11 +714,11 @@
           <Property Name="HealthDataID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MedicalHistory" Type="String" Nullable="false" />
           <Property Name="ChronicDiseases" Type="String" Nullable="false" />
-          <NavigationProperty Name="Patient" Relationship="ERM_Ambulante_Pflege.PatientHealthData" FromRole="HealthData" ToRole="Patient" />
-          <NavigationProperty Name="Hospitaliations" Relationship="ERM_Ambulante_Pflege.HealthDataHospitaliations" FromRole="HealthData" ToRole="Hospitaliations" />
-          <NavigationProperty Name="VitalParameters" Relationship="ERM_Ambulante_Pflege.HealthDataVitalParameters" FromRole="HealthData" ToRole="VitalParameters" />
-          <NavigationProperty Name="RiskValues" Relationship="ERM_Ambulante_Pflege.HealthDataRiskValues" FromRole="HealthData" ToRole="RiskValues" />
-          <NavigationProperty Name="Medication" Relationship="ERM_Ambulante_Pflege.HealthDataMedication" FromRole="HealthData" ToRole="Medication" />
+          <NavigationProperty Name="Patient" Relationship="AmbulantCareDB.PatientHealthData" FromRole="HealthData" ToRole="Patient" />
+          <NavigationProperty Name="Hospitaliations" Relationship="AmbulantCareDB.HealthDataHospitaliations" FromRole="HealthData" ToRole="Hospitaliations" />
+          <NavigationProperty Name="VitalParameters" Relationship="AmbulantCareDB.HealthDataVitalParameters" FromRole="HealthData" ToRole="VitalParameters" />
+          <NavigationProperty Name="RiskValues" Relationship="AmbulantCareDB.HealthDataRiskValues" FromRole="HealthData" ToRole="RiskValues" />
+          <NavigationProperty Name="Medication" Relationship="AmbulantCareDB.HealthDataMedication" FromRole="HealthData" ToRole="Medication" />
         </EntityType>
         <EntityType Name="Hospitaliations">
           <Key>
@@ -727,7 +727,7 @@
           <Property Name="HospitaliationsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Reason" Type="String" Nullable="false" />
           <Property Name="Duration" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="HealthData" Relationship="ERM_Ambulante_Pflege.HealthDataHospitaliations" FromRole="Hospitaliations" ToRole="HealthData" />
+          <NavigationProperty Name="HealthData" Relationship="AmbulantCareDB.HealthDataHospitaliations" FromRole="Hospitaliations" ToRole="HealthData" />
           <Property Name="HealthDataHealthDataID" Type="Int32" Nullable="false" />
           <Property Name="Date" Type="DateTime" Nullable="false" />
         </EntityType>
@@ -740,7 +740,7 @@
           <Property Name="TypeOfMeasurement" Type="String" Nullable="false" />
           <Property Name="Value" Type="Double" Nullable="false" />
           <Property Name="Unit" Type="String" Nullable="false" />
-          <NavigationProperty Name="HealthData" Relationship="ERM_Ambulante_Pflege.HealthDataVitalParameters" FromRole="VitalParameters" ToRole="HealthData" />
+          <NavigationProperty Name="HealthData" Relationship="AmbulantCareDB.HealthDataVitalParameters" FromRole="VitalParameters" ToRole="HealthData" />
           <Property Name="HealthDataHealthDataID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="RiskValues">
@@ -752,7 +752,7 @@
           <Property Name="Pain" Type="Int32" Nullable="false" />
           <Property Name="Falling" Type="Int32" Nullable="false" />
           <Property Name="Dementia" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="HealthData" Relationship="ERM_Ambulante_Pflege.HealthDataRiskValues" FromRole="RiskValues" ToRole="HealthData" />
+          <NavigationProperty Name="HealthData" Relationship="AmbulantCareDB.HealthDataRiskValues" FromRole="RiskValues" ToRole="HealthData" />
           <Property Name="HealthDataHealthDataID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Medication">
@@ -764,16 +764,16 @@
           <Property Name="Dosage" Type="String" Nullable="false" />
           <Property Name="Frequency" Type="String" Nullable="false" />
           <Property Name="AdministeredBy" Type="String" Nullable="false" />
-          <NavigationProperty Name="HealthData" Relationship="ERM_Ambulante_Pflege.HealthDataMedication" FromRole="Medication" ToRole="HealthData" />
+          <NavigationProperty Name="HealthData" Relationship="AmbulantCareDB.HealthDataMedication" FromRole="Medication" ToRole="HealthData" />
           <Property Name="HealthDataHealthDataID" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="PatientHealthData">
-          <End Type="ERM_Ambulante_Pflege.Patient" Role="Patient" Multiplicity="1" />
-          <End Type="ERM_Ambulante_Pflege.HealthData" Role="HealthData" Multiplicity="1" />
+          <End Type="AmbulantCareDB.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="AmbulantCareDB.HealthData" Role="HealthData" Multiplicity="1" />
         </Association>
         <Association Name="HealthDataHospitaliations">
-          <End Type="ERM_Ambulante_Pflege.HealthData" Role="HealthData" Multiplicity="1" />
-          <End Type="ERM_Ambulante_Pflege.Hospitaliations" Role="Hospitaliations" Multiplicity="*" />
+          <End Type="AmbulantCareDB.HealthData" Role="HealthData" Multiplicity="1" />
+          <End Type="AmbulantCareDB.Hospitaliations" Role="Hospitaliations" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HealthData">
               <PropertyRef Name="HealthDataID" />
@@ -784,8 +784,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="HealthDataVitalParameters">
-          <End Type="ERM_Ambulante_Pflege.HealthData" Role="HealthData" Multiplicity="1" />
-          <End Type="ERM_Ambulante_Pflege.VitalParameters" Role="VitalParameters" Multiplicity="*" />
+          <End Type="AmbulantCareDB.HealthData" Role="HealthData" Multiplicity="1" />
+          <End Type="AmbulantCareDB.VitalParameters" Role="VitalParameters" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HealthData">
               <PropertyRef Name="HealthDataID" />
@@ -796,8 +796,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="HealthDataRiskValues">
-          <End Type="ERM_Ambulante_Pflege.HealthData" Role="HealthData" Multiplicity="1" />
-          <End Type="ERM_Ambulante_Pflege.RiskValues" Role="RiskValues" Multiplicity="*" />
+          <End Type="AmbulantCareDB.HealthData" Role="HealthData" Multiplicity="1" />
+          <End Type="AmbulantCareDB.RiskValues" Role="RiskValues" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HealthData">
               <PropertyRef Name="HealthDataID" />
@@ -808,8 +808,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="HealthDataMedication">
-          <End Type="ERM_Ambulante_Pflege.HealthData" Role="HealthData" Multiplicity="1" />
-          <End Type="ERM_Ambulante_Pflege.Medication" Role="Medication" Multiplicity="*" />
+          <End Type="AmbulantCareDB.HealthData" Role="HealthData" Multiplicity="1" />
+          <End Type="AmbulantCareDB.Medication" Role="Medication" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HealthData">
               <PropertyRef Name="HealthDataID" />
@@ -819,20 +819,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="Worker" BaseType="ERM_Ambulante_Pflege.Person">
+        <EntityType Name="Worker" BaseType="AmbulantCareDB.Person">
           <Property Name="Username" Type="String" Nullable="false" />
           <Property Name="Password" Type="String" Nullable="false" />
         </EntityType>
-        <EntityType Name="Doctor" BaseType="ERM_Ambulante_Pflege.Worker" >
+        <EntityType Name="Doctor" BaseType="AmbulantCareDB.Worker" >
           <Property Name="MedicalSpecialty" Type="String" Nullable="false" />
           <Property Name="Address" Type="String" Nullable="false" />
-          <NavigationProperty Name="Patient" Relationship="ERM_Ambulante_Pflege.PatientDoctor" FromRole="Doctor" ToRole="Patient" />
+          <NavigationProperty Name="Patient" Relationship="AmbulantCareDB.PatientDoctor" FromRole="Doctor" ToRole="Patient" />
         </EntityType>
-        <EntityType Name="Caregiver" BaseType="ERM_Ambulante_Pflege.Worker" >
+        <EntityType Name="Caregiver" BaseType="AmbulantCareDB.Worker" >
           <Property Name="IsSpecialist" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Patient" Relationship="ERM_Ambulante_Pflege.PatientCaregiver" FromRole="Caregiver" ToRole="Patient" />
-          <NavigationProperty Name="ActionPlan" Relationship="ERM_Ambulante_Pflege.CaregiverActionPlan" FromRole="Caregiver" ToRole="ActionPlan" />
-          <NavigationProperty Name="CareReport" Relationship="ERM_Ambulante_Pflege.CaregiverCareReport" FromRole="Caregiver" ToRole="CareReport" />
+          <NavigationProperty Name="Patient" Relationship="AmbulantCareDB.PatientCaregiver" FromRole="Caregiver" ToRole="Patient" />
+          <NavigationProperty Name="ActionPlan" Relationship="AmbulantCareDB.CaregiverActionPlan" FromRole="Caregiver" ToRole="ActionPlan" />
+          <NavigationProperty Name="CareReport" Relationship="AmbulantCareDB.CaregiverCareReport" FromRole="Caregiver" ToRole="CareReport" />
         </EntityType>
         <EntityType Name="CareReport">
           <Key>
@@ -842,8 +842,8 @@
           <Property Name="CreatedOn" Type="DateTime" Nullable="false" />
           <Property Name="ActionPlanFulfilled" Type="Boolean" Nullable="false" />
           <Property Name="Deviations" Type="String" Nullable="false" />
-          <NavigationProperty Name="Patient" Relationship="ERM_Ambulante_Pflege.PatientCareReport" FromRole="CareReport" ToRole="Patient" />
-          <NavigationProperty Name="Caregiver" Relationship="ERM_Ambulante_Pflege.CaregiverCareReport" FromRole="CareReport" ToRole="Caregiver" />
+          <NavigationProperty Name="Patient" Relationship="AmbulantCareDB.PatientCareReport" FromRole="CareReport" ToRole="Patient" />
+          <NavigationProperty Name="Caregiver" Relationship="AmbulantCareDB.CaregiverCareReport" FromRole="CareReport" ToRole="Caregiver" />
           <Property Name="CaregiverPersonID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="ActionPlan">
@@ -856,26 +856,26 @@
           <Property Name="Actions_Noon" Type="String" Nullable="false" />
           <Property Name="Actions_Afternoon" Type="String" Nullable="false" />
           <Property Name="Actions_Eve" Type="String" Nullable="false" />
-          <NavigationProperty Name="Patient" Relationship="ERM_Ambulante_Pflege.PatientActionPlan" FromRole="ActionPlan" ToRole="Patient" />
+          <NavigationProperty Name="Patient" Relationship="AmbulantCareDB.PatientActionPlan" FromRole="ActionPlan" ToRole="Patient" />
           <Property Name="PatientPersonID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Caregiver" Relationship="ERM_Ambulante_Pflege.CaregiverActionPlan" FromRole="ActionPlan" ToRole="Caregiver" />
+          <NavigationProperty Name="Caregiver" Relationship="AmbulantCareDB.CaregiverActionPlan" FromRole="ActionPlan" ToRole="Caregiver" />
           <Property Name="CaregiverPersonID" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="PatientCaregiver">
-          <End Type="ERM_Ambulante_Pflege.Patient" Role="Patient" Multiplicity="*" />
-          <End Type="ERM_Ambulante_Pflege.Caregiver" Role="Caregiver" Multiplicity="*" />
+          <End Type="AmbulantCareDB.Patient" Role="Patient" Multiplicity="*" />
+          <End Type="AmbulantCareDB.Caregiver" Role="Caregiver" Multiplicity="*" />
         </Association>
         <Association Name="PatientDoctor">
-          <End Type="ERM_Ambulante_Pflege.Patient" Role="Patient" Multiplicity="*" />
-          <End Type="ERM_Ambulante_Pflege.Doctor" Role="Doctor" Multiplicity="*" />
+          <End Type="AmbulantCareDB.Patient" Role="Patient" Multiplicity="*" />
+          <End Type="AmbulantCareDB.Doctor" Role="Doctor" Multiplicity="*" />
         </Association>
         <Association Name="PatientCareReport">
-          <End Type="ERM_Ambulante_Pflege.Patient" Role="Patient" Multiplicity="*" />
-          <End Type="ERM_Ambulante_Pflege.CareReport" Role="CareReport" Multiplicity="*" />
+          <End Type="AmbulantCareDB.Patient" Role="Patient" Multiplicity="*" />
+          <End Type="AmbulantCareDB.CareReport" Role="CareReport" Multiplicity="*" />
         </Association>
         <Association Name="PatientActionPlan">
-          <End Type="ERM_Ambulante_Pflege.Patient" Role="Patient" Multiplicity="1" />
-          <End Type="ERM_Ambulante_Pflege.ActionPlan" Role="ActionPlan" Multiplicity="*" />
+          <End Type="AmbulantCareDB.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="AmbulantCareDB.ActionPlan" Role="ActionPlan" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Patient">
               <PropertyRef Name="PersonID" />
@@ -886,8 +886,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="CaregiverActionPlan">
-          <End Type="ERM_Ambulante_Pflege.Caregiver" Role="Caregiver" Multiplicity="1" />
-          <End Type="ERM_Ambulante_Pflege.ActionPlan" Role="ActionPlan" Multiplicity="*" />
+          <End Type="AmbulantCareDB.Caregiver" Role="Caregiver" Multiplicity="1" />
+          <End Type="AmbulantCareDB.ActionPlan" Role="ActionPlan" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Caregiver">
               <PropertyRef Name="PersonID" />
@@ -898,8 +898,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="CaregiverCareReport">
-          <End Type="ERM_Ambulante_Pflege.Caregiver" Role="Caregiver" Multiplicity="1" />
-          <End Type="ERM_Ambulante_Pflege.CareReport" Role="CareReport" Multiplicity="*" />
+          <End Type="AmbulantCareDB.Caregiver" Role="Caregiver" Multiplicity="1" />
+          <End Type="AmbulantCareDB.CareReport" Role="CareReport" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Caregiver">
               <PropertyRef Name="PersonID" />
@@ -910,8 +910,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="PatientCaringRelatives">
-          <End Type="ERM_Ambulante_Pflege.Patient" Role="Patient" Multiplicity="1" />
-          <End Type="ERM_Ambulante_Pflege.CaringRelatives" Role="CaringRelatives" Multiplicity="*" />
+          <End Type="AmbulantCareDB.Patient" Role="Patient" Multiplicity="1" />
+          <End Type="AmbulantCareDB.CaringRelatives" Role="CaringRelatives" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Patient">
               <PropertyRef Name="PersonID" />
@@ -926,9 +926,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ERM_Ambulante_PflegeStoreContainer" CdmEntityContainer="ERM_Ambulante_PflegeContainer">
+  <EntityContainerMapping StorageEntityContainer="ERM_Ambulante_PflegeStoreContainer" CdmEntityContainer="AmbulantCareDBContainer">
     <EntitySetMapping Name="PersonSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.Person)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.Person)">
         <MappingFragment StoreEntitySet="PersonSet">
           <ScalarProperty Name="PersonID" ColumnName="PersonID" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -937,7 +937,7 @@
           <ScalarProperty Name="Phone" ColumnName="Phone" />
         </MappingFragment>
       </EntityTypeMapping>
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.Patient)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.Patient)">
         <MappingFragment StoreEntitySet="PersonSet_Patient">
           <ScalarProperty Name="PersonID" ColumnName="PersonID" />
           <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
@@ -951,20 +951,20 @@
           <ScalarProperty Name="PowerOfAttorney" ColumnName="PowerOfAttorney" />
         </MappingFragment>
       </EntityTypeMapping>
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.Worker)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.Worker)">
         <MappingFragment StoreEntitySet="PersonSet_Worker">
           <ScalarProperty Name="PersonID" ColumnName="PersonID" />
           <ScalarProperty Name="Username" ColumnName="Username" />
           <ScalarProperty Name="Password" ColumnName="Password" />
         </MappingFragment>
       </EntityTypeMapping>
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.Caregiver)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.Caregiver)">
         <MappingFragment StoreEntitySet="PersonSet_Caregiver">
           <ScalarProperty Name="PersonID" ColumnName="PersonID" />
           <ScalarProperty Name="IsSpecialist" ColumnName="IsSpecialist" />
         </MappingFragment>
       </EntityTypeMapping>
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.Doctor)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.Doctor)">
         <MappingFragment StoreEntitySet="PersonSet_Doctor">
           <ScalarProperty Name="PersonID" ColumnName="PersonID" />
           <ScalarProperty Name="MedicalSpecialty" ColumnName="MedicalSpecialty" />
@@ -973,7 +973,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="BioSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.Bio)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.Bio)">
         <MappingFragment StoreEntitySet="BioSet">
           <ScalarProperty Name="BioID" ColumnName="BioID" />
           <ScalarProperty Name="School" ColumnName="School" />
@@ -989,7 +989,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HomeSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.Home)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.Home)">
         <MappingFragment StoreEntitySet="HomeSet">
           <ScalarProperty Name="HomeID" ColumnName="HomeID" />
           <ScalarProperty Name="Tools" ColumnName="Tools" />
@@ -1002,7 +1002,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CaringRelativesSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.CaringRelatives)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.CaringRelatives)">
         <MappingFragment StoreEntitySet="CaringRelativesSet">
           <ScalarProperty Name="CaringRelativesID" ColumnName="CaringRelativesID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1014,7 +1014,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HealthDataSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.HealthData)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.HealthData)">
         <MappingFragment StoreEntitySet="HealthDataSet">
           <ScalarProperty Name="HealthDataID" ColumnName="HealthDataID" />
           <ScalarProperty Name="MedicalHistory" ColumnName="MedicalHistory" />
@@ -1023,7 +1023,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HospitaliationsSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.Hospitaliations)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.Hospitaliations)">
         <MappingFragment StoreEntitySet="HospitaliationsSet">
           <ScalarProperty Name="HospitaliationsID" ColumnName="HospitaliationsID" />
           <ScalarProperty Name="Reason" ColumnName="Reason" />
@@ -1034,7 +1034,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="VitalParametersSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.VitalParameters)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.VitalParameters)">
         <MappingFragment StoreEntitySet="VitalParametersSet">
           <ScalarProperty Name="VitalParametersID" ColumnName="VitalParametersID" />
           <ScalarProperty Name="DateTime" ColumnName="DateTime" />
@@ -1046,7 +1046,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RiskValuesSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.RiskValues)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.RiskValues)">
         <MappingFragment StoreEntitySet="RiskValuesSet">
           <ScalarProperty Name="RiskValuesID" ColumnName="RiskValuesID" />
           <ScalarProperty Name="Decubitus" ColumnName="Decubitus" />
@@ -1058,7 +1058,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MedicationSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.Medication)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.Medication)">
         <MappingFragment StoreEntitySet="MedicationSet">
           <ScalarProperty Name="MedicationID" ColumnName="MedicationID" />
           <ScalarProperty Name="Drug" ColumnName="Drug" />
@@ -1070,7 +1070,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="CareReportSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.CareReport)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.CareReport)">
         <MappingFragment StoreEntitySet="CareReportSet">
           <ScalarProperty Name="CareReportID" ColumnName="CareReportID" />
           <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
@@ -1081,7 +1081,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ActionPlanSet">
-      <EntityTypeMapping TypeName="IsTypeOf(ERM_Ambulante_Pflege.ActionPlan)">
+      <EntityTypeMapping TypeName="IsTypeOf(AmbulantCareDB.ActionPlan)">
         <MappingFragment StoreEntitySet="ActionPlanSet">
           <ScalarProperty Name="ActionPlanID" ColumnName="ActionPlanID" />
           <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
@@ -1094,7 +1094,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="PatientBio" TypeName="ERM_Ambulante_Pflege.PatientBio" StoreEntitySet="PersonSet_Patient">
+    <AssociationSetMapping Name="PatientBio" TypeName="AmbulantCareDB.PatientBio" StoreEntitySet="PersonSet_Patient">
       <EndProperty Name="Bio">
         <ScalarProperty Name="BioID" ColumnName="Bio_BioID" />
       </EndProperty>
@@ -1102,7 +1102,7 @@
         <ScalarProperty Name="PersonID" ColumnName="PersonID" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="HomePatient" TypeName="ERM_Ambulante_Pflege.HomePatient" StoreEntitySet="PersonSet_Patient">
+    <AssociationSetMapping Name="HomePatient" TypeName="AmbulantCareDB.HomePatient" StoreEntitySet="PersonSet_Patient">
       <EndProperty Name="Home">
         <ScalarProperty Name="HomeID" ColumnName="Home_HomeID" />
       </EndProperty>
@@ -1110,7 +1110,7 @@
         <ScalarProperty Name="PersonID" ColumnName="PersonID" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="PatientHealthData" TypeName="ERM_Ambulante_Pflege.PatientHealthData" StoreEntitySet="PersonSet_Patient">
+    <AssociationSetMapping Name="PatientHealthData" TypeName="AmbulantCareDB.PatientHealthData" StoreEntitySet="PersonSet_Patient">
       <EndProperty Name="HealthData">
         <ScalarProperty Name="HealthDataID" ColumnName="HealthData_HealthDataID" />
       </EndProperty>
@@ -1118,7 +1118,7 @@
         <ScalarProperty Name="PersonID" ColumnName="PersonID" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="PatientCaregiver" TypeName="ERM_Ambulante_Pflege.PatientCaregiver" StoreEntitySet="PatientCaregiver">
+    <AssociationSetMapping Name="PatientCaregiver" TypeName="AmbulantCareDB.PatientCaregiver" StoreEntitySet="PatientCaregiver">
       <EndProperty Name="Patient">
         <ScalarProperty Name="PersonID" ColumnName="Patient_PersonID" />
       </EndProperty>
@@ -1126,7 +1126,7 @@
         <ScalarProperty Name="PersonID" ColumnName="Caregiver_PersonID" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="PatientDoctor" TypeName="ERM_Ambulante_Pflege.PatientDoctor" StoreEntitySet="PatientDoctor">
+    <AssociationSetMapping Name="PatientDoctor" TypeName="AmbulantCareDB.PatientDoctor" StoreEntitySet="PatientDoctor">
       <EndProperty Name="Patient">
         <ScalarProperty Name="PersonID" ColumnName="Patient_PersonID" />
       </EndProperty>
@@ -1134,7 +1134,7 @@
         <ScalarProperty Name="PersonID" ColumnName="Doctor_PersonID" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="PatientCareReport" TypeName="ERM_Ambulante_Pflege.PatientCareReport" StoreEntitySet="PatientCareReport">
+    <AssociationSetMapping Name="PatientCareReport" TypeName="AmbulantCareDB.PatientCareReport" StoreEntitySet="PatientCareReport">
       <EndProperty Name="Patient">
         <ScalarProperty Name="PersonID" ColumnName="Patient_PersonID" />
       </EndProperty>

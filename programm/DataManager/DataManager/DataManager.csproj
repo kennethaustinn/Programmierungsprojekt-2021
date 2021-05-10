@@ -65,11 +65,6 @@
     <Compile Include="CaringRelatives.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseContext.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseContext.Context.tt</DependentUpon>
-    </Compile>
     <Compile Include="DatabaseContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -135,11 +130,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DatabaseContext.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DatabaseContext.Context.cs</LastGenOutput>
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
-    </Content>
     <Content Include="DatabaseContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DatabaseContext.cs</LastGenOutput>
