@@ -633,7 +633,7 @@
           <Key>
             <PropertyRef Name="PersonID" />
           </Key>
-          <Property Name="PersonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" cg:SetterAccess="Private" />
           <Property Name="LastName" Type="String" Nullable="false" />
           <Property Name="FirstName" Type="String" Nullable="false" />
           <Property Name="Gender" Type="String" Nullable="false" />
