@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{93E29DBE-9689-4B77-AC4E-E142E5A307F3}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Patient</RootNamespace>
-    <AssemblyName>Patient</AssemblyName>
+    <ProjectGuid>{83F582F6-F143-4CB0-873F-E2C2FE49CEC5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DummyPatient</RootNamespace>
+    <AssemblyName>DummyPatient</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,16 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="DummyPatient.cs" />
+    <Compile Include="Patient.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CommonInterfaces\CommonInterfaces\CommonInterfaces.csproj">
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\programm\CommonInterfaces\CommonInterfaces\CommonInterfaces.csproj">
       <Project>{63a95483-bd9c-4e42-8550-e27955fcb0b7}</Project>
       <Name>CommonInterfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\DataManager\DataManager\DataManager.csproj">
+    <ProjectReference Include="..\..\..\programm\DataManager\DataManager\DataManager.csproj">
       <Project>{44f163d0-cb2a-4f64-896a-c3484ba0a043}</Project>
       <Name>DataManager</Name>
     </ProjectReference>
