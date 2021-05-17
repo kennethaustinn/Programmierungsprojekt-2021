@@ -150,5 +150,11 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\CommonInterfaces\CommonInterfaces\CommonInterfaces.csproj">
+      <Project>{63a95483-bd9c-4e42-8550-e27955fcb0b7}</Project>
+      <Name>CommonInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

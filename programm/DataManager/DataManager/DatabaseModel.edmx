@@ -766,6 +766,7 @@
           <Property Name="AdministeredBy" Type="String" Nullable="false" />
           <NavigationProperty Name="HealthData" Relationship="AmbulantCareDB.HealthDataMedication" FromRole="Medication" ToRole="HealthData" />
           <Property Name="HealthDataHealthDataID" Type="Int32" Nullable="false" />
+          <Property Name="Reason" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="PatientHealthData">
           <End Type="AmbulantCareDB.Patient" Role="Patient" Multiplicity="1" />
@@ -822,6 +823,7 @@
         <EntityType Name="Worker" BaseType="AmbulantCareDB.Person">
           <Property Name="Username" Type="String" Nullable="false" />
           <Property Name="Password" Type="String" Nullable="false" />
+          <Property Name="ToDoList" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Doctor" BaseType="AmbulantCareDB.Worker" >
           <Property Name="MedicalSpecialty" Type="String" Nullable="false" />

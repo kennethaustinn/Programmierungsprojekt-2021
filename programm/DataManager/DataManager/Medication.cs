@@ -20,6 +20,7 @@ namespace DataManager
         public string Frequency { get; set; }
         public string AdministeredBy { get; set; }
         public int HealthDataHealthDataID { get; set; }
+        public string Reason { get; set; }
     
         public virtual HealthData HealthData { get; set; }
     }
