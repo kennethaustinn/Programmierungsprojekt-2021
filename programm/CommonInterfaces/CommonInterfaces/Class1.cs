@@ -31,7 +31,7 @@ namespace CommonInterfaces
 
     public interface IPatient
     {
-
+        double CalculateBMI();
     }
 
     public interface IOCRManager
