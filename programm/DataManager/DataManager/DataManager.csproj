@@ -85,6 +85,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DataManager.cs" />
     <Compile Include="Doctor.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>

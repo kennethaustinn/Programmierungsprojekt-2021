@@ -5,21 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using CommonInterfaces;
 
-namespace UserManagement
+namespace DataManager
 {
-    public class UserManagement : DataManager.Worker, IUserManagement
+    public class DataManager<T> : IDataManager<T> where T : IDataBaseConform
     {
-        public int GetUserRights()
+        public bool CreateNew(T careSolutionObject)
         {
             throw new NotImplementedException();
         }
 
-        public bool LogIn(string username, string password)
+        public List<T> SearchPatient(string userSearchText)
         {
             throw new NotImplementedException();
         }
 
-        public bool LogOut()
+        public bool Update(T careSolutionObject)
         {
             throw new NotImplementedException();
         }
