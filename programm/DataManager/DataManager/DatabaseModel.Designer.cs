@@ -1,4 +1,4 @@
-﻿// Die T4-Codegenerierung ist für Modell 'C:\Users\Paul\source\repos\Digitalisierung in der Pflege\programm\DataManager\DataManager\DatabaseModel.edmx' aktiviert. 
+﻿// Die T4-Codegenerierung ist für Modell 'C:\Users\kenne\source\repos\Digitalisierung in der Pflege\programm\DataManager\DataManager\DatabaseModel.edmx' aktiviert. 
 // Um die Generierung von Legacycode zu aktivieren, ändern Sie den Wert der Designer-Eigenschaft 'Code Generation Strategy'
 // in 'Legacy ObjectContext'. Diese Eigenschaft wird im Eigenschaftenfenster angezeigt, wenn das Modell
 // im Designer geöffnet ist.
