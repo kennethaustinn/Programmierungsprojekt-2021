@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5820783a78754afaa9e651714423175f" Name="Diagram1" ZoomLevel="128" >
+        <EntityTypeShape EntityType="AmbulantCareDB.Person" Width="1.5" PointX="5.125" PointY="2.125" />
+        <EntityTypeShape EntityType="AmbulantCareDB.Patient" Width="1.5" PointX="3.125" PointY="5.125" />
+        <InheritanceConnector EntityType="AmbulantCareDB.Patient" />
+        <EntityTypeShape EntityType="AmbulantCareDB.Bio" Width="1.5" PointX="0.5" PointY="5.75" />
+        <EntityTypeShape EntityType="AmbulantCareDB.Home" Width="2.125" PointX="0.5" PointY="9.25" />
+        <EntityTypeShape EntityType="AmbulantCareDB.CaringRelatives" Width="1.5" PointX="0.5" PointY="12.125" />
+        <AssociationConnector Association="AmbulantCareDB.PatientBio" />
+        <AssociationConnector Association="AmbulantCareDB.HomePatient" />
+        <EntityTypeShape EntityType="AmbulantCareDB.HealthData" Width="1.5" PointX="5" PointY="9.375" />
+        <EntityTypeShape EntityType="AmbulantCareDB.Hospitaliations" Width="1.5" PointX="7.5" PointY="13.125" />
+        <EntityTypeShape EntityType="AmbulantCareDB.VitalParameters" Width="1.5" PointX="5.75" PointY="13.125" />
+        <EntityTypeShape EntityType="AmbulantCareDB.RiskValues" Width="1.5" PointX="9.375" PointY="13.125" />
+        <EntityTypeShape EntityType="AmbulantCareDB.Medication" Width="1.5" PointX="4" PointY="13.125" />
+        <AssociationConnector Association="AmbulantCareDB.PatientHealthData" />
+        <AssociationConnector Association="AmbulantCareDB.HealthDataHospitaliations" />
+        <AssociationConnector Association="AmbulantCareDB.HealthDataVitalParameters" />
+        <AssociationConnector Association="AmbulantCareDB.HealthDataRiskValues" />
+        <AssociationConnector Association="AmbulantCareDB.HealthDataMedication" />
+        <EntityTypeShape EntityType="AmbulantCareDB.Worker" Width="1.5" PointX="7.875" PointY="4.375" />
+        <InheritanceConnector EntityType="AmbulantCareDB.Worker" />
+        <EntityTypeShape EntityType="AmbulantCareDB.Doctor" Width="1.5" PointX="5.25" PointY="5.125" />
+        <InheritanceConnector EntityType="AmbulantCareDB.Doctor" />
+        <EntityTypeShape EntityType="AmbulantCareDB.Caregiver" Width="1.5" PointX="12.625" PointY="6.375" />
+        <InheritanceConnector EntityType="AmbulantCareDB.Caregiver" />
+        <EntityTypeShape EntityType="AmbulantCareDB.CareReport" Width="1.5" PointX="15.125" PointY="9.125" />
+        <EntityTypeShape EntityType="AmbulantCareDB.ActionPlan" Width="1.5" PointX="11.75" PointY="10.375" />
+        <AssociationConnector Association="AmbulantCareDB.PatientCaregiver" />
+        <AssociationConnector Association="AmbulantCareDB.PatientDoctor" />
+        <AssociationConnector Association="AmbulantCareDB.PatientCareReport" />
+        <AssociationConnector Association="AmbulantCareDB.PatientActionPlan" />
+        <AssociationConnector Association="AmbulantCareDB.CaregiverActionPlan" />
+        <AssociationConnector Association="AmbulantCareDB.CaregiverCareReport" />
+        <AssociationConnector Association="AmbulantCareDB.PatientCaringRelatives" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
