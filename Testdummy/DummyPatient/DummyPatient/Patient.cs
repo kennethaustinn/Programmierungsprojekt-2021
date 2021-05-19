@@ -10,9 +10,16 @@ namespace DummyPatient
     class Patient : DataManager.Patient, IPatient
 
     {
-    public double CalculateBMI()
-    {
-        return Weight / Math.Pow(Height, 2);
-    }
+        public double CalculateBMI()
+        {
+            return Weight / Math.Pow(Height, 2); //Jede kompenenten testen und jede Methoden sieht
+            //Patientdummy ein patient mit daten.
+
+        }
+
+        public string CheckWarning()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
