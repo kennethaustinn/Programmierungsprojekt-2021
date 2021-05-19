@@ -10,7 +10,7 @@ namespace DummyForOCR
     {
         public static void Main(string[] args)
         {
-            var run = new DummyOcr();
+            var run = new OCRManager();
             run.Menu();
         }
     }

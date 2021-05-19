@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-
+using CommonInterfaces;
 using IronOcr;
 
 namespace DummyForOCR
 {
-    public class DummyOcr
+    public class OCRManager : IOCRManager
     {
         private const string FileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Pictures\Maßnahmenplan_Vorlage.png";
 
@@ -32,7 +32,7 @@ namespace DummyForOCR
         public int _Id;
 
 
-        public DummyOcr()
+        public OCRManager()
         {
         }
 
@@ -156,11 +156,6 @@ namespace DummyForOCR
 
         }
 
-        public Dictionary<string, string> TransferToDataBase(string[] bio, int Id)                  // int Id muss von der GUI übergeben werden. 
-        {
-            return null;
-        }
-
 
         public void Menu()
         {
@@ -185,7 +180,6 @@ namespace DummyForOCR
                         //}
                         break;
                     case 3:
-                        TransferToDataBase(_bioItems, _Id);
                         break;
                     case 4:
                         Environment.Exit(0);
@@ -233,6 +227,11 @@ namespace DummyForOCR
                 }
             }
             return choiceInternal;
+        }
+
+        public Dictionary<string, string> ExecuteOCR(string path)
+        {
+            throw new NotImplementedException();
         }
     }
 }
