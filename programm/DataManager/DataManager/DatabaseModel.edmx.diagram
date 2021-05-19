@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5820783a78754afaa9e651714423175f" Name="Diagram1" ZoomLevel="75" >
+      <Diagram DiagramId="5820783a78754afaa9e651714423175f" Name="Diagram1" ZoomLevel="128" >
         <EntityTypeShape EntityType="AmbulantCareDB.Person" Width="1.5" PointX="5.125" PointY="2.125" />
         <EntityTypeShape EntityType="AmbulantCareDB.Patient" Width="1.5" PointX="3.125" PointY="5.125" />
         <InheritanceConnector EntityType="AmbulantCareDB.Patient" />

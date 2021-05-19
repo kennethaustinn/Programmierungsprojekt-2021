@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/06/2021 16:29:40
+-- Date Created: 05/19/2021 19:32:56
 -- Generated from EDMX file: C:\Users\Paul\source\repos\Digitalisierung in der Pflege\programm\DataManager\DataManager\DatabaseModel.edmx
 -- --------------------------------------------------
 
@@ -239,7 +239,8 @@ CREATE TABLE [dbo].[MedicationSet] (
     [Dosage] nvarchar(max)  NOT NULL,
     [Frequency] nvarchar(max)  NOT NULL,
     [AdministeredBy] nvarchar(max)  NOT NULL,
-    [HealthDataHealthDataID] int  NOT NULL
+    [HealthDataHealthDataID] int  NOT NULL,
+    [Reason] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -288,6 +289,7 @@ GO
 CREATE TABLE [dbo].[PersonSet_Worker] (
     [Username] nvarchar(max)  NOT NULL,
     [Password] nvarchar(max)  NOT NULL,
+    [ToDoList] nvarchar(max)  NOT NULL,
     [PersonID] int  NOT NULL
 );
 GO
