@@ -12,7 +12,7 @@ using System.Runtime.Remoting.Messaging;
 namespace DataManagerDummy
 {
 
-    public class Patients : IPatient, 
+
     public class DataManager<T> : IDataManager<T> where T : IDataBaseConform 
     {
         public bool CreateNew(T careSolutionObject)

@@ -14,7 +14,7 @@ namespace DataManager
     
     public partial class Person
     {
-        public int PersonID { get; private set; }
+        public int PersonID { get; protected set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public string Gender { get; set; }
