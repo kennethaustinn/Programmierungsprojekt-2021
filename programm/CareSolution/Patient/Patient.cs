@@ -22,10 +22,12 @@ namespace Patient
             throw new NotImplementedException();
         }
 
+
         public void SetTestData()
         {
             // Test Patient mit Beispieldaten.
             var testPatient = new Patient();
+            testPatient.PersonID = 001;
             testPatient.FirstName = "Max";
             testPatient.LastName = "Mustermann";
             testPatient.Gender = "Male";
