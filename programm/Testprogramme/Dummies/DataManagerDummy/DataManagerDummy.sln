@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManagerDummy", "DataManagerDummy\DataManagerDummy.csproj", "{D2DE2BA6-3C21-4281-931F-9264D23A2068}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonInterfaces", "..\..\..\programm\CommonInterfaces\CommonInterfaces\CommonInterfaces.csproj", "{63A95483-BD9C-4E42-8550-E27955FCB0B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonInterfaces", "..\..\..\CommonInterfaces\CommonInterfaces\CommonInterfaces.csproj", "{63A95483-BD9C-4E42-8550-E27955FCB0B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

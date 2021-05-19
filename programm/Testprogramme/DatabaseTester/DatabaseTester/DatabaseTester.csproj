@@ -58,7 +58,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\programm\DataManager\DataManager\DataManager.csproj">
+    <ProjectReference Include="..\..\..\DataManager\DataManager\DataManager.csproj">
       <Project>{44f163d0-cb2a-4f64-896a-c3484ba0a043}</Project>
       <Name>DataManager</Name>
     </ProjectReference>
