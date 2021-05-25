@@ -41,7 +41,7 @@ namespace UserManagement
             // falls vorhanden: Objekt der Klasse Usermanagement aus Datenbank landen
 
             // 2. Eingegebenes PW und Salt an ProduceHash übergeben, Ergebnis mit Hash in Datenbank vergleichen
-            if (ProduceHash(password) == Hash) //korrekter Vergleich?
+            if (ProduceHash(password) == Hash) 
                 return true;
             return false;
 
@@ -91,7 +91,7 @@ namespace UserManagement
 
             return newSalt;
         }
-        private string ProduceHash(string pwinput)  // kann hier 
+        private string ProduceHash(string pwinput)   
         {
             using (RandomNumberGenerator randomNumberG = new RNGCryptoServiceProvider())
             {
