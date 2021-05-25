@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using CommonInterfaces;
 using IronOcr;
 
@@ -14,11 +15,10 @@ namespace DummyForOCR
         {
             "Schule:", "Beruf:", "Universität:", "Partnerschaft:", "Kinder:", "Freizeit:", "Familienmitglieder:", "Sprachen:",
         };
-        //List ind Dictonary umändern.
+        
+        private readonly Dictionary<string, string> _bioDictionary = new Dictionary<string, string>();
 
-        //private string[] _bioItems = new string[8];
-
-        private string[] _bioItems = new string[8];
+        private readonly string[] _bioItems = new string[8];
 
         private string _allResult;
         private string _result;
@@ -28,8 +28,6 @@ namespace DummyForOCR
 
         private string[] _readAllLines;
         private List<string> _valueStrings;
-
-        public int _Id;
 
 
         public OCRManager()
@@ -41,8 +39,9 @@ namespace DummyForOCR
             OpenFile();                                         //später path & filename als Übergabeparameter wie das Klassendiagramm einfügen.
             //SearchForKeys(_key1, _a, _key2, _b);
             SearchForKeys2(_bioItemKeyList, _result, _a, _b);
-
+            AddToDictionary();
         }
+
         private static IronTesseract ConfigurationOCR()
         {
             var ocr = new IronTesseract();
@@ -76,7 +75,6 @@ namespace DummyForOCR
 
         }
 
-
         private void SearchForKeys(string key1, int a, string key2, int b)
         {
             for (int highLevel = 0; highLevel < _valueStrings.Count; highLevel++)
@@ -100,7 +98,6 @@ namespace DummyForOCR
             GivExtract(a, b, _result);
         }
 
-
         private void SearchForKeys2(List<string> keys, string extract, int a, int b)
         {
             RemoveSpaceFromList();
@@ -121,18 +118,25 @@ namespace DummyForOCR
                         b = _valueStrings.IndexOf(_valueStrings[highLevel]);
                     }
 
-                    for (int secondLevel = a; secondLevel < b; secondLevel++)
+                    for (int secondLevel = a + 1; secondLevel < b; secondLevel++)
                     {
-                        extract = extract + (secondLevel + _valueStrings[secondLevel]) + Environment.NewLine;
+                        extract = extract + (_valueStrings[secondLevel]) + Environment.NewLine;         //Evt. NewLine entfernen und anders lösen, da sonst eine Zeile zu viel ist.
 
-                        _bioItems[i - 1] = extract;
+                        _bioItems[i - 1] = extract;                                                     //Item für Freizeit wird noch nicht befüllt.
                     }
 
-                    //_bioItems[i-1] = extract;
                 }
-
+                extract = null;
             }
+        }
 
+
+        private void AddToDictionary()
+        {
+            for (int i = 0; i < _bioItemKeyList.Count; i++)
+            {
+                _bioDictionary.Add(_bioItemKeyList[i], _bioItems[i]);                   //Value für Freizeit wird noch nicht befüllt.
+            }
         }
 
         private void RemoveSpaceFromList()
@@ -156,7 +160,6 @@ namespace DummyForOCR
 
         }
 
-
         public void Menu()
         {
             while (true)
@@ -173,13 +176,18 @@ namespace DummyForOCR
                         Console.WriteLine(_allResult);
                         break;
                     case 2:
-                        Console.WriteLine(string.Join("Test" + Environment.NewLine, _bioItems));
-                        //for (int i = 0; i < _bioItems.Length; i++)
-                        //{
-                        //    Console.WriteLine(_bioItems[i]);
-                        //}
+                        //Console.WriteLine(string.Join("" + Environment.NewLine, _bioItems ));      // Array zu string konventieren 
+                        for (int i = 0; i < _bioItems.Length; i++)
+                        {
+                            Console.WriteLine(Environment.NewLine + _bioItems[i]);
+                        }
                         break;
                     case 3:
+                        for (int i = 0; i < _bioDictionary.Count; i++)
+                        {
+                            Console.WriteLine("Key: ==> " + _bioDictionary.ElementAt(i).Key);
+                            Console.WriteLine("Value: ==> " + _bioDictionary.ElementAt(i).Value);
+                        }
                         break;
                     case 4:
                         Environment.Exit(0);
