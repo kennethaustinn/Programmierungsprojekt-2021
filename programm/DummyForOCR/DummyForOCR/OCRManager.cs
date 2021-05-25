@@ -8,7 +8,7 @@ namespace DummyForOCR
 {
     public class OCRManager : IOCRManager
     {
-        private const string FileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Pictures\Maßnahmenplan_Vorlage.png";
+        private const string FileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Pictures\Vorlage1.png";
 
         private readonly List<string> _bioItemKeyList = new List<string>()
         {
