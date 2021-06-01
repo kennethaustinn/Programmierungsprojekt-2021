@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using CommonInterfaces;
 using IronOcr;
@@ -15,30 +14,22 @@ namespace DummyForOCR
         {
             "Schule:", "Beruf:", "Universität:", "Partnerschaft:", "Kinder:", "Freizeit:", "Familienmitglieder:", "Sprachen:",
         };
-        
+
         private readonly Dictionary<string, string> _bioDictionary = new Dictionary<string, string>();
 
         private readonly string[] _bioItems = new string[8];
 
         private string _allResult;
-        private string _result;
-
-        private int _a = 0;
-        private int _b = 0;
+        private string _extract;
 
         private string[] _readAllLines;
         private List<string> _valueStrings;
 
 
-        public OCRManager()
-        {
-        }
-
         private void ExecuteOcr()                                // Eingabeparamter noch auf Path ändern.
         {
             OpenFile();                                         //später path & filename als Übergabeparameter wie das Klassendiagramm einfügen.
-            //SearchForKeys(_key1, _a, _key2, _b);
-            SearchForKeys2(_bioItemKeyList, _result, _a, _b);
+            SearchForKeys();
             AddToDictionary();
         }
 
@@ -53,11 +44,12 @@ namespace DummyForOCR
             //var abc = OcrResult.TextFlow.LeftToRight;
             return ocr;
         }
-        private static void SaveAsPdfAndTextFile(OcrResult ocrResult)
-        {
-            ocrResult.SaveAsTextFile(@"C:\Users\ala19\Desktop\OCR\blabla.txt");
-            ocrResult.SaveAsSearchablePdf(@"C:\Users\ala19\Desktop\OCR\blabla.pdf");
-        }
+
+        //private static void SaveAsPdfAndTextFile(OcrResult ocrResult)
+        //{
+        //    ocrResult.SaveAsTextFile(@"C:\Users\ala19\Desktop\OCR\blabla.txt");
+        //    ocrResult.SaveAsSearchablePdf(@"C:\Users\ala19\Desktop\OCR\blabla.pdf");
+        //}
 
         private void OpenFile()
         {
@@ -66,41 +58,22 @@ namespace DummyForOCR
             var input = new OcrInput(FileName);
             var ocrResult = ocr.Read(input);
             _allResult = ocrResult.Text;
+            var allResultLines = ocrResult.Lines;
 
-            SaveAsPdfAndTextFile(ocrResult);
+            //SaveAsPdfAndTextFile(ocrResult);
             Console.WriteLine("Datei wurde geladen!");
 
-            _readAllLines = File.ReadAllLines(@"C:\Users\ala19\Desktop\OCR\blabla.txt");        // durch _allResult ersetzten
+            _readAllLines = allResultLines.Cast<object>().Select(x => x.ToString()).ToArray();
             _valueStrings = new List<string>(_readAllLines);
 
         }
 
-        private void SearchForKeys(string key1, int a, string key2, int b)
-        {
-            for (int highLevel = 0; highLevel < _valueStrings.Count; highLevel++)
-            {
-                if (_valueStrings[highLevel].Equals(""))
-                {
-                    _valueStrings.RemoveAt(highLevel);
-                }
-
-                if (key1.Equals(_valueStrings[highLevel], StringComparison.OrdinalIgnoreCase))
-                {
-                    a = _valueStrings.IndexOf(_valueStrings[highLevel]);
-                }
-
-                if (key2.Equals(_valueStrings[highLevel], StringComparison.OrdinalIgnoreCase))
-                {
-                    b = _valueStrings.IndexOf(_valueStrings[highLevel]);
-                }
-            }
-
-            GivExtract(a, b, _result);
-        }
-
-        private void SearchForKeys2(List<string> keys, string extract, int a, int b)
+        private void SearchForKeys()
         {
             RemoveSpaceFromList();
+
+            int a = 0;
+            int b = 0;
 
             for (int highLevel = 0; highLevel < _valueStrings.Count; highLevel++)
             {
@@ -108,28 +81,26 @@ namespace DummyForOCR
                 for (i = 1; i < _bioItemKeyList.Count; i++) //ohne 2 For loop i =0 setzten
                 {
 
-                    if (keys[i - 1].Equals(_valueStrings[highLevel], StringComparison.OrdinalIgnoreCase))
+                    if (_bioItemKeyList[i - 1].Equals(_valueStrings[highLevel], StringComparison.OrdinalIgnoreCase))
                     {
                         a = _valueStrings.IndexOf(_valueStrings[highLevel]);
                     }
 
-                    if (keys[i].Equals(_valueStrings[highLevel], StringComparison.OrdinalIgnoreCase))
+                    if (_bioItemKeyList[i].Equals(_valueStrings[highLevel], StringComparison.OrdinalIgnoreCase))
                     {
                         b = _valueStrings.IndexOf(_valueStrings[highLevel]);
                     }
 
                     for (int secondLevel = a + 1; secondLevel < b; secondLevel++)
                     {
-                        extract = extract + (_valueStrings[secondLevel]) + Environment.NewLine;         //Evt. NewLine entfernen und anders lösen, da sonst eine Zeile zu viel ist.
-
-                        _bioItems[i - 1] = extract;                                                     //Item für Freizeit wird noch nicht befüllt.
+                        _extract = _extract + (_valueStrings[secondLevel]) + Environment.NewLine;            //Evt. NewLine entfernen und anders lösen, da sonst eine Zeile zu viel ist.
+                        _bioItems[i - 1] = _extract;                                                        //Item für Freizeit wird noch nicht befüllt.
                     }
 
                 }
-                extract = null;
+                _extract = null;
             }
         }
-
 
         private void AddToDictionary()
         {
@@ -148,16 +119,6 @@ namespace DummyForOCR
                     _valueStrings.RemoveAt(highLevel);
                 }
             }
-        }
-
-        private void GivExtract(int a, int b, string extract)
-        {
-            for (int secondLevel = a; secondLevel < b; secondLevel++)
-            {
-                extract = extract + (secondLevel + _valueStrings[secondLevel]) + Environment.NewLine;
-            }
-            _result = extract;
-
         }
 
         public void Menu()
@@ -199,6 +160,7 @@ namespace DummyForOCR
                         break;
                 }
             }
+            // ReSharper disable once FunctionNeverReturns
         }
 
         private void PrintMenue()
