@@ -70,7 +70,7 @@ namespace DummyForOCR
             SaveAsPdfAndTextFile(ocrResult);
             Console.WriteLine("Datei wurde geladen!");
 
-            _readAllLines = File.ReadAllLines(@"C:\Users\ala19\Desktop\OCR\blabla.txt");
+            _readAllLines = File.ReadAllLines(@"C:\Users\ala19\Desktop\OCR\blabla.txt");        // durch _allResult ersetzten
             _valueStrings = new List<string>(_readAllLines);
 
         }
