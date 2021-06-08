@@ -55,6 +55,8 @@ namespace CareSolution
                 this.Hide();
                 Main ss = new Main();
                 ss.Show();
+
+                ss.label10.Text = dt.Rows[0].ToString();
             }
             else
             {

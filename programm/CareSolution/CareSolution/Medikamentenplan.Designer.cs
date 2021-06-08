@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -45,14 +46,24 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.healthDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.healthDataIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medicalHistoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chronicDiseasesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hospitaliationsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vitalParametersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.riskValuesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.healthDataBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -291,17 +302,17 @@
             this.panel2.Size = new System.Drawing.Size(1224, 435);
             this.panel2.TabIndex = 4;
             // 
-            // dataGridView1
+            // button10
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 15);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1188, 339);
-            this.dataGridView1.TabIndex = 4;
+            this.button10.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button10.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.button10.Location = new System.Drawing.Point(843, 381);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(163, 35);
+            this.button10.TabIndex = 46;
+            this.button10.Text = "Anlegen";
+            this.button10.UseVisualStyleBackColor = false;
             // 
             // button11
             // 
@@ -315,17 +326,96 @@
             this.button11.Text = "Ändern";
             this.button11.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // dataGridView1
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.button10.Location = new System.Drawing.Point(843, 381);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(163, 35);
-            this.button10.TabIndex = 46;
-            this.button10.Text = "Anlegen";
-            this.button10.UseVisualStyleBackColor = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.healthDataIDDataGridViewTextBoxColumn,
+            this.medicalHistoryDataGridViewTextBoxColumn,
+            this.chronicDiseasesDataGridViewTextBoxColumn,
+            this.patientDataGridViewTextBoxColumn,
+            this.hospitaliationsDataGridViewTextBoxColumn,
+            this.vitalParametersDataGridViewTextBoxColumn,
+            this.riskValuesDataGridViewTextBoxColumn,
+            this.medicationDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.healthDataBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(18, 15);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1188, 339);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // healthDataBindingSource
+            // 
+            this.healthDataBindingSource.DataSource = typeof(DataManager.HealthData);
+            // 
+            // healthDataIDDataGridViewTextBoxColumn
+            // 
+            this.healthDataIDDataGridViewTextBoxColumn.DataPropertyName = "HealthDataID";
+            this.healthDataIDDataGridViewTextBoxColumn.HeaderText = "HealthDataID";
+            this.healthDataIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.healthDataIDDataGridViewTextBoxColumn.Name = "healthDataIDDataGridViewTextBoxColumn";
+            this.healthDataIDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // medicalHistoryDataGridViewTextBoxColumn
+            // 
+            this.medicalHistoryDataGridViewTextBoxColumn.DataPropertyName = "MedicalHistory";
+            this.medicalHistoryDataGridViewTextBoxColumn.HeaderText = "MedicalHistory";
+            this.medicalHistoryDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.medicalHistoryDataGridViewTextBoxColumn.Name = "medicalHistoryDataGridViewTextBoxColumn";
+            this.medicalHistoryDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // chronicDiseasesDataGridViewTextBoxColumn
+            // 
+            this.chronicDiseasesDataGridViewTextBoxColumn.DataPropertyName = "ChronicDiseases";
+            this.chronicDiseasesDataGridViewTextBoxColumn.HeaderText = "ChronicDiseases";
+            this.chronicDiseasesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.chronicDiseasesDataGridViewTextBoxColumn.Name = "chronicDiseasesDataGridViewTextBoxColumn";
+            this.chronicDiseasesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // patientDataGridViewTextBoxColumn
+            // 
+            this.patientDataGridViewTextBoxColumn.DataPropertyName = "Patient";
+            this.patientDataGridViewTextBoxColumn.HeaderText = "Patient";
+            this.patientDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.patientDataGridViewTextBoxColumn.Name = "patientDataGridViewTextBoxColumn";
+            this.patientDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // hospitaliationsDataGridViewTextBoxColumn
+            // 
+            this.hospitaliationsDataGridViewTextBoxColumn.DataPropertyName = "Hospitaliations";
+            this.hospitaliationsDataGridViewTextBoxColumn.HeaderText = "Hospitaliations";
+            this.hospitaliationsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hospitaliationsDataGridViewTextBoxColumn.Name = "hospitaliationsDataGridViewTextBoxColumn";
+            this.hospitaliationsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // vitalParametersDataGridViewTextBoxColumn
+            // 
+            this.vitalParametersDataGridViewTextBoxColumn.DataPropertyName = "VitalParameters";
+            this.vitalParametersDataGridViewTextBoxColumn.HeaderText = "VitalParameters";
+            this.vitalParametersDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.vitalParametersDataGridViewTextBoxColumn.Name = "vitalParametersDataGridViewTextBoxColumn";
+            this.vitalParametersDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // riskValuesDataGridViewTextBoxColumn
+            // 
+            this.riskValuesDataGridViewTextBoxColumn.DataPropertyName = "RiskValues";
+            this.riskValuesDataGridViewTextBoxColumn.HeaderText = "RiskValues";
+            this.riskValuesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.riskValuesDataGridViewTextBoxColumn.Name = "riskValuesDataGridViewTextBoxColumn";
+            this.riskValuesDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // medicationDataGridViewTextBoxColumn
+            // 
+            this.medicationDataGridViewTextBoxColumn.DataPropertyName = "Medication";
+            this.medicationDataGridViewTextBoxColumn.HeaderText = "Medication";
+            this.medicationDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.medicationDataGridViewTextBoxColumn.Name = "medicationDataGridViewTextBoxColumn";
+            this.medicationDataGridViewTextBoxColumn.Width = 125;
             // 
             // Medikamentenplan
             // 
@@ -344,6 +434,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.healthDataBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,5 +461,14 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.BindingSource healthDataBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn healthDataIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medicalHistoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chronicDiseasesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn patientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hospitaliationsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vitalParametersDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn riskValuesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medicationDataGridViewTextBoxColumn;
     }
 }

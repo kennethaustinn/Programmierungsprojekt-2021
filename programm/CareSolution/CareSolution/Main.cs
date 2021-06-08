@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataManager;
 
 namespace CareSolution
 {
@@ -47,12 +48,13 @@ namespace CareSolution
         private void Main_Load(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from  [dbo].[Patient]", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView1.DataSource = dt;
+            //using (AmbulantCareDBContainer db = new AmbulantCareDBContainer())
+            //{
+                
 
+            //    db.PersonSet
+            //    patientBindingSource.DataSource = db.PersonSet.ToList();
+            //}
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DeepSkyBlue;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -72,11 +74,11 @@ namespace CareSolution
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from [dbo].[Patient] where Vorname like '" + textBox1.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView1.DataSource = dt;
+            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
+            //SqlDataAdapter sda = new SqlDataAdapter("select * from [dbo].[Patient] where Vorname like '%" + textBox1.Text + "%' or Name like'%" + textBox1.Text + "%'", con);
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //dataGridView1.DataSource = dt;
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -85,5 +87,7 @@ namespace CareSolution
             PatientFiles cc = new PatientFiles();
             cc.Show();
         }
+
+        
     }
 }

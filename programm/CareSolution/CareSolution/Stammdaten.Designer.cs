@@ -46,10 +46,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.age = new System.Windows.Forms.Label();
+            this.vorname = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -81,6 +81,7 @@
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -317,16 +318,18 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label23);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.label19);
+            this.panel3.Controls.Add(this.age);
+            this.panel3.Controls.Add(this.vorname);
+            this.panel3.Controls.Add(this.name);
+            this.panel3.Controls.Add(this.id);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.label4);
+            this.panel3.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.panel3.Location = new System.Drawing.Point(190, 182);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(672, 149);
@@ -343,49 +346,49 @@
             this.label23.TabIndex = 25;
             this.label23.Text = "x";
             // 
-            // label22
+            // age
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label22.Location = new System.Drawing.Point(472, 57);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(28, 21);
-            this.label22.TabIndex = 24;
-            this.label22.Text = "00";
+            this.age.AutoSize = true;
+            this.age.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.age.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.age.Location = new System.Drawing.Point(472, 57);
+            this.age.Name = "age";
+            this.age.Size = new System.Drawing.Size(28, 21);
+            this.age.TabIndex = 24;
+            this.age.Text = "00";
             // 
-            // label21
+            // vorname
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label21.Location = new System.Drawing.Point(280, 57);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(87, 21);
-            this.label21.TabIndex = 23;
-            this.label21.Text = "Vorname";
+            this.vorname.AutoSize = true;
+            this.vorname.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vorname.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.vorname.Location = new System.Drawing.Point(280, 57);
+            this.vorname.Name = "vorname";
+            this.vorname.Size = new System.Drawing.Size(87, 21);
+            this.vorname.TabIndex = 23;
+            this.vorname.Text = "Vorname";
             // 
-            // label20
+            // name
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label20.Location = new System.Drawing.Point(90, 57);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(61, 21);
-            this.label20.TabIndex = 22;
-            this.label20.Text = "Name";
+            this.name.AutoSize = true;
+            this.name.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.name.Location = new System.Drawing.Point(90, 57);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(61, 21);
+            this.name.TabIndex = 22;
+            this.name.Text = "Name";
             // 
-            // label19
+            // id
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label19.Location = new System.Drawing.Point(124, 11);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(37, 21);
-            this.label19.TabIndex = 21;
-            this.label19.Text = "000";
+            this.id.AutoSize = true;
+            this.id.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.id.Location = new System.Drawing.Point(124, 11);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(37, 21);
+            this.id.TabIndex = 21;
+            this.id.Text = "000";
             // 
             // label8
             // 
@@ -746,6 +749,14 @@
             this.pictureBox1.TabIndex = 36;
             this.pictureBox1.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.textBox1.Location = new System.Drawing.Point(168, 11);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 28);
+            this.textBox1.TabIndex = 26;
+            // 
             // Stammdaten
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -795,10 +806,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label age;
+        private System.Windows.Forms.Label vorname;
+        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label id;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -830,5 +841,6 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -33,7 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
@@ -131,6 +138,10 @@
     <EmbeddedResource Include="Wichtiges.resx">
       <DependentUpon>Wichtiges.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\DataManager.HealthData.datasource" />
+    <None Include="Properties\DataSources\DataManager.Patient.datasource" />
+    <None Include="Properties\DataSources\Medikamentenplan.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -152,6 +163,10 @@
     <ProjectReference Include="..\..\DataManager\DataManager\DataManager.csproj">
       <Project>{44f163d0-cb2a-4f64-896a-c3484ba0a043}</Project>
       <Name>DataManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Patient\Patient.csproj">
+      <Project>{93e29dbe-9689-4b77-ac4e-e142e5a307f3}</Project>
+      <Name>Patient</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

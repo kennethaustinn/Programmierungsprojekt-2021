@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,30 +48,37 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label3);
@@ -89,6 +99,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1248, 156);
             this.panel1.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Location = new System.Drawing.Point(604, 85);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 26);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "NoName";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label9.Location = new System.Drawing.Point(541, 85);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 21);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Hallo, ";
             // 
             // pictureBox3
             // 
@@ -284,7 +316,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(516, 50);
+            this.label1.Location = new System.Drawing.Point(511, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(198, 34);
             this.label1.TabIndex = 0;
@@ -307,6 +339,49 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1224, 435);
             this.panel2.TabIndex = 6;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(14, 74);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(193, 34);
+            this.label7.TabIndex = 57;
+            this.label7.Text = "Erinnerungen";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.label35);
+            this.panel5.Location = new System.Drawing.Point(20, 122);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(337, 184);
+            this.panel5.TabIndex = 56;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(18, 58);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(323, 23);
+            this.label8.TabIndex = 27;
+            this.label8.Text = "Geburtstag von Hans in 7 Tagen";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label35.Location = new System.Drawing.Point(19, 14);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(316, 23);
+            this.label35.TabIndex = 26;
+            this.label35.Text = "Geburtstag von Max in 5 Tagen";
             // 
             // pictureBox1
             // 
@@ -342,15 +417,50 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.personIDDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.patientBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(701, 122);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(488, 294);
             this.dataGridView1.TabIndex = 52;
+            // 
+            // personIDDataGridViewTextBoxColumn
+            // 
+            this.personIDDataGridViewTextBoxColumn.DataPropertyName = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.HeaderText = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
+            this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.personIDDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // patientBindingSource
+            // 
+            this.patientBindingSource.DataSource = typeof(DataManager.Patient);
             // 
             // checkedListBox1
             // 
@@ -363,7 +473,7 @@
             "Blutzücker checken"});
             this.checkedListBox1.Location = new System.Drawing.Point(413, 122);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(240, 184);
+            this.checkedListBox1.Size = new System.Drawing.Size(240, 166);
             this.checkedListBox1.TabIndex = 51;
             // 
             // label4
@@ -402,49 +512,6 @@
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel5.Controls.Add(this.label8);
-            this.panel5.Controls.Add(this.label35);
-            this.panel5.Location = new System.Drawing.Point(20, 122);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(337, 184);
-            this.panel5.TabIndex = 56;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label35.Location = new System.Drawing.Point(19, 14);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(316, 23);
-            this.label35.TabIndex = 26;
-            this.label35.Text = "Geburtstag von Max in 5 Tagen";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(14, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(193, 34);
-            this.label7.TabIndex = 57;
-            this.label7.Text = "Erinnerungen";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(18, 58);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(323, 23);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Geburtstag von Hans in 7 Tagen";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -463,10 +530,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -502,5 +570,11 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.BindingSource patientBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label10;
     }
 }

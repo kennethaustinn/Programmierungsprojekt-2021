@@ -33,7 +33,7 @@ namespace Patient
             testPatient.Gender = "Male";
             testPatient.Phone = "030 0940185";
             testPatient.BirthDate = new DateTime(1990, 1, 1);
-            testPatient.Address = "Potsdamer Strasse 100, 1234 Berlin";
+            testPatient.Address = "Potsdamer Strasse 100, 1234  Berlin";
             testPatient.Contactperson = "Sophia";
             testPatient.ContactpersonPhone = "01488872662";
             testPatient.HealthInsurance = "AOK";

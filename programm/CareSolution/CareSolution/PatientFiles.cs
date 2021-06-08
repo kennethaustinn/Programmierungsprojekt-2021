@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataManager;
 
 namespace CareSolution
 {
@@ -39,11 +40,13 @@ namespace CareSolution
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from [dbo].[Patient] where Vorname like '" + textBox1.Text + "%'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("select * from [dbo].[Patient] where Vorname like '%" + textBox1.Text + "%' or Name like'%" + textBox1.Text + "%'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
+            
         }
+        
 
         private void PatientFiles_Load(object sender, EventArgs e)
         {
@@ -52,6 +55,8 @@ namespace CareSolution
             DataTable dt = new DataTable();
             sda.Fill(dt);
             dataGridView1.DataSource = dt;
+
+            System.Diagnostics.Debug.WriteLine(sda);
 
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DeepSkyBlue;
@@ -89,6 +94,11 @@ namespace CareSolution
             this.Hide();
             Stammdaten cc = new Stammdaten();
             cc.Show();
+        }
+
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
