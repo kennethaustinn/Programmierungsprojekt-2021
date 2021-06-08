@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DummyForOCR
 {
+    // Es wird mit Levenshtein Distanz gearbeitet
     class AnalysisProgram
     {
     }
