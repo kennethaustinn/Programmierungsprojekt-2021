@@ -9,11 +9,37 @@ namespace DummyForOCR
     public class AnalysisProgram
     {
 
-        public readonly List<string> CompareList = new List<string>()
-        {
-            "Barbarrosa Grundschule", "OSZ Lise-Meitner Schule", "HTW Berlin", "Kellner, Stabler, Arzt", "Anwalt, Anwaltr, Anwalt", "Test", "Test", "Test", "Test", "Test",
-        };
+        //public readonly List<string> CompareList = new List<string>()
+        //{
+        //    "Barbarrosa Grundschule", "OSZ Lise-Meitner Schule", "HTW Berlin", "Kellner, Stabler, Arzt", "Anwalt, Anwaltr, Anwalt", "Test", "Test", "Test", "Test", "Test","Test"
+        //};
 
+        public Dictionary<int, List<string> > CompareDictionary= new Dictionary<int, List<string>>();
+
+
+        public void AddCompareList()
+        {
+            CompareDictionary.Add(0, new List<string>() {
+                "Barbarrosa Grundschule", "OSZ Lise-Meitner Schule", "HTW Berlin", "Kellner, Stabler, Arzt", "Anwalt, Anwaltr, Anwalt",
+                "Test", "Test", "Test", "Test", "Test","Test"
+            });
+
+            CompareDictionary.Add(1, new List<string>() {
+                "Otto-Hahn-Schule", "Robert-Koch-Gymnasium", "Keine", "HTW-Berlin", "Medieninformatiker", "Verheiratet seit 40 Jahren",
+                "Moritz 30 Jahre", "Lena 28 Jahre", "Lesen, Spazieren, Kochen, Tanzen", "2 Kinder", "3 Brüder", "Deutsch, Spanisch"
+            });
+
+            CompareDictionary.Add(2, new List<string>() {
+                "Immanuel-Kant Gymnasium", "Ich hab keine.", "Hochschule für Technik und Wirtschaft", "Conterstrike Profilegende", "Vergeben", "Nein",
+                "- CounterStrike  - Rap", "- Klavier  - Fußball", "Viele", "Deutsch, Bulgarisch, Englisch, Französisch"
+            });
+
+            CompareDictionary.Add(3, new List<string>() {
+                "IGS-Anna Segher Mainz", "", "HTW-Berlin", "Werkstudent", "Vergeben", "",
+                "Zocken, Lesen, Spazieren,", "Freunde treffen", "Wagner Familie", "deutsch, Englisch"
+            });
+
+        }
 
         /// <summary>
         /// Mit der CalculateDistance Methode wird die Differenz bzw. Unterschied zwischen zwei string verglichen.
@@ -27,6 +53,7 @@ namespace DummyForOCR
         /// <returns>Gibt die Distanz zurück.</returns>
         public int CalculateDistance(string handwrittenSource, string expectedSource) 
         {
+
             var handwrittenSourceLength = handwrittenSource.Length;
             var expectedSourceLength = expectedSource.Length;
             
