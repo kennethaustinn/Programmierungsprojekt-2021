@@ -14,6 +14,7 @@ namespace DummyForOCR
         {
             "Schule:", "Beruf:", "Universität:", "Partnerschaft:", "Kinder:", "Freizeit:", "Familienmitglieder:", "Sprachen:",
         };
+        
 
         private readonly Dictionary<string, string> _bioDictionary = new Dictionary<string, string>();
 
@@ -24,6 +25,7 @@ namespace DummyForOCR
 
         private string[] _readAllLines;
         private List<string> _valueStrings;
+        private List<string> _handSource;
 
 
         private void ExecuteOcr()                                // Eingabeparamter noch auf Path ändern.
@@ -114,9 +116,29 @@ namespace DummyForOCR
         {
             for (int highLevel = 0; highLevel < _valueStrings.Count; highLevel++)
             {
-                if (_valueStrings[highLevel].Equals(""))
+                if (_valueStrings[highLevel].Equals("") || _valueStrings[highLevel].Equals("Biografie"))
                 {
                     _valueStrings.RemoveAt(highLevel);
+                }
+            }
+        }
+
+        private void RemoveWordForComparison()
+        {
+            _handSource = _valueStrings;
+            for (int highLevel = 0; highLevel < _handSource.Count; highLevel++)
+            {
+                if (_handSource[highLevel].Equals("") || _handSource[highLevel].Equals("Biografie")
+                                                      || _handSource[highLevel].Equals("Schule:")
+                                                      || _handSource[highLevel].Equals("Beruf:")
+                                                      || _handSource[highLevel].Equals("Universität:")
+                                                      || _handSource[highLevel].Equals("Partnerschaft:")
+                                                      || _handSource[highLevel].Equals("Kinder:")
+                                                      || _handSource[highLevel].Equals("Freizeit:")
+                                                      || _handSource[highLevel].Equals("Familienmitglieder:")
+                                                      || _handSource[highLevel].Equals("Sprachen:"))
+                {
+                    _handSource.RemoveAt(highLevel);
                 }
             }
         }
@@ -153,6 +175,15 @@ namespace DummyForOCR
                     case 4:
                         Environment.Exit(0);
                         break;
+                    case 5:
+                        RemoveWordForComparison();
+                        for (int i = 0; i < _handSource.Count; i++)
+                        {
+                            var analysis = new AnalysisProgram();
+                            var cost =analysis. CalculateDistance(_handSource[i], analysis.CompareList[i]);
+                            Console.WriteLine("{0} -> {1} = {2}", _handSource[i], analysis.CompareList[i], cost);
+                        }
+                        break;
                     default:
                         {
                             Console.WriteLine("Ungueltige Eingabe. Bitte ueberpruefen Sie Ihre Eingabe");
@@ -169,7 +200,7 @@ namespace DummyForOCR
             string[] menuItems =
             {
                 "\n(00) Lade die Datei hoch. \n", "(01) Gib das Ergbnis zurück\n",
-                "(02) Speicher das Ergebnis im Objekt \n", "(03) Gibe das Ergebnis weiter an DataBase\n", "(04) Beenden\n"
+                "(02) Speicher das Ergebnis im Objekt \n", "(03) Gibe das Ergebnis weiter an DataBase\n", "(04) Beenden\n", "(05) Value Ausgabe\n"
             };
 
             for (int i = 0; i < menuItems.Length; i++)
