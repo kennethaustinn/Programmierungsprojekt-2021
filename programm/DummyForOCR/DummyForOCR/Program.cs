@@ -11,7 +11,9 @@ namespace DummyForOCR
         public static void Main(string[] args)
         {
             var run = new OCRManager();
-            run.Menu();
+            var analysis = new AnalysisProgram();
+            analysis.AddCompareList();
+            run.Menu(analysis);
         }
     }
 }
