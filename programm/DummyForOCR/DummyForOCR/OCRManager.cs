@@ -8,9 +8,10 @@ namespace DummyForOCR
 {
     public class OCRManager : IOCRManager
     {
+        //private readonly AnalysisProgram _analysis = new AnalysisProgram();
+
         private string _fileName;
-
-
+        
         private readonly List<string> _bioItemKeyList = new List<string>()
         {
             "Schule:","Ausbildung:", "Beruf:", "Universität:", "Partnerschaft:", "Kinder:", "Freizeit:", "Familienmitglieder:", "Sprachen:",
@@ -147,8 +148,9 @@ namespace DummyForOCR
             }
         }
 
-        public void Menu()
+        public void Menu(AnalysisProgram analysis)
         {
+            
             while (true)
             {
                 PrintMenue();
@@ -176,21 +178,13 @@ namespace DummyForOCR
                             Console.WriteLine("Key: ==> " + _bioDictionary.ElementAt(i).Key);
                             Console.WriteLine("Value: ==> " + _bioDictionary.ElementAt(i).Value);
                         }
+                       
                         break;
                     case 4:
                         Environment.Exit(0);
                         break;
                     case 5:
-                        RemoveWordForComparison();
-                        for (int i = 0; i < _handSource.Count; i++)                                 // Bedingung muss immer an der CompareSource angepasst werden.
-                        {
-                            var analysis = new AnalysisProgram();
-                            analysis.AddCompareList();
-                            
-                            var compareSource = analysis.CompareDictionary[_keyForCompareDictionary]; // letztere element wieder nicht erreichbar
-                            var cost =analysis.CalculateDistance(_handSource[i], compareSource[i]); // i+1, da "Schule" mitgelesen wird.
-                            Console.WriteLine("{0} -> {1} = {2}", _handSource[i], compareSource[i], cost);  
-                        }
+                        CompareHandWithExpected(analysis);
                         break;
                     default:
                         {
@@ -200,6 +194,25 @@ namespace DummyForOCR
                 }
             }
             // ReSharper disable once FunctionNeverReturns
+        }
+
+        private void CompareHandWithExpected(AnalysisProgram _analysis)
+        {
+            RemoveWordForComparison();
+            var sumFaultRate = 0;
+            var sumHandSourceLength = 0;
+            
+            for (int i = 0; i < _handSource.Count-1; i++) // Bedingung muss immer an der CompareSource angepasst werden.
+            {
+                var compareSource = _analysis.CompareDictionary[_keyForCompareDictionary]; // letztere element wieder nicht erreichbar
+                var faultRate = _analysis.CalculateDistance(_handSource[i+1], compareSource[i]);
+                sumFaultRate += faultRate;
+                Console.WriteLine("{0} -> {1} = {2} ", _handSource[i+1], compareSource[i], faultRate);
+                sumHandSourceLength += _handSource[i+1].Length;
+                _analysis.FaultRate = sumFaultRate;
+            }
+
+            Console.WriteLine("\n"+_analysis.CalculateDeviationRate(sumHandSourceLength));  
         }
 
 
@@ -220,7 +233,7 @@ namespace DummyForOCR
             Console.WriteLine("\n================================================================================\n");
         }
 
-        private void ChooseFile()                        
+        private void ChooseFile() 
         {
             while (true)
             {
@@ -246,6 +259,8 @@ namespace DummyForOCR
                         _keyForCompareDictionary = 3;
                         return;
                     case 4:
+                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\3.png";
+                        _keyForCompareDictionary = 4;
                         return;
                     case 5:
                         break;
