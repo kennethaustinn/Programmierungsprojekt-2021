@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using CommonInterfaces;
@@ -141,7 +142,11 @@ namespace DummyForOCR
                                                       || _handSource[highLevel].Equals("Kinder:")
                                                       || _handSource[highLevel].Equals("Freizeit:")
                                                       || _handSource[highLevel].Equals("Familienmitglieder:")
-                                                      || _handSource[highLevel].Equals("Sprachen:"))
+                                                      || _handSource[highLevel].Equals("Sprachen:")
+                                                      || _handSource[highLevel].Equals("Biografie Ban")
+                                                      || _handSource[highLevel].Equals("Aublung")
+                                                      || _handSource[highLevel].Equals("Kinder")
+                                                      || _handSource[highLevel].Equals("Bit "))
                 {
                     _handSource.RemoveAt(highLevel);
                 }
@@ -198,21 +203,22 @@ namespace DummyForOCR
 
         private void CompareHandWithExpected(AnalysisProgram _analysis)
         {
+            
             RemoveWordForComparison();
             var sumFaultRate = 0;
             var sumHandSourceLength = 0;
-            
-            for (int i = 0; i < _handSource.Count-1; i++) // Bedingung muss immer an der CompareSource angepasst werden.
+            var compareSource = _analysis.CompareDictionary[_keyForCompareDictionary];          // letztere element wieder nicht erreichbar
+            for (int i = 0; i < _handSource.Count; i++)                                                  // Bedingung muss immer an der CompareSource angepasst werden.
             {
-                var compareSource = _analysis.CompareDictionary[_keyForCompareDictionary]; // letztere element wieder nicht erreichbar
-                var faultRate = _analysis.CalculateDistance(_handSource[i+1], compareSource[i]);
+                var faultRate = _analysis.CalculateDistance(_handSource[i], compareSource[i]);
                 sumFaultRate += faultRate;
-                Console.WriteLine("{0} -> {1} = {2} ", _handSource[i+1], compareSource[i], faultRate);
-                sumHandSourceLength += _handSource[i+1].Length;
+                Console.WriteLine("{0} -> {1} = {2} ", _handSource[i], compareSource[i], faultRate);
+                sumHandSourceLength += _handSource[i].Length;
                 _analysis.FaultRate = sumFaultRate;
             }
 
-            Console.WriteLine("\n"+_analysis.CalculateDeviationRate(sumHandSourceLength));  
+            Console.WriteLine("\n" + _analysis.CalculateDeviationRate(sumHandSourceLength));
+
         }
 
 
@@ -263,17 +269,29 @@ namespace DummyForOCR
                         _keyForCompareDictionary = 4;
                         return;
                     case 5:
-                        break;
+                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio1.png";
+                        _keyForCompareDictionary = 5;
+                        return;
                     case 6:
-                        break;
+                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio2.png";
+                        _keyForCompareDictionary = 6;
+                        return;
                     case 7:
-                        break;
+                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio3.png";
+                        _keyForCompareDictionary = 7;
+                        return;
                     case 8:
-                        break;
+                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio4.png";
+                        _keyForCompareDictionary = 8;
+                        return;
                     case 9:
-                        break;
+                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio5.png";
+                        _keyForCompareDictionary = 9;
+                        return;
                     case 10:
-                        break;
+                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio6.png";
+                        _keyForCompareDictionary = 10;
+                        return;
                     case 11:
                         break;
                     case 12:
