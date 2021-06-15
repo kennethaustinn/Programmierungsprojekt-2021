@@ -81,8 +81,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1248, 156);
+            this.panel1.Size = new System.Drawing.Size(988, 127);
             this.panel1.TabIndex = 2;
             // 
             // label3
@@ -90,9 +91,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(1091, 56);
+            this.label3.Location = new System.Drawing.Point(818, 46);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 34);
+            this.label3.Size = new System.Drawing.Size(86, 25);
             this.label3.TabIndex = 15;
             this.label3.Text = "Logout";
             // 
@@ -101,9 +103,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(69, 56);
+            this.label2.Location = new System.Drawing.Point(52, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 34);
+            this.label2.Size = new System.Drawing.Size(77, 25);
             this.label2.TabIndex = 14;
             this.label2.Text = "Home";
             // 
@@ -111,9 +114,10 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::CareSolution.Properties.Resources.home;
-            this.pictureBox3.Location = new System.Drawing.Point(32, 56);
+            this.pictureBox3.Location = new System.Drawing.Point(24, 46);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox3.Size = new System.Drawing.Size(30, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
@@ -123,9 +127,10 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::CareSolution.Properties.Resources.logout;
-            this.pictureBox2.Location = new System.Drawing.Point(1045, 56);
+            this.pictureBox2.Location = new System.Drawing.Point(784, 46);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -138,9 +143,10 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button9.Location = new System.Drawing.Point(1144, 128);
+            this.button9.Location = new System.Drawing.Point(858, 104);
+            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(105, 28);
+            this.button9.Size = new System.Drawing.Size(79, 23);
             this.button9.TabIndex = 12;
             this.button9.Text = "Sonstiges";
             this.button9.UseVisualStyleBackColor = true;
@@ -152,9 +158,10 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button8.Location = new System.Drawing.Point(1024, 128);
+            this.button8.Location = new System.Drawing.Point(768, 104);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(114, 28);
+            this.button8.Size = new System.Drawing.Size(86, 23);
             this.button8.TabIndex = 11;
             this.button8.Text = "Wichtiges ";
             this.button8.UseVisualStyleBackColor = true;
@@ -166,9 +173,10 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button7.Location = new System.Drawing.Point(889, 128);
+            this.button7.Location = new System.Drawing.Point(667, 104);
+            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(129, 28);
+            this.button7.Size = new System.Drawing.Size(97, 23);
             this.button7.TabIndex = 10;
             this.button7.Text = "Medikamentenplan";
             this.button7.UseVisualStyleBackColor = true;
@@ -180,9 +188,10 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(741, 128);
+            this.button6.Location = new System.Drawing.Point(556, 104);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(142, 28);
+            this.button6.Size = new System.Drawing.Size(106, 23);
             this.button6.TabIndex = 9;
             this.button6.Text = "Pflegebericht";
             this.button6.UseVisualStyleBackColor = true;
@@ -194,9 +203,10 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(545, 128);
+            this.button5.Location = new System.Drawing.Point(409, 104);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(190, 28);
+            this.button5.Size = new System.Drawing.Size(142, 23);
             this.button5.TabIndex = 8;
             this.button5.Text = "Gesundheitszustand";
             this.button5.UseVisualStyleBackColor = true;
@@ -208,9 +218,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(425, 128);
+            this.button4.Location = new System.Drawing.Point(319, 104);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(114, 28);
+            this.button4.Size = new System.Drawing.Size(86, 23);
             this.button4.TabIndex = 7;
             this.button4.Text = "Anamnese";
             this.button4.UseVisualStyleBackColor = true;
@@ -222,9 +233,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(250, 128);
+            this.button3.Location = new System.Drawing.Point(188, 104);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(169, 28);
+            this.button3.Size = new System.Drawing.Size(127, 23);
             this.button3.TabIndex = 6;
             this.button3.Text = "Maßnahmenplan";
             this.button3.UseVisualStyleBackColor = true;
@@ -236,9 +248,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(149, 128);
+            this.button2.Location = new System.Drawing.Point(112, 104);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 28);
+            this.button2.Size = new System.Drawing.Size(71, 23);
             this.button2.TabIndex = 5;
             this.button2.Text = "Biografie";
             this.button2.UseVisualStyleBackColor = true;
@@ -252,9 +265,10 @@
             this.closebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closebutton.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closebutton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.closebutton.Location = new System.Drawing.Point(1209, 0);
+            this.closebutton.Location = new System.Drawing.Point(907, 0);
+            this.closebutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.closebutton.Name = "closebutton";
-            this.closebutton.Size = new System.Drawing.Size(40, 40);
+            this.closebutton.Size = new System.Drawing.Size(30, 32);
             this.closebutton.TabIndex = 4;
             this.closebutton.Text = "X";
             this.closebutton.UseVisualStyleBackColor = false;
@@ -267,9 +281,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(0, 128);
+            this.button1.Location = new System.Drawing.Point(0, 104);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 28);
+            this.button1.Size = new System.Drawing.Size(107, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Stammdaten";
             this.button1.UseVisualStyleBackColor = true;
@@ -280,9 +295,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(516, 50);
+            this.label1.Location = new System.Drawing.Point(387, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 34);
+            this.label1.Size = new System.Drawing.Size(155, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Care Solution";
             // 
@@ -293,17 +309,19 @@
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Location = new System.Drawing.Point(0, 174);
+            this.panel2.Location = new System.Drawing.Point(0, 141);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1249, 367);
+            this.panel2.Size = new System.Drawing.Size(937, 299);
             this.panel2.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::CareSolution.Properties.Resources._65_659285_search_icon_transparent_background_material_design_magnifying_glass;
-            this.pictureBox1.Location = new System.Drawing.Point(207, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(155, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 29);
+            this.pictureBox1.Size = new System.Drawing.Size(28, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -313,11 +331,12 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(24, 64);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1188, 262);
+            this.dataGridView1.Size = new System.Drawing.Size(891, 213);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
@@ -326,9 +345,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(246, 28);
+            this.label4.Location = new System.Drawing.Point(184, 23);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(163, 23);
+            this.label4.Size = new System.Drawing.Size(133, 21);
             this.label4.TabIndex = 1;
             this.label4.Text = "Search Patient :";
             // 
@@ -337,9 +357,10 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(424, 25);
+            this.textBox1.Location = new System.Drawing.Point(318, 20);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(435, 32);
+            this.textBox1.Size = new System.Drawing.Size(327, 27);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -351,9 +372,10 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button10.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button10.Location = new System.Drawing.Point(522, 547);
+            this.button10.Location = new System.Drawing.Point(392, 444);
+            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(192, 46);
+            this.button10.Size = new System.Drawing.Size(144, 37);
             this.button10.TabIndex = 16;
             this.button10.Text = "Akten ansehen";
             this.button10.UseVisualStyleBackColor = false;
@@ -365,13 +387,14 @@
             // 
             // PatientFiles
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1248, 600);
+            this.ClientSize = new System.Drawing.Size(988, 509);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PatientFiles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PatientFiles";
