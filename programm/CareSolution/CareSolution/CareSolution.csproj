@@ -54,17 +54,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bio.cs">
+    <Compile Include="Bio1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bio.Designer.cs">
-      <DependentUpon>Bio.cs</DependentUpon>
+    <Compile Include="Bio1.Designer.cs">
+      <DependentUpon>Bio1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gesundheitszustand.cs">
+    <Compile Include="Gesundheitszustand1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gesundheitszustand.Designer.cs">
-      <DependentUpon>Gesundheitszustand.cs</DependentUpon>
+    <Compile Include="Gesundheitszustand1.Designer.cs">
+      <DependentUpon>Gesundheitszustand1.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -72,55 +72,40 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="Main1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Main1.Designer.cs">
+      <DependentUpon>Main1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Medikamentenplan.cs">
+    <Compile Include="PatientData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Medikamentenplan.Designer.cs">
-      <DependentUpon>Medikamentenplan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PatientFiles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PatientFiles.Designer.cs">
-      <DependentUpon>PatientFiles.cs</DependentUpon>
+    <Compile Include="PatientData.Designer.cs">
+      <DependentUpon>PatientData.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Stammdaten.cs">
+    <Compile Include="Stammdaten1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stammdaten.Designer.cs">
-      <DependentUpon>Stammdaten.cs</DependentUpon>
+    <Compile Include="Stammdaten1.Designer.cs">
+      <DependentUpon>Stammdaten1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Wichtiges.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Wichtiges.Designer.cs">
-      <DependentUpon>Wichtiges.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Bio.resx">
-      <DependentUpon>Bio.cs</DependentUpon>
+    <EmbeddedResource Include="Bio1.resx">
+      <DependentUpon>Bio1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gesundheitszustand.resx">
-      <DependentUpon>Gesundheitszustand.cs</DependentUpon>
+    <EmbeddedResource Include="Gesundheitszustand1.resx">
+      <DependentUpon>Gesundheitszustand1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="Main1.resx">
+      <DependentUpon>Main1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Medikamentenplan.resx">
-      <DependentUpon>Medikamentenplan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PatientFiles.resx">
-      <DependentUpon>PatientFiles.cs</DependentUpon>
+    <EmbeddedResource Include="PatientData.resx">
+      <DependentUpon>PatientData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -132,11 +117,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Stammdaten.resx">
-      <DependentUpon>Stammdaten.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wichtiges.resx">
-      <DependentUpon>Wichtiges.cs</DependentUpon>
+    <EmbeddedResource Include="Stammdaten1.resx">
+      <DependentUpon>Stammdaten1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DataManager.HealthData.datasource" />

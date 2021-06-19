@@ -23,7 +23,7 @@ namespace Patient
         }
 
 
-        public void SetTestData()
+        public Patient SetTestData()
         {
             // Test Patient mit Beispieldaten.
             var testPatient = new Patient();
@@ -32,7 +32,7 @@ namespace Patient
             testPatient.LastName = "Mustermann";
             testPatient.Gender = "Male";
             testPatient.Phone = "030 0940185";
-            testPatient.BirthDate = new DateTime(1990, 1, 1);
+            testPatient.BirthDate = new DateTime(1990, 3, 3);
             testPatient.Address = "Potsdamer Strasse 100, 1234  Berlin";
             testPatient.Contactperson = "Sophia";
             testPatient.ContactpersonPhone = "01488872662";
@@ -160,6 +160,8 @@ namespace Patient
             testPatient.Home = testHome;
             testPatient.CaringRelatives.Add(testCaringRelatives);
             testPatient.ActionPlan.Add(testActionPlan);
+
+            return testPatient;
 
         }
     }
