@@ -96,18 +96,18 @@ namespace CareSolution
         {
             openChildForm(new Stammdaten1());
 
-            if (dataGridViewPatient.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
-            {
-                dataGridViewPatient.CurrentRow.Selected = true;
-                Stammdaten1 cc = new Stammdaten1();
-                cc.labelId.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
+            //if (e.RowIndex!= -1)
+            //{
+            //    dataGridViewPatient.CurrentRow.Selected = true;
+            //    Stammdaten1 cc = new Stammdaten1();
+            //    cc.labelId.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
                 //cc.labelName.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
                 //cc.labelName2.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
                 //cc.labelVorname.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["vorname"].FormattedValue.ToString();
                 //cc.labelAlter.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["alt"].FormattedValue.ToString();
                 //cc.labelAdresse.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["adresse"].FormattedValue.ToString();
                 //cc.labelArzt.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["arzt"].FormattedValue.ToString();
-            }
+            //}
             
         }
     }

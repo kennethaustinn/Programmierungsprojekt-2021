@@ -34,17 +34,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labelName2 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
+            this.labelVerischerung = new System.Windows.Forms.Label();
             this.labelArzt = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.labelKontaktperson = new System.Windows.Forms.Label();
+            this.labelPflegegrad = new System.Windows.Forms.Label();
+            this.labelGewicht = new System.Windows.Forms.Label();
+            this.labelHöhe = new System.Windows.Forms.Label();
             this.labelAdresse = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.labelGeburtsdatum = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -52,7 +49,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.labelStammdaten = new System.Windows.Forms.Label();
             this.labelGeschlecht = new System.Windows.Forms.Label();
@@ -76,17 +72,14 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.labelName2);
-            this.panel3.Controls.Add(this.label33);
-            this.panel3.Controls.Add(this.label32);
+            this.panel3.Controls.Add(this.labelVerischerung);
             this.panel3.Controls.Add(this.labelArzt);
-            this.panel3.Controls.Add(this.label30);
-            this.panel3.Controls.Add(this.label29);
-            this.panel3.Controls.Add(this.label28);
-            this.panel3.Controls.Add(this.label27);
+            this.panel3.Controls.Add(this.labelKontaktperson);
+            this.panel3.Controls.Add(this.labelPflegegrad);
+            this.panel3.Controls.Add(this.labelGewicht);
+            this.panel3.Controls.Add(this.labelHöhe);
             this.panel3.Controls.Add(this.labelAdresse);
-            this.panel3.Controls.Add(this.label25);
-            this.panel3.Controls.Add(this.label24);
-            this.panel3.Controls.Add(this.label18);
+            this.panel3.Controls.Add(this.labelGeburtsdatum);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label15);
@@ -94,7 +87,6 @@
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label12);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.labelStammdaten);
             this.panel3.Controls.Add(this.labelGeschlecht);
@@ -121,7 +113,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox1.Location = new System.Drawing.Point(374, 456);
+            this.checkBox1.Location = new System.Drawing.Point(374, 459);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(179, 25);
             this.checkBox1.TabIndex = 60;
@@ -174,82 +166,71 @@
             this.labelName2.TabIndex = 56;
             this.labelName2.Text = "Name";
             // 
-            // label33
+            // labelVerischerung
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label33.Location = new System.Drawing.Point(526, 146);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(18, 21);
-            this.label33.TabIndex = 55;
-            this.label33.Text = "x";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label32.Location = new System.Drawing.Point(527, 182);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(18, 21);
-            this.label32.TabIndex = 54;
-            this.label32.Text = "x";
+            this.labelVerischerung.AutoSize = true;
+            this.labelVerischerung.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVerischerung.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelVerischerung.Location = new System.Drawing.Point(503, 146);
+            this.labelVerischerung.Name = "labelVerischerung";
+            this.labelVerischerung.Size = new System.Drawing.Size(18, 21);
+            this.labelVerischerung.TabIndex = 55;
+            this.labelVerischerung.Text = "x";
             // 
             // labelArzt
             // 
             this.labelArzt.AutoSize = true;
             this.labelArzt.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelArzt.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelArzt.Location = new System.Drawing.Point(158, 504);
+            this.labelArzt.Location = new System.Drawing.Point(158, 463);
             this.labelArzt.Name = "labelArzt";
             this.labelArzt.Size = new System.Drawing.Size(89, 21);
             this.labelArzt.TabIndex = 48;
             this.labelArzt.Text = "Dr. Name";
             // 
-            // label30
+            // labelKontaktperson
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label30.Location = new System.Drawing.Point(158, 460);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(61, 21);
-            this.label30.TabIndex = 47;
-            this.label30.Text = "Name";
+            this.labelKontaktperson.AutoSize = true;
+            this.labelKontaktperson.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKontaktperson.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelKontaktperson.Location = new System.Drawing.Point(158, 419);
+            this.labelKontaktperson.Name = "labelKontaktperson";
+            this.labelKontaktperson.Size = new System.Drawing.Size(61, 21);
+            this.labelKontaktperson.TabIndex = 47;
+            this.labelKontaktperson.Text = "Name";
             // 
-            // label29
+            // labelPflegegrad
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label29.Location = new System.Drawing.Point(526, 110);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(19, 21);
-            this.label29.TabIndex = 53;
-            this.label29.Text = "0";
+            this.labelPflegegrad.AutoSize = true;
+            this.labelPflegegrad.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPflegegrad.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelPflegegrad.Location = new System.Drawing.Point(503, 110);
+            this.labelPflegegrad.Name = "labelPflegegrad";
+            this.labelPflegegrad.Size = new System.Drawing.Size(19, 21);
+            this.labelPflegegrad.TabIndex = 53;
+            this.labelPflegegrad.Text = "0";
             // 
-            // label28
+            // labelGewicht
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label28.Location = new System.Drawing.Point(158, 420);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(44, 21);
-            this.label28.TabIndex = 52;
-            this.label28.Text = "0 kg";
+            this.labelGewicht.AutoSize = true;
+            this.labelGewicht.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGewicht.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelGewicht.Location = new System.Drawing.Point(158, 379);
+            this.labelGewicht.Name = "labelGewicht";
+            this.labelGewicht.Size = new System.Drawing.Size(44, 21);
+            this.labelGewicht.TabIndex = 52;
+            this.labelGewicht.Text = "0 kg";
             // 
-            // label27
+            // labelHöhe
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label27.Location = new System.Drawing.Point(158, 379);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(50, 21);
-            this.label27.TabIndex = 51;
-            this.label27.Text = "0 cm";
+            this.labelHöhe.AutoSize = true;
+            this.labelHöhe.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHöhe.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelHöhe.Location = new System.Drawing.Point(158, 338);
+            this.labelHöhe.Name = "labelHöhe";
+            this.labelHöhe.Size = new System.Drawing.Size(50, 21);
+            this.labelHöhe.TabIndex = 51;
+            this.labelHöhe.Text = "0 cm";
             // 
             // labelAdresse
             // 
@@ -262,38 +243,16 @@
             this.labelAdresse.TabIndex = 50;
             this.labelAdresse.Text = "x";
             // 
-            // label25
+            // labelGeburtsdatum
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label25.Location = new System.Drawing.Point(158, 338);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(92, 21);
-            this.label25.TabIndex = 49;
-            this.label25.Text = "01.01.1990";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label24.Location = new System.Drawing.Point(158, 220);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(18, 21);
-            this.label24.TabIndex = 46;
-            this.label24.Text = "x";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label18.Location = new System.Drawing.Point(370, 182);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(108, 21);
-            this.label18.TabIndex = 45;
-            this.label18.Text = "Diagnosen :";
+            this.labelGeburtsdatum.AutoSize = true;
+            this.labelGeburtsdatum.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGeburtsdatum.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelGeburtsdatum.Location = new System.Drawing.Point(158, 297);
+            this.labelGeburtsdatum.Name = "labelGeburtsdatum";
+            this.labelGeburtsdatum.Size = new System.Drawing.Size(92, 21);
+            this.labelGeburtsdatum.TabIndex = 49;
+            this.labelGeburtsdatum.Text = "01.01.1990";
             // 
             // label17
             // 
@@ -302,16 +261,16 @@
             this.label17.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label17.Location = new System.Drawing.Point(370, 146);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(101, 21);
+            this.label17.Size = new System.Drawing.Size(127, 21);
             this.label17.TabIndex = 44;
-            this.label17.Text = "Insurance :";
+            this.label17.Text = "Versicherung :";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label16.Location = new System.Drawing.Point(12, 504);
+            this.label16.Location = new System.Drawing.Point(12, 463);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(52, 21);
             this.label16.TabIndex = 43;
@@ -322,7 +281,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label15.Location = new System.Drawing.Point(12, 460);
+            this.label15.Location = new System.Drawing.Point(12, 419);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(142, 21);
             this.label15.TabIndex = 42;
@@ -335,16 +294,16 @@
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label14.Location = new System.Drawing.Point(370, 110);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(150, 21);
+            this.label14.Size = new System.Drawing.Size(100, 21);
             this.label14.TabIndex = 41;
-            this.label14.Text = "Degree of Care :";
+            this.label14.Text = "Pflegerad :";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label9.Location = new System.Drawing.Point(12, 338);
+            this.label9.Location = new System.Drawing.Point(12, 297);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(143, 21);
             this.label9.TabIndex = 40;
@@ -355,7 +314,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label10.Location = new System.Drawing.Point(12, 420);
+            this.label10.Location = new System.Drawing.Point(12, 379);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(91, 21);
             this.label10.TabIndex = 39;
@@ -366,22 +325,11 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label11.Location = new System.Drawing.Point(12, 379);
+            this.label11.Location = new System.Drawing.Point(12, 338);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 21);
             this.label11.TabIndex = 38;
             this.label11.Text = "Höhe :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label12.Location = new System.Drawing.Point(12, 297);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 21);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "PLZ : ";
             // 
             // label13
             // 
@@ -411,7 +359,7 @@
             this.labelGeschlecht.AutoSize = true;
             this.labelGeschlecht.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGeschlecht.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelGeschlecht.Location = new System.Drawing.Point(158, 297);
+            this.labelGeschlecht.Location = new System.Drawing.Point(158, 220);
             this.labelGeschlecht.Name = "labelGeschlecht";
             this.labelGeschlecht.Size = new System.Drawing.Size(18, 21);
             this.labelGeschlecht.TabIndex = 25;
@@ -544,15 +492,12 @@
         private System.Windows.Forms.Label labelStammdaten;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label labelVerischerung;
+        private System.Windows.Forms.Label labelKontaktperson;
+        private System.Windows.Forms.Label labelPflegegrad;
+        private System.Windows.Forms.Label labelGewicht;
+        private System.Windows.Forms.Label labelHöhe;
+        private System.Windows.Forms.Label labelGeburtsdatum;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -560,7 +505,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label labelReport;
         private System.Windows.Forms.CheckBox checkBox1;

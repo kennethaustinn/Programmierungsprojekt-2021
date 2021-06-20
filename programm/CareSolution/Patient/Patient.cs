@@ -27,13 +27,13 @@ namespace Patient
         {
             // Test Patient mit Beispieldaten.
             var testPatient = new Patient();
-            testPatient.PersonID = 001;
+            testPatient.PersonID = 1;
             testPatient.FirstName = "Max";
             testPatient.LastName = "Mustermann";
             testPatient.Gender = "Male";
             testPatient.Phone = "030 0940185";
             testPatient.BirthDate = new DateTime(1990, 3, 3);
-            testPatient.Address = "Potsdamer Strasse 100, 1234  Berlin";
+            testPatient.Address = "Berlinstr. 1, 12345 Berlin";
             testPatient.Contactperson = "Sophia";
             testPatient.ContactpersonPhone = "01488872662";
             testPatient.HealthInsurance = "AOK";

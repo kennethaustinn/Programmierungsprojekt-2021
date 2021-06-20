@@ -9,21 +9,28 @@ namespace DummyForOCR
     public class AnalysisProgram
     {
 
-        //public readonly List<string> CompareList = new List<string>()
-        //{
-        //    "Barbarrosa Grundschule", "OSZ Lise-Meitner Schule", "HTW Berlin", "Kellner, Stabler, Arzt", "Anwalt, Anwaltr, Anwalt", "Test", "Test", "Test", "Test", "Test","Test"
-        //};
-
         public Dictionary<int, List<string> > CompareDictionary= new Dictionary<int, List<string>>();
 
+        private int _faultRate;
 
+        private double _deviationRate;
+
+        public int FaultRate
+        {
+            get => _faultRate;
+            set => _faultRate = value;
+        }
+
+        /// <summary>
+        /// Methode die die CompareDictionary initialisiert. Diese beinhalten die zu erwartenden Texte, welche eingelesen werden müssten.
+        /// </summary>
         public void AddCompareList()
         {
             CompareDictionary.Add(0, new List<string>() {
                 "Barbarrosa Grundschule", "OSZ Lise-Meitner Schule", "HTW Berlin", "Kellner, Stabler, Arzt", "Anwalt, Anwaltr, Anwalt",
                 "Test", "Test", "Test", "Test", "Test","Test"
             });
-
+            
             CompareDictionary.Add(1, new List<string>() {
                 "Otto-Hahn-Schule", "Robert-Koch-Gymnasium", "Keine", "HTW-Berlin", "Medieninformatiker", "Verheiratet seit 40 Jahren",
                 "Moritz 30 Jahre", "Lena 28 Jahre", "Lesen, Spazieren, Kochen, Tanzen", "2 Kinder", "3 Brüder", "Deutsch, Spanisch"
@@ -37,6 +44,41 @@ namespace DummyForOCR
             CompareDictionary.Add(3, new List<string>() {
                 "IGS-Anna Segher Mainz", "", "HTW-Berlin", "Werkstudent", "Vergeben", "",
                 "Zocken, Lesen, Spazieren,", "Freunde treffen", "Wagner Familie", "deutsch, Englisch"
+            });
+
+            CompareDictionary.Add(4, new List<string>() {
+                "Sophie-Scholl Schule Berlin", "Physikalisch-technischer Assistenz", "Frei Universität Berlin", "Werkstudent", "Finanzberater", "Verheiratet",
+                "Paul 10 Jahre", "Tennis, Joggen, Lesen", "Eine Schwester", "Deutsch, Englisch; Spanisch"
+            });
+
+            CompareDictionary.Add(5, new List<string>() {
+                "SMAK St Louis 1 Surabaya", "", "HTW Berlin", "Student", "", "",
+                ". Basketball", ". Netflix", "", "Englisch, Deutsch, Chinesisch, Indonesisch"
+            });
+
+            CompareDictionary.Add(6, new List<string>() {
+                "Staatliche Gymnasium in Probolinggo", "Keine", "Europa - Universität Viadrina", "Keine", "Keine", "Keine",
+                "Fußball spielen, kochen", "Vater", "Mutter", "Kleine Schwester", "Englisch, Indonesisch, Deutsch"
+            });
+
+            CompareDictionary.Add(7, new List<string>() {
+                "SMA Katolik Ricci II", "insert something random here", "Technische Universität Berlin", "Software Engineer", "myself and my wine", "oshi, cleo, goldy",
+                "eat, sleep, repeat", "Eltern, Geschwistern, Hunde", "Java, Python"
+            });
+
+            CompareDictionary.Add(8, new List<string>() {
+                "St.Louis 1 Oberschule", "Keine", "HTW Berlin", "Student", "ledig", "Keine",
+                "Sport treiben", "Spazieren gehen", "Keine", "Deutsch, Englisch, Indonesien"
+            });
+
+            CompareDictionary.Add(9, new List<string>() {
+                "Madania", "Keine", "TU Berlin", "Student", "ledig :(", "0",
+                "Spazieren gehen", "Keine", "Deutsch, Englisch, Indonesisch"
+            });
+
+            CompareDictionary.Add(10, new List<string>() {
+                "St.Louis Surabaya", "", "TU Berlin", "Student", "Keine", "Keine",
+                "-Kochen - Film gucken", "-Lesen","", "Deutsch , Indonesien ,Englisch"
             });
 
         }
@@ -110,5 +152,30 @@ namespace DummyForOCR
 
         //    return a;
         //}
+
+
+        /// <summary>
+        /// Diese Methode berechnet die prozentuale Abweichung vom eingelesenen Dokumnet zu dem erwartenden Ergebnis.
+        /// </summary>
+        /// <param name="sourceLength">Länge der gesamten Zeichenkette, di eingelessen wurde.</param>
+        /// <returns> Gibt ein string mit den wichtigsten Informationen wieder.</returns>
+        public string CalculateDeviationRate(int sourceLength)
+        {
+            double deviation;
+            if (Convert.ToDouble(sourceLength)/2 <= Convert.ToDouble(_faultRate))
+            {
+                 deviation = (Convert.ToDouble(_faultRate) / Convert.ToDouble(sourceLength)) * 100.0;
+            }
+            else
+            {
+                deviation = 100 - ((Convert.ToDouble(_faultRate) / Convert.ToDouble(sourceLength)) * 100.0);
+            }
+            
+            var _deviationRate = Math.Round(deviation, 2);
+
+            return $"Die Fehlerabweichung, der {_faultRate} Fehler im gesamten Inhalt der Länge {sourceLength} (chars), beträgt {_deviationRate} %.";
+
+        }
+
     }
 }

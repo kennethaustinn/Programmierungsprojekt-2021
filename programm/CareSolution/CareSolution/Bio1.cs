@@ -16,6 +16,14 @@ namespace CareSolution
         public Bio1()
         {
             InitializeComponent();
+            var patient = new Patient.Patient().SetTestData();
+            labelSchule.Text = patient.Bio.School;
+            labelBeruf.Text = patient.Bio.Job;
+            labelUni.Text = patient.Bio.University;
+            labelPartnerschaft.Text = patient.Bio.Partnership;
+            labelKinder.Text = patient.Bio.Children;
+            labelFreizeit.Text = patient.Bio.Leisure;
+            labelFamilieMitglieder.Text = patient.Bio.Family_Members;
         }
 
         private void buttonScanNeueData_Click(object sender, EventArgs e)
@@ -23,6 +31,11 @@ namespace CareSolution
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "PDF File | *.pdf";
             ofd.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
