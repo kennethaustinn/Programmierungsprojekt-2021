@@ -78,7 +78,7 @@ namespace CareSolution
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
             SqlDataAdapter sda = new SqlDataAdapter("select * from  [dbo].[Patient]", con);
             DataTable dt = new DataTable();
-            sda.Fill(dt); 
+            sda.Fill(dt);
             dataGridViewPatient.Rows.Clear();
             foreach (DataRow row in dt.Rows)
             {
