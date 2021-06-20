@@ -2,6 +2,7 @@
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using CommonInterfaces;
 using IronOcr;
 
@@ -109,31 +110,37 @@ namespace DummyForOCR
 
             int a = 0;
             int b = 0;
-
+            int i;
+            string abc = null;
+            string def = null;
             for (int highLevel = 0; highLevel < _valueStrings.Count; highLevel++)
             {
-                int i;
                 for (i = 1; i < _bioItemKeyList.Count; i++) //ohne 2 For loop i =0 setzten
                 {
-
+                    
                     if (_bioItemKeyList[i - 1].Equals(_valueStrings[highLevel], StringComparison.OrdinalIgnoreCase))
                     {
                         a = _valueStrings.IndexOf(_valueStrings[highLevel]);
+                        abc = _bioItemKeyList[i - 1];
                     }
 
                     if (_bioItemKeyList[i].Equals(_valueStrings[highLevel], StringComparison.OrdinalIgnoreCase))
                     {
                         b = _valueStrings.IndexOf(_valueStrings[highLevel]);
+                        def = _bioItemKeyList[i];
                     }
 
-                    for (int secondLevel = a+1; secondLevel < b; secondLevel++)
+                    string pattern = string.Format(@"\b{0}\w*\b{1}", abc, def);
+
+                    for (int secondLevel = a + 1; secondLevel < b; secondLevel++)
                     {
-                        _extract = _extract + (_valueStrings[secondLevel]) + Environment.NewLine;            //Evt. NewLine entfernen und anders lösen, da sonst eine Zeile zu viel ist.
-                        _bioItems[i -1] = _extract;                                                        //Item für Freizeit wird noch nicht befüllt.
+                        var ma = Regex.Match(_valueStrings[secondLevel], pattern, RegexOptions.IgnoreCase);
+                        _extract = _extract + ma + Environment.NewLine;            //Evt. NewLine entfernen und anders lösen, da sonst eine Zeile zu viel ist.
+                        _bioItems[i - 1] = _extract;                                                        //Item für Freizeit wird noch nicht befüllt.
                     }
 
+                    _extract = null;
                 }
-                _extract = null;
             }
         }
 
