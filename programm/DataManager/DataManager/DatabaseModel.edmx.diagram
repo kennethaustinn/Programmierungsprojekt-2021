@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="5820783a78754afaa9e651714423175f" Name="Diagram1" ZoomLevel="72" >
-        <EntityTypeShape EntityType="AmbulantCareDB.Person" Width="1.5" PointX="5.125" PointY="2.125" />
+        <EntityTypeShape EntityType="AmbulantCareDB.Person" Width="1.625" PointX="5.125" PointY="1.75" />
         <EntityTypeShape EntityType="AmbulantCareDB.Patient" Width="1.5" PointX="3.125" PointY="5.125" />
         <InheritanceConnector EntityType="AmbulantCareDB.Patient" />
         <EntityTypeShape EntityType="AmbulantCareDB.Bio" Width="1.5" PointX="0.5" PointY="5.75" />
@@ -23,7 +23,7 @@
         <AssociationConnector Association="AmbulantCareDB.HealthDataVitalParameters" />
         <AssociationConnector Association="AmbulantCareDB.HealthDataRiskValues" />
         <AssociationConnector Association="AmbulantCareDB.HealthDataMedication" />
-        <EntityTypeShape EntityType="AmbulantCareDB.Worker" Width="1.5" PointX="7.875" PointY="4.375" />
+        <EntityTypeShape EntityType="AmbulantCareDB.Worker" Width="1.5" PointX="7.875" PointY="4.375" IsExpanded="true" />
         <InheritanceConnector EntityType="AmbulantCareDB.Worker" />
         <EntityTypeShape EntityType="AmbulantCareDB.Doctor" Width="1.5" PointX="5.25" PointY="5.125" />
         <InheritanceConnector EntityType="AmbulantCareDB.Doctor" />

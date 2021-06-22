@@ -25,7 +25,7 @@ namespace DatabaseTester
                 Console.WriteLine("Was möchten Sie tun?");
                 Console.WriteLine("1. Neue Person hinzufügen ");
                 Console.WriteLine("2. Person nach Nachname suchen");
-                Console.WriteLine("3. ");
+                Console.WriteLine("3. Neuen Arzt hinzufügen ");
                 Console.WriteLine("4. ");
                 Console.WriteLine("5. ");
                 Console.WriteLine("6. ");
@@ -100,6 +100,65 @@ namespace DatabaseTester
                             break;
 
                         case 3:
+                            using (var context = new AmbulantCareDBContainer())
+                            {
+                                string personlastname;
+                                string personfirstname;
+                                string persongender;
+                                string personphone;
+                                string personusername;
+                                string personpassword;
+                                string persontodolist;
+                                string personmedicalSpeciality;
+                                string personaddress;
+
+                                Console.WriteLine("Geben Sie den Nachnamen ein.");
+                                personlastname = Console.ReadLine();
+
+                                Console.WriteLine("Geben Sie den Vornamen der Person an.");
+                                personfirstname = Console.ReadLine();
+
+                                Console.WriteLine("Geben Sie das Geschlecht der Person an.");
+                                persongender = Console.ReadLine();
+
+                                Console.WriteLine("Geben Sie die Rufnummer der Person an.");
+                                personphone = Console.ReadLine();
+
+                                Console.WriteLine("Geben Sie den Nutzernamen der Person an.");
+                                personusername = Console.ReadLine();
+
+                                Console.WriteLine("Geben Sie das Passwort der Person an.");
+                                personpassword = Console.ReadLine();
+
+                                Console.WriteLine("Geben Sie die ToDoListe der Person an.");
+                                persontodolist = Console.ReadLine();
+
+                                Console.WriteLine("Geben Sie die Fachrichtung der Person an.");
+                                personmedicalSpeciality = Console.ReadLine();
+
+                                Console.WriteLine("Geben Sie die Addresse der Person an.");
+                                personaddress = Console.ReadLine();
+
+                                var doctor = new Doctor()
+                                {
+                                    LastName = personlastname,
+                                    FirstName = personfirstname,
+                                    Gender = persongender,
+                                    Phone = personphone,
+                                    Username = personusername,
+                                    Password = personpassword,
+                                    ToDoList = persontodolist,
+                                    MedicalSpecialty = personmedicalSpeciality,
+                                    Address = personaddress
+
+                                };
+
+                                context.PersonSet.Add(doctor);
+                                context.SaveChanges();
+
+
+                            }
+
 
 
                             break;

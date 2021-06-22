@@ -65,15 +65,20 @@
     <Compile Include="CaringRelatives.cs">
       <DependentUpon>DatabaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataBase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataBase.tt</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseContext.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseContext.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DatabaseModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DatabaseModel.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="DatabaseModel.cs">
       <AutoGen>True</AutoGen>
@@ -131,14 +136,19 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataBase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataBase.Context.cs</LastGenOutput>
+      <DependentUpon>DatabaseModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DataBase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataBase.cs</LastGenOutput>
+      <DependentUpon>DatabaseModel.edmx</DependentUpon>
+    </Content>
     <Content Include="DatabaseContext.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>DatabaseContext.cs</LastGenOutput>
-      <DependentUpon>DatabaseModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="DatabaseModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DatabaseModel.Context.cs</LastGenOutput>
       <DependentUpon>DatabaseModel.edmx</DependentUpon>
     </Content>
     <Content Include="DatabaseModel.edmx.sql" />

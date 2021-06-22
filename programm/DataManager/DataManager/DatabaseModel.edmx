@@ -256,7 +256,7 @@
     </Key>
     <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ToDoList" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ToDoList" Type="nvarchar(max)" Nullable="true" />
     <Property Name="PersonID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PersonSet_Caregiver">
@@ -825,7 +825,7 @@
         <EntityType Name="Worker" BaseType="AmbulantCareDB.Person">
           <Property Name="Username" Type="String" Nullable="false" />
           <Property Name="Password" Type="String" Nullable="false" />
-          <Property Name="ToDoList" Type="String" Nullable="false" />
+          <Property Name="ToDoList" Type="String" Nullable="true" />
         </EntityType>
         <EntityType Name="Doctor" BaseType="AmbulantCareDB.Worker" >
           <Property Name="MedicalSpecialty" Type="String" Nullable="false" />
