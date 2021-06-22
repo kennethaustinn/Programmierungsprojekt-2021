@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CareSolution
 {
-    public partial class Gesundheitszustand1 : Form
+    public partial class Maßnahmenplan : Form
     {
-        public Gesundheitszustand1()
+        public Maßnahmenplan()
         {
             InitializeComponent();
         }

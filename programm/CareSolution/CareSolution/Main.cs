@@ -13,12 +13,12 @@ using System.Windows.Forms;
 
 namespace CareSolution
 {
-    public partial class Main1 : Form
+    public partial class Main : Form
     {
         private Button currentButton;
         private Panel leftBorderBtn;
 
-        public Main1()
+        public Main()
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
@@ -80,13 +80,13 @@ namespace CareSolution
         private void buttonBiography_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Bio1());
+            openChildForm(new Bio());
         }
 
         private void buttonPatientData_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Stammdaten1());
+            openChildForm(new Stammdaten());
         }
 
         private void buttonHome_Click(object sender, EventArgs e)
@@ -117,7 +117,7 @@ namespace CareSolution
         private void buttonGesundheitszustand_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Gesundheitszustand1());
+            openChildForm(new Gesundheitszustand());
         }
 
         private void buttonPflegebericht_Click(object sender, EventArgs e)

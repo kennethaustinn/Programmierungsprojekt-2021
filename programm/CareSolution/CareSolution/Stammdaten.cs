@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CareSolution
 {
-    public partial class Stammdaten1 : Form
+    public partial class Stammdaten : Form
     {
-        public Stammdaten1()
+        public Stammdaten()
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();
@@ -30,7 +30,7 @@ namespace CareSolution
             labelGeburtsdatum.Text = patient.BirthDate.ToString();
             labelHöhe.Text = patient.Height.ToString();
             labelGewicht.Text = patient.Weight.ToString();
-            labelArzt.Text = patient.Doctor.ToString();
+            //labelArzt.Text = patient.Doctor.ToString();
             labelPflegegrad.Text = patient.DegreeOfCare.ToString();
             labelVerischerung.Text = patient.HealthInsurance;
 
