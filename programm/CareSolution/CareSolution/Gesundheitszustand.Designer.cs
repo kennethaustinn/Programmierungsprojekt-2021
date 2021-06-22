@@ -1,6 +1,6 @@
 ﻿namespace CareSolution
 {
-    partial class Gesundheitszustand1
+    partial class Gesundheitszustand
     {
         /// <summary>
         /// Required designer variable.
@@ -32,12 +32,10 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonAnlegen = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -58,12 +56,10 @@
             this.panelBio.Controls.Add(this.button2);
             this.panelBio.Controls.Add(this.button1);
             this.panelBio.Controls.Add(this.buttonAnlegen);
-            this.panelBio.Controls.Add(this.label19);
             this.panelBio.Controls.Add(this.label21);
             this.panelBio.Controls.Add(this.label8);
             this.panelBio.Controls.Add(this.label7);
             this.panelBio.Controls.Add(this.label6);
-            this.panelBio.Controls.Add(this.label5);
             this.panelBio.Controls.Add(this.label4);
             this.panelBio.Controls.Add(this.label26);
             this.panelBio.Controls.Add(this.label25);
@@ -130,20 +126,6 @@
             this.buttonAnlegen.Text = "Anlegen";
             this.buttonAnlegen.UseVisualStyleBackColor = false;
             // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label19.Location = new System.Drawing.Point(333, 588);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(18, 21);
-            this.label19.TabIndex = 41;
-            this.label19.Text = "x";
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -187,20 +169,6 @@
             this.label6.Size = new System.Drawing.Size(18, 21);
             this.label6.TabIndex = 36;
             this.label6.Text = "x";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label5.Location = new System.Drawing.Point(63, 588);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 21);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Sprache :";
             // 
             // label4
             // 
@@ -324,7 +292,7 @@
             this.label13.TabIndex = 16;
             this.label13.Text = "Schule :";
             // 
-            // Gesundheitszustand1
+            // Gesundheitszustand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -332,8 +300,8 @@
             this.Controls.Add(this.panelBio);
             this.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Gesundheitszustand1";
-            this.Text = "Gesundheitszustand1";
+            this.Name = "Gesundheitszustand";
+            this.Text = "Gesundheitszustand";
             this.panelBio.ResumeLayout(false);
             this.panelBio.PerformLayout();
             this.ResumeLayout(false);
@@ -346,12 +314,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonAnlegen;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;

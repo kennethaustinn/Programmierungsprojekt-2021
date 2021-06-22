@@ -1,6 +1,6 @@
 ﻿namespace CareSolution
 {
-    partial class Stammdaten1
+    partial class Stammdaten
     {
         /// <summary>
         /// Required designer variable.
@@ -105,7 +105,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(730, 544);
+            this.panel3.Size = new System.Drawing.Size(748, 544);
             this.panel3.TabIndex = 3;
             // 
             // checkBox1
@@ -149,7 +149,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(484, 9);
+            this.label1.Location = new System.Drawing.Point(599, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 21);
             this.label1.TabIndex = 57;
@@ -160,7 +160,7 @@
             this.labelName2.AutoSize = true;
             this.labelName2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelName2.Location = new System.Drawing.Point(578, 9);
+            this.labelName2.Location = new System.Drawing.Point(684, 9);
             this.labelName2.Name = "labelName2";
             this.labelName2.Size = new System.Drawing.Size(61, 21);
             this.labelName2.TabIndex = 56;
@@ -348,7 +348,7 @@
             this.labelStammdaten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
             this.labelStammdaten.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStammdaten.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelStammdaten.Location = new System.Drawing.Point(254, 20);
+            this.labelStammdaten.Location = new System.Drawing.Point(266, 22);
             this.labelStammdaten.Name = "labelStammdaten";
             this.labelStammdaten.Size = new System.Drawing.Size(193, 34);
             this.labelStammdaten.TabIndex = 35;
@@ -464,16 +464,16 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Patient ID :";
             // 
-            // Stammdaten1
+            // Stammdaten
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 544);
+            this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Stammdaten1";
-            this.Text = "Stammdaten1";
+            this.Name = "Stammdaten";
+            this.Text = "Stammdaten";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);

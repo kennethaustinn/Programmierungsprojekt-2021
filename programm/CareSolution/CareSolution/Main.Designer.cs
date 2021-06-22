@@ -1,6 +1,6 @@
 ﻿namespace CareSolution
 {
-    partial class Main1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -360,7 +360,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(19, 9);
+            this.label1.Location = new System.Drawing.Point(19, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 37);
             this.label1.TabIndex = 59;
@@ -377,7 +377,7 @@
             this.checkedListBox1.Items.AddRange(new object[] {
             "Puls messen",
             "Blutdruck checken"});
-            this.checkedListBox1.Location = new System.Drawing.Point(26, 156);
+            this.checkedListBox1.Location = new System.Drawing.Point(26, 187);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(268, 297);
             this.checkedListBox1.TabIndex = 58;
@@ -385,7 +385,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(345, 156);
+            this.pictureBox1.Location = new System.Drawing.Point(345, 187);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 25);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -398,7 +398,7 @@
             this.textBoxSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSuche.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSuche.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxSuche.Location = new System.Drawing.Point(375, 156);
+            this.textBoxSuche.Location = new System.Drawing.Point(375, 187);
             this.textBoxSuche.Name = "textBoxSuche";
             this.textBoxSuche.Size = new System.Drawing.Size(240, 25);
             this.textBoxSuche.TabIndex = 56;
@@ -412,7 +412,7 @@
             this.buttonWeiterPatientsübersicht.FlatAppearance.BorderSize = 0;
             this.buttonWeiterPatientsübersicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonWeiterPatientsübersicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonWeiterPatientsübersicht.Location = new System.Drawing.Point(343, 488);
+            this.buttonWeiterPatientsübersicht.Location = new System.Drawing.Point(345, 506);
             this.buttonWeiterPatientsübersicht.Name = "buttonWeiterPatientsübersicht";
             this.buttonWeiterPatientsübersicht.Size = new System.Drawing.Size(255, 51);
             this.buttonWeiterPatientsübersicht.TabIndex = 5;
@@ -447,7 +447,7 @@
             this.dataGridViewPatient.DataSource = this.patientBindingSource;
             this.dataGridViewPatient.EnableHeadersVisualStyles = false;
             this.dataGridViewPatient.GridColor = System.Drawing.Color.MediumPurple;
-            this.dataGridViewPatient.Location = new System.Drawing.Point(343, 210);
+            this.dataGridViewPatient.Location = new System.Drawing.Point(343, 233);
             this.dataGridViewPatient.Name = "dataGridViewPatient";
             this.dataGridViewPatient.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -504,7 +504,7 @@
             this.labelPatient.AutoSize = true;
             this.labelPatient.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPatient.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelPatient.Location = new System.Drawing.Point(336, 97);
+            this.labelPatient.Location = new System.Drawing.Point(336, 128);
             this.labelPatient.Name = "labelPatient";
             this.labelPatient.Size = new System.Drawing.Size(156, 37);
             this.labelPatient.TabIndex = 3;
@@ -515,7 +515,7 @@
             this.labelToDoListe.AutoSize = true;
             this.labelToDoListe.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelToDoListe.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelToDoListe.Location = new System.Drawing.Point(19, 97);
+            this.labelToDoListe.Location = new System.Drawing.Point(19, 128);
             this.labelToDoListe.Name = "labelToDoListe";
             this.labelToDoListe.Size = new System.Drawing.Size(169, 37);
             this.labelToDoListe.TabIndex = 2;
@@ -526,7 +526,7 @@
             this.labelDatum.AutoSize = true;
             this.labelDatum.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDatum.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelDatum.Location = new System.Drawing.Point(211, 9);
+            this.labelDatum.Location = new System.Drawing.Point(211, 22);
             this.labelDatum.Name = "labelDatum";
             this.labelDatum.Size = new System.Drawing.Size(115, 37);
             this.labelDatum.TabIndex = 1;
@@ -537,7 +537,7 @@
             this.labelUhr.AutoSize = true;
             this.labelUhr.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUhr.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelUhr.Location = new System.Drawing.Point(492, 9);
+            this.labelUhr.Location = new System.Drawing.Point(492, 22);
             this.labelUhr.Name = "labelUhr";
             this.labelUhr.Size = new System.Drawing.Size(64, 37);
             this.labelUhr.TabIndex = 0;
@@ -548,7 +548,7 @@
             this.DatumUhr.Enabled = true;
             this.DatumUhr.Tick += new System.EventHandler(this.DatumUhr_Tick);
             // 
-            // Main1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -558,9 +558,9 @@
             this.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(920, 450);
-            this.Name = "Main1";
+            this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main1";
+            this.Text = "Main";
             this.panelMenu.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
             this.panelHome.ResumeLayout(false);

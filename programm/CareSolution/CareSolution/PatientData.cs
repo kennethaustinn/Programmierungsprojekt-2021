@@ -94,7 +94,7 @@ namespace CareSolution
 
         private void dataGridViewPatient_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            openChildForm(new Stammdaten1());
+            openChildForm(new Stammdaten());
 
             //if (e.RowIndex!= -1)
             //{

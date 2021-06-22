@@ -18,10 +18,10 @@ namespace CareSolution
         {
             InitializeComponent();
             //form
-            this.Text = String.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            //this.Text = String.Empty;
+            //this.ControlBox = false;
+            //this.DoubleBuffered = true;
+            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         private void textBox1_Click(object sender, EventArgs e)
@@ -31,14 +31,14 @@ namespace CareSolution
             pictureBoxUsername.BackColor= Color.White;
             panel3.BackColor = SystemColors.Control;
             textBox2.BackColor = SystemColors.Control;
-            pictureBoxPassword.BackColor= SystemColors.Control;
+            pictureBoxShowpassword.BackColor= SystemColors.Control;
         }
 
         private void textBox2_Click(object sender, EventArgs e)
         {
             textBox2.BackColor = Color.White;
             panel3.BackColor = Color.White;
-            pictureBoxPassword.BackColor = Color.White;
+            pictureBoxShowpassword.BackColor = Color.White;
             panel2.BackColor = SystemColors.Control;
             textBox1.BackColor = SystemColors.Control;
             pictureBoxUsername.BackColor = SystemColors.Control;
@@ -62,7 +62,7 @@ namespace CareSolution
             if (dt.Rows[0][0].ToString() == "1")
             {
                 this.Hide();
-                Main1 ss = new Main1();
+                Main ss = new Main();
                 ss.Show();
 
             }
@@ -126,10 +126,13 @@ namespace CareSolution
         private void textBox2_Enter(object sender, EventArgs e)
         {
             if (textBox2.Text == "Password")
+            {
                 textBox2.Text = "";
+                textBox2.UseSystemPasswordChar = true;
+            }
+                
 
             textBox2.ForeColor = Color.Black;
-            textBox2.UseSystemPasswordChar = true;
         }
 
         private void textBox2_Leave(object sender, EventArgs e)
