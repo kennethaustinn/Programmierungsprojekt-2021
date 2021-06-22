@@ -67,6 +67,16 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Files\Biopattern for Analysis Tests\BioTest0.png" />
+    <Content Include="Files\Biopattern for Analysis Tests\BioTest1.png" />
+    <Content Include="Files\Biopattern for Analysis Tests\BioTest2.png" />
+    <Content Include="Files\Biopattern for Analysis Tests\BioTest3.png" />
+    <Content Include="Files\Biopattern for Analysis Tests\BioTest4.png" />
+    <Content Include="Files\Biopattern for Analysis Tests\BioTest5.png" />
+    <Content Include="Files\Biopattern for Analysis Tests\BioTest6.png" />
+    <Content Include="Files\Biopattern for Analysis Tests\BioTest7.png" />
+    <Content Include="Files\Biopattern for Analysis Tests\BioTest8.png" />
+    <Content Include="Files\Biopattern for Analysis Tests\BioTest9.png" />
     <Content Include="Files\Pictures\hand.png" />
     <Content Include="Files\Pictures\Maßnahmenplan_Vorlage.png" />
     <Content Include="Files\Pictures\Vorlage1.png" />

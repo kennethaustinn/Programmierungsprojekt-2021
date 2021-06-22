@@ -1,8 +1,6 @@
 ﻿using System;
-using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using CommonInterfaces;
 using IronOcr;
 
@@ -17,13 +15,14 @@ namespace DummyForOCR
 
         private readonly HashSet<string> _documentName = new HashSet<string>()
         {
-            "Biografie", "Maßnahmenplan", "Pflegebericht", "Vitalwerte", "Medikamentenplan", "Krankenhausaufenthalte"
+            "Biografie", "Biografie Bit" ,"Maßnahmenplan", "Pflegebericht", "Vitalwerte", "Medikamentenplan", "Krankenhausaufenthalte"
         };
 
-        private static readonly List<string> _bioItemKeyList = new List<string>()
-        {
-            "Schule:", "Ausbildung:", "Universität:", "Beruf:", "Partnerschaft:", "Kinder:", "Freizeit:", "Familienmitglieder:", "Sprachen:"
-        };
+        //List<string> _bioItemKeyList = new List<string>()
+        //{
+        //    "Schule:", "Ausbildung:", "Universität:", "Beruf:", "Partnerschaft:", "Kinder:", "Freizeit:",
+        //    "Familienmitglieder:", "Sprachen:"
+        //};
 
         //private HashSet<string> _ignoreKey = new HashSet<string>()
         //{
@@ -36,29 +35,29 @@ namespace DummyForOCR
         //};
 
 
-        private Dictionary<string, HashSet<string>> _recognizeKeys = new Dictionary<string, HashSet<string>>();
+        private Dictionary<string, List<string>> _recognizeKeys = new Dictionary<string, List<string>>();
 
-        private readonly Dictionary<string, string> _bioDictionary = new Dictionary<string, string>();
+        private List<List<string>> _bioItems = new List<List<string>>();
 
-        private readonly string[] _bioItems = new string[_bioItemKeyList.Count];
+        private Dictionary<string, List<string>> _bioDictionary = new Dictionary<string, List<string>>();
+
 
         private string _allResult;
-        private string _extract;
-
-        private string[] _readAllLines;
+        
         private List<string> _valueStrings;
+        
         private List<string> _handSource;
 
         private int _keyForCompareDictionary;
         private string _currentDocument;
-
+        private List<string> _currentCategory = new List<string>();
 
         private void ExecuteOcr()                                // Eingabeparamter noch auf Path ändern.
         {
             AddKeyToRecognize();
             OpenFile();                                         //später path & filename als Übergabeparameter wie das Klassendiagramm einfügen.
             SearchForKeys();
-            //AddToDictionary();                               // es kommt zu einer Fehlermeldung, wenn man während der Laufzeit eine andere Datei auswählt -> Hashcode 
+            AddToDictionary();                               // es kommt zu einer Fehlermeldung, wenn man während der Laufzeit eine andere Datei auswählt -> Hashcode 
         }
 
         private static IronTesseract ConfigurationOCR()
@@ -89,12 +88,8 @@ namespace DummyForOCR
             var allResultLines = ocrResult.Lines;
 
             //SaveAsPdfAndTextFile(ocrResult);
-            Console.WriteLine("Datei wurde geladen!");
-
-            _readAllLines = allResultLines.Cast<object>().Select(x => x.ToString()).ToArray();
-            _valueStrings = new List<string>(_readAllLines);
-
-
+            _valueStrings = allResultLines.Cast<object>().Select(x => x.ToString()).ToList();
+            
             for (int i = 0; i < _valueStrings.Count; i++)
             {
                 if (_documentName.Contains(_valueStrings[i]))
@@ -102,64 +97,51 @@ namespace DummyForOCR
                     _currentDocument = _valueStrings[i];
                 }
             }
+            _currentCategory = _recognizeKeys[_currentDocument];
+
+            Console.WriteLine("Datei wurde geladen!");
         }
 
         private void SearchForKeys()
         {
             RemoveSpaceFromList();
 
-            int a = 0;
-            int b = 0;
-            int i;
-            string abc = null;
-            string def = null;
-            for (int highLevel = 0; highLevel < _valueStrings.Count; highLevel++)
+            var newArray = _valueStrings.Cast<object>().Select(x => x.ToString()).ToArray();
+            int first;
+            int second;
+            List<string> bioList = new List<string>();
+            
+            for (int i = 0; i < _currentCategory.Count; i++)
             {
-                for (i = 1; i < _bioItemKeyList.Count; i++) //ohne 2 For loop i =0 setzten
+                if (i == _currentCategory.Count - 1)
+                {
+                    first = Array.IndexOf(newArray, _currentCategory[i]) + 1;
+                    second = _valueStrings.IndexOf(_valueStrings[_valueStrings.Count - 1]);
+                    //bioList = _valueStrings.ToList().GetRange(first, second - first + 1);
+                    bioList = _valueStrings.Skip(first).Take(second).ToList();
+
+                }
+                else if (i < _currentCategory.Count)
                 {
                     
-                    if (_bioItemKeyList[i - 1].Equals(_valueStrings[highLevel], StringComparison.OrdinalIgnoreCase))
-                    {
-                        a = _valueStrings.IndexOf(_valueStrings[highLevel]);
-                        abc = _bioItemKeyList[i - 1];
-                    }
-
-                    if (_bioItemKeyList[i].Equals(_valueStrings[highLevel], StringComparison.OrdinalIgnoreCase))
-                    {
-                        b = _valueStrings.IndexOf(_valueStrings[highLevel]);
-                        def = _bioItemKeyList[i];
-                    }
-
-                    string pattern = string.Format(@"\b{0}\w*\b{1}", abc, def);
-
-                    for (int secondLevel = a + 1; secondLevel < b; secondLevel++)
-                    {
-                        var ma = Regex.Match(_valueStrings[secondLevel], pattern, RegexOptions.IgnoreCase);
-                        _extract = _extract + ma + Environment.NewLine;            //Evt. NewLine entfernen und anders lösen, da sonst eine Zeile zu viel ist.
-                        _bioItems[i - 1] = _extract;                                                        //Item für Freizeit wird noch nicht befüllt.
-                    }
-
-                    _extract = null;
+                    first = Array.IndexOf(newArray, _currentCategory[i])+1;
+                    second = Array.IndexOf(newArray, _currentCategory[i + 1]);
+                    //bioList = _valueStrings.ToList().GetRange(first, (second - first + 1));
+                    bioList = _valueStrings.Skip(first).Take(second - first).ToList();
                 }
+                
+                _bioItems.Add(bioList);
             }
+
         }
 
         private void AddToDictionary()
         {
-            for (int i = 0; i < _bioItemKeyList.Count; i++)
+            for (int i = 0; i < _currentCategory.Count; i++)
             {
-                _bioDictionary.Add(_bioItemKeyList[i], _bioItems[i]); //Value für Freizeit wird noch nicht befüllt.
-                
-            }
+                _bioDictionary.Add(_currentCategory[i], _bioItems[i]); //Value für Freizeit wird noch nicht befüllt.
 
-            //HashSet<string>.Enumerator em = _recognizeKeys[_currentDocument].GetEnumerator();
-            //int i = -1;
-            //while (em.MoveNext())
-            //{
-            //    string val = em.Current;
-            //    _bioDictionary.Add(val, _bioItems[i]);
-            //    i++;
-            //}
+            }
         }
 
         private void RemoveSpaceFromList()
@@ -188,17 +170,17 @@ namespace DummyForOCR
 
         public void AddKeyToRecognize()
         {
-            _recognizeKeys.Add("Biografie", new HashSet<string>() { "Schule:", "Beruf:", "Universität:", "Partnerschaft:", "Kinder:", "Freizeit:", "Familienmitglieder:", "Sprachen:", "Ausbildung:" });
-            _recognizeKeys.Add("Maßnahmenplan", new HashSet<string>() { "Datum:", "Vormittag:", "Mittag:", "Nachmittag:", "Abend:", "Erstellt von:" });
-            _recognizeKeys.Add("Pflegebericht", new HashSet<string>() { "Datum:", "Erfüllung vom Maßnahmenplan:", "Abweichungen:", "Erstellt von:" });
-            _recognizeKeys.Add("Vitalwerte", new HashSet<string>() { "Datum:", "Was wurde gemessen:", "Wert:", "Einheit:", });
-            _recognizeKeys.Add("Medikamentenplan", new HashSet<string>() { "Datum:", "Medikament:", "Dosierung:", "Häufigkeit", "Grund:", "Verabreicht von:", });
-            _recognizeKeys.Add("Krankenhausaufenthalte", new HashSet<string>() { "Datum:", "Grund:", "Dauer:" });
+            _recognizeKeys.Add("Biografie", new List<string>() { "Schule:", "Ausbildung:", "Universität:", "Beruf:", "Partnerschaft:", "Kinder:", "Freizeit:", "Familienmitglieder:", "Sprachen:" });
+            _recognizeKeys.Add("Maßnahmenplan", new List<string>() { "Datum:", "Vormittag:", "Mittag:", "Nachmittag:", "Abend:", "Erstellt von:" });
+            _recognizeKeys.Add("Pflegebericht", new List<string>() { "Datum:", "Erfüllung vom Maßnahmenplan:", "Abweichungen:", "Erstellt von:" });
+            _recognizeKeys.Add("Vitalwerte", new List<string>() { "Datum:", "Was wurde gemessen:", "Wert:", "Einheit:", });
+            _recognizeKeys.Add("Medikamentenplan", new List<string>() { "Datum:", "Medikament:", "Dosierung:", "Häufigkeit", "Grund:", "Verabreicht von:", });
+            _recognizeKeys.Add("Krankenhausaufenthalte", new List<string>() { "Datum:", "Grund:", "Dauer:" });
         }
-        
+
         private void CompareHandWithExpected(AnalysisProgram _analysis)
         {
-            
+
             RemoveWordForComparison();
             var sumFaultRate = 0;
             var sumHandSourceLength = 0;
@@ -216,13 +198,12 @@ namespace DummyForOCR
             Console.WriteLine(_currentDocument);
         }
 
-
+        #region MyRegion Menu und Konsolenbedienung der Konsolenanwendung
 
         //----------------------------Menu---------------------------
 
         public void Menu(AnalysisProgram analysis)
         {
-            
             while (true)
             {
                 PrintMenue();
@@ -238,19 +219,27 @@ namespace DummyForOCR
                         Console.WriteLine(_allResult);
                         break;
                     case 2:
-                        //Console.WriteLine(string.Join("" + Environment.NewLine, _bioItems ));      // Array zu string konventieren 
-                        for (int i = 0; i < _bioItems.Length; i++)
+                        for (int i = 0; i < _bioItems.Count; i++)
                         {
-                            Console.WriteLine(Environment.NewLine + _bioItems[i]);
+                            var test = _bioItems[i];
+                            for (int j = 0; j < test.Count; j++)
+                            {
+                                Console.WriteLine(Environment.NewLine + test[j]);
+                            }
                         }
                         break;
                     case 3:
                         for (int i = 0; i < _bioDictionary.Count; i++)
                         {
+                            var key = _bioDictionary.ElementAt(i);
                             Console.WriteLine("Key: ==> " + _bioDictionary.ElementAt(i).Key);
-                            Console.WriteLine("Value: ==> " + _bioDictionary.ElementAt(i).Value);
+                            for (int j = 0; j < key.Value.Count; j++)
+                            {
+
+                                Console.WriteLine($"Value {j}: ==> " + key.Value[j]);
+                            }
+                            Console.WriteLine(Environment.NewLine);
                         }
-                       
                         break;
                     case 4:
                         Environment.Exit(0);
@@ -283,7 +272,7 @@ namespace DummyForOCR
             Console.WriteLine("\n================================================================================\n");
         }
 
-        private void ChooseFile() 
+        private void ChooseFile()
         {
             while (true)
             {
@@ -297,43 +286,44 @@ namespace DummyForOCR
                         _keyForCompareDictionary = 0;
                         return;
                     case 1:
-                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio_Vorlage 1 P1.png";
+
+                        _fileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest0.png";
                         _keyForCompareDictionary = 1;
                         return;
                     case 2:
-                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\1.png";
+                        _fileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest1.png";
                         _keyForCompareDictionary = 2;
                         return;
                     case 3:
-                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\2.png";
+                        _fileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest2.png";
                         _keyForCompareDictionary = 3;
                         return;
                     case 4:
-                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\3.png";
+                        _fileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest3.png";
                         _keyForCompareDictionary = 4;
                         return;
                     case 5:
-                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio1.png";
+                        _fileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest4.png";
                         _keyForCompareDictionary = 5;
                         return;
                     case 6:
-                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio2.png";
+                        _fileName = @"C:\Users\ala19\Dsource\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest5.png";
                         _keyForCompareDictionary = 6;
                         return;
                     case 7:
-                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio3.png";
+                        _fileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest6.png";
                         _keyForCompareDictionary = 7;
                         return;
                     case 8:
-                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio4.png";
+                        _fileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest7.png";
                         _keyForCompareDictionary = 8;
                         return;
                     case 9:
-                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio5.png";
+                        _fileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest8.png";
                         _keyForCompareDictionary = 9;
                         return;
                     case 10:
-                        _fileName = @"C:\Users\ala19\Desktop\OCR\Auswertungsprogramm\Bio6.png";
+                        _fileName = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest9.png";
                         _keyForCompareDictionary = 10;
                         return;
                     default:
@@ -344,14 +334,14 @@ namespace DummyForOCR
                 }
             }
         }
-        
+
         private void PrintImageMenu()
         {
             Console.WriteLine("\n================================================================================");
             string[] menuItems =
             {
-                "\n(00) Erste funktionierende Vorlage\n","\n(01) Bio_Vorlage\n",
-                "(02) 1\t", "(03) 2\t", "(04) 3\t", "(05) Bio1\t", "(06) Bio2\n", "(07) Bio3\t", "(08) Bio4\t", "(09) Bio5\t", "(10) Bio6\t"
+                "\n(00) Erste nicht funktionierende Vorlage\n","\n(01) BioTest0\n",
+                "(02) BioTest1\t", "(03) BioTest2\t", "(04) BioTest3\t", "(05) BioTest4\t", "(06) BioTest5\n", "(07) BioTest6\t", "(08) BioTest7\t", "(09) BioTest8\t", "(10) BioTest9\t"
             };
 
             for (int i = 0; i < menuItems.Length; i++)
@@ -380,6 +370,8 @@ namespace DummyForOCR
             }
             return choiceInternal;
         }
+
+        #endregion
 
         public Dictionary<string, string> ExecuteOCR(string path)
         {
