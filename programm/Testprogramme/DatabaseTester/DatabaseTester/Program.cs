@@ -70,7 +70,8 @@ namespace DatabaseTester
 
                                 context.PersonSet.Add(person);
                                 context.SaveChanges();
-                                
+
+
                             }
 
                             break;
@@ -85,6 +86,7 @@ namespace DatabaseTester
                                     select t;
 
                                 var person = query.FirstOrDefault<Person>();
+                                
 
                                 Console.WriteLine(person.LastName+ ", "+ person.FirstName+ ", "+ person.Gender+ ", "+
                                     person.Phone); 
@@ -92,7 +94,6 @@ namespace DatabaseTester
                               
                             }
 
-                            
 
                             
 
