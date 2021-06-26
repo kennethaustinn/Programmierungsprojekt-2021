@@ -13,8 +13,6 @@ namespace DummyForOCR
 
         private int _faultRate;
 
-        private double _deviationRate;
-
         public int FaultRate
         {
             get => _faultRate;
@@ -161,16 +159,8 @@ namespace DummyForOCR
         /// <returns> Gibt ein string mit den wichtigsten Informationen wieder.</returns>
         public string CalculateDeviationRate(int sourceLength)
         {
-            double deviation;
-            if (Convert.ToDouble(sourceLength)/2 <= Convert.ToDouble(_faultRate))
-            {
-                 deviation = (Convert.ToDouble(_faultRate) / Convert.ToDouble(sourceLength)) * 100.0;
-            }
-            else
-            {
-                deviation = 100 - ((Convert.ToDouble(_faultRate) / Convert.ToDouble(sourceLength)) * 100.0);
-            }
-            
+            var deviation = (Convert.ToDouble(_faultRate) / Convert.ToDouble(sourceLength)) * 100.0;
+
             var _deviationRate = Math.Round(deviation, 2);
 
             return $"Die Fehlerabweichung, der {_faultRate} Fehler im gesamten Inhalt der Länge {sourceLength} (chars), beträgt {_deviationRate} %.";
