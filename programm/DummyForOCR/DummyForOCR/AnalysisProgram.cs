@@ -1,23 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DummyForOCR
 {
     public class AnalysisProgram
     {
 
-        public Dictionary<int, List<string> > CompareDictionary= new Dictionary<int, List<string>>();
+        public Dictionary<int, List<string> > CompareDictionary = new Dictionary<int, List<string>>();
 
-        private int _faultRate;
-
-        public int FaultRate
-        {
-            get => _faultRate;
-            set => _faultRate = value;
-        }
+        public int FaultRate { get; set; }
 
         /// <summary>
         /// Methode die die CompareDictionary initialisiert. Diese beinhalten die zu erwartenden Texte, welche eingelesen werden müssten.
@@ -82,34 +73,37 @@ namespace DummyForOCR
         }
 
         /// <summary>
+        /// Vorerst der folgende Code dieser Methode wurde aus folgendener Quelle entnommen bzw. angeguckt:
+        /// https://gist.github.com/Davidblkx/e12ab0bb2aff7fd8072632b396538560
+        /// 
         /// Mit der CalculateDistance Methode wird die Differenz bzw. Unterschied zwischen zwei string verglichen.
         /// Dies geschieht mit hilfe der „Levenshtein Distanz“. Dies ist ein Algorithmus der char für char die jeweiligen
-        /// beiden string durchgeht und guckt wie sie sich jeweils unterscheiden.
-        /// Am ende erhält man eine Distanz (Zahl), die dafür steht wie viele Operationen man benötigt um den einen string wie den anderen darstellen zulassen.
+        /// beiden string durchgeht und guckt, wie sie sich jeweils unterscheiden.
+        /// Am Ende erhält man eine Distanz (Zahl), die dafür steht wie viele Operationen man benötigt um den einen string wie den anderen darstellen zulassen.
         /// Diese sind replace, delete oder insert.
         /// </summary>
-        /// <param name="handwrittenSource">Hier befindet sich der handschriftliche string welcher durch OCR eingelesen wurde.</param>
+        /// <param name="scannedSource">Hier befindet sich der handschriftliche string welcher durch OCR eingelesen wurde.</param>
         /// <param name="expectedSource">Hier befindet sich der eigentlich zu erwartende string welcher gelesen werden müsste.</param>
         /// <returns>Gibt die Distanz zurück.</returns>
-        public int CalculateDistance(string handwrittenSource, string expectedSource) 
+        public int CalculateDistance(string scannedSource, string expectedSource) 
         {
 
-            var handwrittenSourceLength = handwrittenSource.Length;
+            var scannedSourceLength = scannedSource.Length;
             var expectedSourceLength = expectedSource.Length;
             
-            var matrix = new int[handwrittenSourceLength + 1, expectedSourceLength + 1];
+            var matrix = new int[scannedSourceLength + 1, expectedSourceLength + 1];
 
             // Überprüft ob der erste string leer ist, wenn ja ist die Distanz die länge des zweiten strings.
-            if (handwrittenSourceLength == 0)
+            if (scannedSourceLength == 0)
                 return expectedSourceLength;
 
             // Überprüft ob der zweite string leer ist, wenn ja ist die Distanz die länge des ersten strings.
             if (expectedSourceLength == 0)
-                return handwrittenSourceLength;
+                return scannedSourceLength;
 
             
             // Initialisierung  der Zeilenanzahl des ersten string in der Matrix. Jedes char des stings, ist dabei eine Zeile.
-            for (var row = 0; row <= handwrittenSourceLength; row++)
+            for (var row = 0; row <= scannedSourceLength; row++)
             {
                 matrix[row, 0] = row;
             }
@@ -121,36 +115,22 @@ namespace DummyForOCR
 
             // Hier wird die Distanz berechnet bzw. rausgefunden d.h. hier beginnt die eigetnliche Suche nach den Unterschieden.
             // Dabei wird immer das Minimum innerhalb der temporären/ aktuellen matrix gesucht. Dies geschieht bis man an der Stelle n x m ankommt 
-            for (var i = 1; i <= handwrittenSourceLength; i++)
+            for (var i = 1; i <= scannedSourceLength; i++)
             {
                 for (var j = 1; j <= expectedSourceLength; j++)
                 {
-                    var substitutionCount = expectedSource[j - 1] == handwrittenSource[i - 1] ? 0 : 1;           // Unterschied der zwei chars, wenn die gleich sind dann ist 
+                    var substitutionCount = expectedSource[j - 1] == scannedSource[i - 1] ? 0 : 1;           // Unterschied der zwei chars, wenn die gleich sind dann ist 
                                                                                                                     // die Differenz 0, ansonsten 1.
                     
-                    matrix[i, j] = Math.Min(Math.Min(matrix[i - 1, j] + 1,          //delete
-                                                     matrix[i, j - 1] + 1),         //insert
-                                                     matrix[i - 1, j - 1] + substitutionCount);  // replace
+                    matrix[i, j] = Math.Min(Math.Min(matrix[i - 1, j] + 1,                          // delete
+                                                     matrix[i, j - 1] + 1),                         // insert
+                                                     matrix[i - 1, j - 1] + substitutionCount);     // replace
 
-                    //matrix[i, j] = Minimum(matrix[i - 1, j] + 1,
-                    //                         matrix[i, j - 1] + 1,
-                    //                         matrix[i - 1, j - 1] + cost);
                 }
             }
             // Gibt die Distanz wieder zurück.
-            return matrix[handwrittenSourceLength, expectedSourceLength];
-
+            return matrix[scannedSourceLength, expectedSourceLength];
         }
-
-        //static int Minimum(int a, int b, int c)
-        //{
-        //    if (a > b) { a = b; }
-
-        //    if (a > c) { a = c; }
-
-        //    return a;
-        //}
-
 
         /// <summary>
         /// Diese Methode berechnet die prozentuale Abweichung vom eingelesenen Dokumnet zu dem erwartenden Ergebnis.
@@ -159,11 +139,11 @@ namespace DummyForOCR
         /// <returns> Gibt ein string mit den wichtigsten Informationen wieder.</returns>
         public string CalculateDeviationRate(int sourceLength)
         {
-            var deviation = (Convert.ToDouble(_faultRate) / Convert.ToDouble(sourceLength)) * 100.0;
+            var deviation = (Convert.ToDouble(FaultRate) / Convert.ToDouble(sourceLength)) * 100.0;
 
-            var _deviationRate = Math.Round(deviation, 2);
+            var deviationRate = Math.Round(deviation, 2);
 
-            return $"Die Fehlerabweichung, der {_faultRate} Fehler im gesamten Inhalt der Länge {sourceLength} (chars), beträgt {_deviationRate} %.";
+            return $"Die Fehlerabweichung, der {FaultRate} Fehler im gesamten Inhalt der Länge {sourceLength} (chars), beträgt {deviationRate} %.";
 
         }
 
