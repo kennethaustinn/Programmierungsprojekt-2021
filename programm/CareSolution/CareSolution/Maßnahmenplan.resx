@@ -117,4 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pictureBoxTopMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAQNJREFUWEft
+        lLENwjAQRdMgmIGeAaCkoqHIBlGSIlVGCYwBM0AFG2QKdmAAcpb+WZFji5NxFAX5SV/E9++fT0pEEpkl
+        dV0viqI4kV5Qo2qwx6csyzNd+jHUwA6D5YKBaJED6WjzTGGsHNsQU2maLquqWtk8UxgrxwxKB/nmBvgO
+        8s0NcA2SCrE/WsCXuMCoC4TqseIK0j/fjuqXLMvW3KOe8zy/0u8WbRrXnK+4glR7wntzDz/TEg+0abgH
+        RzmuIF2yofqd/Z5uykObhn0c5biC9Ar2VG/Z76lVHto07OMoxxWk2rSvYPKPsE+oHiveQYO4wPwXCCWM
+        lWMb8oswNhIxSJIOJfryeB4M5MwAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAg9JREFUWEft
+        lstKW2EUhYNVLKgDbx34BlL7CpKJhSBO1JB7CIEGnAii7Ug0OHUggg58gIID04HoSzgRAiIEsSMtdeId
+        L4Pot8NqCMYDJ+aIFbJgkXPW2Xvtffb/5098DTTw7pBIJD5Fo9H5WCy2A/+Kdj0XDAZ7FfY6iMfjEQpd
+        wwcHXsKQwr0FxuOwqEI5pjAIO8VB0/SsyP2o0ryBjRbjcyuA+azkKjCh72riNJlMdkuuHxRdkHFOkiOI
+        2bJYmslKqh8Y5s3URi3JERT2WyzclVQ/MLsyU74BbZIckU6nO9TAhaT68T808LZL8G8TYr4pyRHEbCvW
+        u00YiUR6MD0zY5qZkVwFnv+wGIu1HMneANPyQUQTG7YcqVTqo9Gu0csHEW8/pjRvQaEk5rcq9BxvwuFw
+        QuHeAvNxiv95UvA5Hns6Ab/f34zpcmURChyEQqEBW2ftjy/wsDIGLnGEf5DNy4HRigzv4DQsTYEm1hh3
+        H0W6uF81DR6hz/B5r5hF2bwMmERlfIfZkGm88YjdSy+T/XFLzLDyvkKLKVq8aTUjEAi0YvDbzOE3ySVw
+        Ig6g/aLgiZHrHIU+63EJNDSh3EImk2mR7B4YhGWQz2azTZJdw9af3D3zwCso2T1IXFfypKSaQe6UecCf
+        ktyDpIIlM+5+STVDS2UN7EtyD5Ls/90Do2yXVDNe5ZexgQa8hc/3CPIrYllzl0KcAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="DatumUhr.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

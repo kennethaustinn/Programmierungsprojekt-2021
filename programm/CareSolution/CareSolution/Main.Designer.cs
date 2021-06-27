@@ -29,12 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelLogout = new System.Windows.Forms.Panel();
+            this.panelHome = new System.Windows.Forms.Panel();
+            this.panelChildform = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.textBoxSuche = new System.Windows.Forms.TextBox();
+            this.buttonWeiterPatientsübersicht = new System.Windows.Forms.Button();
+            this.dataGridViewPatient = new System.Windows.Forms.DataGridView();
+            this.labelPatient = new System.Windows.Forms.Label();
+            this.labelToDoListe = new System.Windows.Forms.Label();
+            this.labelDatum = new System.Windows.Forms.Label();
+            this.DatumUhr = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonSonstiges = new System.Windows.Forms.Button();
             this.buttonWichtiges = new System.Windows.Forms.Button();
@@ -45,30 +61,13 @@
             this.buttonMaßnahmenplan = new System.Windows.Forms.Button();
             this.buttonBiographie = new System.Windows.Forms.Button();
             this.buttonStammdaten = new System.Windows.Forms.Button();
-            this.panelHome = new System.Windows.Forms.Panel();
             this.buttonHome = new System.Windows.Forms.Button();
-            this.panelChildform = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBoxSuche = new System.Windows.Forms.TextBox();
-            this.buttonWeiterPatientsübersicht = new System.Windows.Forms.Button();
-            this.dataGridViewPatient = new System.Windows.Forms.DataGridView();
-            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.labelPatient = new System.Windows.Forms.Label();
-            this.labelToDoListe = new System.Windows.Forms.Label();
-            this.labelDatum = new System.Windows.Forms.Label();
-            this.labelUhr = new System.Windows.Forms.Label();
-            this.DatumUhr = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panelLogout.SuspendLayout();
             this.panelHome.SuspendLayout();
             this.panelChildform.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +100,214 @@
             this.panelLogout.Name = "panelLogout";
             this.panelLogout.Size = new System.Drawing.Size(228, 60);
             this.panelLogout.TabIndex = 10;
+            // 
+            // panelHome
+            // 
+            this.panelHome.Controls.Add(this.buttonHome);
+            this.panelHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHome.Location = new System.Drawing.Point(0, 0);
+            this.panelHome.Margin = new System.Windows.Forms.Padding(2);
+            this.panelHome.Name = "panelHome";
+            this.panelHome.Size = new System.Drawing.Size(234, 96);
+            this.panelHome.TabIndex = 0;
+            // 
+            // panelChildform
+            // 
+            this.panelChildform.AutoScroll = true;
+            this.panelChildform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelChildform.Controls.Add(this.label1);
+            this.panelChildform.Controls.Add(this.checkedListBox1);
+            this.panelChildform.Controls.Add(this.pictureBox1);
+            this.panelChildform.Controls.Add(this.textBoxSuche);
+            this.panelChildform.Controls.Add(this.buttonWeiterPatientsübersicht);
+            this.panelChildform.Controls.Add(this.dataGridViewPatient);
+            this.panelChildform.Controls.Add(this.labelPatient);
+            this.panelChildform.Controls.Add(this.labelToDoListe);
+            this.panelChildform.Controls.Add(this.labelDatum);
+            this.panelChildform.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildform.Location = new System.Drawing.Point(234, 0);
+            this.panelChildform.Name = "panelChildform";
+            this.panelChildform.Size = new System.Drawing.Size(766, 591);
+            this.panelChildform.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(19, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 37);
+            this.label1.TabIndex = 59;
+            this.label1.Text = "Wilkommen !";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(33, 187);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(293, 81);
+            this.checkedListBox1.TabIndex = 58;
+            // 
+            // textBoxSuche
+            // 
+            this.textBoxSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.textBoxSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSuche.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSuche.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxSuche.Location = new System.Drawing.Point(375, 187);
+            this.textBoxSuche.Name = "textBoxSuche";
+            this.textBoxSuche.Size = new System.Drawing.Size(240, 25);
+            this.textBoxSuche.TabIndex = 56;
+            this.textBoxSuche.Text = "Suche";
+            this.textBoxSuche.Enter += new System.EventHandler(this.textBoxSuche_Enter);
+            this.textBoxSuche.Leave += new System.EventHandler(this.textBoxSuche_Leave);
+            // 
+            // buttonWeiterPatientsübersicht
+            // 
+            this.buttonWeiterPatientsübersicht.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonWeiterPatientsübersicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            this.buttonWeiterPatientsübersicht.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonWeiterPatientsübersicht.FlatAppearance.BorderSize = 0;
+            this.buttonWeiterPatientsübersicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonWeiterPatientsübersicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonWeiterPatientsübersicht.Location = new System.Drawing.Point(345, 506);
+            this.buttonWeiterPatientsübersicht.Name = "buttonWeiterPatientsübersicht";
+            this.buttonWeiterPatientsübersicht.Size = new System.Drawing.Size(255, 51);
+            this.buttonWeiterPatientsübersicht.TabIndex = 5;
+            this.buttonWeiterPatientsübersicht.Text = "Weiter zur Patientsübersicht";
+            this.buttonWeiterPatientsübersicht.UseVisualStyleBackColor = false;
+            this.buttonWeiterPatientsübersicht.Click += new System.EventHandler(this.buttonWeiterPatientsübersicht_Click);
+            // 
+            // dataGridViewPatient
+            // 
+            this.dataGridViewPatient.AutoGenerateColumns = false;
+            this.dataGridViewPatient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewPatient.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewPatient.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.dataGridViewPatient.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewPatient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewPatient.ColumnHeadersHeight = 30;
+            this.dataGridViewPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewPatient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.personIDDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn});
+            this.dataGridViewPatient.DataSource = this.patientBindingSource;
+            this.dataGridViewPatient.EnableHeadersVisualStyles = false;
+            this.dataGridViewPatient.GridColor = System.Drawing.Color.MediumPurple;
+            this.dataGridViewPatient.Location = new System.Drawing.Point(343, 233);
+            this.dataGridViewPatient.Name = "dataGridViewPatient";
+            this.dataGridViewPatient.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewPatient.RowHeadersVisible = false;
+            this.dataGridViewPatient.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewPatient.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewPatient.RowTemplate.Height = 24;
+            this.dataGridViewPatient.Size = new System.Drawing.Size(411, 251);
+            this.dataGridViewPatient.TabIndex = 4;
+            // 
+            // labelPatient
+            // 
+            this.labelPatient.AutoSize = true;
+            this.labelPatient.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPatient.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelPatient.Location = new System.Drawing.Point(336, 128);
+            this.labelPatient.Name = "labelPatient";
+            this.labelPatient.Size = new System.Drawing.Size(156, 37);
+            this.labelPatient.TabIndex = 3;
+            this.labelPatient.Text = "Patienten";
+            // 
+            // labelToDoListe
+            // 
+            this.labelToDoListe.AutoSize = true;
+            this.labelToDoListe.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelToDoListe.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelToDoListe.Location = new System.Drawing.Point(19, 128);
+            this.labelToDoListe.Name = "labelToDoListe";
+            this.labelToDoListe.Size = new System.Drawing.Size(169, 37);
+            this.labelToDoListe.TabIndex = 2;
+            this.labelToDoListe.Text = "To do Liste";
+            // 
+            // labelDatum
+            // 
+            this.labelDatum.AutoSize = true;
+            this.labelDatum.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDatum.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelDatum.Location = new System.Drawing.Point(211, 22);
+            this.labelDatum.Name = "labelDatum";
+            this.labelDatum.Size = new System.Drawing.Size(115, 37);
+            this.labelDatum.TabIndex = 1;
+            this.labelDatum.Text = "Datum";
+            // 
+            // DatumUhr
+            // 
+            this.DatumUhr.Enabled = true;
+            this.DatumUhr.Tick += new System.EventHandler(this.DatumUhr_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(345, 187);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            // 
+            // personIDDataGridViewTextBoxColumn
+            // 
+            this.personIDDataGridViewTextBoxColumn.DataPropertyName = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.HeaderText = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
+            this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.personIDDataGridViewTextBoxColumn.Width = 101;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            // 
+            // patientBindingSource
+            // 
+            this.patientBindingSource.DataSource = typeof(DataManager.Patient);
             // 
             // buttonLogout
             // 
@@ -311,16 +518,6 @@
             this.buttonStammdaten.UseVisualStyleBackColor = true;
             this.buttonStammdaten.Click += new System.EventHandler(this.buttonPatientData_Click);
             // 
-            // panelHome
-            // 
-            this.panelHome.Controls.Add(this.buttonHome);
-            this.panelHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHome.Location = new System.Drawing.Point(0, 0);
-            this.panelHome.Margin = new System.Windows.Forms.Padding(2);
-            this.panelHome.Name = "panelHome";
-            this.panelHome.Size = new System.Drawing.Size(234, 96);
-            this.panelHome.TabIndex = 0;
-            // 
             // buttonHome
             // 
             this.buttonHome.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -328,6 +525,7 @@
             this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHome.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.buttonHome.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonHome.Image = ((System.Drawing.Image)(resources.GetObject("buttonHome.Image")));
             this.buttonHome.Location = new System.Drawing.Point(0, 0);
             this.buttonHome.Name = "buttonHome";
             this.buttonHome.Size = new System.Drawing.Size(234, 96);
@@ -335,218 +533,6 @@
             this.buttonHome.Text = "Care Solution";
             this.buttonHome.UseVisualStyleBackColor = true;
             this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
-            // 
-            // panelChildform
-            // 
-            this.panelChildform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.panelChildform.Controls.Add(this.label1);
-            this.panelChildform.Controls.Add(this.checkedListBox1);
-            this.panelChildform.Controls.Add(this.pictureBox1);
-            this.panelChildform.Controls.Add(this.textBoxSuche);
-            this.panelChildform.Controls.Add(this.buttonWeiterPatientsübersicht);
-            this.panelChildform.Controls.Add(this.dataGridViewPatient);
-            this.panelChildform.Controls.Add(this.labelPatient);
-            this.panelChildform.Controls.Add(this.labelToDoListe);
-            this.panelChildform.Controls.Add(this.labelDatum);
-            this.panelChildform.Controls.Add(this.labelUhr);
-            this.panelChildform.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildform.Location = new System.Drawing.Point(234, 0);
-            this.panelChildform.Name = "panelChildform";
-            this.panelChildform.Size = new System.Drawing.Size(766, 591);
-            this.panelChildform.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(19, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 37);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Wilkommen !";
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.CheckOnClick = true;
-            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Puls messen",
-            "Blutdruck checken"});
-            this.checkedListBox1.Location = new System.Drawing.Point(26, 187);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(268, 297);
-            this.checkedListBox1.TabIndex = 58;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(345, 187);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 57;
-            this.pictureBox1.TabStop = false;
-            // 
-            // textBoxSuche
-            // 
-            this.textBoxSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.textBoxSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSuche.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSuche.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxSuche.Location = new System.Drawing.Point(375, 187);
-            this.textBoxSuche.Name = "textBoxSuche";
-            this.textBoxSuche.Size = new System.Drawing.Size(240, 25);
-            this.textBoxSuche.TabIndex = 56;
-            this.textBoxSuche.Text = "Suche";
-            // 
-            // buttonWeiterPatientsübersicht
-            // 
-            this.buttonWeiterPatientsübersicht.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonWeiterPatientsübersicht.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            this.buttonWeiterPatientsübersicht.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonWeiterPatientsübersicht.FlatAppearance.BorderSize = 0;
-            this.buttonWeiterPatientsübersicht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonWeiterPatientsübersicht.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonWeiterPatientsübersicht.Location = new System.Drawing.Point(345, 506);
-            this.buttonWeiterPatientsübersicht.Name = "buttonWeiterPatientsübersicht";
-            this.buttonWeiterPatientsübersicht.Size = new System.Drawing.Size(255, 51);
-            this.buttonWeiterPatientsübersicht.TabIndex = 5;
-            this.buttonWeiterPatientsübersicht.Text = "Weiter zur Patientsübersicht";
-            this.buttonWeiterPatientsübersicht.UseVisualStyleBackColor = false;
-            this.buttonWeiterPatientsübersicht.Click += new System.EventHandler(this.buttonWeiterPatientsübersicht_Click);
-            // 
-            // dataGridViewPatient
-            // 
-            this.dataGridViewPatient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewPatient.AutoGenerateColumns = false;
-            this.dataGridViewPatient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewPatient.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridViewPatient.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.dataGridViewPatient.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewPatient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewPatient.ColumnHeadersHeight = 30;
-            this.dataGridViewPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewPatient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.personIDDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn});
-            this.dataGridViewPatient.DataSource = this.patientBindingSource;
-            this.dataGridViewPatient.EnableHeadersVisualStyles = false;
-            this.dataGridViewPatient.GridColor = System.Drawing.Color.MediumPurple;
-            this.dataGridViewPatient.Location = new System.Drawing.Point(343, 233);
-            this.dataGridViewPatient.Name = "dataGridViewPatient";
-            this.dataGridViewPatient.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewPatient.RowHeadersVisible = false;
-            this.dataGridViewPatient.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewPatient.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewPatient.RowTemplate.Height = 24;
-            this.dataGridViewPatient.Size = new System.Drawing.Size(411, 251);
-            this.dataGridViewPatient.TabIndex = 4;
-            // 
-            // personIDDataGridViewTextBoxColumn
-            // 
-            this.personIDDataGridViewTextBoxColumn.DataPropertyName = "PersonID";
-            this.personIDDataGridViewTextBoxColumn.HeaderText = "PersonID";
-            this.personIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
-            this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.personIDDataGridViewTextBoxColumn.Width = 101;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // patientBindingSource
-            // 
-            this.patientBindingSource.DataSource = typeof(DataManager.Patient);
-            // 
-            // labelPatient
-            // 
-            this.labelPatient.AutoSize = true;
-            this.labelPatient.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPatient.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelPatient.Location = new System.Drawing.Point(336, 128);
-            this.labelPatient.Name = "labelPatient";
-            this.labelPatient.Size = new System.Drawing.Size(156, 37);
-            this.labelPatient.TabIndex = 3;
-            this.labelPatient.Text = "Patienten";
-            // 
-            // labelToDoListe
-            // 
-            this.labelToDoListe.AutoSize = true;
-            this.labelToDoListe.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelToDoListe.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelToDoListe.Location = new System.Drawing.Point(19, 128);
-            this.labelToDoListe.Name = "labelToDoListe";
-            this.labelToDoListe.Size = new System.Drawing.Size(169, 37);
-            this.labelToDoListe.TabIndex = 2;
-            this.labelToDoListe.Text = "To do Liste";
-            // 
-            // labelDatum
-            // 
-            this.labelDatum.AutoSize = true;
-            this.labelDatum.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDatum.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelDatum.Location = new System.Drawing.Point(211, 22);
-            this.labelDatum.Name = "labelDatum";
-            this.labelDatum.Size = new System.Drawing.Size(115, 37);
-            this.labelDatum.TabIndex = 1;
-            this.labelDatum.Text = "Datum";
-            // 
-            // labelUhr
-            // 
-            this.labelUhr.AutoSize = true;
-            this.labelUhr.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelUhr.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelUhr.Location = new System.Drawing.Point(492, 22);
-            this.labelUhr.Name = "labelUhr";
-            this.labelUhr.Size = new System.Drawing.Size(64, 37);
-            this.labelUhr.TabIndex = 0;
-            this.labelUhr.Text = "Uhr";
-            // 
-            // DatumUhr
-            // 
-            this.DatumUhr.Enabled = true;
-            this.DatumUhr.Tick += new System.EventHandler(this.DatumUhr_Tick);
             // 
             // Main
             // 
@@ -560,14 +546,14 @@
             this.MinimumSize = new System.Drawing.Size(920, 450);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "Care Solution";
             this.panelMenu.ResumeLayout(false);
             this.panelLogout.ResumeLayout(false);
             this.panelHome.ResumeLayout(false);
             this.panelChildform.ResumeLayout(false);
             this.panelChildform.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -591,7 +577,6 @@
         private System.Windows.Forms.Button buttonLogout;
         private System.Windows.Forms.Button buttonHome;
         private System.Windows.Forms.Label labelDatum;
-        private System.Windows.Forms.Label labelUhr;
         private System.Windows.Forms.Timer DatumUhr;
         private System.Windows.Forms.Label labelToDoListe;
         private System.Windows.Forms.DataGridView dataGridViewPatient;

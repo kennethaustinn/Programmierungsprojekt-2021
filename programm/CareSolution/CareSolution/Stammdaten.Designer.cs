@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stammdaten));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.labelReport = new System.Windows.Forms.Label();
+            this.panelReport = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelReport = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.panelProfil = new System.Windows.Forms.Panel();
             this.labelName2 = new System.Windows.Forms.Label();
             this.labelVerischerung = new System.Windows.Forms.Label();
             this.labelArzt = new System.Windows.Forms.Label();
@@ -61,17 +63,22 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
+            this.panelReport.SuspendLayout();
+            this.panelProfil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
+            this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.panel3.Controls.Add(this.checkBox1);
-            this.panel3.Controls.Add(this.labelReport);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.labelName2);
+            this.panel3.Controls.Add(this.panelReport);
+            this.panel3.Controls.Add(this.pictureBoxTopMenu);
+            this.panel3.Controls.Add(this.panelProfil);
             this.panel3.Controls.Add(this.labelVerischerung);
             this.panel3.Controls.Add(this.labelArzt);
             this.panel3.Controls.Add(this.labelKontaktperson);
@@ -108,12 +115,46 @@
             this.panel3.Size = new System.Drawing.Size(748, 544);
             this.panel3.TabIndex = 3;
             // 
+            // panelReport
+            // 
+            this.panelReport.Controls.Add(this.label3);
+            this.panelReport.Controls.Add(this.labelReport);
+            this.panelReport.Controls.Add(this.checkBox1);
+            this.panelReport.Location = new System.Drawing.Point(374, 220);
+            this.panelReport.Name = "panelReport";
+            this.panelReport.Size = new System.Drawing.Size(374, 264);
+            this.panelReport.TabIndex = 63;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label3.Location = new System.Drawing.Point(-4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(66, 21);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "Report";
+            // 
+            // labelReport
+            // 
+            this.labelReport.AutoSize = true;
+            this.labelReport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.labelReport.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReport.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelReport.Location = new System.Drawing.Point(15, 31);
+            this.labelReport.Name = "labelReport";
+            this.labelReport.Size = new System.Drawing.Size(18, 21);
+            this.labelReport.TabIndex = 59;
+            this.labelReport.Text = "x";
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox1.Location = new System.Drawing.Point(374, 459);
+            this.checkBox1.Location = new System.Drawing.Point(19, 236);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(179, 25);
             this.checkBox1.TabIndex = 60;
@@ -121,50 +162,25 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // labelReport
+            // panelProfil
             // 
-            this.labelReport.AutoSize = true;
-            this.labelReport.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReport.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelReport.Location = new System.Drawing.Point(369, 297);
-            this.labelReport.Name = "labelReport";
-            this.labelReport.Size = new System.Drawing.Size(136, 21);
-            this.labelReport.TabIndex = 59;
-            this.labelReport.Text = "Höhe Blutdruck";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(368, 247);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 30);
-            this.label3.TabIndex = 58;
-            this.label3.Text = "Report";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(599, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 21);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "Daten von";
+            this.panelProfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelProfil.Controls.Add(this.labelName2);
+            this.panelProfil.Controls.Add(this.pictureBox1);
+            this.panelProfil.Location = new System.Drawing.Point(548, 3);
+            this.panelProfil.Name = "panelProfil";
+            this.panelProfil.Size = new System.Drawing.Size(200, 28);
+            this.panelProfil.TabIndex = 61;
             // 
             // labelName2
             // 
             this.labelName2.AutoSize = true;
-            this.labelName2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelName2.Location = new System.Drawing.Point(684, 9);
+            this.labelName2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName2.Location = new System.Drawing.Point(33, 5);
             this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(61, 21);
-            this.labelName2.TabIndex = 56;
-            this.labelName2.Text = "Name";
+            this.labelName2.Size = new System.Drawing.Size(72, 23);
+            this.labelName2.TabIndex = 58;
+            this.labelName2.Text = "label1";
             // 
             // labelVerischerung
             // 
@@ -464,6 +480,26 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Patient ID :";
             // 
+            // pictureBoxTopMenu
+            // 
+            this.pictureBoxTopMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTopMenu.Image")));
+            this.pictureBoxTopMenu.Location = new System.Drawing.Point(228, 24);
+            this.pictureBoxTopMenu.Name = "pictureBoxTopMenu";
+            this.pictureBoxTopMenu.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxTopMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxTopMenu.TabIndex = 62;
+            this.pictureBoxTopMenu.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 28);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            // 
             // Stammdaten
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -476,6 +512,12 @@
             this.Text = "Stammdaten";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panelReport.ResumeLayout(false);
+            this.panelReport.PerformLayout();
+            this.panelProfil.ResumeLayout(false);
+            this.panelProfil.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -491,7 +533,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelStammdaten;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelVerischerung;
         private System.Windows.Forms.Label labelKontaktperson;
         private System.Windows.Forms.Label labelPflegegrad;
@@ -511,9 +552,13 @@
         public System.Windows.Forms.Label labelVorname;
         public System.Windows.Forms.Label labelName;
         public System.Windows.Forms.Label labelId;
-        public System.Windows.Forms.Label labelName2;
         public System.Windows.Forms.Label labelArzt;
         public System.Windows.Forms.Label labelAdresse;
         public System.Windows.Forms.Label labelAlter;
+        private System.Windows.Forms.Panel panelProfil;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelName2;
+        private System.Windows.Forms.PictureBox pictureBoxTopMenu;
+        private System.Windows.Forms.Panel panelReport;
     }
 }

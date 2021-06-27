@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gesundheitszustand));
             this.panelBio = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,12 +48,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
             this.panelBio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBio
             // 
             this.panelBio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelBio.Controls.Add(this.pictureBoxTopMenu);
             this.panelBio.Controls.Add(this.button2);
             this.panelBio.Controls.Add(this.button1);
             this.panelBio.Controls.Add(this.buttonAnlegen);
@@ -176,7 +180,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
             this.label4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(222, 24);
+            this.label4.Location = new System.Drawing.Point(245, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(289, 34);
             this.label4.TabIndex = 34;
@@ -277,9 +281,9 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label12.Location = new System.Drawing.Point(22, 154);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 21);
+            this.label12.Size = new System.Drawing.Size(73, 21);
             this.label12.TabIndex = 17;
-            this.label12.Text = "Beruf :";
+            this.label12.Text = "Einheit :";
             // 
             // label13
             // 
@@ -288,9 +292,19 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label13.Location = new System.Drawing.Point(22, 106);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 21);
+            this.label13.Size = new System.Drawing.Size(173, 21);
             this.label13.TabIndex = 16;
-            this.label13.Text = "Schule :";
+            this.label13.Text = "Vital Parameter Id :";
+            // 
+            // pictureBoxTopMenu
+            // 
+            this.pictureBoxTopMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTopMenu.Image")));
+            this.pictureBoxTopMenu.Location = new System.Drawing.Point(207, 26);
+            this.pictureBoxTopMenu.Name = "pictureBoxTopMenu";
+            this.pictureBoxTopMenu.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxTopMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxTopMenu.TabIndex = 66;
+            this.pictureBoxTopMenu.TabStop = false;
             // 
             // Gesundheitszustand
             // 
@@ -304,6 +318,7 @@
             this.Text = "Gesundheitszustand";
             this.panelBio.ResumeLayout(false);
             this.panelBio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,5 +344,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.PictureBox pictureBoxTopMenu;
     }
 }

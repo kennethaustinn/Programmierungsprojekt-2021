@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bio));
             this.panelBio = new System.Windows.Forms.Panel();
+            this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
+            this.panelProfil = new System.Windows.Forms.Panel();
+            this.labelName2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelSprache = new System.Windows.Forms.Label();
             this.labelAusbildung = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelName2 = new System.Windows.Forms.Label();
-            this.buttonSpeichern = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonScanNeueData = new System.Windows.Forms.Button();
             this.labelFamilieMitglieder = new System.Windows.Forms.Label();
             this.labelKinder = new System.Windows.Forms.Label();
@@ -54,19 +56,21 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panelBio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
+            this.panelProfil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBio
             // 
             this.panelBio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelBio.Controls.Add(this.pictureBoxTopMenu);
+            this.panelBio.Controls.Add(this.panelProfil);
             this.panelBio.Controls.Add(this.labelSprache);
             this.panelBio.Controls.Add(this.labelAusbildung);
             this.panelBio.Controls.Add(this.label3);
             this.panelBio.Controls.Add(this.label2);
-            this.panelBio.Controls.Add(this.label1);
-            this.panelBio.Controls.Add(this.labelName2);
-            this.panelBio.Controls.Add(this.buttonSpeichern);
-            this.panelBio.Controls.Add(this.buttonUpdate);
+            this.panelBio.Controls.Add(this.buttonEdit);
             this.panelBio.Controls.Add(this.buttonScanNeueData);
             this.panelBio.Controls.Add(this.labelFamilieMitglieder);
             this.panelBio.Controls.Add(this.labelKinder);
@@ -89,6 +93,47 @@
             this.panelBio.Name = "panelBio";
             this.panelBio.Size = new System.Drawing.Size(748, 544);
             this.panelBio.TabIndex = 24;
+            // 
+            // pictureBoxTopMenu
+            // 
+            this.pictureBoxTopMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTopMenu.Image")));
+            this.pictureBoxTopMenu.Location = new System.Drawing.Point(257, 24);
+            this.pictureBoxTopMenu.Name = "pictureBoxTopMenu";
+            this.pictureBoxTopMenu.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxTopMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxTopMenu.TabIndex = 65;
+            this.pictureBoxTopMenu.TabStop = false;
+            // 
+            // panelProfil
+            // 
+            this.panelProfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelProfil.Controls.Add(this.labelName2);
+            this.panelProfil.Controls.Add(this.pictureBox1);
+            this.panelProfil.Location = new System.Drawing.Point(548, 3);
+            this.panelProfil.Name = "panelProfil";
+            this.panelProfil.Size = new System.Drawing.Size(200, 28);
+            this.panelProfil.TabIndex = 64;
+            // 
+            // labelName2
+            // 
+            this.labelName2.AutoSize = true;
+            this.labelName2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelName2.Location = new System.Drawing.Point(33, 5);
+            this.labelName2.Name = "labelName2";
+            this.labelName2.Size = new System.Drawing.Size(72, 23);
+            this.labelName2.TabIndex = 58;
+            this.labelName2.Text = "label1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 28);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
             // 
             // labelSprache
             // 
@@ -134,60 +179,20 @@
             this.label2.TabIndex = 60;
             this.label2.Text = "Ausbildung :";
             // 
-            // label1
+            // buttonEdit
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(599, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 21);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Daten von";
-            // 
-            // labelName2
-            // 
-            this.labelName2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelName2.AutoSize = true;
-            this.labelName2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelName2.Location = new System.Drawing.Point(684, 9);
-            this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(61, 21);
-            this.labelName2.TabIndex = 58;
-            this.labelName2.Text = "Name";
-            // 
-            // buttonSpeichern
-            // 
-            this.buttonSpeichern.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSpeichern.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            this.buttonSpeichern.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSpeichern.FlatAppearance.BorderSize = 0;
-            this.buttonSpeichern.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSpeichern.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonSpeichern.Location = new System.Drawing.Point(514, 481);
-            this.buttonSpeichern.Name = "buttonSpeichern";
-            this.buttonSpeichern.Size = new System.Drawing.Size(166, 51);
-            this.buttonSpeichern.TabIndex = 44;
-            this.buttonSpeichern.Text = "Speichern";
-            this.buttonSpeichern.UseVisualStyleBackColor = false;
-            // 
-            // buttonUpdate
-            // 
-            this.buttonUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            this.buttonUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonUpdate.FlatAppearance.BorderSize = 0;
-            this.buttonUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUpdate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonUpdate.Location = new System.Drawing.Point(301, 481);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(166, 51);
-            this.buttonUpdate.TabIndex = 43;
-            this.buttonUpdate.Text = "Update";
-            this.buttonUpdate.UseVisualStyleBackColor = false;
-            this.buttonUpdate.Click += new System.EventHandler(this.button1_Click);
+            this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEdit.FlatAppearance.BorderSize = 0;
+            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonEdit.Location = new System.Drawing.Point(514, 481);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(166, 51);
+            this.buttonEdit.TabIndex = 44;
+            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.UseVisualStyleBackColor = false;
             // 
             // buttonScanNeueData
             // 
@@ -383,6 +388,10 @@
             this.Text = "Bio";
             this.panelBio.ResumeLayout(false);
             this.panelBio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
+            this.panelProfil.ResumeLayout(false);
+            this.panelProfil.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -405,14 +414,15 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button buttonSpeichern;
-        private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonScanNeueData;
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label labelName2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelSprache;
         private System.Windows.Forms.Label labelAusbildung;
+        private System.Windows.Forms.Panel panelProfil;
+        private System.Windows.Forms.Label labelName2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.PictureBox pictureBoxTopMenu;
     }
 }

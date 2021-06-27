@@ -17,7 +17,6 @@ namespace CareSolution
     {
         private Button currentButton;
         private Panel leftBorderBtn;
-
         public Main()
         {
             InitializeComponent();
@@ -25,8 +24,13 @@ namespace CareSolution
             leftBorderBtn.Size = new Size(7, 38);
             panelMenu.Controls.Add(leftBorderBtn);
 
-        }
+            var patient = new Patient.Patient().SetTestData();
+            foreach (var item in patient.Doctor)
+            {
+                checkedListBox1.Items.Add(item.ToDoList);
+            }
 
+        }
         //speichern das Form von Anfang
         private Form activeForm = null;
 
@@ -36,7 +40,6 @@ namespace CareSolution
             {
                 activeForm.Close();
             }
-
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -45,7 +48,6 @@ namespace CareSolution
             panelChildform.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
 
         private void ActivateButton(object senderBtn)
@@ -107,11 +109,13 @@ namespace CareSolution
         private void buttonMaßnahmenplan_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            openChildForm(new Maßnahmenplan());
         }
 
         private void buttonAnamnese_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            openChildForm(new Anamnese());
         }
 
         private void buttonGesundheitszustand_Click(object sender, EventArgs e)
@@ -149,14 +153,30 @@ namespace CareSolution
 
         private void DatumUhr_Tick(object sender, EventArgs e)
         {
-            labelDatum.Text = DateTime.Now.ToString("D");
-            labelUhr.Text = DateTime.Now.ToString("HH:mm");
+            labelDatum.Text = DateTime.Now.ToString("f");
         }
 
         private void buttonWeiterPatientsübersicht_Click(object sender, EventArgs e)
         {
             openChildForm(new PatientData());
         }
+        private void textBoxSuche_Enter(object sender, EventArgs e)
+        {
+            if (textBoxSuche.Text == "Suche")
+                textBoxSuche.Text = "";
+
+            textBoxSuche.ForeColor = Color.WhiteSmoke;
+        }
+
+        private void textBoxSuche_Leave(object sender, EventArgs e)
+        {
+            if (textBoxSuche.Text == "")
+                textBoxSuche.Text = "Suche";
+
+            textBoxSuche.ForeColor = Color.Gray;
+        }
+
+
     }
 
 }

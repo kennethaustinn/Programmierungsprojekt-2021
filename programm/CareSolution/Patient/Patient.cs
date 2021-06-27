@@ -89,7 +89,7 @@ namespace Patient
             testCareReport.CareReportID = 001;
             testCareReport.ActionPlanFulfilled = true;
             testCareReport.CreatedOn = new DateTime(2021,05,19);
-            testCareReport.Deviations = "Es kam zu keiner Abweichung im Vergleich zu den vorherigen Tagen";
+            testCareReport.Deviations = "Keine Abweichung zu den Vortagen";
             testCareReport.CaregiverPersonID = 123456;
 
             // Beipieldaten für eine Instanz der HealthData Klasse
@@ -140,10 +140,13 @@ namespace Patient
 
             // Beipieldaten für eine Instanz der Doctor Klasse
             var testDoctor = new Doctor();
+            testDoctor.FirstName = "Hans";
+            testDoctor.LastName = "Otto";
             testDoctor.Address = "Spandauerstr. 24 12564 Berlin";
             testDoctor.MedicalSpecialty = "Facharzt für Allgemeinmedizin";
+            testDoctor.ToDoList = "Puls messen";
 
-            
+
             //Hinzufügen der Instanzen zu der Klasse HealthData
             testHealthData.VitalParameters.Add(testVitalParameters);
             testHealthData.Medication.Add(testMedication);

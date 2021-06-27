@@ -17,7 +17,7 @@ namespace CareSolution
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();
-            labelName2.Text = patient.LastName;
+            labelName2.Text = patient.FirstName + " " + patient.LastName;
             labelSchule.Text = patient.Bio.School;
             labelBeruf.Text = patient.Bio.Job;
             labelAusbildung.Text = patient.Bio.Training;
@@ -32,7 +32,7 @@ namespace CareSolution
         private void buttonScanNeueData_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "PDF File | *.pdf";
+            ofd.Filter = "PDF File (*.pdf)| *.pdf |Image Files (*.png;*.jpg)|*.png;*.jpg ";
             ofd.ShowDialog();
         }
 

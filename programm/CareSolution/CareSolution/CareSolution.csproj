@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anamnese.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anamnese.Designer.cs">
+      <DependentUpon>Anamnese.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     <Compile Include="Stammdaten.Designer.cs">
       <DependentUpon>Stammdaten.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Anamnese.resx">
+      <DependentUpon>Anamnese.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bio.resx">
       <DependentUpon>Bio.cs</DependentUpon>
     </EmbeddedResource>

@@ -29,25 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientData));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelPatient = new System.Windows.Forms.Label();
             this.panelPatient = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonNeueData = new System.Windows.Forms.Button();
             this.textBoxSuche = new System.Windows.Forms.TextBox();
             this.dataGridViewPatient = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Alt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Arzt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelPatient.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@
             // panelPatient
             // 
             this.panelPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelPatient.Controls.Add(this.buttonNeueData);
             this.panelPatient.Controls.Add(this.pictureBox1);
             this.panelPatient.Controls.Add(this.textBoxSuche);
             this.panelPatient.Controls.Add(this.dataGridViewPatient);
@@ -77,16 +79,21 @@
             this.panelPatient.Size = new System.Drawing.Size(748, 544);
             this.panelPatient.TabIndex = 25;
             // 
-            // pictureBox1
+            // buttonNeueData
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(245, 110);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
+            this.buttonNeueData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonNeueData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            this.buttonNeueData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNeueData.FlatAppearance.BorderSize = 0;
+            this.buttonNeueData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNeueData.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonNeueData.Location = new System.Drawing.Point(279, 481);
+            this.buttonNeueData.Name = "buttonNeueData";
+            this.buttonNeueData.Size = new System.Drawing.Size(166, 51);
+            this.buttonNeueData.TabIndex = 56;
+            this.buttonNeueData.Text = "Neue hinzufügen";
+            this.buttonNeueData.UseVisualStyleBackColor = false;
+            this.buttonNeueData.Click += new System.EventHandler(this.buttonNeueData_Click);
             // 
             // textBoxSuche
             // 
@@ -94,7 +101,7 @@
             this.textBoxSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxSuche.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSuche.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxSuche.Location = new System.Drawing.Point(279, 110);
+            this.textBoxSuche.Location = new System.Drawing.Point(279, 82);
             this.textBoxSuche.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxSuche.Name = "textBoxSuche";
             this.textBoxSuche.Size = new System.Drawing.Size(270, 25);
@@ -113,14 +120,14 @@
             this.dataGridViewPatient.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
             this.dataGridViewPatient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewPatient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewPatient.ColumnHeadersHeight = 30;
             this.dataGridViewPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewPatient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -132,30 +139,45 @@
             this.Arzt});
             this.dataGridViewPatient.EnableHeadersVisualStyles = false;
             this.dataGridViewPatient.GridColor = System.Drawing.Color.MediumPurple;
-            this.dataGridViewPatient.Location = new System.Drawing.Point(36, 186);
+            this.dataGridViewPatient.Location = new System.Drawing.Point(43, 145);
             this.dataGridViewPatient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewPatient.Name = "dataGridViewPatient";
             this.dataGridViewPatient.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewPatient.RowHeadersVisible = false;
             this.dataGridViewPatient.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewPatient.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewPatient.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewPatient.RowTemplate.Height = 24;
-            this.dataGridViewPatient.Size = new System.Drawing.Size(674, 205);
+            this.dataGridViewPatient.Size = new System.Drawing.Size(674, 135);
             this.dataGridViewPatient.TabIndex = 35;
             this.dataGridViewPatient.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPatient_CellDoubleClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(245, 82);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 55;
+            this.pictureBox1.TabStop = false;
+            // 
+            // patientBindingSource
+            // 
+            this.patientBindingSource.DataSource = typeof(DataManager.Patient);
             // 
             // id
             // 
@@ -199,10 +221,6 @@
             this.Arzt.MinimumWidth = 6;
             this.Arzt.Name = "Arzt";
             // 
-            // patientBindingSource
-            // 
-            this.patientBindingSource.DataSource = typeof(DataManager.Patient);
-            // 
             // PatientData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -216,8 +234,8 @@
             this.Load += new System.EventHandler(this.PatientData_Load);
             this.panelPatient.ResumeLayout(false);
             this.panelPatient.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -231,6 +249,7 @@
         private System.Windows.Forms.BindingSource patientBindingSource;
         private System.Windows.Forms.TextBox textBoxSuche;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonNeueData;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nachname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vorname;
