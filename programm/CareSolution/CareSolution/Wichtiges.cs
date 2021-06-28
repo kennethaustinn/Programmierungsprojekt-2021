@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CareSolution
 {
-    public partial class Gesundheitszustand : Form
+    public partial class Wichtiges : Form
     {
-        public Gesundheitszustand()
+        public Wichtiges()
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();

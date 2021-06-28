@@ -34,8 +34,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.labelReport = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
             this.panelProfil = new System.Windows.Forms.Panel();
             this.labelName2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelVerischerung = new System.Windows.Forms.Label();
             this.labelArzt = new System.Windows.Forms.Label();
             this.labelKontaktperson = new System.Windows.Forms.Label();
@@ -63,12 +65,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panelReport.SuspendLayout();
-            this.panelProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
+            this.panelProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panel3.Controls.Add(this.buttonEdit);
             this.panel3.Controls.Add(this.panelReport);
             this.panel3.Controls.Add(this.pictureBoxTopMenu);
             this.panel3.Controls.Add(this.panelProfil);
@@ -120,9 +122,9 @@
             this.panelReport.Controls.Add(this.label3);
             this.panelReport.Controls.Add(this.labelReport);
             this.panelReport.Controls.Add(this.checkBox1);
-            this.panelReport.Location = new System.Drawing.Point(374, 220);
+            this.panelReport.Location = new System.Drawing.Point(374, 258);
             this.panelReport.Name = "panelReport";
-            this.panelReport.Size = new System.Drawing.Size(374, 264);
+            this.panelReport.Size = new System.Drawing.Size(374, 182);
             this.panelReport.TabIndex = 63;
             // 
             // label3
@@ -131,7 +133,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(-4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 21);
             this.label3.TabIndex = 58;
@@ -154,13 +156,23 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox1.Location = new System.Drawing.Point(19, 236);
+            this.checkBox1.Location = new System.Drawing.Point(19, 155);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(179, 25);
             this.checkBox1.TabIndex = 60;
             this.checkBox1.Text = "Bereits behandelt";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // pictureBoxTopMenu
+            // 
+            this.pictureBoxTopMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTopMenu.Image")));
+            this.pictureBoxTopMenu.Location = new System.Drawing.Point(228, 24);
+            this.pictureBoxTopMenu.Name = "pictureBoxTopMenu";
+            this.pictureBoxTopMenu.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxTopMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxTopMenu.TabIndex = 62;
+            this.pictureBoxTopMenu.TabStop = false;
             // 
             // panelProfil
             // 
@@ -182,12 +194,22 @@
             this.labelName2.TabIndex = 58;
             this.labelName2.Text = "label1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 28);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            // 
             // labelVerischerung
             // 
             this.labelVerischerung.AutoSize = true;
             this.labelVerischerung.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVerischerung.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelVerischerung.Location = new System.Drawing.Point(503, 146);
+            this.labelVerischerung.Location = new System.Drawing.Point(493, 182);
             this.labelVerischerung.Name = "labelVerischerung";
             this.labelVerischerung.Size = new System.Drawing.Size(18, 21);
             this.labelVerischerung.TabIndex = 55;
@@ -198,7 +220,7 @@
             this.labelArzt.AutoSize = true;
             this.labelArzt.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelArzt.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelArzt.Location = new System.Drawing.Point(158, 463);
+            this.labelArzt.Location = new System.Drawing.Point(493, 110);
             this.labelArzt.Name = "labelArzt";
             this.labelArzt.Size = new System.Drawing.Size(89, 21);
             this.labelArzt.TabIndex = 48;
@@ -220,7 +242,7 @@
             this.labelPflegegrad.AutoSize = true;
             this.labelPflegegrad.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPflegegrad.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelPflegegrad.Location = new System.Drawing.Point(503, 110);
+            this.labelPflegegrad.Location = new System.Drawing.Point(493, 146);
             this.labelPflegegrad.Name = "labelPflegegrad";
             this.labelPflegegrad.Size = new System.Drawing.Size(19, 21);
             this.labelPflegegrad.TabIndex = 53;
@@ -275,7 +297,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label17.Location = new System.Drawing.Point(370, 146);
+            this.label17.Location = new System.Drawing.Point(370, 182);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(127, 21);
             this.label17.TabIndex = 44;
@@ -286,7 +308,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label16.Location = new System.Drawing.Point(12, 463);
+            this.label16.Location = new System.Drawing.Point(370, 110);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(52, 21);
             this.label16.TabIndex = 43;
@@ -308,7 +330,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label14.Location = new System.Drawing.Point(370, 110);
+            this.label14.Location = new System.Drawing.Point(370, 146);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(100, 21);
             this.label14.TabIndex = 41;
@@ -480,25 +502,20 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Patient ID :";
             // 
-            // pictureBoxTopMenu
+            // buttonEdit
             // 
-            this.pictureBoxTopMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTopMenu.Image")));
-            this.pictureBoxTopMenu.Location = new System.Drawing.Point(228, 24);
-            this.pictureBoxTopMenu.Name = "pictureBoxTopMenu";
-            this.pictureBoxTopMenu.Size = new System.Drawing.Size(32, 32);
-            this.pictureBoxTopMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxTopMenu.TabIndex = 62;
-            this.pictureBoxTopMenu.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 28);
-            this.pictureBox1.TabIndex = 57;
-            this.pictureBox1.TabStop = false;
+            this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEdit.FlatAppearance.BorderSize = 0;
+            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonEdit.Location = new System.Drawing.Point(241, 481);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(166, 51);
+            this.buttonEdit.TabIndex = 110;
+            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.UseVisualStyleBackColor = false;
             // 
             // Stammdaten
             // 
@@ -514,9 +531,9 @@
             this.panel3.PerformLayout();
             this.panelReport.ResumeLayout(false);
             this.panelReport.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
             this.panelProfil.ResumeLayout(false);
             this.panelProfil.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -560,5 +577,6 @@
         private System.Windows.Forms.Label labelName2;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
         private System.Windows.Forms.Panel panelReport;
+        private System.Windows.Forms.Button buttonEdit;
     }
 }

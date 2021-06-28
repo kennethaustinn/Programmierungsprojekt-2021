@@ -4,38 +4,32 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CareSolution
 {
-    public partial class Bio : Form
+    public partial class Pflegebericht : Form
     {
-        public Bio()
+        public Pflegebericht()
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();
             labelName2.Text = patient.FirstName + " " + patient.LastName;
-            labelSchule.Text = patient.Bio.School;
-            labelBeruf.Text = patient.Bio.Job;
-            labelAusbildung.Text = patient.Bio.Training;
-            labelUni.Text = patient.Bio.University;
-            labelPartnerschaft.Text = patient.Bio.Partnership;
-            labelKinder.Text = patient.Bio.Children;
-            labelFreizeit.Text = patient.Bio.Leisure;
-            labelFamilieMitglieder.Text = patient.Bio.Family_Members;
-            labelSprache.Text = patient.Bio.Languages;
+            foreach (var item in patient.CareReport)
+            {
+                labelDatum.Text = item.CreatedOn.ToShortDateString();
+                checkBoxErfüllungMaßnahmenplan.Checked = item.ActionPlanFulfilled;
+                labelAbweichungen.Text = item.Deviations;
+                labelErstelltvon.Text = item.CaregiverPersonID.ToString();
+            }
         }
-
         private void buttonScanNeueData_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "PDF File (*.pdf)| *.pdf |Image Files (*.png;*.jpg)|*.png;*.jpg ";
             ofd.ShowDialog();
         }
-
-
     }
 }

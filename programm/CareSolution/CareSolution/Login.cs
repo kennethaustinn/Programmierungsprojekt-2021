@@ -46,11 +46,19 @@ namespace CareSolution
 
         private void pictureBoxPassword_MouseDown(object sender, MouseEventArgs e)
         {
+            
             textBox2.UseSystemPasswordChar = false;
         }
         private void pictureBoxPassword_MouseUp(object sender, MouseEventArgs e)
         {
-            textBox2.UseSystemPasswordChar = true;
+            if (textBox2.Text == "Password")
+            {
+                textBox2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -130,8 +138,7 @@ namespace CareSolution
                 textBox2.Text = "";
                 textBox2.UseSystemPasswordChar = true;
             }
-                
-
+            
             textBox2.ForeColor = Color.Black;
         }
 

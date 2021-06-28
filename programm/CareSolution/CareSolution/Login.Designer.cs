@@ -45,17 +45,20 @@ namespace CareSolution
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowpassword)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
+            this.panelMenu.Controls.Add(this.pictureBox1);
             this.panelMenu.Controls.Add(this.label2);
             this.panelMenu.Controls.Add(this.label1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -72,7 +75,7 @@ namespace CareSolution
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(57, 258);
+            this.label2.Location = new System.Drawing.Point(57, 253);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(271, 40);
             this.label2.TabIndex = 1;
@@ -86,7 +89,7 @@ namespace CareSolution
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(29, 204);
+            this.label1.Location = new System.Drawing.Point(26, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(341, 40);
             this.label1.TabIndex = 0;
@@ -199,7 +202,7 @@ namespace CareSolution
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(141, 344);
+            this.button1.Location = new System.Drawing.Point(210, 348);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 37);
             this.button1.TabIndex = 2;
@@ -256,6 +259,16 @@ namespace CareSolution
             this.label4.TabIndex = 3;
             this.label4.Text = "Login to your account";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(64, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(234, 133);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -277,6 +290,7 @@ namespace CareSolution
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,6 +311,7 @@ namespace CareSolution
         private System.Windows.Forms.Button buttonMaximieren;
         private System.Windows.Forms.Button buttonMinimize;
         private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

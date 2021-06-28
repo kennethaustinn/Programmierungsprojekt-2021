@@ -19,6 +19,13 @@ namespace CareSolution
             labelName2.Text = patient.FirstName + " " + patient.LastName;
             labelKrankengeschichte.Text = patient.HealthData.MedicalHistory;
             labelChronischeKrankheit.Text = patient.HealthData.ChronicDiseases;
+            foreach (var item in patient.HealthData.RiskValues)
+            {
+                labelDekubitus.Text = item.Decubitus.ToString();
+                labelSchmerz.Text = item.Pain.ToString();
+                labelSturzgefahr.Text = item.Falling.ToString();
+                labelDemenz.Text = item.Dementia.ToString();
+            }
         }
 
     }

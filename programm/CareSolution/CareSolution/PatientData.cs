@@ -57,46 +57,46 @@ namespace CareSolution
         private void textBoxSuche_TextChanged(object sender, EventArgs e)
         {
 
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from [dbo].[Patient] where Vorname like '%" + textBoxSuche.Text + "%' or Name like'%" + textBoxSuche.Text + "%'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridViewPatient.Rows.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                int n = dataGridViewPatient.Rows.Add();
-                dataGridViewPatient.Rows[n].Cells["id"].Value = row["Id"].ToString();
-                dataGridViewPatient.Rows[n].Cells["nachname"].Value = row["Name"].ToString();
-                dataGridViewPatient.Rows[n].Cells["vorname"].Value = row["Vorname"].ToString();
-                dataGridViewPatient.Rows[n].Cells["alt"].Value = row["Alter"].ToString();
-                dataGridViewPatient.Rows[n].Cells["adresse"].Value = row["Adresse"].ToString();
-                dataGridViewPatient.Rows[n].Cells["arzt"].Value = row["Arzt"].ToString();
-            }
+            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
+            //SqlDataAdapter sda = new SqlDataAdapter("select * from [dbo].[Patient] where Vorname like '%" + textBoxSuche.Text + "%' or Name like'%" + textBoxSuche.Text + "%'", con);
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //dataGridViewPatient.Rows.Clear();
+            //foreach (DataRow row in dt.Rows)
+            //{
+            //    int n = dataGridViewPatient.Rows.Add();
+            //    dataGridViewPatient.Rows[n].Cells["id"].Value = row["Id"].ToString();
+            //    dataGridViewPatient.Rows[n].Cells["nachname"].Value = row["Name"].ToString();
+            //    dataGridViewPatient.Rows[n].Cells["vorname"].Value = row["Vorname"].ToString();
+            //    dataGridViewPatient.Rows[n].Cells["alt"].Value = row["Alter"].ToString();
+            //    dataGridViewPatient.Rows[n].Cells["adresse"].Value = row["Adresse"].ToString();
+            //    dataGridViewPatient.Rows[n].Cells["arzt"].Value = row["Arzt"].ToString();
+            //}
         }
 
         private void PatientData_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("select * from  [dbo].[Patient]", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridViewPatient.Rows.Clear();
-            foreach (DataRow row in dt.Rows)
-            {
-                int n = dataGridViewPatient.Rows.Add();
-                dataGridViewPatient.Rows[n].Cells["id"].Value = row["Id"].ToString();
-                dataGridViewPatient.Rows[n].Cells["nachname"].Value = row["Name"].ToString();
-                dataGridViewPatient.Rows[n].Cells["vorname"].Value = row["Vorname"].ToString();
-                dataGridViewPatient.Rows[n].Cells["alt"].Value = row["Alter"].ToString();
-                dataGridViewPatient.Rows[n].Cells["adresse"].Value = row["Adresse"].ToString();
-                dataGridViewPatient.Rows[n].Cells["arzt"].Value = row["Arzt"].ToString();
-            }
-            //var patient = new Patient.Patient().SetTestData();
-            //int n = dataGridViewPatient.Rows.Add();
-            //dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
-            //dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
-            //dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName; 
-            //dataGridViewPatient.Rows[n].Cells["adresse"].Value = patient.Address;
+            //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
+            //SqlDataAdapter sda = new SqlDataAdapter("select * from  [dbo].[Patient]", con);
+            //DataTable dt = new DataTable();
+            //sda.Fill(dt);
+            //dataGridViewPatient.Rows.Clear();
+            //foreach (DataRow row in dt.Rows)
+            //{
+            //    int n = dataGridViewPatient.Rows.Add();
+            //    dataGridViewPatient.Rows[n].Cells["id"].Value = row["Id"].ToString();
+            //    dataGridViewPatient.Rows[n].Cells["nachname"].Value = row["Name"].ToString();
+            //    dataGridViewPatient.Rows[n].Cells["vorname"].Value = row["Vorname"].ToString();
+            //    dataGridViewPatient.Rows[n].Cells["alt"].Value = row["Alter"].ToString();
+            //    dataGridViewPatient.Rows[n].Cells["adresse"].Value = row["Adresse"].ToString();
+            //    dataGridViewPatient.Rows[n].Cells["arzt"].Value = row["Arzt"].ToString();
+            //}
+            var patient = new Patient.Patient().SetTestData();
+            int n = dataGridViewPatient.Rows.Add();
+            dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
+            dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
+            dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
+            dataGridViewPatient.Rows[n].Cells["adresse"].Value = patient.Address;
             //DataTable dt = new DataTable();
             //DataRow myDataRow;
             //myDataRow = dt.NewRow();

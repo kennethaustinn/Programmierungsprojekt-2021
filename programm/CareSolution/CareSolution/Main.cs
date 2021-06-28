@@ -23,7 +23,6 @@ namespace CareSolution
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 38);
             panelMenu.Controls.Add(leftBorderBtn);
-
             var patient = new Patient.Patient().SetTestData();
             foreach (var item in patient.Doctor)
             {
@@ -127,21 +126,26 @@ namespace CareSolution
         private void buttonPflegebericht_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            openChildForm(new Pflegebericht());
         }
 
         private void buttonMedikamente_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            openChildForm(new Medikamente());
+
         }
 
         private void buttonWichtiges_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            openChildForm(new Wichtiges());
         }
 
         private void buttonSonstiges_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            openChildForm(new Sonstiges());
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
@@ -176,7 +180,14 @@ namespace CareSolution
             textBoxSuche.ForeColor = Color.Gray;
         }
 
-
+        private void Main_Load(object sender, EventArgs e)
+        {
+            var patient = new Patient.Patient().SetTestData();
+            int n = dataGridViewPatient.Rows.Add();
+            dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
+            dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
+            dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
+        }
     }
 
 }
