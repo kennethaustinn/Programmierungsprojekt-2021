@@ -48,11 +48,11 @@ namespace CareSolution
         {
             if (checkBox1.Checked)
             {
-                labelReport.Visible=false;
+                labelReport.Enabled=false;
             }
             else
             {
-                labelReport.Visible = true;
+                labelReport.Enabled = true;
             }
         }
         public static int CalculateAge(DateTime dateOfBirth)

@@ -37,7 +37,7 @@
             this.panelLogout = new System.Windows.Forms.Panel();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonSonstiges = new System.Windows.Forms.Button();
-            this.buttonWichtiges = new System.Windows.Forms.Button();
+            this.buttonZuhause = new System.Windows.Forms.Button();
             this.buttonMedikamente = new System.Windows.Forms.Button();
             this.buttonPflegebericht = new System.Windows.Forms.Button();
             this.buttonGesundheitszustand = new System.Windows.Forms.Button();
@@ -54,14 +54,14 @@
             this.textBoxSuche = new System.Windows.Forms.TextBox();
             this.buttonWeiterPatientsübersicht = new System.Windows.Forms.Button();
             this.dataGridViewPatient = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelPatient = new System.Windows.Forms.Label();
             this.labelToDoListe = new System.Windows.Forms.Label();
             this.labelDatum = new System.Windows.Forms.Label();
             this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DatumUhr = new System.Windows.Forms.Timer(this.components);
-            this.vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMenu.SuspendLayout();
             this.panelLogout.SuspendLayout();
             this.panelHome.SuspendLayout();
@@ -77,7 +77,7 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
             this.panelMenu.Controls.Add(this.panelLogout);
             this.panelMenu.Controls.Add(this.buttonSonstiges);
-            this.panelMenu.Controls.Add(this.buttonWichtiges);
+            this.panelMenu.Controls.Add(this.buttonZuhause);
             this.panelMenu.Controls.Add(this.buttonMedikamente);
             this.panelMenu.Controls.Add(this.buttonPflegebericht);
             this.panelMenu.Controls.Add(this.buttonGesundheitszustand);
@@ -142,26 +142,26 @@
             this.buttonSonstiges.UseVisualStyleBackColor = true;
             this.buttonSonstiges.Click += new System.EventHandler(this.buttonSonstiges_Click);
             // 
-            // buttonWichtiges
+            // buttonZuhause
             // 
-            this.buttonWichtiges.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonWichtiges.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonWichtiges.FlatAppearance.BorderSize = 0;
-            this.buttonWichtiges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonWichtiges.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonWichtiges.Image = ((System.Drawing.Image)(resources.GetObject("buttonWichtiges.Image")));
-            this.buttonWichtiges.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonWichtiges.Location = new System.Drawing.Point(0, 399);
-            this.buttonWichtiges.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonWichtiges.Name = "buttonWichtiges";
-            this.buttonWichtiges.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.buttonWichtiges.Size = new System.Drawing.Size(234, 38);
-            this.buttonWichtiges.TabIndex = 8;
-            this.buttonWichtiges.Text = "Wichtiges";
-            this.buttonWichtiges.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonWichtiges.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonWichtiges.UseVisualStyleBackColor = true;
-            this.buttonWichtiges.Click += new System.EventHandler(this.buttonWichtiges_Click);
+            this.buttonZuhause.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonZuhause.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonZuhause.FlatAppearance.BorderSize = 0;
+            this.buttonZuhause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonZuhause.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonZuhause.Image = ((System.Drawing.Image)(resources.GetObject("buttonZuhause.Image")));
+            this.buttonZuhause.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonZuhause.Location = new System.Drawing.Point(0, 399);
+            this.buttonZuhause.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonZuhause.Name = "buttonZuhause";
+            this.buttonZuhause.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonZuhause.Size = new System.Drawing.Size(234, 38);
+            this.buttonZuhause.TabIndex = 8;
+            this.buttonZuhause.Text = "Zuhause";
+            this.buttonZuhause.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonZuhause.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonZuhause.UseVisualStyleBackColor = true;
+            this.buttonZuhause.Click += new System.EventHandler(this.buttonZuhause_Click);
             // 
             // buttonMedikamente
             // 
@@ -465,6 +465,27 @@
             this.dataGridViewPatient.Size = new System.Drawing.Size(411, 251);
             this.dataGridViewPatient.TabIndex = 4;
             // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Width = 51;
+            // 
+            // nachname
+            // 
+            this.nachname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nachname.HeaderText = "Name";
+            this.nachname.MinimumWidth = 6;
+            this.nachname.Name = "nachname";
+            // 
+            // vorname
+            // 
+            this.vorname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.vorname.HeaderText = "Vorname";
+            this.vorname.MinimumWidth = 6;
+            this.vorname.Name = "vorname";
+            // 
             // labelPatient
             // 
             this.labelPatient.AutoSize = true;
@@ -507,27 +528,6 @@
             this.DatumUhr.Enabled = true;
             this.DatumUhr.Tick += new System.EventHandler(this.DatumUhr_Tick);
             // 
-            // vorname
-            // 
-            this.vorname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.vorname.HeaderText = "Vorname";
-            this.vorname.MinimumWidth = 6;
-            this.vorname.Name = "vorname";
-            // 
-            // nachname
-            // 
-            this.nachname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nachname.HeaderText = "Name";
-            this.nachname.MinimumWidth = 6;
-            this.nachname.Name = "nachname";
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Width = 51;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -558,7 +558,7 @@
 
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button buttonSonstiges;
-        private System.Windows.Forms.Button buttonWichtiges;
+        private System.Windows.Forms.Button buttonZuhause;
         private System.Windows.Forms.Button buttonMedikamente;
         private System.Windows.Forms.Button buttonPflegebericht;
         private System.Windows.Forms.Button buttonGesundheitszustand;

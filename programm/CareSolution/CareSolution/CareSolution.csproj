@@ -122,11 +122,11 @@
     <Compile Include="Stammdaten.Designer.cs">
       <DependentUpon>Stammdaten.cs</DependentUpon>
     </Compile>
-    <Compile Include="Wichtiges.cs">
+    <Compile Include="Zuhause.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Wichtiges.Designer.cs">
-      <DependentUpon>Wichtiges.cs</DependentUpon>
+    <Compile Include="Zuhause.Designer.cs">
+      <DependentUpon>Zuhause.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Anamnese.resx">
       <DependentUpon>Anamnese.cs</DependentUpon>
@@ -171,8 +171,8 @@
     <EmbeddedResource Include="Stammdaten.resx">
       <DependentUpon>Stammdaten.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Wichtiges.resx">
-      <DependentUpon>Wichtiges.cs</DependentUpon>
+    <EmbeddedResource Include="Zuhause.resx">
+      <DependentUpon>Zuhause.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DataManager.HealthData.datasource" />

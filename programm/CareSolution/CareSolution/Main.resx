@@ -139,18 +139,22 @@
         vYBLiWUb2oKGFMveuXmiaA+yvJ6Un4qo0QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonWichtiges.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonZuhause.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAd9JREFUWEft
-        lTtOw0AQhtMADSBxDV7iFQlxgxSUlpxX4yJX4BSAQLwvQENJA9dIoIICKVR0gBRAvP6x/rUVeyexHUcC
-        KZ/0i8z4n5ll19kURoz4c1Sr1Z9himN0bEV5imN0EhtT8v8WMCxxjI6tKE9xjE5iY0pGCxhoAdGciTXV
-        arU7WgOQv5dnDHVME4Y+0ZyJLbqEirTFqFQqq/yoY5oxTE29Xp/HDuygRwt6opqSK5fLc7TpyHARw8Q4
-        jjOOukPoy/Sw6BPabzQaYyyLY8wMfaI5E0Pf+K82S6XSBLb3mrl36Bg7sYbcjAhxETqBPiDxXMmC2a4b
-        GhItAM0vGJ8x13Zdd9k3WcAxrMDzKF58PmK6GzZKfATwLkCy7R3sxiLTPrZeWPQS9Ia8HMcs0yG2ol7A
-        uyd+ecmYCtB69arJsoBb1sS+flov5Nb5rMlUiFakAe+L+PFSTTIVoPXyPG+Kz56ZCtGKNOB9Fb9tATjr
-        LRHDAPinOUdfQD/h/M7pV49AA7UbrNGPIIEe6M/8EmJ3tpnKDhrl+zXMAv77Uw5rywCmY8DX/yLKglyr
-        GBy7iuWKFiE2V7E8E49+FWdFGqLxASRb62+9Rf1/jAZFfo4xZBe6gTpUS15S/I2ceaHwC90EkbwdMJ8b
-        AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAuFJREFUWEft
+        lklrFFEUhRNBEEU0im40ivkH7uLCIYpLFw4tnakJQXuprkxiQBsVBBcOP8GAYBa6SXQlhkgWujLkF7hw
+        BAeSiOAQ9Tvtqerq1OsQi25B8MChq889995Xr24NTf80SqXSCtF//x5yudy6np6eUnd392tRx9Icbhxo
+        soGGw/At/LmIb+BwV1dXi+31Q6FQ2Ebx63DezcQnnPlRkeOnCX0e7ZpynJ4dFGuHY3DBxb/BkXw+v9OW
+        GNIUg9/tVY5y221ZNpo7OzsPkTjlQuJneJPtbbOnJuSR1zlR/pRqEm7+7QqgWCyuZOsKmGcSie89YJts
+        WzZ6e3s3K1c1EvVm1EO9bKuAFe5KGDXdQ/UYKNWg6TnqaUij+uHLQmCEhGJfX98qS3WDaqo2vGVpabDq
+        gyzoMfxgTpJ8xOGayJpXBZIuwR8w2rIkr9iWArFMeVXAeACqyBdWPsDArGag1nB8Cu2rYhx32B4ja14K
+        GLV9WvFZSzHQhhybsBQDLVNeCpjKTzuGZr2lGH4Uq9CspRhZ81KICoVeLmxhS61CWfNSwDRh8xlLMdAG
+        HXtoKQZaprwU/BiWuWqYXETDtMCtts/2GFnzgsB4g4TQ7STtqm0pZM2rAqvPY/6USF7MdzQ6we8ofG6O
+        crYn+U0+9xdTr+njbhMGpmMwOoO7LGaPBkgkeTfauGNLcVzeKE810O45ptqH3a4aeuMRnLXxvOUUKD5t
+        zxhnvYMGbWj3rU3blgKxaBA/8rGy0XIFFLpow5ilIIi/lI8PkFZLyt3u3BeWgiD+QD78FyxVQKD8HaAt
+        sxQEHr2q1WyrJX0NtVp7ZSkIanfY98xSBYjlwdOtYykIPHdcZJyt3CImLsFt24Lo7+9fa9+cpT+HzpaG
+        cy6U5HzysjQMnpXQvS5etq0x4PLsp4ma68k2GD3t2JHT1hZ4Iu61vf6gwSTUoA5YisEi9N2nXXhkqf6g
+        eH1euf8Ro6npFwszgg8qC04zAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="buttonMedikamente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

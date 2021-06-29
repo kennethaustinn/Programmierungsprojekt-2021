@@ -72,7 +72,6 @@ namespace CareSolution
                 this.Hide();
                 Main ss = new Main();
                 ss.Show();
-
             }
             else
             {

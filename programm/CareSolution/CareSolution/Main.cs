@@ -136,10 +136,10 @@ namespace CareSolution
 
         }
 
-        private void buttonWichtiges_Click(object sender, EventArgs e)
+        private void buttonZuhause_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Wichtiges());
+            openChildForm(new Zuhause());
         }
 
         private void buttonSonstiges_Click(object sender, EventArgs e)
@@ -188,6 +188,7 @@ namespace CareSolution
             dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
             dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
         }
+
     }
 
 }

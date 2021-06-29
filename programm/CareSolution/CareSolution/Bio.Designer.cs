@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bio));
             this.panelBio = new System.Windows.Forms.Panel();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonScanNeueData = new System.Windows.Forms.Button();
             this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
             this.panelProfil = new System.Windows.Forms.Panel();
             this.labelName2 = new System.Windows.Forms.Label();
@@ -53,8 +55,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.buttonEdit = new System.Windows.Forms.Button();
-            this.buttonScanNeueData = new System.Windows.Forms.Button();
             this.panelBio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.panelProfil.SuspendLayout();
@@ -93,6 +93,37 @@
             this.panelBio.Name = "panelBio";
             this.panelBio.Size = new System.Drawing.Size(748, 544);
             this.panelBio.TabIndex = 24;
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEdit.FlatAppearance.BorderSize = 0;
+            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonEdit.Location = new System.Drawing.Point(501, 481);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(166, 51);
+            this.buttonEdit.TabIndex = 109;
+            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.UseVisualStyleBackColor = false;
+            // 
+            // buttonScanNeueData
+            // 
+            this.buttonScanNeueData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonScanNeueData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            this.buttonScanNeueData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonScanNeueData.FlatAppearance.BorderSize = 0;
+            this.buttonScanNeueData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonScanNeueData.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonScanNeueData.Location = new System.Drawing.Point(73, 481);
+            this.buttonScanNeueData.Name = "buttonScanNeueData";
+            this.buttonScanNeueData.Size = new System.Drawing.Size(166, 51);
+            this.buttonScanNeueData.TabIndex = 108;
+            this.buttonScanNeueData.Text = "Scan Data";
+            this.buttonScanNeueData.UseVisualStyleBackColor = false;
+            this.buttonScanNeueData.Click += new System.EventHandler(this.buttonScanNeueData_Click);
             // 
             // pictureBoxTopMenu
             // 
@@ -284,7 +315,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label14.Location = new System.Drawing.Point(379, 103);
+            this.label14.Location = new System.Drawing.Point(382, 103);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(80, 21);
             this.label14.TabIndex = 92;
@@ -344,37 +375,6 @@
             this.label13.Size = new System.Drawing.Size(73, 21);
             this.label13.TabIndex = 87;
             this.label13.Text = "Schule :";
-            // 
-            // buttonEdit
-            // 
-            this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEdit.FlatAppearance.BorderSize = 0;
-            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonEdit.Location = new System.Drawing.Point(501, 481);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(166, 51);
-            this.buttonEdit.TabIndex = 109;
-            this.buttonEdit.Text = "Edit";
-            this.buttonEdit.UseVisualStyleBackColor = false;
-            // 
-            // buttonScanNeueData
-            // 
-            this.buttonScanNeueData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonScanNeueData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            this.buttonScanNeueData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonScanNeueData.FlatAppearance.BorderSize = 0;
-            this.buttonScanNeueData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonScanNeueData.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonScanNeueData.Location = new System.Drawing.Point(73, 481);
-            this.buttonScanNeueData.Name = "buttonScanNeueData";
-            this.buttonScanNeueData.Size = new System.Drawing.Size(166, 51);
-            this.buttonScanNeueData.TabIndex = 108;
-            this.buttonScanNeueData.Text = "Scan Data";
-            this.buttonScanNeueData.UseVisualStyleBackColor = false;
-            this.buttonScanNeueData.Click += new System.EventHandler(this.buttonScanNeueData_Click);
             // 
             // Bio
             // 

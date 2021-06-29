@@ -50,11 +50,11 @@ namespace CareSolution
         {
             if (checkBox1.Checked)
             {
-                labelMaßnahmenplan.Visible = false;
+                labelMaßnahmenplan.Enabled = false;
             }
             else
             {
-                labelMaßnahmenplan.Visible = true;
+                labelMaßnahmenplan.Enabled = true;
             }
         }
     }
