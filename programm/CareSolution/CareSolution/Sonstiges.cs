@@ -17,6 +17,21 @@ namespace CareSolution
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();
             labelName2.Text = patient.FirstName + " " + patient.LastName;
+            foreach (var item in patient.CaringRelatives)
+            {
+                labelName.Text = item.Name;
+                labelBeruf.Text = item.Activity;
+                labelBesuch.Text = item.VisitFrequency;
+                if (item.LivesInHousehold)
+                {
+                    checkBox1.Checked = true;
+                }
+                else
+                {
+                    checkBox2.Checked = false;
+                }
+            }
+
         }
     }
 }

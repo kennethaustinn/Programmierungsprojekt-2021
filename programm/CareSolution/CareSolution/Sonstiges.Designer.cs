@@ -36,12 +36,16 @@
             this.labelName2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelSchule = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelBeruf = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.labelBesuch = new System.Windows.Forms.Label();
             this.panelBio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.panelProfil.SuspendLayout();
@@ -51,15 +55,19 @@
             // panelBio
             // 
             this.panelBio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelBio.Controls.Add(this.labelBesuch);
+            this.panelBio.Controls.Add(this.checkBox2);
+            this.panelBio.Controls.Add(this.checkBox1);
+            this.panelBio.Controls.Add(this.labelBeruf);
+            this.panelBio.Controls.Add(this.label6);
             this.panelBio.Controls.Add(this.label2);
             this.panelBio.Controls.Add(this.label1);
-            this.panelBio.Controls.Add(this.label3);
+            this.panelBio.Controls.Add(this.labelName);
             this.panelBio.Controls.Add(this.label5);
             this.panelBio.Controls.Add(this.buttonEdit);
             this.panelBio.Controls.Add(this.pictureBoxTopMenu);
             this.panelBio.Controls.Add(this.panelProfil);
             this.panelBio.Controls.Add(this.label4);
-            this.panelBio.Controls.Add(this.labelSchule);
             this.panelBio.Controls.Add(this.label13);
             this.panelBio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBio.Location = new System.Drawing.Point(0, 0);
@@ -136,71 +144,113 @@
             this.label4.TabIndex = 97;
             this.label4.Text = "Sonstiges";
             // 
-            // labelSchule
-            // 
-            this.labelSchule.AutoSize = true;
-            this.labelSchule.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSchule.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelSchule.Location = new System.Drawing.Point(149, 103);
-            this.labelSchule.Name = "labelSchule";
-            this.labelSchule.Size = new System.Drawing.Size(18, 21);
-            this.labelSchule.TabIndex = 94;
-            this.labelSchule.Text = "x";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label13.Location = new System.Drawing.Point(12, 103);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 21);
+            this.label13.Size = new System.Drawing.Size(229, 22);
             this.label13.TabIndex = 87;
-            this.label13.Text = "Schule :";
+            this.label13.Text = "Pflegende Angehorige :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(344, 352);
+            this.label2.Location = new System.Drawing.Point(22, 272);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 21);
+            this.label2.Size = new System.Drawing.Size(79, 21);
             this.label2.TabIndex = 115;
-            this.label2.Text = "Haus :";
+            this.label2.Text = "Besuch :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(507, 326);
+            this.label1.Location = new System.Drawing.Point(22, 332);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 21);
+            this.label1.Size = new System.Drawing.Size(201, 21);
             this.label1.TabIndex = 114;
-            this.label1.Text = "Haus :";
+            this.label1.Text = "Im Haushalt wohnend?";
             // 
-            // label3
+            // labelName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(392, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(18, 21);
-            this.label3.TabIndex = 113;
-            this.label3.Text = "x";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelName.Location = new System.Drawing.Point(107, 157);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(18, 21);
+            this.labelName.TabIndex = 113;
+            this.labelName.Text = "x";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Location = new System.Drawing.Point(181, 172);
+            this.label5.Location = new System.Drawing.Point(22, 157);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(205, 21);
+            this.label5.Size = new System.Drawing.Size(71, 21);
             this.label5.TabIndex = 112;
-            this.label5.Text = "Pflegende Angehorige :";
+            this.label5.Text = "Name :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label6.Location = new System.Drawing.Point(22, 213);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 21);
+            this.label6.TabIndex = 116;
+            this.label6.Text = "Beruf :";
+            // 
+            // labelBeruf
+            // 
+            this.labelBeruf.AutoSize = true;
+            this.labelBeruf.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBeruf.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelBeruf.Location = new System.Drawing.Point(107, 213);
+            this.labelBeruf.Name = "labelBeruf";
+            this.labelBeruf.Size = new System.Drawing.Size(18, 21);
+            this.labelBeruf.TabIndex = 117;
+            this.labelBeruf.Text = "x";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(230, 332);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(48, 24);
+            this.checkBox1.TabIndex = 118;
+            this.checkBox1.Text = "Ja";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(349, 332);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(64, 24);
+            this.checkBox2.TabIndex = 119;
+            this.checkBox2.Text = "Nein";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // labelBesuch
+            // 
+            this.labelBesuch.AutoSize = true;
+            this.labelBesuch.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBesuch.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelBesuch.Location = new System.Drawing.Point(107, 272);
+            this.labelBesuch.Name = "labelBesuch";
+            this.labelBesuch.Size = new System.Drawing.Size(18, 21);
+            this.labelBesuch.TabIndex = 120;
+            this.labelBesuch.Text = "x";
             // 
             // Sonstiges
             // 
@@ -232,11 +282,15 @@
         private System.Windows.Forms.Label labelName2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label labelSchule;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelBesuch;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label labelBeruf;
+        private System.Windows.Forms.Label label6;
     }
 }

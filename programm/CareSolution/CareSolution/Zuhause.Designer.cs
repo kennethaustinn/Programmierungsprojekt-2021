@@ -80,7 +80,7 @@
             this.buttonSpeichern.FlatAppearance.BorderSize = 0;
             this.buttonSpeichern.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSpeichern.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonSpeichern.Location = new System.Drawing.Point(271, 481);
+            this.buttonSpeichern.Location = new System.Drawing.Point(280, 481);
             this.buttonSpeichern.Name = "buttonSpeichern";
             this.buttonSpeichern.Size = new System.Drawing.Size(166, 51);
             this.buttonSpeichern.TabIndex = 109;
