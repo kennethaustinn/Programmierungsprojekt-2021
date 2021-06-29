@@ -8,10 +8,10 @@ namespace DummyForOCR
 {
     public class OcrManager : IOCRManager
     {
-
-        private string _allResult;
-
+        
         private readonly AnalysisProgram _analysis = new AnalysisProgram();
+        
+        private string _allResult;
 
         private string _path;
         
@@ -28,7 +28,7 @@ namespace DummyForOCR
             "Biografie", "Maßnahmenplan", "Pflegebericht", "Vitalwerte", "Medikamentenplan", "Krankenhausaufenthalte"
         };
 
-        private List<string> _currentDocumentKeys = new List<string>();
+        private  List<string> _currentDocumentKeys = new List<string>();
         
         private readonly List<string> _newCurrentDocumentKeys = new List<string>();
 
@@ -37,6 +37,8 @@ namespace DummyForOCR
         private readonly Dictionary<string, List<string>> _currentDocumentDictionary = new Dictionary<string, List<string>>();
         
         private readonly Dictionary<string, List<string>> _recognizeDocumentKeys = new Dictionary<string, List<string>>();
+
+        private readonly List<int> _noticeIndexList = new List<int>();
         
         private void AddKeyToRecognize()
         {
@@ -48,11 +50,12 @@ namespace DummyForOCR
             _recognizeDocumentKeys.Add("Krankenhausaufenthalte", new List<string>() { "Datum:", "Grund:", "Dauer:" });
         }
 
-        private void ExecuteOcr()                                // Eingabeparamter noch auf Path ändern.
+        private void ExecuteOcr()                                
         {
-            OpenFile();                                         //später path & filename als Übergabeparameter wie das Klassendiagramm einfügen.
-            SearchForKeys();
-            AddToDictionary();                               // es kommt zu einer Fehlermeldung, wenn man während der Laufzeit eine andere Datei auswählt -> Hashcode 
+            OpenFile();                                         
+            StartSearchForItems();
+            AddToDictionary();
+
         }
 
         #region Methods for the OCR configuration and file manager
@@ -61,12 +64,10 @@ namespace DummyForOCR
         private static IronTesseract ConfigurationOcr()
         {
             var ocr = new IronTesseract();
-            //var input = new OcrInput(@"C:\Users\ala19\Desktop\testdata.png"); //_filename später
             ocr.Language = OcrLanguage.German;
             ocr.Configuration.TesseractVersion = TesseractVersion.Tesseract5;
             ocr.Configuration.EngineMode = TesseractEngineMode.LstmOnly;
             ocr.Configuration.BlackListCharacters = "";
-            //var abc = OcrResult.TextFlow.LeftToRight;
             return ocr;
         }
 
@@ -74,10 +75,11 @@ namespace DummyForOCR
         {
             var ocr = ConfigurationOcr();
             var input = new OcrInput(_path);
+            input.Deskew();
             var ocrResult = ocr.Read(input);
             _allResult = ocrResult.Text;
             var allResultLines = ocrResult.Lines;
-            //SaveAsPdfAndTextFile(ocrResult);
+
             _resultFromOcr = allResultLines.Cast<object>().Select(x => x.ToString()).ToList();
 
             foreach (var value in _resultFromOcr.Where(value => _documentName.Contains(value)))
@@ -89,25 +91,30 @@ namespace DummyForOCR
             Console.WriteLine("Datei wurde geladen!");
         }
 
-        //private static void SaveAsPdfAndTextFile(OcrResult ocrResult)
-        //{
-        //    ocrResult.SaveAsTextFile(@"C:\Users\ala19\Desktop\OCR\blabla.txt");
-        //    ocrResult.SaveAsSearchablePdf(@"C:\Users\ala19\Desktop\OCR\blabla.pdf");
-        //}
-        
         #endregion
         
-        #region Methods to extract the scanned document 
+        #region Methods to extract the scanned document
 
 
-        private void SearchForKeys()
+        private void StartSearchForItems()
         {
             RemoveSpaceFromList();
             ApproximateValue();
 
+            if (_newCurrentDocumentKeys.Count != 0)
+            {
+                DeleteUnnecessaryKey();
+                NoticeAndAddIndex();
+            }
+
+            CheckKeyItentity();
+            FindItem();
+        }
+
+        private void FindItem()
+        {
             var resultAsArray = _resultFromOcr.Cast<object>().Select(x => x.ToString()).ToArray();
             var itemList = new List<string>();
-            _currentDocumentKeys = _newCurrentDocumentKeys;
 
             for (int i = 0; i < _currentDocumentKeys.Count; i++)
             {
@@ -125,10 +132,49 @@ namespace DummyForOCR
                     lowerBound = Array.IndexOf(resultAsArray, _currentDocumentKeys[i + 1]);
                     itemList = _resultFromOcr.Skip(upperBound).Take(lowerBound - upperBound).ToList();
                 }
+
                 _currentDocumentItems.Add(itemList);
             }
         }
-        
+
+        private void DeleteUnnecessaryKey()
+        {
+            if (_newCurrentDocumentKeys.Count > _currentDocumentKeys.Count)
+            {
+                for (int i = 0; i < _newCurrentDocumentKeys.Count; i++)
+                {
+                    //var value = GiveSubstring(new List<string>() {_newCurrentDocumentKeys[i]});
+                    if (_newCurrentDocumentKeys[i].Length < 5 || !_currentDocumentKeys.Contains(_newCurrentDocumentKeys[i]))
+                    {
+                        _newCurrentDocumentKeys.RemoveAt(i);
+                    }
+                }
+            }
+        }
+
+        private void NoticeAndAddIndex()
+        {
+            for (int i = 0; i < _newCurrentDocumentKeys.Count; i++)
+            {
+                if (!_currentDocumentKeys[i].Equals(_newCurrentDocumentKeys[i]))
+                {
+                    _noticeIndexList.Add(i);
+                }
+            }
+        }
+
+        private bool CheckKeyItentity()
+        {
+            //bool result = false;
+            if (_noticeIndexList.Count != 0)
+            {
+                _currentDocumentKeys = _newCurrentDocumentKeys;
+                //result = false;
+            }
+            return false;
+
+        }
+
         private void RemoveSpaceFromList()
         {
             for (int i = 0; i < _resultFromOcr.Count; i++)
@@ -176,6 +222,7 @@ namespace DummyForOCR
                 }
             }
         }
+        
         private static string GiveSubstring(List<string> approach)
         {
             string substring;
@@ -215,15 +262,29 @@ namespace DummyForOCR
 
         private void AddToDictionary()
         {
-            for (int i = 0; i < _currentDocumentKeys.Count; i++)
+            for (int i = 0; i < _recognizeDocumentKeys[_currentDocumentName].Count; i++)
             {
-                _currentDocumentDictionary.Add(_currentDocumentKeys[i], _currentDocumentItems[i]);
+                if (i>= _currentDocumentKeys.Count) { return; }
 
+                var isKeyAvailable = _currentDocumentKeys.Contains(_recognizeDocumentKeys[_currentDocumentName][i]);
+                var isItemAvailable = _currentDocumentItems[i].Count == 0;
+                if (isKeyAvailable && !isItemAvailable)
+                {
+                    _currentDocumentDictionary.Add(_currentDocumentKeys[i], _currentDocumentItems[i]);
+                }
+                else if (isKeyAvailable)
+                {
+                    _currentDocumentDictionary.Add(_currentDocumentKeys[i], new List<string>() { "" });
+                }
+                else
+                {
+                    _currentDocumentDictionary.Add(_recognizeDocumentKeys[_currentDocumentName][i], new List<string>(){""});
+                }
             }
         }
         
         #endregion
-        
+
         #region Methods for the analysis program
 
 
@@ -246,17 +307,29 @@ namespace DummyForOCR
             RemoveWordForComparison();
             var sumFaultRate = 0;
             var sumCompareSourceLength = 0;
-            var compareSource = _analysis.CompareDictionary[_keyForCompareDictionary];          // letztere element wieder nicht erreichbar
-            for (int i = 0; i < _scannedSource.Count; i++)                                                  // Bedingung muss immer an der CompareSource angepasst werden.
+            var compareSource = _analysis.CompareDictionary[_keyForCompareDictionary];
+            int countItem = 0;
+            
+            if (!CheckKeyItentity())
             {
+                foreach (var itemToDelete in _noticeIndexList)
+                {
+                    _scannedSource.RemoveAt(itemToDelete);
+                }
+
+                countItem = _scannedSource.Count > compareSource.Count ? _scannedSource.Count : compareSource.Count;
+            }
+            for (int i = 0; i < countItem; i++)                                                  // Bedingung muss immer an der CompareSource angepasst werden.
+            {
+                    
                 var faultRate = _analysis.CalculateDistance(_scannedSource[i], compareSource[i]);
                 sumFaultRate += faultRate;
                 Console.WriteLine("{0} -> {1} = {2} ", _scannedSource[i], compareSource[i], faultRate);
                 sumCompareSourceLength += compareSource[i].Length;
                 _analysis.FaultRate = sumFaultRate;
             }
-
-            Console.WriteLine(_scannedSource.Count + " and " + compareSource.Count);
+            Console.WriteLine("Länge des gelesenen:\t Länge des Originalen:\t Fehlerwert");
+            Console.WriteLine(_scannedSource.Count + "\t" + compareSource.Count + "\t" + sumFaultRate + "\t");
             Console.WriteLine("\n" + _analysis.CalculateDeviationRate(sumCompareSourceLength));
 
         }
@@ -322,6 +395,7 @@ namespace DummyForOCR
             }
             // ReSharper disable once FunctionNeverReturns
         }
+        
         private void PrintMenue()
         {
             Console.WriteLine("\n================================================================================");
@@ -348,7 +422,7 @@ namespace DummyForOCR
                 switch (choice)
                 {
                     case 0:
-                        _path = @"C:\Users\ala19\Desktop\InkedMaßnahmenplan_Vorlage_LI.png";
+                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Pictures\Vorlage1.png";
                         _keyForCompareDictionary = 0;
                         return;
                     case 1:
