@@ -1,8 +1,6 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace CommonInterfaces
 {
@@ -49,16 +47,16 @@ namespace CommonInterfaces
     public interface IPatient
     {
         // Interface für die Patientendaten
-        double CalculateBMI();  // Berechnet den BMI des Patienten
+        double CalculateBmi();  // Berechnet den BMI des Patienten
 
         // prüft alle Vitalparameter des Patienten und gibt Warnungen bei Überschreitung des Grenzwertes als string zurück
         string CheckWarning();  
     }
 
-    public interface IOCRManager
+    public interface IOcrManager
     {
         // Interface für die Kommunikation mit dem OCR Manager
-        Dictionary<string, string> ExecuteOCR(string path);  
+        Dictionary<string, List<string>> ExecuteOcr(string path);  
         // Nimmt den Pfad der Bild oder PDF-Datei entgegeben.
         // Erkennt automatisch, welches Formular eingelesen wird und befüllt entsprechend ein Dictionary
     }
