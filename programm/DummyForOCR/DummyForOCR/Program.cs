@@ -3,7 +3,11 @@ namespace DummyForOCR
 {
     public class Program
     {
-        // Die Konsolenanwendung wird hier mit Erzeugung einer Instanz des OcrManager gestartet.
+        /// <summary>
+        /// Die Konsolenanwendung wird hier mit Erzeugung einer Instanz des OcrManager gestartet. Nur für die Testung des Auswertungsprogramm
+        /// in dieser Konsolenanwendung.
+        /// </summary>
+        /// <param name="args"></param>
         public static void Main(string[] args)
         {
             var run = new OcrManager();

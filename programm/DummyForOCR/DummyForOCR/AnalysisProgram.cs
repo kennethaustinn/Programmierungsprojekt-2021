@@ -3,11 +3,20 @@ using System.Collections.Generic;
 
 namespace DummyForOCR
 {
+    /// <summary>
+    /// Diese Klasse dient zur Auswertung des ausgewählten OCR-Nuget Paktes für den Kunden/Professor, welches gewünscht war.
+    /// Und ist für das finale Produkt nicht in die GUI zu intergrieren.
+    /// </summary>
     public class AnalysisProgram
     {
+        /// <summary>
+        /// Dictionary mit den Keys und Values mit den zuerwartenden Ergbnisse.
+        /// </summary>
+        internal readonly Dictionary<int, List<string> > CompareDictionary = new Dictionary<int, List<string>>();
 
-        public Dictionary<int, List<string> > CompareDictionary = new Dictionary<int, List<string>>();
-
+        /// <summary>
+        /// Fehlerrate des strings.
+        /// </summary>
         public int FaultRate { get; set; }
 
         /// <summary>
