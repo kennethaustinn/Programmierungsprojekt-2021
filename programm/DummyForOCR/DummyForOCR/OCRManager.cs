@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using CommonInterfaces;
 using IronOcr;
@@ -17,7 +18,12 @@ namespace DummyForOCR
         /// Instanz der Klasse AnalysisProgram.
         /// </summary>
         private readonly AnalysisProgram _analysis = new AnalysisProgram();
-        
+
+        /// <summary>
+        /// Parentpfad des Projekt, damit jeder der dasd Projekt hat auf die Files zugreifen kann.
+        /// </summary>
+        private readonly string _projectDirectory = Directory.GetParent(Environment.CurrentDirectory)?.Parent?.FullName;
+
         /// <summary>
         /// Gibt den eingelesenen Text zurück.
         /// </summary>
@@ -569,47 +575,47 @@ namespace DummyForOCR
                 switch (choice)
                 {
                     case 0:
-                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Pictures\Vorlage1.png";
+                        _path = _projectDirectory + @"\Files\Pictures\Pflegebericht_Vorlage P1.png";
                         _keyForCompareDictionary = 0;
                         return;
                     case 1:
-                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest0.png";
+                        _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest0.png";
                         _keyForCompareDictionary = 1;
                         return;
                     case 2:
-                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest1.png";
+                        _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest1.png";
                         _keyForCompareDictionary = 2;
                         return;
                     case 3:
-                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest2.png";
+                        _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest2.png";
                         _keyForCompareDictionary = 3;
                         return;
                     case 4:
-                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest3.png";
+                        _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest3.png";
                         _keyForCompareDictionary = 4;
                         return;
                     case 5:
-                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest4.png";
+                        _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest4.png";
                         _keyForCompareDictionary = 5;
                         return;
                     case 6:
-                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest5.png";
+                        _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest5.png";
                         _keyForCompareDictionary = 6;
                         return;
                     case 7:
-                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest6.png";
+                        _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest6.png";
                         _keyForCompareDictionary = 7;
                         return;
                     case 8:
-                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest7.png";
+                        _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest7.png";
                         _keyForCompareDictionary = 8;
                         return;
                     case 9:
-                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest8.png";
+                        _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest8.png";
                         _keyForCompareDictionary = 9;
                         return;
                     case 10:
-                        _path = @"C:\Users\ala19\source\repos\grp02\digitalisierung der Pflege\programm\DummyForOCR\DummyForOCR\Files\Biopattern for Analysis Tests\BioTest9.png";
+                        _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest9.png";
                         _keyForCompareDictionary = 10;
                         return;
                     default:
@@ -629,8 +635,8 @@ namespace DummyForOCR
             Console.WriteLine("\n================================================================================");
             string[] menuItems =
             {
-                "\n(00) Erste nicht funktionierende Vorlage\n","\n(01) BioTest0\n",
-                "(02) BioTest1\t", "(03) BioTest2\t", "(04) BioTest3\t", "(05) BioTest4\t", "(06) BioTest5\n", "(07) BioTest6\t", "(08) BioTest7\t", "(09) BioTest8\t", "(10) BioTest9\t"
+                "\n(00) Dokument aus dem Ordner Pictures\n\nFolgende Dokumente werden zum Testen benutzt","\n(01) BioTest0\t",
+                "(02) BioTest1 (Ausreißer)\t", "(03) BioTest2\t", "(04) BioTest3\t", "(05) BioTest4\t", "(06) BioTest5\t", "(07) BioTest6\t", "(08) BioTest7\t", "(09) BioTest8\t", "(10) BioTest9\t"
             };
 
             for (int i = 0; i < menuItems.Length; i++)
