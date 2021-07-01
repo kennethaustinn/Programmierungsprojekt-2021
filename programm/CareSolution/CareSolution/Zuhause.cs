@@ -23,8 +23,6 @@ namespace CareSolution
             checkBox3.Checked = patient.Home.Barrier_Free_Living_Area;
             checkBox4.Checked = patient.Home.Barrier_Free_Elevator;
             checkBox5.Checked = patient.Home.Barrier_Free_Stairlift;
-
-
         }
     }
 }

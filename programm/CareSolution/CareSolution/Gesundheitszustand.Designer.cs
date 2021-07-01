@@ -30,23 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gesundheitszustand));
             this.panelBio = new System.Windows.Forms.Panel();
+            this.panelProfil = new System.Windows.Forms.Panel();
+            this.labelName2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.panelProfil = new System.Windows.Forms.Panel();
-            this.labelName2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panelBio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.panelProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBio
             // 
             this.panelBio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelBio.Controls.Add(this.comboBox1);
+            this.panelBio.Controls.Add(this.label2);
+            this.panelBio.Controls.Add(this.label1);
             this.panelBio.Controls.Add(this.panelProfil);
             this.panelBio.Controls.Add(this.pictureBoxTopMenu);
             this.panelBio.Controls.Add(this.button1);
@@ -59,6 +65,37 @@
             this.panelBio.Name = "panelBio";
             this.panelBio.Size = new System.Drawing.Size(748, 544);
             this.panelBio.TabIndex = 25;
+            // 
+            // panelProfil
+            // 
+            this.panelProfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelProfil.Controls.Add(this.labelName2);
+            this.panelProfil.Controls.Add(this.pictureBox1);
+            this.panelProfil.Location = new System.Drawing.Point(548, 3);
+            this.panelProfil.Name = "panelProfil";
+            this.panelProfil.Size = new System.Drawing.Size(200, 28);
+            this.panelProfil.TabIndex = 67;
+            // 
+            // labelName2
+            // 
+            this.labelName2.AutoSize = true;
+            this.labelName2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelName2.Location = new System.Drawing.Point(33, 5);
+            this.labelName2.Name = "labelName2";
+            this.labelName2.Size = new System.Drawing.Size(72, 23);
+            this.labelName2.TabIndex = 58;
+            this.labelName2.Text = "label1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 28);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBoxTopMenu
             // 
@@ -115,40 +152,40 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label13.Location = new System.Drawing.Point(22, 106);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(173, 21);
+            this.label13.Size = new System.Drawing.Size(77, 21);
             this.label13.TabIndex = 16;
-            this.label13.Text = "Vital Parameter Id :";
+            this.label13.Text = "Datum :";
             // 
-            // panelProfil
+            // label1
             // 
-            this.panelProfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelProfil.Controls.Add(this.labelName2);
-            this.panelProfil.Controls.Add(this.pictureBox1);
-            this.panelProfil.Location = new System.Drawing.Point(548, 3);
-            this.panelProfil.Name = "panelProfil";
-            this.panelProfil.Size = new System.Drawing.Size(200, 28);
-            this.panelProfil.TabIndex = 67;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(22, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 21);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Art der Messung :";
             // 
-            // labelName2
+            // label2
             // 
-            this.labelName2.AutoSize = true;
-            this.labelName2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelName2.Location = new System.Drawing.Point(33, 5);
-            this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(72, 23);
-            this.labelName2.TabIndex = 58;
-            this.labelName2.Text = "label1";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(22, 236);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 21);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "Wert :";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // pictureBox1
+            // comboBox1
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 28);
-            this.pictureBox1.TabIndex = 57;
-            this.pictureBox1.TabStop = false;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(184, 167);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 70;
             // 
             // Gesundheitszustand
             // 
@@ -163,10 +200,10 @@
             this.Text = "Gesundheitszustand";
             this.panelBio.ResumeLayout(false);
             this.panelBio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
             this.panelProfil.ResumeLayout(false);
             this.panelProfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,5 +219,8 @@
         private System.Windows.Forms.Panel panelProfil;
         private System.Windows.Forms.Label labelName2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

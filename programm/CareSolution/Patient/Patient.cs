@@ -10,8 +10,8 @@ namespace Patient
 {
 
     public class Patient : DataManager.Patient, IPatient
-    {
-        public double CalculateBMI()
+    { 
+        public double CalculateBmi()
         {
             throw new NotImplementedException();
         }
