@@ -133,4 +133,40 @@
   <data name="65-659285_search-icon-transparent-background-material-design-magnifying-glass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\65-659285_search-icon-transparent-background-material-design-magnifying-glass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BioTest0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BioTest0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BioTest2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BioTest2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BioTest3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BioTest3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BioTest4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BioTest4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BioTest5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BioTest5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BioTest6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BioTest6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BioTest7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BioTest7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BioTest8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BioTest8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Krankenhausaufenthalte_P1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Krankenhausaufenthalte P1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maßnahmenplan_Vorlage_P1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maßnahmenplan_Vorlage P1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Maßnahmenplan_Vorlage_P2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maßnahmenplan_Vorlage P2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pflegebericht_Vorlage_P1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pflegebericht_Vorlage P1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

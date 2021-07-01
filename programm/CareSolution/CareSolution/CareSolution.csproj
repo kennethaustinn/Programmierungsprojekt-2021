@@ -201,6 +201,10 @@
       <Project>{44f163d0-cb2a-4f64-896a-c3484ba0a043}</Project>
       <Name>DataManager</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OCRManager\OCRManager.csproj">
+      <Project>{c7a4f145-9a55-4143-9792-6906cc30bdd6}</Project>
+      <Name>OCRManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Patient\Patient.csproj">
       <Project>{93e29dbe-9689-4b77-ac4e-e142e5a307f3}</Project>
       <Name>Patient</Name>
@@ -220,6 +224,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\65-659285_search-icon-transparent-background-material-design-magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BioTest0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BioTest2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BioTest3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BioTest4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BioTest5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BioTest6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BioTest7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BioTest8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Krankenhausaufenthalte P1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maßnahmenplan_Vorlage P1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maßnahmenplan_Vorlage P2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pflegebericht_Vorlage P1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
