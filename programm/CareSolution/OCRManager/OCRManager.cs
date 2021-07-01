@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CommonInterfaces;
 using IronOcr;
 
 
 namespace OCRManager
 {
-    public class OCRManager : IOcrManager
+    public class OcrManager : IOcrManager
     {
-        
         /// <summary>
         /// Dateipfad der einzulesenden Datei.
         /// </summary>
@@ -104,6 +100,7 @@ namespace OCRManager
         /// </summary>
         private void ExecuteOcr()
         {
+            AddKeyToRecognize();
             OpenFile();
             StartSearchForItems();
             AddToDictionary();
@@ -160,7 +157,6 @@ namespace OCRManager
             }
         }
 
-        //------------Dieser Teil ist nur für den OCR-Manager---------------------------//
 
         #region Methods to extract the scanned document
 
@@ -341,7 +337,7 @@ namespace OCRManager
         /// Dies passiert nur, wenn die _noticeIndexList sich keine Änderung gemerkt oder gespeichert hat.
         /// </summary>
         /// <returns> False oder True.</returns>
-        private bool CheckKeyItentity()
+        private void CheckKeyItentity()
         {
             //bool result = false;
             if (_noticeIndexList.Count != 0)
@@ -349,8 +345,7 @@ namespace OCRManager
                 _currentDocumentKeys = _newCurrentDocumentKeys;
                 //result = false;
             }
-            return false;
-
+            
         }
 
         /// <summary>

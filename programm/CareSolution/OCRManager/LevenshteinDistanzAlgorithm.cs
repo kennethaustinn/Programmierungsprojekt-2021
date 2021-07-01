@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OCRManager
 {
-    public class LevenshteinDistanzAlgorithm
+    public static class LevenshteinDistanzAlgorithm
     {
         
         /// <summary>
