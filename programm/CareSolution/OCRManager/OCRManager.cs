@@ -9,10 +9,10 @@ namespace OCRManager
 {
     public class OcrManager : IOcrManager
     {
-        /// <summary>
-        /// Dateipfad der einzulesenden Datei.
-        /// </summary>
-        private string _path;
+        ///// <summary>
+        ///// Dateipfad der einzulesenden Datei.
+        ///// </summary>
+        //private string _path;
 
         /// <summary>
         /// Aktuelles einzulesendes Dokument z.B. Biografie oder Pflegebericht.
@@ -101,7 +101,7 @@ namespace OCRManager
         private void ExecuteOcr()
         {
             AddKeyToRecognize();
-            OpenFile();
+            //OpenFile();
             StartSearchForItems();
             AddToDictionary();
         }
@@ -111,10 +111,10 @@ namespace OCRManager
         /// Es wird auch geguckt, um welches Dokument es ich handelt. Es dies gefunden wurden, wird der Name dessen in _currentDocumentName gespeichert
         /// und an _recognizeDocumentKeys, für die Ermittlung  der Keys, als Key übergeben.
         /// </summary>
-        private void OpenFile()
+        private void OpenFile(string path)
         {
             var ocr = ConfigurationOcr();
-            var input = new OcrInput(_path);
+            var input = new OcrInput(path);
             input.Deskew();
             var ocrResult = ocr.Read(input);
             var allResultLines = ocrResult.Lines;
@@ -387,6 +387,11 @@ namespace OCRManager
         public Dictionary<string, List<string>> ExecuteOcr(string path)
         {
             //throw new NotImplementedException();
+            AddKeyToRecognize();
+            OpenFile(path);
+            StartSearchForItems();
+            AddToDictionary();
+
             return _currentDocumentDictionary;
         }
 
