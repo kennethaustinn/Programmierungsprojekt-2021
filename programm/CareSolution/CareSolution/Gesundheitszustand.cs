@@ -17,11 +17,16 @@ namespace CareSolution
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();
             labelName2.Text = patient.FirstName + " " + patient.LastName;
+
+            foreach (var item in patient.HealthData.VitalParameters)
+            {
+                labelDatum.Text = item.DateTime.ToShortDateString();
+                labelWert.Text = item.Value.ToString();
+            }
+
+            
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

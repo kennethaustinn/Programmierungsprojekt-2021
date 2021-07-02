@@ -30,8 +30,8 @@ namespace CareSolution
         {
             InitializeComponent();
             //SaveLabelInList();
-            //var patient = new Patient.Patient().SetTestData();
-            //labelName2.Text = patient.FirstName + " " + patient.LastName;
+            var patient = new Patient.Patient().SetTestData();
+            labelName2.Text = patient.FirstName + " " + patient.LastName;
             //labelSchule.Text = patient.Bio.School;
             //labelBeruf.Text = patient.Bio.Job;
             //labelAusbildung.Text = patient.Bio.Training;
@@ -53,7 +53,7 @@ namespace CareSolution
                 AddExtension = true,
                 //DefaultExt = ".drw",
                 //CheckPathExists = true,
-                Filter = "PDF File(*.pdf) | *.pdf | Image Files(*.png; *.jpg)| *.png; *.jpg ",
+                Filter = "  Image Files(*.png; *.jpg)| *.png; *.jpg | PDF File(*.pdf) | *.pdf  ",
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
                 Title = "Welche Datei soll geladen werden.",
 
