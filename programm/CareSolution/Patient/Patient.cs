@@ -22,6 +22,16 @@ namespace Patient
             throw new NotImplementedException();
         }
 
+        public int CalculateAge(DateTime dateOfBirth)
+        {
+            int age;
+            age = DateTime.Now.Year - dateOfBirth.Year;
+            if (DateTime.Now.DayOfYear < dateOfBirth.DayOfYear)
+                age = age - 1;
+
+            return age;
+        }
+
         public Patient SetTestData()
         {
             // Test Patient mit Beispieldaten.

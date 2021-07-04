@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 
 
@@ -50,7 +51,9 @@ namespace CommonInterfaces
         double CalculateBmi();  // Berechnet den BMI des Patienten
 
         // prüft alle Vitalparameter des Patienten und gibt Warnungen bei Überschreitung des Grenzwertes als string zurück
-        string CheckWarning();  
+        string CheckWarning();
+
+        int CalculateAge(DateTime dateOfBirth); // Berechnet den Alter des Patienten
     }
 
     public interface IOcrManager

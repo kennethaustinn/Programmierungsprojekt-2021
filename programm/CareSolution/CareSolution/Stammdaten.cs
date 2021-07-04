@@ -21,10 +21,7 @@ namespace CareSolution
             labelName.Text = patient.LastName;
             labelName2.Text = patient.FirstName + " " + patient.LastName;
             labelVorname.Text = patient.FirstName;
-
-            DateTime dob = patient.BirthDate;
-            int alter = CalculateAge(patient.BirthDate);
-            labelAlter.Text = alter.ToString();
+            labelAlter.Text = patient.CalculateAge(patient.BirthDate).ToString();
 
             labelGeschlecht.Text = patient.Gender;
             labelAdresse.Text = patient.Address;
@@ -55,15 +52,7 @@ namespace CareSolution
                 labelReport.Enabled = true;
             }
         }
-        public static int CalculateAge(DateTime dateOfBirth)
-        {
-            int age = 0;
-            age = DateTime.Now.Year - dateOfBirth.Year;
-            if (DateTime.Now.DayOfYear < dateOfBirth.DayOfYear)
-                age = age - 1;
-
-            return age;
-        }
+        
 
     }
 }

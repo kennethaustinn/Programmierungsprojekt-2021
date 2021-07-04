@@ -96,7 +96,12 @@ namespace CareSolution
             dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
             dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
             dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
+            dataGridViewPatient.Rows[n].Cells["alt"].Value = patient.CalculateAge(patient.BirthDate).ToString();
             dataGridViewPatient.Rows[n].Cells["adresse"].Value = patient.Address;
+            foreach (var item in patient.Doctor)
+            {
+                dataGridViewPatient.Rows[n].Cells["arzt"].Value = item.LastName;
+            }
             //DataTable dt = new DataTable();
             //DataRow myDataRow;
             //myDataRow = dt.NewRow();
