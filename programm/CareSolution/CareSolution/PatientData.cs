@@ -130,7 +130,6 @@ namespace CareSolution
             //if (e.RowIndex != -1)
             //{
             //    dataGridViewPatient.CurrentRow.Selected = true;
-            //    Stammdaten1 cc = new Stammdaten1();
             //    cc.labelId.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
             //    cc.labelName.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
             //    cc.labelName2.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();

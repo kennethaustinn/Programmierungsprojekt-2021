@@ -71,7 +71,6 @@ namespace CareSolution
 
             }
         }
-
         private void DisableButton()
         {
             if (currentButton != null)
@@ -103,7 +102,6 @@ namespace CareSolution
                 activeForm.Close();
             }
         }
-
         private void Reset()
         {
             DisableButton();
@@ -169,22 +167,7 @@ namespace CareSolution
         {
             openChildForm(new PatientData());
         }
-        private void textBoxSuche_Enter(object sender, EventArgs e)
-        {
-            if (textBoxSuche.Text == "Suche")
-                textBoxSuche.Text = "";
-
-            textBoxSuche.ForeColor = Color.WhiteSmoke;
-        }
-
-        private void textBoxSuche_Leave(object sender, EventArgs e)
-        {
-            if (textBoxSuche.Text == "")
-                textBoxSuche.Text = "Suche";
-
-            textBoxSuche.ForeColor = Color.Gray;
-        }
-
+        
         private void Main_Load(object sender, EventArgs e)
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.PersonSet". Sie können sie bei Bedarf verschieben oder entfernen.

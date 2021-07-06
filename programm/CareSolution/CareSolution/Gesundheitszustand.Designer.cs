@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gesundheitszustand));
             this.panelBio = new System.Windows.Forms.Panel();
+            this.labelWert = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.labelDatum = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.labelWert = new System.Windows.Forms.Label();
             this.panelBio.SuspendLayout();
             this.panelProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,12 +68,23 @@
             this.panelBio.Size = new System.Drawing.Size(748, 544);
             this.panelBio.TabIndex = 25;
             // 
+            // labelWert
+            // 
+            this.labelWert.AutoSize = true;
+            this.labelWert.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWert.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelWert.Location = new System.Drawing.Point(180, 236);
+            this.labelWert.Name = "labelWert";
+            this.labelWert.Size = new System.Drawing.Size(18, 21);
+            this.labelWert.TabIndex = 71;
+            this.labelWert.Text = "x";
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Puls"});
-            this.comboBox1.Location = new System.Drawing.Point(184, 167);
+            this.comboBox1.Location = new System.Drawing.Point(184, 162);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 70;
@@ -189,17 +200,6 @@
             this.label13.Size = new System.Drawing.Size(77, 21);
             this.label13.TabIndex = 16;
             this.label13.Text = "Datum :";
-            // 
-            // labelWert
-            // 
-            this.labelWert.AutoSize = true;
-            this.labelWert.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWert.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelWert.Location = new System.Drawing.Point(180, 245);
-            this.labelWert.Name = "labelWert";
-            this.labelWert.Size = new System.Drawing.Size(18, 21);
-            this.labelWert.TabIndex = 71;
-            this.labelWert.Text = "x";
             // 
             // Gesundheitszustand
             // 

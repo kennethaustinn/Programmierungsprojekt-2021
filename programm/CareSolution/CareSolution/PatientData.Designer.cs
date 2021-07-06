@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientData));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientData));
             this.labelPatient = new System.Windows.Forms.Label();
             this.panelPatient = new System.Windows.Forms.Panel();
             this.buttonNeueData = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBoxSuche = new System.Windows.Forms.TextBox();
             this.dataGridViewPatient = new System.Windows.Forms.DataGridView();
             this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,12 +45,16 @@
             this.personSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ambulantCareDBDataSet = new CareSolution.AmbulantCareDBDataSet();
             this.personSetTableAdapter = new CareSolution.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelSuche = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBoxSuche = new System.Windows.Forms.TextBox();
             this.panelPatient.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
+            this.panelSuche.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelPatient
@@ -70,10 +72,8 @@
             // panelPatient
             // 
             this.panelPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.panelPatient.Controls.Add(this.label1);
+            this.panelPatient.Controls.Add(this.panelSuche);
             this.panelPatient.Controls.Add(this.buttonNeueData);
-            this.panelPatient.Controls.Add(this.pictureBox1);
-            this.panelPatient.Controls.Add(this.textBoxSuche);
             this.panelPatient.Controls.Add(this.dataGridViewPatient);
             this.panelPatient.Controls.Add(this.labelPatient);
             this.panelPatient.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -98,31 +98,6 @@
             this.buttonNeueData.Text = "Neue hinzufügen";
             this.buttonNeueData.UseVisualStyleBackColor = false;
             this.buttonNeueData.Click += new System.EventHandler(this.buttonNeueData_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(199, 74);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 55;
-            this.pictureBox1.TabStop = false;
-            // 
-            // textBoxSuche
-            // 
-            this.textBoxSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.textBoxSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSuche.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSuche.ForeColor = System.Drawing.Color.Gray;
-            this.textBoxSuche.Location = new System.Drawing.Point(308, 80);
-            this.textBoxSuche.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxSuche.Name = "textBoxSuche";
-            this.textBoxSuche.Size = new System.Drawing.Size(270, 25);
-            this.textBoxSuche.TabIndex = 54;
-            this.textBoxSuche.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
-            this.textBoxSuche.Enter += new System.EventHandler(this.textBoxSuche_Enter);
             // 
             // dataGridViewPatient
             // 
@@ -231,17 +206,53 @@
             // 
             this.personSetTableAdapter.ClearBeforeFill = true;
             // 
-            // label1
+            // panelSuche
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(230, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 23);
-            this.label1.TabIndex = 57;
-            this.label1.Text = "Suche :";
+            this.panelSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelSuche.Controls.Add(this.label2);
+            this.panelSuche.Controls.Add(this.pictureBox2);
+            this.panelSuche.Controls.Add(this.textBoxSuche);
+            this.panelSuche.Location = new System.Drawing.Point(169, 73);
+            this.panelSuche.Name = "panelSuche";
+            this.panelSuche.Size = new System.Drawing.Size(409, 38);
+            this.panelSuche.TabIndex = 62;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(42, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 23);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "Suche :";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 57;
+            this.pictureBox2.TabStop = false;
+            // 
+            // textBoxSuche
+            // 
+            this.textBoxSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.textBoxSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSuche.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSuche.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxSuche.Location = new System.Drawing.Point(109, 6);
+            this.textBoxSuche.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxSuche.Name = "textBoxSuche";
+            this.textBoxSuche.Size = new System.Drawing.Size(300, 25);
+            this.textBoxSuche.TabIndex = 54;
+            this.textBoxSuche.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
+            this.textBoxSuche.Enter += new System.EventHandler(this.textBoxSuche_Enter);
             // 
             // PatientData
             // 
@@ -256,10 +267,12 @@
             this.Load += new System.EventHandler(this.PatientData_Load);
             this.panelPatient.ResumeLayout(false);
             this.panelPatient.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
+            this.panelSuche.ResumeLayout(false);
+            this.panelSuche.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,8 +282,6 @@
         private System.Windows.Forms.Label labelPatient;
         private System.Windows.Forms.Panel panelPatient;
         private System.Windows.Forms.DataGridView dataGridViewPatient;
-        private System.Windows.Forms.TextBox textBoxSuche;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonNeueData;
         private AmbulantCareDBDataSet ambulantCareDBDataSet;
         private AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter personSetTableAdapter;
@@ -280,6 +291,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelSuche;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textBoxSuche;
     }
 }
