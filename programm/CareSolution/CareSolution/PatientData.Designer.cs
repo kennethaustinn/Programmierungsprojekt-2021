@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientData));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,15 +39,19 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxSuche = new System.Windows.Forms.TextBox();
             this.dataGridViewPatient = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nachname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vorname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Alt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Arzt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ambulantCareDBDataSet = new CareSolution.AmbulantCareDBDataSet();
+            this.personSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.personSetTableAdapter = new CareSolution.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter();
+            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPatient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // labelPatient
@@ -57,7 +62,7 @@
             this.labelPatient.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelPatient.Location = new System.Drawing.Point(248, 24);
             this.labelPatient.Name = "labelPatient";
-            this.labelPatient.Size = new System.Drawing.Size(225, 34);
+            this.labelPatient.Size = new System.Drawing.Size(174, 25);
             this.labelPatient.TabIndex = 34;
             this.labelPatient.Text = "Patienten Data";
             // 
@@ -112,7 +117,7 @@
             this.textBoxSuche.Location = new System.Drawing.Point(279, 82);
             this.textBoxSuche.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxSuche.Name = "textBoxSuche";
-            this.textBoxSuche.Size = new System.Drawing.Size(270, 25);
+            this.textBoxSuche.Size = new System.Drawing.Size(270, 20);
             this.textBoxSuche.TabIndex = 54;
             this.textBoxSuche.Text = "Suche";
             this.textBoxSuche.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
@@ -121,6 +126,7 @@
             // 
             // dataGridViewPatient
             // 
+            this.dataGridViewPatient.AutoGenerateColumns = false;
             this.dataGridViewPatient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewPatient.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewPatient.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
@@ -137,12 +143,12 @@
             this.dataGridViewPatient.ColumnHeadersHeight = 30;
             this.dataGridViewPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewPatient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Nachname,
-            this.Vorname,
-            this.Alt,
-            this.Adresse,
-            this.Arzt});
+            this.personIDDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.phoneDataGridViewTextBoxColumn});
+            this.dataGridViewPatient.DataSource = this.personSetBindingSource;
             this.dataGridViewPatient.EnableHeadersVisualStyles = false;
             this.dataGridViewPatient.GridColor = System.Drawing.Color.MediumPurple;
             this.dataGridViewPatient.Location = new System.Drawing.Point(43, 145);
@@ -170,51 +176,59 @@
             this.dataGridViewPatient.TabIndex = 35;
             this.dataGridViewPatient.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPatient_CellDoubleClick);
             // 
-            // id
+            // ambulantCareDBDataSet
             // 
-            this.id.HeaderText = "Id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.Width = 51;
+            this.ambulantCareDBDataSet.DataSetName = "AmbulantCareDBDataSet";
+            this.ambulantCareDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Nachname
+            // personSetBindingSource
             // 
-            this.Nachname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nachname.HeaderText = "Name";
-            this.Nachname.MinimumWidth = 6;
-            this.Nachname.Name = "Nachname";
+            this.personSetBindingSource.DataMember = "PersonSet";
+            this.personSetBindingSource.DataSource = this.ambulantCareDBDataSet;
             // 
-            // Vorname
+            // personSetTableAdapter
             // 
-            this.Vorname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Vorname.HeaderText = "Vorname";
-            this.Vorname.MinimumWidth = 6;
-            this.Vorname.Name = "Vorname";
+            this.personSetTableAdapter.ClearBeforeFill = true;
             // 
-            // Alt
+            // personIDDataGridViewTextBoxColumn
             // 
-            this.Alt.HeaderText = "Alt";
-            this.Alt.MinimumWidth = 6;
-            this.Alt.Name = "Alt";
-            this.Alt.Width = 55;
+            this.personIDDataGridViewTextBoxColumn.DataPropertyName = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.HeaderText = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
+            this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.personIDDataGridViewTextBoxColumn.Width = 82;
             // 
-            // Adresse
+            // lastNameDataGridViewTextBoxColumn
             // 
-            this.Adresse.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Adresse.HeaderText = "Adresse";
-            this.Adresse.MinimumWidth = 6;
-            this.Adresse.Name = "Adresse";
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Width = 91;
             // 
-            // Arzt
+            // firstNameDataGridViewTextBoxColumn
             // 
-            this.Arzt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Arzt.HeaderText = "Arzt";
-            this.Arzt.MinimumWidth = 6;
-            this.Arzt.Name = "Arzt";
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.Width = 76;
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.Width = 68;
             // 
             // PatientData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelPatient);
@@ -227,6 +241,8 @@
             this.panelPatient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,11 +255,13 @@
         private System.Windows.Forms.TextBox textBoxSuche;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonNeueData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nachname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vorname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Alt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Adresse;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Arzt;
+        private AmbulantCareDBDataSet ambulantCareDBDataSet;
+        private System.Windows.Forms.BindingSource personSetBindingSource;
+        private AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter personSetTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
     }
 }

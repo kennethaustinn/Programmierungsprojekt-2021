@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -13,9 +14,13 @@ namespace CareSolution
 {
     public partial class PatientData : Form
     {
+        SqlConnection connection;
+        private string connectionString;
         public PatientData()
         {
             InitializeComponent();
+            connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
+
         }
         //speichern das Form von Anfang
         private Form activeForm = null;
@@ -56,7 +61,22 @@ namespace CareSolution
 
         private void textBoxSuche_TextChanged(object sender, EventArgs e)
         {
+            //var query = "SELECT * FROM PersonSet a WHERE a.FirstName Like  @FirstName" ;
+            var query = "SELECT * FROM PersonSet a WHERE a.LastName   Like '" + textBoxSuche.Text + "%' or a.FirstName like'%" + textBoxSuche.Text + "%'";
+            //or Name like'%" + textBoxSuche.Text + "%'"
+            using (connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            using (SqlDataAdapter adatpe = new SqlDataAdapter(command))
+            {
+                //command.Parameters.AddWithValue("@FirstName", textBox1.Text);
 
+                DataTable Persondt = new DataTable();
+                adatpe.Fill(Persondt);
+                dataGridViewPatient.DataSource = Persondt;
+                //listBox2.DisplayMember = "LastName";
+                //listBox2.ValueMember = "Firstname";
+                //listBox2.DataSource = Persondt;
+            }
             //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
             //SqlDataAdapter sda = new SqlDataAdapter("select * from [dbo].[Patient] where Vorname like '%" + textBoxSuche.Text + "%' or Name like'%" + textBoxSuche.Text + "%'", con);
             //DataTable dt = new DataTable();
@@ -76,6 +96,8 @@ namespace CareSolution
 
         private void PatientData_Load(object sender, EventArgs e)
         {
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.PersonSet". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.personSetTableAdapter.Fill(this.ambulantCareDBDataSet.PersonSet);
             //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
             //SqlDataAdapter sda = new SqlDataAdapter("select * from  [dbo].[Patient]", con);
             //DataTable dt = new DataTable();
@@ -91,17 +113,17 @@ namespace CareSolution
             //    dataGridViewPatient.Rows[n].Cells["adresse"].Value = row["Adresse"].ToString();
             //    dataGridViewPatient.Rows[n].Cells["arzt"].Value = row["Arzt"].ToString();
             //}
-            var patient = new Patient.Patient().SetTestData();
-            int n = dataGridViewPatient.Rows.Add();
-            dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
-            dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
-            dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
-            dataGridViewPatient.Rows[n].Cells["alt"].Value = patient.CalculateAge(patient.BirthDate).ToString();
-            dataGridViewPatient.Rows[n].Cells["adresse"].Value = patient.Address;
-            foreach (var item in patient.Doctor)
-            {
-                dataGridViewPatient.Rows[n].Cells["arzt"].Value = item.LastName;
-            }
+            //var patient = new Patient.Patient().SetTestData();
+            //int n = dataGridViewPatient.Rows.Add();
+            //dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
+            //dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
+            //dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
+            //dataGridViewPatient.Rows[n].Cells["alt"].Value = patient.CalculateAge(patient.BirthDate).ToString();
+            //dataGridViewPatient.Rows[n].Cells["adresse"].Value = patient.Address;
+            //foreach (var item in patient.Doctor)
+            //{
+            //    dataGridViewPatient.Rows[n].Cells["arzt"].Value = item.LastName;
+            //}
             //DataTable dt = new DataTable();
             //DataRow myDataRow;
             //myDataRow = dt.NewRow();
