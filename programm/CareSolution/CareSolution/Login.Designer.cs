@@ -31,12 +31,10 @@ namespace CareSolution
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonMaximieren = new System.Windows.Forms.Button();
-            this.buttonMinimize = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBoxShowpassword = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -45,14 +43,13 @@ namespace CareSolution
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShowpassword)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -66,6 +63,16 @@ namespace CareSolution
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(383, 591);
             this.panelMenu.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(64, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(234, 133);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -97,9 +104,6 @@ namespace CareSolution
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.buttonMaximieren);
-            this.panel1.Controls.Add(this.buttonMinimize);
-            this.panel1.Controls.Add(this.buttonClose);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
@@ -109,49 +113,6 @@ namespace CareSolution
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(599, 591);
             this.panel1.TabIndex = 2;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // buttonMaximieren
-            // 
-            this.buttonMaximieren.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMaximieren.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMaximieren.FlatAppearance.BorderSize = 0;
-            this.buttonMaximieren.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMaximieren.Image = ((System.Drawing.Image)(resources.GetObject("buttonMaximieren.Image")));
-            this.buttonMaximieren.Location = new System.Drawing.Point(517, 3);
-            this.buttonMaximieren.Name = "buttonMaximieren";
-            this.buttonMaximieren.Size = new System.Drawing.Size(38, 23);
-            this.buttonMaximieren.TabIndex = 8;
-            this.buttonMaximieren.UseVisualStyleBackColor = true;
-            this.buttonMaximieren.Click += new System.EventHandler(this.buttonMaximieren_Click);
-            // 
-            // buttonMinimize
-            // 
-            this.buttonMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMinimize.FlatAppearance.BorderSize = 0;
-            this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinimize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMinimize.Image")));
-            this.buttonMinimize.Location = new System.Drawing.Point(473, 3);
-            this.buttonMinimize.Name = "buttonMinimize";
-            this.buttonMinimize.Size = new System.Drawing.Size(38, 23);
-            this.buttonMinimize.TabIndex = 7;
-            this.buttonMinimize.UseVisualStyleBackColor = true;
-            this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonClose.FlatAppearance.BorderSize = 0;
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Image = ((System.Drawing.Image)(resources.GetObject("buttonClose.Image")));
-            this.buttonClose.Location = new System.Drawing.Point(561, 3);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(38, 23);
-            this.buttonClose.TabIndex = 6;
-            this.buttonClose.UseVisualStyleBackColor = true;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // panel3
             // 
@@ -259,16 +220,6 @@ namespace CareSolution
             this.label4.TabIndex = 3;
             this.label4.Text = "Login to your account";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(64, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(234, 133);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -282,6 +233,7 @@ namespace CareSolution
             this.Text = "Login";
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -290,7 +242,6 @@ namespace CareSolution
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUsername)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,9 +259,6 @@ namespace CareSolution
         private System.Windows.Forms.PictureBox pictureBoxUsername;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button buttonMaximieren;
-        private System.Windows.Forms.Button buttonMinimize;
-        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

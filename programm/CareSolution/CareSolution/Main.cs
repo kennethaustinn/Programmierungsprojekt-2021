@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Drawing.Text;
@@ -17,9 +19,12 @@ namespace CareSolution
     {
         private Button currentButton;
         private Panel leftBorderBtn;
+        SqlConnection connection;
+        private string connectionString;
         public Main()
         {
             InitializeComponent();
+            connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 38);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -182,13 +187,28 @@ namespace CareSolution
 
         private void Main_Load(object sender, EventArgs e)
         {
-            var patient = new Patient.Patient().SetTestData();
-            int n = dataGridViewPatient.Rows.Add();
-            dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
-            dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
-            dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.PersonSet". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.personSetTableAdapter.Fill(this.ambulantCareDBDataSet.PersonSet);
+
+            //var patient = new Patient.Patient().SetTestData();
+            //int n = dataGridViewPatient.Rows.Add();
+            //dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
+            //dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
+            //dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
         }
 
+        private void textBoxSuche_TextChanged(object sender, EventArgs e)
+        {
+            var query = "SELECT * FROM PersonSet a WHERE a.LastName   Like '" + textBoxSuche.Text + "%' or a.FirstName like'%" + textBoxSuche.Text + "%'";
+            using (connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            using (SqlDataAdapter adatpe = new SqlDataAdapter(command))
+            {
+                DataTable Persondt = new DataTable();
+                adatpe.Fill(Persondt);
+                dataGridViewPatient.DataSource = Persondt;
+            }
+        }
     }
 
 }

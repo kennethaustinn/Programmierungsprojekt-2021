@@ -45,31 +45,18 @@ namespace CareSolution
         }
         private void textBoxSuche_Enter(object sender, EventArgs e)
         {
-            if (textBoxSuche.Text == "Suche")
+            if (textBoxSuche.Text == "Suche") 
                 textBoxSuche.Text = "";
-
             textBoxSuche.ForeColor = Color.WhiteSmoke;
-        }
-
-        private void textBoxSuche_Leave(object sender, EventArgs e)
-        {
-            if (textBoxSuche.Text == "")
-                textBoxSuche.Text = "Suche";
-
-            textBoxSuche.ForeColor = Color.Gray;
         }
 
         private void textBoxSuche_TextChanged(object sender, EventArgs e)
         {
-            //var query = "SELECT * FROM PersonSet a WHERE a.FirstName Like  @FirstName" ;
             var query = "SELECT * FROM PersonSet a WHERE a.LastName   Like '" + textBoxSuche.Text + "%' or a.FirstName like'%" + textBoxSuche.Text + "%'";
-            //or Name like'%" + textBoxSuche.Text + "%'"
             using (connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             using (SqlDataAdapter adatpe = new SqlDataAdapter(command))
             {
-                //command.Parameters.AddWithValue("@FirstName", textBox1.Text);
-
                 DataTable Persondt = new DataTable();
                 adatpe.Fill(Persondt);
                 dataGridViewPatient.DataSource = Persondt;

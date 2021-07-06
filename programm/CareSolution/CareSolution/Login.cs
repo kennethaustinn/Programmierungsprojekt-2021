@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -14,14 +15,12 @@ namespace CareSolution
 {
     public partial class Login : Form
     {
+        SqlConnection connection;
+        private string connectionString;
         public Login()
         {
             InitializeComponent();
-            //form
-            //this.Text = String.Empty;
-            //this.ControlBox = false;
-            //this.DoubleBuffered = true;
-            //this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
         }
 
         private void textBox1_Click(object sender, EventArgs e)
@@ -63,57 +62,44 @@ namespace CareSolution
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login where Username = '" + textBox1.Text + "'and Password='" + textBox2.Text + "'", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1")
+            var query = "SELECT * FROM PersonSet_Worker a WHERE a.Username  = '" + textBox1.Text + "'and a.Password='" + textBox2.Text + "'";
+            using (connection = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(query, connection))
+            using (SqlDataAdapter adatpe = new SqlDataAdapter(command))
             {
-                this.Hide();
-                Main ss = new Main();
-                ss.Show();
-            }
-            else
-            {
-                MessageBox.Show("Falsche Username und oder Password");
-            }
-        }
-
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void buttonMaximieren_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                WindowState = FormWindowState.Normal;
+                DataSet ds = new DataSet();
+                adatpe.Fill(ds);
+                int count = ds.Tables[0].Rows.Count;
+                if (count ==1)
+                {
+                    this.Hide();
+                    Main ss = new Main();
+                    ss.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Falsche Username und oder Password");
+                    textBox1.Text = "Username";
+                    textBox2.Text = "Password";
+                    textBox2.UseSystemPasswordChar = false;
+                }
             }
         }
-
-        private void buttonMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-        // Drag Form
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-
-        }
-
+        //        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
+                //    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login where Username = '" + textBox1.Text + "'and Password='" + textBox2.Text + "'", con);
+                //    DataTable dt = new DataTable();
+                //    sda.Fill(dt);
+                //    if (dt.Rows[0][0].ToString() == "1")
+                //    {
+                //        this.Hide();
+                //        Main ss = new Main();
+                //        ss.Show();
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Falsche Username und oder Password");
+                //    }
+            
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if (textBox1.Text == "Username")
