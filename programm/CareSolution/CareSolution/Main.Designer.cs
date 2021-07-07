@@ -48,11 +48,12 @@
             this.panelHome = new System.Windows.Forms.Panel();
             this.buttonHome = new System.Windows.Forms.Button();
             this.panelChildform = new System.Windows.Forms.Panel();
+            this.panelSuche = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxSuche = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.buttonWeiterPatientsübersicht = new System.Windows.Forms.Button();
             this.dataGridViewPatient = new System.Windows.Forms.DataGridView();
             this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,17 +68,16 @@
             this.DatumUhr = new System.Windows.Forms.Timer(this.components);
             this.personSetTableAdapter = new CareSolution.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.panelSuche = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogout.SuspendLayout();
             this.panelHome.SuspendLayout();
             this.panelChildform.SuspendLayout();
+            this.panelSuche.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            this.panelSuche.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -363,6 +363,17 @@
             this.panelChildform.Size = new System.Drawing.Size(766, 591);
             this.panelChildform.TabIndex = 1;
             // 
+            // panelSuche
+            // 
+            this.panelSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelSuche.Controls.Add(this.label2);
+            this.panelSuche.Controls.Add(this.pictureBox1);
+            this.panelSuche.Controls.Add(this.textBoxSuche);
+            this.panelSuche.Location = new System.Drawing.Point(345, 171);
+            this.panelSuche.Name = "panelSuche";
+            this.panelSuche.Size = new System.Drawing.Size(409, 38);
+            this.panelSuche.TabIndex = 61;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -374,6 +385,29 @@
             this.label2.Size = new System.Drawing.Size(81, 23);
             this.label2.TabIndex = 60;
             this.label2.Text = "Suche :";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 38);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBoxSuche
+            // 
+            this.textBoxSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.textBoxSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSuche.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSuche.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxSuche.Location = new System.Drawing.Point(109, 6);
+            this.textBoxSuche.Name = "textBoxSuche";
+            this.textBoxSuche.Size = new System.Drawing.Size(275, 25);
+            this.textBoxSuche.TabIndex = 56;
+            this.textBoxSuche.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
             // 
             // label1
             // 
@@ -398,29 +432,6 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(293, 81);
             this.checkedListBox1.TabIndex = 58;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 57;
-            this.pictureBox1.TabStop = false;
-            // 
-            // textBoxSuche
-            // 
-            this.textBoxSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.textBoxSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSuche.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSuche.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.textBoxSuche.Location = new System.Drawing.Point(109, 6);
-            this.textBoxSuche.Name = "textBoxSuche";
-            this.textBoxSuche.Size = new System.Drawing.Size(275, 25);
-            this.textBoxSuche.TabIndex = 56;
-            this.textBoxSuche.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
             // 
             // buttonWeiterPatientsübersicht
             // 
@@ -577,17 +588,6 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // panelSuche
-            // 
-            this.panelSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.panelSuche.Controls.Add(this.label2);
-            this.panelSuche.Controls.Add(this.pictureBox1);
-            this.panelSuche.Controls.Add(this.textBoxSuche);
-            this.panelSuche.Location = new System.Drawing.Point(345, 171);
-            this.panelSuche.Name = "panelSuche";
-            this.panelSuche.Size = new System.Drawing.Size(409, 38);
-            this.panelSuche.TabIndex = 61;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -607,13 +607,13 @@
             this.panelHome.ResumeLayout(false);
             this.panelChildform.ResumeLayout(false);
             this.panelChildform.PerformLayout();
+            this.panelSuche.ResumeLayout(false);
+            this.panelSuche.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.panelSuche.ResumeLayout(false);
-            this.panelSuche.PerformLayout();
             this.ResumeLayout(false);
 
         }

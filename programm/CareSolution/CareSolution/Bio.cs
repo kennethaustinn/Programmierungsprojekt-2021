@@ -111,5 +111,12 @@ namespace CareSolution
             _documentKeys.Add(labelFamilieMitglieder.Text);
             _documentKeys.Add(labelSprache.Text);
         }
+
+        private void Bio_Load(object sender, EventArgs e)
+        {
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.BioSet". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.bioSetTableAdapter.Fill(this.ambulantCareDBDataSet.BioSet);
+
+        }
     }
 }

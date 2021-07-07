@@ -192,6 +192,7 @@ namespace CareSolution
                 dataGridViewPatient.DataSource = Persondt;
             }
         }
+
     }
 
 }
