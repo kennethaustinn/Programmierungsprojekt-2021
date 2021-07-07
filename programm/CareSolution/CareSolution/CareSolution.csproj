@@ -70,11 +70,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AmbulantCareDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AmbulantCareDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Anamnese.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,17 +190,6 @@
     <EmbeddedResource Include="Zuhause.resx">
       <DependentUpon>Zuhause.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="AmbulantCareDBDataSet.xsc">
-      <DependentUpon>AmbulantCareDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="AmbulantCareDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AmbulantCareDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="AmbulantCareDBDataSet.xss">
-      <DependentUpon>AmbulantCareDBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DataManager.HealthData.datasource" />
     <None Include="Properties\DataSources\DataManager.Medication.datasource" />
@@ -304,15 +288,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="AmbulantCareDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="AmbulantCareDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>AmbulantCareDB.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

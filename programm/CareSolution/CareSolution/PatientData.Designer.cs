@@ -43,8 +43,8 @@
             this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ambulantCareDBDataSet = new CareSolution.AmbulantCareDBDataSet();
-            this.personSetTableAdapter = new CareSolution.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter();
+            this.ambulantCareDBDataSet = new DataManager.AmbulantCareDBDataSet();
+            this.personSetTableAdapter = new DataManager.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter();
             this.panelSuche = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -283,8 +283,8 @@
         private System.Windows.Forms.Panel panelPatient;
         private System.Windows.Forms.DataGridView dataGridViewPatient;
         private System.Windows.Forms.Button buttonNeueData;
-        private AmbulantCareDBDataSet ambulantCareDBDataSet;
-        private AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter personSetTableAdapter;
+        private DataManager.AmbulantCareDBDataSet ambulantCareDBDataSet;
+        private DataManager.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter personSetTableAdapter;
         private System.Windows.Forms.BindingSource personSetBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn personIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;

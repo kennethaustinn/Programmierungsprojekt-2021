@@ -57,9 +57,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ambulantCareDBDataSet = new CareSolution.AmbulantCareDBDataSet();
+            this.ambulantCareDBDataSet = new DataManager.AmbulantCareDBDataSet();
             this.bioSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bioSetTableAdapter = new CareSolution.AmbulantCareDBDataSetTableAdapters.BioSetTableAdapter();
+            this.bioSetTableAdapter = new DataManager.AmbulantCareDBDataSetTableAdapters.BioSetTableAdapter();
             this.bioIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.schoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trainingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -567,9 +567,9 @@
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonScanNeueData;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private AmbulantCareDBDataSet ambulantCareDBDataSet;
+        private DataManager.AmbulantCareDBDataSet ambulantCareDBDataSet;
         private System.Windows.Forms.BindingSource bioSetBindingSource;
-        private AmbulantCareDBDataSetTableAdapters.BioSetTableAdapter bioSetTableAdapter;
+        private DataManager.AmbulantCareDBDataSetTableAdapters.BioSetTableAdapter bioSetTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn bioIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn schoolDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trainingDataGridViewTextBoxColumn;

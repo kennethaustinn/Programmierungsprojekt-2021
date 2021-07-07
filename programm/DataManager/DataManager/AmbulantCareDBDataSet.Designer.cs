@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace CareSolution {
+namespace DataManager {
     
     
     /// <summary>
@@ -9327,7 +9327,7 @@ namespace CareSolution {
         }
     }
 }
-namespace CareSolution.AmbulantCareDBDataSetTableAdapters {
+namespace DataManager.AmbulantCareDBDataSetTableAdapters {
     
     
     /// <summary>
@@ -9505,7 +9505,7 @@ SELECT ActionPlanID, CreatedOn, Actions_Morning, Actions_Noon, Actions_Afternoon
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9880,7 +9880,7 @@ SELECT BioID, School, Training, University, Job, Partnership, Children, Leisure,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10296,7 +10296,7 @@ SELECT CareReportID, CreatedOn, ActionPlanFulfilled, Deviations, CaregiverPerson
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10629,7 +10629,7 @@ SELECT CaringRelativesID, Name, LivesInHousehold, VisitFrequency, Activity, Pati
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10969,7 +10969,7 @@ SELECT HealthDataID, MedicalHistory, ChronicDiseases FROM HealthDataSet WHERE (H
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11308,7 +11308,7 @@ SELECT HomeID, Tools, Barrier_Free_Kitchen, Barrier_Free_Bath, Barrier_Free_Livi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11648,7 +11648,7 @@ SELECT HospitaliationsID, Reason, Duration, HealthDataHealthDataID, Date FROM Ho
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11978,7 +11978,7 @@ SELECT MedicationID, Drug, Dosage, Frequency, AdministeredBy, HealthDataHealthDa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12325,7 +12325,7 @@ SELECT Patient_PersonID, Caregiver_PersonID FROM PatientCaregiver WHERE (Caregiv
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12625,7 +12625,7 @@ SELECT Patient_PersonID, CareReport_CareReportID FROM PatientCareReport WHERE (C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12924,7 +12924,7 @@ SELECT Patient_PersonID, Doctor_PersonID FROM PatientDoctor WHERE (Doctor_Person
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13231,7 +13231,7 @@ SELECT Patient_PersonID, Doctor_PersonID FROM PatientDoctor WHERE (Doctor_Person
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13574,7 +13574,7 @@ SELECT IsSpecialist, PersonID FROM PersonSet_Caregiver WHERE (PersonID = @Person
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13874,7 +13874,7 @@ SELECT MedicalSpecialty, Address, PersonID FROM PersonSet_Doctor WHERE (PersonID
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14237,7 +14237,7 @@ SELECT BirthDate, Address, Contactperson, ContactpersonPhone, HealthInsurance, H
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14665,7 +14665,7 @@ SELECT BirthDate, Address, Contactperson, ContactpersonPhone, HealthInsurance, H
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15002,7 +15002,7 @@ SELECT RiskValuesID, Decubitus, Pain, Falling, Dementia, HealthDataHealthDataID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15333,7 +15333,7 @@ SELECT VitalParametersID, DateTime, TypeOfMeasurement, Value, Unit, HealthDataHe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString;
+            this._connection.ConnectionString = global::DataManager.Properties.Settings.Default.AmbulantCareDBConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
