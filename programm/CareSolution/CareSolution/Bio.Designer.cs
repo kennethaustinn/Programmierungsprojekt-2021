@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bio));
             this.panelBio = new System.Windows.Forms.Panel();
+            this.bioSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ambulantCareDBDataSet = new DataManager.AmbulantCareDBDataSet();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonScanNeueData = new System.Windows.Forms.Button();
             this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
@@ -56,33 +58,18 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ambulantCareDBDataSet = new DataManager.AmbulantCareDBDataSet();
-            this.bioSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bioSetTableAdapter = new DataManager.AmbulantCareDBDataSetTableAdapters.BioSetTableAdapter();
-            this.bioIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.schoolDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trainingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.universityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.jobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.partnershipDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.childrenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leisureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.familyMembersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.languagesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bioSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.panelProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bioSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBio
             // 
             this.panelBio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.panelBio.Controls.Add(this.dataGridView1);
             this.panelBio.Controls.Add(this.buttonEdit);
             this.panelBio.Controls.Add(this.buttonScanNeueData);
             this.panelBio.Controls.Add(this.pictureBoxTopMenu);
@@ -112,6 +99,16 @@
             this.panelBio.Name = "panelBio";
             this.panelBio.Size = new System.Drawing.Size(748, 544);
             this.panelBio.TabIndex = 24;
+            // 
+            // bioSetBindingSource
+            // 
+            this.bioSetBindingSource.DataMember = "BioSet";
+            this.bioSetBindingSource.DataSource = this.ambulantCareDBDataSet;
+            // 
+            // ambulantCareDBDataSet
+            // 
+            this.ambulantCareDBDataSet.DataSetName = "AmbulantCareDBDataSet";
+            this.ambulantCareDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonEdit
             // 
@@ -395,123 +392,9 @@
             this.label13.TabIndex = 87;
             this.label13.Text = "Schule :";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bioIDDataGridViewTextBoxColumn,
-            this.schoolDataGridViewTextBoxColumn,
-            this.trainingDataGridViewTextBoxColumn,
-            this.universityDataGridViewTextBoxColumn,
-            this.jobDataGridViewTextBoxColumn,
-            this.partnershipDataGridViewTextBoxColumn,
-            this.childrenDataGridViewTextBoxColumn,
-            this.leisureDataGridViewTextBoxColumn,
-            this.familyMembersDataGridViewTextBoxColumn,
-            this.languagesDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bioSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(331, 258);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(381, 150);
-            this.dataGridView1.TabIndex = 110;
-            // 
-            // ambulantCareDBDataSet
-            // 
-            this.ambulantCareDBDataSet.DataSetName = "AmbulantCareDBDataSet";
-            this.ambulantCareDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bioSetBindingSource
-            // 
-            this.bioSetBindingSource.DataMember = "BioSet";
-            this.bioSetBindingSource.DataSource = this.ambulantCareDBDataSet;
-            // 
             // bioSetTableAdapter
             // 
             this.bioSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // bioIDDataGridViewTextBoxColumn
-            // 
-            this.bioIDDataGridViewTextBoxColumn.DataPropertyName = "BioID";
-            this.bioIDDataGridViewTextBoxColumn.HeaderText = "BioID";
-            this.bioIDDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bioIDDataGridViewTextBoxColumn.Name = "bioIDDataGridViewTextBoxColumn";
-            this.bioIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.bioIDDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // schoolDataGridViewTextBoxColumn
-            // 
-            this.schoolDataGridViewTextBoxColumn.DataPropertyName = "School";
-            this.schoolDataGridViewTextBoxColumn.HeaderText = "School";
-            this.schoolDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.schoolDataGridViewTextBoxColumn.Name = "schoolDataGridViewTextBoxColumn";
-            this.schoolDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // trainingDataGridViewTextBoxColumn
-            // 
-            this.trainingDataGridViewTextBoxColumn.DataPropertyName = "Training";
-            this.trainingDataGridViewTextBoxColumn.HeaderText = "Training";
-            this.trainingDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.trainingDataGridViewTextBoxColumn.Name = "trainingDataGridViewTextBoxColumn";
-            this.trainingDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // universityDataGridViewTextBoxColumn
-            // 
-            this.universityDataGridViewTextBoxColumn.DataPropertyName = "University";
-            this.universityDataGridViewTextBoxColumn.HeaderText = "University";
-            this.universityDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.universityDataGridViewTextBoxColumn.Name = "universityDataGridViewTextBoxColumn";
-            this.universityDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // jobDataGridViewTextBoxColumn
-            // 
-            this.jobDataGridViewTextBoxColumn.DataPropertyName = "Job";
-            this.jobDataGridViewTextBoxColumn.HeaderText = "Job";
-            this.jobDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.jobDataGridViewTextBoxColumn.Name = "jobDataGridViewTextBoxColumn";
-            this.jobDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // partnershipDataGridViewTextBoxColumn
-            // 
-            this.partnershipDataGridViewTextBoxColumn.DataPropertyName = "Partnership";
-            this.partnershipDataGridViewTextBoxColumn.HeaderText = "Partnership";
-            this.partnershipDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.partnershipDataGridViewTextBoxColumn.Name = "partnershipDataGridViewTextBoxColumn";
-            this.partnershipDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // childrenDataGridViewTextBoxColumn
-            // 
-            this.childrenDataGridViewTextBoxColumn.DataPropertyName = "Children";
-            this.childrenDataGridViewTextBoxColumn.HeaderText = "Children";
-            this.childrenDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.childrenDataGridViewTextBoxColumn.Name = "childrenDataGridViewTextBoxColumn";
-            this.childrenDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // leisureDataGridViewTextBoxColumn
-            // 
-            this.leisureDataGridViewTextBoxColumn.DataPropertyName = "Leisure";
-            this.leisureDataGridViewTextBoxColumn.HeaderText = "Leisure";
-            this.leisureDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.leisureDataGridViewTextBoxColumn.Name = "leisureDataGridViewTextBoxColumn";
-            this.leisureDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // familyMembersDataGridViewTextBoxColumn
-            // 
-            this.familyMembersDataGridViewTextBoxColumn.DataPropertyName = "Family_Members";
-            this.familyMembersDataGridViewTextBoxColumn.HeaderText = "Family_Members";
-            this.familyMembersDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.familyMembersDataGridViewTextBoxColumn.Name = "familyMembersDataGridViewTextBoxColumn";
-            this.familyMembersDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // languagesDataGridViewTextBoxColumn
-            // 
-            this.languagesDataGridViewTextBoxColumn.DataPropertyName = "Languages";
-            this.languagesDataGridViewTextBoxColumn.HeaderText = "Languages";
-            this.languagesDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.languagesDataGridViewTextBoxColumn.Name = "languagesDataGridViewTextBoxColumn";
-            this.languagesDataGridViewTextBoxColumn.Width = 125;
             // 
             // Bio
             // 
@@ -527,13 +410,12 @@
             this.Load += new System.EventHandler(this.Bio_Load);
             this.panelBio.ResumeLayout(false);
             this.panelBio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bioSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
             this.panelProfil.ResumeLayout(false);
             this.panelProfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bioSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -566,19 +448,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonScanNeueData;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private DataManager.AmbulantCareDBDataSet ambulantCareDBDataSet;
         private System.Windows.Forms.BindingSource bioSetBindingSource;
         private DataManager.AmbulantCareDBDataSetTableAdapters.BioSetTableAdapter bioSetTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bioIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn schoolDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn trainingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn universityDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn jobDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn partnershipDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn childrenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn leisureDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn familyMembersDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn languagesDataGridViewTextBoxColumn;
     }
 }
