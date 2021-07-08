@@ -172,12 +172,6 @@ namespace CareSolution
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.PersonSet". Sie können sie bei Bedarf verschieben oder entfernen.
             this.personSetTableAdapter.Fill(this.ambulantCareDBDataSet.PersonSet);
-
-            //var patient = new Patient.Patient().SetTestData();
-            //int n = dataGridViewPatient.Rows.Add();
-            //dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
-            //dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
-            //dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
         }
 
         private void textBoxSuche_TextChanged(object sender, EventArgs e)

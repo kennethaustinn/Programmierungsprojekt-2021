@@ -17,14 +17,11 @@ namespace CareSolution
     public partial class Bio : Form
     {
         private readonly OcrManager _ocrManager = new OcrManager();
-
         private Dictionary<string, List<string>> _documentDictionary = new Dictionary<string, List<string>>();
-
         private List<string> _documentKeys = new List<string>();
         private string _path;
 
         //private readonly string _projectDirectory = Directory.GetParent(Environment.CurrentDirectory)?.Parent?.FullName;
-
 
         public Bio()
         {
@@ -45,9 +42,6 @@ namespace CareSolution
 
         private void buttonScanNeueData_Click(object sender, EventArgs e)
         {
-            //OpenFileDialog ofd = new OpenFileDialog();
-            //ofd.Filter = "PDF File (*.pdf)| *.pdf |Image Files (*.png;*.jpg)|*.png;*.jpg ";
-            //ofd.ShowDialog();
             OpenFileDialog ofd = new OpenFileDialog
             {
                 AddExtension = true,

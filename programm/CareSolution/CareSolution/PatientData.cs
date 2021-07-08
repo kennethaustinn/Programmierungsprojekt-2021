@@ -41,13 +41,6 @@ namespace CareSolution
             childForm.BringToFront();
             childForm.Show();
         }
-        private void textBoxSuche_Enter(object sender, EventArgs e)
-        {
-            if (textBoxSuche.Text == "Suche") 
-                textBoxSuche.Text = "";
-            textBoxSuche.ForeColor = Color.WhiteSmoke;
-        }
-
         private void textBoxSuche_TextChanged(object sender, EventArgs e)
         {
             var query = "SELECT * FROM PersonSet a WHERE a.LastName   Like '" + textBoxSuche.Text + "%' or a.FirstName like'%" + textBoxSuche.Text + "%'";

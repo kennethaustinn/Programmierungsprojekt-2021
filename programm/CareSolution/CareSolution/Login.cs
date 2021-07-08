@@ -85,21 +85,6 @@ namespace CareSolution
                 }
             }
         }
-        //        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
-                //    SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) From Login where Username = '" + textBox1.Text + "'and Password='" + textBox2.Text + "'", con);
-                //    DataTable dt = new DataTable();
-                //    sda.Fill(dt);
-                //    if (dt.Rows[0][0].ToString() == "1")
-                //    {
-                //        this.Hide();
-                //        Main ss = new Main();
-                //        ss.Show();
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show("Falsche Username und oder Password");
-                //    }
-            
         private void textBox1_Enter(object sender, EventArgs e)
         {
             if (textBox1.Text == "Username")

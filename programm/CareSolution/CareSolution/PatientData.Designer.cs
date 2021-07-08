@@ -129,7 +129,6 @@
             this.textBoxSuche.Size = new System.Drawing.Size(300, 25);
             this.textBoxSuche.TabIndex = 54;
             this.textBoxSuche.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
-            this.textBoxSuche.Enter += new System.EventHandler(this.textBoxSuche_Enter);
             // 
             // dataGridViewPatient
             // 
