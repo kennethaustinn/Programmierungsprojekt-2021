@@ -25,8 +25,6 @@ namespace CareSolution
             connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
 
         }
-
-
         private void AddPatient_Load(object sender, EventArgs e)
         {
             FillComboBox();
@@ -73,5 +71,6 @@ namespace CareSolution
             this.Close();
 
         }
+
     }
 }

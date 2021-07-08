@@ -1,6 +1,6 @@
 ﻿namespace CareSolution
 {
-    partial class Pflegebericht
+    partial class CareReport
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pflegebericht));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CareReport));
             this.panelBio = new System.Windows.Forms.Panel();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonScanNeueData = new System.Windows.Forms.Button();

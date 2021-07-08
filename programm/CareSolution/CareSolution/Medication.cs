@@ -10,23 +10,19 @@ using System.Windows.Forms;
 
 namespace CareSolution
 {
-    public partial class Gesundheitszustand : Form
+    public partial class Medication : Form
     {
-        public Gesundheitszustand()
+        public Medication()
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();
             labelName2.Text = patient.FirstName + " " + patient.LastName;
-
-            foreach (var item in patient.HealthData.VitalParameters)
-            {
-                labelDatum.Text = item.DateTime.ToShortDateString();
-                labelWert.Text = item.Value.ToString();
-            }
-
-            
         }
 
-        
+        private void Medikamente_Load(object sender, EventArgs e)
+        {
+            // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.MedicationSet". Sie können sie bei Bedarf verschieben oder entfernen.
+            this.medicationSetTableAdapter.Fill(this.ambulantCareDBDataSet.MedicationSet);
+            }
     }
 }

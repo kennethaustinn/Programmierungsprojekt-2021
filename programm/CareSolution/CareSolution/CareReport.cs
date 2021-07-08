@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CareSolution
 {
-    public partial class Pflegebericht : Form
+    public partial class CareReport : Form
     {
-        public Pflegebericht()
+        public CareReport()
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();

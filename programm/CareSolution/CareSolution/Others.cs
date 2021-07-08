@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CareSolution
 {
-    public partial class Sonstiges : Form
+    public partial class Others : Form
     {
-        public Sonstiges()
+        public Others()
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();

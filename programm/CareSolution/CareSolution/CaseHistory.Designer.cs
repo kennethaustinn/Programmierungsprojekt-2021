@@ -1,6 +1,6 @@
 ﻿namespace CareSolution
 {
-    partial class Anamnese
+    partial class CaseHistory
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Anamnese));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CaseHistory));
             this.panelBio = new System.Windows.Forms.Panel();
             this.panelProfil = new System.Windows.Forms.Panel();
             this.labelName2 = new System.Windows.Forms.Label();

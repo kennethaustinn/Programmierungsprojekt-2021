@@ -1,6 +1,6 @@
 ﻿namespace CareSolution
 {
-    partial class Medikamente
+    partial class Medication
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medikamente));
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medication));
             this.panelBio = new System.Windows.Forms.Panel();
             this.dataGridViewMedikamente = new System.Windows.Forms.DataGridView();
             this.buttonEdit = new System.Windows.Forms.Button();
@@ -40,16 +41,20 @@
             this.labelName2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.medikament = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dosierung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frequenz = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grund = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.verwaltetvon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ambulantCareDBDataSet = new CareSolution.AmbulantCareDBDataSet();
+            this.medicationSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.medicationSetTableAdapter = new CareSolution.AmbulantCareDBDataSetTableAdapters.MedicationSetTableAdapter();
+            this.drugDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dosageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frequencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.administeredByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedikamente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.panelProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicationSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBio
@@ -71,48 +76,49 @@
             // 
             this.dataGridViewMedikamente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewMedikamente.AutoGenerateColumns = false;
             this.dataGridViewMedikamente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewMedikamente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewMedikamente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
             this.dataGridViewMedikamente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewMedikamente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewMedikamente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMedikamente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewMedikamente.ColumnHeadersHeight = 30;
             this.dataGridViewMedikamente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewMedikamente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.medikament,
-            this.dosierung,
-            this.frequenz,
-            this.grund,
-            this.verwaltetvon});
+            this.drugDataGridViewTextBoxColumn,
+            this.dosageDataGridViewTextBoxColumn,
+            this.frequencyDataGridViewTextBoxColumn,
+            this.administeredByDataGridViewTextBoxColumn});
+            this.dataGridViewMedikamente.DataSource = this.medicationSetBindingSource;
             this.dataGridViewMedikamente.EnableHeadersVisualStyles = false;
             this.dataGridViewMedikamente.GridColor = System.Drawing.Color.MediumPurple;
             this.dataGridViewMedikamente.Location = new System.Drawing.Point(28, 101);
             this.dataGridViewMedikamente.Name = "dataGridViewMedikamente";
             this.dataGridViewMedikamente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewMedikamente.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMedikamente.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewMedikamente.RowHeadersVisible = false;
             this.dataGridViewMedikamente.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewMedikamente.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewMedikamente.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewMedikamente.RowTemplate.Height = 24;
             this.dataGridViewMedikamente.Size = new System.Drawing.Size(689, 321);
             this.dataGridViewMedikamente.TabIndex = 110;
@@ -185,42 +191,53 @@
             this.label4.TabIndex = 97;
             this.label4.Text = "Medikamente";
             // 
-            // medikament
+            // ambulantCareDBDataSet
             // 
-            this.medikament.HeaderText = "Medikament";
-            this.medikament.MinimumWidth = 6;
-            this.medikament.Name = "medikament";
-            this.medikament.Width = 129;
+            this.ambulantCareDBDataSet.DataSetName = "AmbulantCareDBDataSet";
+            this.ambulantCareDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // dosierung
+            // medicationSetBindingSource
             // 
-            this.dosierung.HeaderText = "Dosierung";
-            this.dosierung.MinimumWidth = 6;
-            this.dosierung.Name = "dosierung";
-            this.dosierung.Width = 109;
+            this.medicationSetBindingSource.DataMember = "MedicationSet";
+            this.medicationSetBindingSource.DataSource = this.ambulantCareDBDataSet;
             // 
-            // frequenz
+            // medicationSetTableAdapter
             // 
-            this.frequenz.HeaderText = "Frequenz";
-            this.frequenz.MinimumWidth = 6;
-            this.frequenz.Name = "frequenz";
-            this.frequenz.Width = 102;
+            this.medicationSetTableAdapter.ClearBeforeFill = true;
             // 
-            // grund
+            // drugDataGridViewTextBoxColumn
             // 
-            this.grund.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.grund.HeaderText = "Grund";
-            this.grund.MinimumWidth = 6;
-            this.grund.Name = "grund";
+            this.drugDataGridViewTextBoxColumn.DataPropertyName = "Drug";
+            this.drugDataGridViewTextBoxColumn.HeaderText = "Drug";
+            this.drugDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.drugDataGridViewTextBoxColumn.Name = "drugDataGridViewTextBoxColumn";
+            this.drugDataGridViewTextBoxColumn.Width = 71;
             // 
-            // verwaltetvon
+            // dosageDataGridViewTextBoxColumn
             // 
-            this.verwaltetvon.HeaderText = "Verwaltet von";
-            this.verwaltetvon.MinimumWidth = 6;
-            this.verwaltetvon.Name = "verwaltetvon";
-            this.verwaltetvon.Width = 142;
+            this.dosageDataGridViewTextBoxColumn.DataPropertyName = "Dosage";
+            this.dosageDataGridViewTextBoxColumn.HeaderText = "Dosage";
+            this.dosageDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dosageDataGridViewTextBoxColumn.Name = "dosageDataGridViewTextBoxColumn";
+            this.dosageDataGridViewTextBoxColumn.Width = 93;
             // 
-            // Medikamente
+            // frequencyDataGridViewTextBoxColumn
+            // 
+            this.frequencyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.frequencyDataGridViewTextBoxColumn.DataPropertyName = "Frequency";
+            this.frequencyDataGridViewTextBoxColumn.HeaderText = "Frequency";
+            this.frequencyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.frequencyDataGridViewTextBoxColumn.Name = "frequencyDataGridViewTextBoxColumn";
+            // 
+            // administeredByDataGridViewTextBoxColumn
+            // 
+            this.administeredByDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.administeredByDataGridViewTextBoxColumn.DataPropertyName = "AdministeredBy";
+            this.administeredByDataGridViewTextBoxColumn.HeaderText = "AdministeredBy";
+            this.administeredByDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.administeredByDataGridViewTextBoxColumn.Name = "administeredByDataGridViewTextBoxColumn";
+            // 
+            // Medication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -229,7 +246,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Medikamente";
+            this.Name = "Medication";
             this.Text = "Medikamente";
             this.Load += new System.EventHandler(this.Medikamente_Load);
             this.panelBio.ResumeLayout(false);
@@ -239,6 +256,8 @@
             this.panelProfil.ResumeLayout(false);
             this.panelProfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicationSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,10 +272,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridViewMedikamente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn medikament;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dosierung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn frequenz;
-        private System.Windows.Forms.DataGridViewTextBoxColumn grund;
-        private System.Windows.Forms.DataGridViewTextBoxColumn verwaltetvon;
+        private AmbulantCareDBDataSet ambulantCareDBDataSet;
+        private System.Windows.Forms.BindingSource medicationSetBindingSource;
+        private AmbulantCareDBDataSetTableAdapters.MedicationSetTableAdapter medicationSetTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn drugDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dosageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frequencyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn administeredByDataGridViewTextBoxColumn;
     }
 }

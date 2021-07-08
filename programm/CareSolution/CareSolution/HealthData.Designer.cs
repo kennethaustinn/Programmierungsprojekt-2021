@@ -1,6 +1,6 @@
 ﻿namespace CareSolution
 {
-    partial class Gesundheitszustand
+    partial class HealthData
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gesundheitszustand));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HealthData));
             this.panelBio = new System.Windows.Forms.Panel();
             this.labelWert = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();

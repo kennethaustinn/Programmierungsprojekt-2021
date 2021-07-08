@@ -76,11 +76,16 @@
     <Compile Include="AddPatient.Designer.cs">
       <DependentUpon>AddPatient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Anamnese.cs">
+    <Compile Include="AmbulantCareDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AmbulantCareDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CaseHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Anamnese.Designer.cs">
-      <DependentUpon>Anamnese.cs</DependentUpon>
+    <Compile Include="CaseHistory.Designer.cs">
+      <DependentUpon>CaseHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Bio.cs">
       <SubType>Form</SubType>
@@ -88,11 +93,11 @@
     <Compile Include="Bio.Designer.cs">
       <DependentUpon>Bio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gesundheitszustand.cs">
+    <Compile Include="HealthData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gesundheitszustand.Designer.cs">
-      <DependentUpon>Gesundheitszustand.cs</DependentUpon>
+    <Compile Include="HealthData.Designer.cs">
+      <DependentUpon>HealthData.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -106,17 +111,17 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Maßnahmenplan.cs">
+    <Compile Include="ActionPlan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maßnahmenplan.Designer.cs">
-      <DependentUpon>Maßnahmenplan.cs</DependentUpon>
+    <Compile Include="ActionPlan.Designer.cs">
+      <DependentUpon>ActionPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Medikamente.cs">
+    <Compile Include="Medication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Medikamente.Designer.cs">
-      <DependentUpon>Medikamente.cs</DependentUpon>
+    <Compile Include="Medication.Designer.cs">
+      <DependentUpon>Medication.cs</DependentUpon>
     </Compile>
     <Compile Include="PatientData.cs">
       <SubType>Form</SubType>
@@ -124,19 +129,19 @@
     <Compile Include="PatientData.Designer.cs">
       <DependentUpon>PatientData.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pflegebericht.cs">
+    <Compile Include="CareReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pflegebericht.Designer.cs">
-      <DependentUpon>Pflegebericht.cs</DependentUpon>
+    <Compile Include="CareReport.Designer.cs">
+      <DependentUpon>CareReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sonstiges.cs">
+    <Compile Include="Others.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sonstiges.Designer.cs">
-      <DependentUpon>Sonstiges.cs</DependentUpon>
+    <Compile Include="Others.Designer.cs">
+      <DependentUpon>Others.cs</DependentUpon>
     </Compile>
     <Compile Include="Stammdaten.cs">
       <SubType>Form</SubType>
@@ -144,23 +149,23 @@
     <Compile Include="Stammdaten.Designer.cs">
       <DependentUpon>Stammdaten.cs</DependentUpon>
     </Compile>
-    <Compile Include="Zuhause.cs">
+    <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Zuhause.Designer.cs">
-      <DependentUpon>Zuhause.cs</DependentUpon>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddPatient.resx">
       <DependentUpon>AddPatient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Anamnese.resx">
-      <DependentUpon>Anamnese.cs</DependentUpon>
+    <EmbeddedResource Include="CaseHistory.resx">
+      <DependentUpon>CaseHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Bio.resx">
       <DependentUpon>Bio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gesundheitszustand.resx">
-      <DependentUpon>Gesundheitszustand.cs</DependentUpon>
+    <EmbeddedResource Include="HealthData.resx">
+      <DependentUpon>HealthData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -168,17 +173,17 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maßnahmenplan.resx">
-      <DependentUpon>Maßnahmenplan.cs</DependentUpon>
+    <EmbeddedResource Include="ActionPlan.resx">
+      <DependentUpon>ActionPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Medikamente.resx">
-      <DependentUpon>Medikamente.cs</DependentUpon>
+    <EmbeddedResource Include="Medication.resx">
+      <DependentUpon>Medication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientData.resx">
       <DependentUpon>PatientData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pflegebericht.resx">
-      <DependentUpon>Pflegebericht.cs</DependentUpon>
+    <EmbeddedResource Include="CareReport.resx">
+      <DependentUpon>CareReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -190,15 +195,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Sonstiges.resx">
-      <DependentUpon>Sonstiges.cs</DependentUpon>
+    <EmbeddedResource Include="Others.resx">
+      <DependentUpon>Others.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stammdaten.resx">
       <DependentUpon>Stammdaten.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Zuhause.resx">
-      <DependentUpon>Zuhause.cs</DependentUpon>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AmbulantCareDBDataSet.xsc">
+      <DependentUpon>AmbulantCareDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AmbulantCareDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AmbulantCareDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AmbulantCareDBDataSet.xss">
+      <DependentUpon>AmbulantCareDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DataManager.HealthData.datasource" />
     <None Include="Properties\DataSources\DataManager.Medication.datasource" />

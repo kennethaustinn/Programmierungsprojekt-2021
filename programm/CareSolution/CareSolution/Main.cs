@@ -111,44 +111,44 @@ namespace CareSolution
         private void buttonMaßnahmenplan_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Maßnahmenplan());
+            openChildForm(new ActionPlan());
         }
 
         private void buttonAnamnese_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Anamnese());
+            openChildForm(new CaseHistory());
         }
 
         private void buttonGesundheitszustand_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Gesundheitszustand());
+            openChildForm(new HealthData());
         }
 
         private void buttonPflegebericht_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Pflegebericht());
+            openChildForm(new CareReport());
         }
 
         private void buttonMedikamente_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Medikamente());
+            openChildForm(new Medication());
 
         }
 
         private void buttonZuhause_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Zuhause());
+            openChildForm(new Home());
         }
 
         private void buttonSonstiges_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Sonstiges());
+            openChildForm(new Others());
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
