@@ -145,12 +145,12 @@ namespace CareSolution
             DialogResult dialogResult = MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                var patient = new Patient.Patient().SetTestData();
-                int n = dataGridViewPatient.Rows.Add();
-                dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
-                dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
-                dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
-                dataGridViewPatient.Rows[n].Cells["adresse"].Value = patient.Address;
+                //var patient = new Patient.Patient().SetTestData();
+                //int n = dataGridViewPatient.Rows.Add();
+                //dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
+                //dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
+                //dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
+                //dataGridViewPatient.Rows[n].Cells["adresse"].Value = patient.Address;
 
                 //do something
             }
