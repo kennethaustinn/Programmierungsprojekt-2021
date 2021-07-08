@@ -85,6 +85,8 @@ namespace CareSolution
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.PersonSet". Sie können sie bei Bedarf verschieben oder entfernen.
             this.personSetTableAdapter.Fill(this.ambulantCareDBDataSet.PersonSet);
+            dataGridViewPatient.Update();
+            dataGridViewPatient.Refresh();
             //SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\kenne\Documents\Data.mdf;Integrated Security=True;Connect Timeout=30");
             //SqlDataAdapter sda = new SqlDataAdapter("select * from  [dbo].[Patient]", con);
             //DataTable dt = new DataTable();
@@ -142,24 +144,24 @@ namespace CareSolution
         }
         private void buttonNeueData_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                //var patient = new Patient.Patient().SetTestData();
-                //int n = dataGridViewPatient.Rows.Add();
-                //dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
-                //dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
-                //dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
-                //dataGridViewPatient.Rows[n].Cells["adresse"].Value = patient.Address;
+            openChildForm(new AddPatient());
+            //DialogResult dialogResult = MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
+            //if (dialogResult == DialogResult.Yes)
+            //{
+            //    //var patient = new Patient.Patient().SetTestData();
+            //    //int n = dataGridViewPatient.Rows.Add();
+            //    //dataGridViewPatient.Rows[n].Cells["id"].Value = patient.PersonID;
+            //    //dataGridViewPatient.Rows[n].Cells["nachname"].Value = patient.LastName;
+            //    //dataGridViewPatient.Rows[n].Cells["vorname"].Value = patient.FirstName;
+            //    //dataGridViewPatient.Rows[n].Cells["adresse"].Value = patient.Address;
 
-                //do something
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                //do something else
-            }
-           
-
+            //    //do something
+            //}
+            //else if (dialogResult == DialogResult.No)
+            //{
+            //    //do something else
+            //}
+            
         }
     }
 }
