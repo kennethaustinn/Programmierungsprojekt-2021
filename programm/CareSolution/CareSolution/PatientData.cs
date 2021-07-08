@@ -16,15 +16,21 @@ namespace CareSolution
     {
         SqlConnection connection;
         private string connectionString;
+        /// <summary>
+        /// Für das Form PatientData wird erst alle die Sachen von dem Designer initialisiert und auch das
+        /// ConnectionString mit dem DatenBank erstellt.
+        /// </summary>
         public PatientData()
         {
             InitializeComponent();
             connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
         }
-        //speichern das Form von Anfang
+        /// speichern das activeForm für OpenChildForm das genau am Anfang ist genau null.
+        /// Das heißt anderen OpenChildForm geöffnet oder gedrückt wird 
         private Form activeForm = null;
 
-        //hab schon mit erben versucht aber hat nicht geklappt
+        // wird das Form im PanelChilForm hier neue abgerufen und angezeigt. Mit dem Parameter Form
+        // die man gerade gedrückt von dem beliebigen Button
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
@@ -41,6 +47,11 @@ namespace CareSolution
             childForm.BringToFront();
             childForm.Show();
         }
+        /// <summary>
+        /// ist ein Event so wenn man das Text in TextboxSuche geändert, wird eine Verbindung zur Datenbank erstellt
+        /// danach wird die Datei in der Tabelle abgerufen und man vergleicht die mit dem Text in TextboxSuche.
+        /// Dann letzendlich in DataGridView beliebig angezeigt
+        /// </summary>
         private void textBoxSuche_TextChanged(object sender, EventArgs e)
         {
             var query = "SELECT * FROM PersonSet a WHERE a.LastName   Like '" + textBoxSuche.Text + "%' or a.FirstName like'%" + textBoxSuche.Text + "%'";
@@ -53,7 +64,11 @@ namespace CareSolution
                 dataGridViewPatient.DataSource = Persondt;
             }
         }
-
+        /// <summary>
+        ///  Es wird eine Verbindung mit dem Datenbank automatisch erstellt. Da man die Datenquelle im DataGridView verknüpft hatte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PatientData_Load(object sender, EventArgs e)
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.PersonSet". Sie können sie bei Bedarf verschieben oder entfernen.
@@ -61,7 +76,11 @@ namespace CareSolution
             dataGridViewPatient.Update();
             dataGridViewPatient.Refresh();
         }
-
+        /// <summary>
+        /// Ein Event wird ausgeführt wenn man beliebige Zelle doppelklicken und öffnet das Form von OpenChildForm von Stammdaten 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dataGridViewPatient_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             openChildForm(new Stammdaten());
@@ -79,6 +98,11 @@ namespace CareSolution
             //}
 
         }
+        /// <summary>
+        /// Ein neue Form wird geöffnet wenn man das Button Neue hinzufügen drücken und zur Form AddPatient
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonNeueData_Click(object sender, EventArgs e)
         {
             openChildForm(new AddPatient());

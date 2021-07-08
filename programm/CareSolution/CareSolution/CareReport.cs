@@ -12,6 +12,10 @@ namespace CareSolution
 {
     public partial class CareReport : Form
     {
+        /// <summary>
+        /// Für das Form CareReport wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
+        /// dem DatenBank erstellt. Auch die DummyTest Patient Data wird mit dem Klasse Patient verbunden und im Labels angezeigt
+        /// </summary>
         public CareReport()
         {
             InitializeComponent();
@@ -25,6 +29,12 @@ namespace CareSolution
                 labelErstelltvon.Text = item.CaregiverPersonID.ToString();
             }
         }
+        /// <summary>
+        /// Event wenn man Button Scan New Data anklicken dann komm zur new open file dialog um neue Daten holen vom
+        /// unserer Explorer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonScanNeueData_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();

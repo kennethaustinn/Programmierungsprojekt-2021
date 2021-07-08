@@ -18,12 +18,14 @@ namespace CareSolution
         public List<string> addList = new List<string>();
         SqlConnection connection;
         private string connectionString;
-
+        /// <summary>
+        /// Für das Form AddPatiet wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
+        /// dem DatenBank erstellt.
+        /// </summary>
         public AddPatient()
         {
             InitializeComponent();
             connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
-
         }
         private void AddPatient_Load(object sender, EventArgs e)
         {

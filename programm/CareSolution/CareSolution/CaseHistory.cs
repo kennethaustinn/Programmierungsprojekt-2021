@@ -12,6 +12,10 @@ namespace CareSolution
 {
     public partial class CaseHistory : Form
     {
+        /// <summary>
+        /// Für das Form CaseHistory wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
+        /// dem DatenBank erstellt. Auch die DummyTest Patient Data wird mit dem Klasse Patient verbunden und im Labels angezeigt
+        /// </summary>
         public CaseHistory()
         {
             InitializeComponent(); 

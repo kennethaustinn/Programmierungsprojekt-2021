@@ -17,52 +17,71 @@ namespace CareSolution
     {
         SqlConnection connection;
         private string connectionString;
+        /// <summary>
+        /// Für das Form Login wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
+        /// dem DatenBank erstellt.
+        /// </summary>
         public Login()
         {
             InitializeComponent();
             connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
         }
-
-        private void textBox1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Ein Eventhandler wenn man das Textbox Username rein geht, dann wird das BackColor von Textbox geandert
+        /// und auch ein Panel von Textbox Username
+        /// </summary>
+        private void textBoxUsername_Click(object sender, EventArgs e)
         {
-            textBox1.BackColor = Color.White;
+            textBoxUsername.BackColor = Color.White;
             panel2.BackColor = Color.White;
             pictureBoxUsername.BackColor= Color.White;
             panel3.BackColor = SystemColors.Control;
-            textBox2.BackColor = SystemColors.Control;
+            textBoxPassword.BackColor = SystemColors.Control;
             pictureBoxShowpassword.BackColor= SystemColors.Control;
         }
-
-        private void textBox2_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Ein Eventhandler wenn man das Textbox Password rein geht, dann wird das BackColor von Textbox geandert
+        /// und auch ein Panel von Textbox Password
+        /// </summary>
+        private void textBoxPassword_Click(object sender, EventArgs e)
         {
-            textBox2.BackColor = Color.White;
+            textBoxPassword.BackColor = Color.White;
             panel3.BackColor = Color.White;
             pictureBoxShowpassword.BackColor = Color.White;
             panel2.BackColor = SystemColors.Control;
-            textBox1.BackColor = SystemColors.Control;
+            textBoxUsername.BackColor = SystemColors.Control;
             pictureBoxUsername.BackColor = SystemColors.Control;
         }
-
+        /// <summary>
+        /// Ein Event wenn man das PictureBox(Vorhängeschloss) drückt dann wird das Password character angezeigt (Show Password)
+        /// </summary>
         private void pictureBoxPassword_MouseDown(object sender, MouseEventArgs e)
         {
-            
-            textBox2.UseSystemPasswordChar = false;
+            textBoxPassword.UseSystemPasswordChar = false;
         }
+        /// <summary>
+        /// Ein Event wenn man das PictureBox(Vorhängeschloss) verlässt dann wird das Password character
+        /// wieder als schwarzer Punkt angezeigt.
+        /// </summary>
         private void pictureBoxPassword_MouseUp(object sender, MouseEventArgs e)
         {
-            if (textBox2.Text == "Password")
+            if (textBoxPassword.Text == "Password")
             {
-                textBox2.UseSystemPasswordChar = false;
+                textBoxPassword.UseSystemPasswordChar = false;
             }
             else
             {
-                textBox2.UseSystemPasswordChar = true;
+                textBoxPassword.UseSystemPasswordChar = true;
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Ein Event wenn man das Button anklicken dann wird das Verbindung mit dem DatenBank und zwar MySql 
+        /// gebaut und die Daten in jeweiligen TextBox Username und Password mit dem Datenbank Tabelle bei
+        /// PersonSet_Worker vergleichen.
+        /// </summary>
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
-            var query = "SELECT * FROM PersonSet_Worker a WHERE a.Username  = '" + textBox1.Text + "'and a.Password='" + textBox2.Text + "'";
+            var query = "SELECT * FROM PersonSet_Worker a WHERE a.Username  = '" + textBoxUsername.Text + "'and a.Password='" + textBoxPassword.Text + "'";
             using (connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             using (SqlDataAdapter adatpe = new SqlDataAdapter(command))
@@ -79,47 +98,58 @@ namespace CareSolution
                 else
                 {
                     MessageBox.Show("Falsche Username und oder Password");
-                    textBox1.Text = "Username";
-                    textBox2.Text = "Password";
-                    textBox2.UseSystemPasswordChar = false;
+                    textBoxUsername.Text = "Username";
+                    textBoxPassword.Text = "Password";
+                    textBoxPassword.UseSystemPasswordChar = false;
                 }
             }
         }
-        private void textBox1_Enter(object sender, EventArgs e)
+        /// <summary>
+        /// Ein Event wenn man im TextBox rein geht dann wird das Username Text weg und die Farbe auch nach Schwarz
+        /// gewechselt so als Watermark
+        /// </summary>
+        private void textBoxUsername_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Username")
-                textBox1.Text = "";
+            if (textBoxUsername.Text == "Username")
+                textBoxUsername.Text = "";
 
-            textBox1.ForeColor = Color.Black;
+            textBoxUsername.ForeColor = Color.Black;
         }
-
-        private void textBox1_Leave(object sender, EventArgs e)
+        /// <summary>
+        /// Ein Event wenn man im TextBox verlässt mit leer Text wieder zurück zur Username
+        /// </summary>
+        private void textBoxUsername_Leave(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
-                textBox1.Text = "Username";
+            if (textBoxUsername.Text == "")
+                textBoxUsername.Text = "Username";
 
-            textBox1.ForeColor = Color.Gray;
+            textBoxUsername.ForeColor = Color.Gray;
         }
-
-        private void textBox2_Enter(object sender, EventArgs e)
+        /// <summary>
+        /// Ein Event wenn man im TextBox rein geht dann wird das Password Text weg und die Farbe auch nach Schwarz
+        /// gewechselt so als Watermark
+        /// </summary>
+        private void textBoxPassword_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text == "Password")
+            if (textBoxPassword.Text == "Password")
             {
-                textBox2.Text = "";
-                textBox2.UseSystemPasswordChar = true;
+                textBoxPassword.Text = "";
+                textBoxPassword.UseSystemPasswordChar = true;
             }
             
-            textBox2.ForeColor = Color.Black;
+            textBoxPassword.ForeColor = Color.Black;
         }
-
-        private void textBox2_Leave(object sender, EventArgs e)
+        /// <summary>
+        /// Ein Event wenn man im TextBox verlässt mit leer Text wieder zurück zur Password
+        /// </summary>
+        private void textBoxPassword_Leave(object sender, EventArgs e)
         {
-            if (textBox2.Text == "")
+            if (textBoxPassword.Text == "")
             {
-                textBox2.Text = "Password";
-                textBox2.UseSystemPasswordChar = false;
+                textBoxPassword.Text = "Password";
+                textBoxPassword.UseSystemPasswordChar = false;
             }
-            textBox2.ForeColor = Color.Gray;
+            textBoxPassword.ForeColor = Color.Gray;
         }
     }
 }

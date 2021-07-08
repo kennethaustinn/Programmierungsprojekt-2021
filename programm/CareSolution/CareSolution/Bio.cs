@@ -22,7 +22,10 @@ namespace CareSolution
         private string _path;
 
         //private readonly string _projectDirectory = Directory.GetParent(Environment.CurrentDirectory)?.Parent?.FullName;
-
+        /// <summary>
+        /// Für das Form Bio wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
+        /// dem DatenBank erstellt. Auch die DummyTest Patient Data wird mit dem Klasse Patient verbunden und im Labels angezeigt
+        /// </summary>
         public Bio()
         {
             InitializeComponent();
@@ -105,7 +108,8 @@ namespace CareSolution
             _documentKeys.Add(labelFamilieMitglieder.Text);
             _documentKeys.Add(labelSprache.Text);
         }
-
+        // Es wird eine Verbindung mit dem Datenbank automatisch erstellt. Da man die Datenquelle im DataGridView verknüpft hatte
+        // und die Daten von OCR die wir bekommen in DatenBank wird dahin geschickt
         private void Bio_Load(object sender, EventArgs e)
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.BioSet". Sie können sie bei Bedarf verschieben oder entfernen.

@@ -37,11 +37,11 @@ namespace CareSolution
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBoxShowpassword = new System.Windows.Forms.PictureBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.buttonLogin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBoxUsername = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,7 +105,7 @@ namespace CareSolution
             // panel1
             // 
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.buttonLogin);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -120,7 +120,7 @@ namespace CareSolution
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel3.Controls.Add(this.pictureBoxShowpassword);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.textBoxPassword);
             this.panel3.Location = new System.Drawing.Point(0, 270);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(596, 46);
@@ -140,36 +140,36 @@ namespace CareSolution
             this.pictureBoxShowpassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxPassword_MouseDown);
             this.pictureBoxShowpassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBoxPassword_MouseUp);
             // 
-            // textBox2
+            // textBoxPassword
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(48, 12);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(507, 25);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.Text = "Password";
-            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
-            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
-            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxPassword.Location = new System.Drawing.Point(48, 12);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Size = new System.Drawing.Size(507, 25);
+            this.textBoxPassword.TabIndex = 1;
+            this.textBoxPassword.Text = "Password";
+            this.textBoxPassword.Click += new System.EventHandler(this.textBoxPassword_Click);
+            this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
+            this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
-            // button1
+            // buttonLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(210, 348);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.buttonLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLogin.FlatAppearance.BorderSize = 0;
+            this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogin.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonLogin.Location = new System.Drawing.Point(210, 348);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(148, 37);
+            this.buttonLogin.TabIndex = 2;
+            this.buttonLogin.Text = "LOGIN";
+            this.buttonLogin.UseVisualStyleBackColor = false;
+            this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // panel2
             // 
@@ -177,7 +177,7 @@ namespace CareSolution
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.pictureBoxUsername);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.textBoxUsername);
             this.panel2.Location = new System.Drawing.Point(0, 191);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(596, 46);
@@ -193,19 +193,19 @@ namespace CareSolution
             this.pictureBoxUsername.TabIndex = 3;
             this.pictureBoxUsername.TabStop = false;
             // 
-            // textBox1
+            // textBoxUsername
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(48, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(515, 25);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Username";
-            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.textBoxUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUsername.ForeColor = System.Drawing.Color.Gray;
+            this.textBoxUsername.Location = new System.Drawing.Point(48, 13);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(515, 25);
+            this.textBoxUsername.TabIndex = 0;
+            this.textBoxUsername.Text = "Username";
+            this.textBoxUsername.Click += new System.EventHandler(this.textBoxUsername_Click);
+            this.textBoxUsername.Enter += new System.EventHandler(this.textBoxUsername_Enter);
+            this.textBoxUsername.Leave += new System.EventHandler(this.textBoxUsername_Leave);
             // 
             // label4
             // 
@@ -255,11 +255,11 @@ namespace CareSolution
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBoxShowpassword;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxPassword;
+        private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBoxUsername;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
