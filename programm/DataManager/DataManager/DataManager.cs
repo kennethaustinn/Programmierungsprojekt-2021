@@ -13,6 +13,7 @@ namespace DataManager
 {
     public class DataManager<T> : IDataManager<T> where T : IDataBaseConform
     {
+        public  Patient patient = new Patient();
         /// <summary>
         /// Dieser string stellt die Verbindungszeichungsfolge zu der Datenbank Datei (mdf). Mit dem wird die ganze Zeit weiter gearbeitet.
         /// </summary>
@@ -64,6 +65,15 @@ namespace DataManager
         public bool Update(T careSolutionObject)
         {
             throw new NotImplementedException();
+        }
+
+        public List<Patient> GetPatient(string id)
+        {
+            using (IDbConnection connections = new SqlConnection(ConnectionString))
+            {
+                var output = connections.Query<Patient>("dbo.GetPatient @PersonID", new {PersonID = id}).ToList();
+                return output;
+            }
         }
     }
 }
