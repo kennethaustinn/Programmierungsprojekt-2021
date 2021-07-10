@@ -102,7 +102,7 @@ namespace CareSolution
             BaseData.baseDataForm.labelId.Text = id;
             BaseData.baseDataForm.labelName.Text = name;
             BaseData.baseDataForm.labelVorname.Text = firstName;
-            BaseData.baseDataForm.labelAlter.Text = patient.CalculateAge(testPatient[0].BirthDate).ToString();
+            //BaseData.baseDataForm.labelAlter.Text = patient.CalculateAge(testPatient[0].BirthDate).ToString();
             BaseData.baseDataForm.labelGeschlecht.Text = gender;
             BaseData.baseDataForm.labelAdresse.Text = testPatient[0].Address;
             BaseData.baseDataForm.labelGeburtsdatum.Text = testPatient[0].BirthDate.ToString();
