@@ -40,7 +40,7 @@ namespace CareSolution
             var patient = new Patient.Patient().SetTestData();
             foreach (var item in patient.Doctor)
             {
-                checkedListBox1.Items.Add(item.ToDoList);
+                checkedListBox.Items.Add(item.ToDoList);
             }
         }
         // speichern das activeForm für OpenChildForm das genau am Anfang ist genau am Main. Das heißt keine
@@ -55,7 +55,7 @@ namespace CareSolution
         {
             if (activeForm != null)
             {
-                activeForm.Close();
+                activeForm.Hide();
             }
             activeForm = childForm;
             childForm.TopLevel = false;
@@ -110,16 +110,16 @@ namespace CareSolution
         private void buttonBiography_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Bio());
+            openChildForm(Bio.bioForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button PatientData angeklickt dann wird das PatientData Form geladen,
         /// sowie das PatientData Button im PanelMenu wird aktualisiert
         /// </summary>
-        private void buttonPatientData_Click(object sender, EventArgs e)
+        private void buttonBaseData_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Stammdaten());
+            openChildForm(BaseData.baseDataForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Home angeklickt dann wird das Home Form geladen,
@@ -127,12 +127,23 @@ namespace CareSolution
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonHome_Click(object sender, EventArgs e)
+        private void buttonMain_Click(object sender, EventArgs e)
         {
             Reset();
+            Bio.bioForm = new Bio();
+            BaseData.baseDataForm = new BaseData();
+            ActionPlan.actionPlanForm = new ActionPlan();
+            CaseHistory.caseHistoryForm = new CaseHistory();
+            HealthData.healthDataForm = new HealthData();
+            CareReport.careReportForm = new CareReport();
+            Medication.medicationForm = new Medication();
+            Home.homeForm = new Home();
+            Others.othersForm = new Others();
+            PatientData.patientDataForm = new PatientData();
             if (activeForm != null)
             {
-                activeForm.Close();
+                activeForm.Hide();
+                Main_Load(null,EventArgs.Empty);
             }
         }
         /// <summary>
@@ -144,82 +155,82 @@ namespace CareSolution
             leftBorderBtn.Visible = false;
         }
         /// <summary>
-        /// Ein Eventhandler wenn das Button Maßnahmenplan angeklickt dann wird das Maßnahmenplan Form geladen,
-        /// sowie das Maßnahmenplan Button im PanelMenu wird aktualisiert
+        /// Ein Eventhandler wenn das Button ActionPlan angeklickt dann wird das ActionPlan Form geladen,
+        /// sowie das ActionPlan Button im PanelMenu wird aktualisiert
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonMaßnahmenplan_Click(object sender, EventArgs e)
+        private void buttonActionPlan_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new ActionPlan());
+            openChildForm(ActionPlan.actionPlanForm);
         }
         /// <summary>
-        /// Ein Eventhandler wenn das Button Anamnese angeklickt dann wird das Anamnese Form geladen,
-        /// sowie das Anamnese Button im PanelMenu wird aktualisiert
+        /// Ein Eventhandler wenn das Button CaseHistory angeklickt dann wird das CaseHistory Form geladen,
+        /// sowie das CaseHistory Button im PanelMenu wird aktualisiert
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonAnamnese_Click(object sender, EventArgs e)
+        private void buttonCaseHistory_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new CaseHistory());
+            openChildForm(CaseHistory.caseHistoryForm);
         }
         /// <summary>
-        /// Ein Eventhandler wenn das Button Gesundheitszustand angeklickt dann wird das Gesundheitszustand Form geladen,
-        /// sowie das Gesundheitszustand Button im PanelMenu wird aktualisiert
+        /// Ein Eventhandler wenn das Button HealthData angeklickt dann wird das HealthData Form geladen,
+        /// sowie das HealthData Button im PanelMenu wird aktualisiert
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonGesundheitszustand_Click(object sender, EventArgs e)
+        private void buttonHealthData_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new HealthData());
+            openChildForm(HealthData.healthDataForm);
         }
         /// <summary>
-        /// Ein Eventhandler wenn das Button Pflegebericht angeklickt dann wird das Pflegebericht Form geladen,
-        /// sowie das Pflegebericht Button im PanelMenu wird aktualisiert
+        /// Ein Eventhandler wenn das Button CareReport angeklickt dann wird das CareReport Form geladen,
+        /// sowie das CareReport Button im PanelMenu wird aktualisiert
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonPflegebericht_Click(object sender, EventArgs e)
+        private void buttonCareReport_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new CareReport());
+            openChildForm(CareReport.careReportForm);
         }
         /// <summary>
-        /// Ein Eventhandler wenn das Button Medikamente angeklickt dann wird das Medikamente Form geladen,
-        /// sowie das Medikamente Button im PanelMenu wird aktualisiert
+        /// Ein Eventhandler wenn das Button Medication angeklickt dann wird das Medication Form geladen,
+        /// sowie das Medication Button im PanelMenu wird aktualisiert
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonMedikamente_Click(object sender, EventArgs e)
+        private void buttonMedication_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Medication());
+            openChildForm(Medication.medicationForm);
 
         }
         /// <summary>
-        /// Ein Eventhandler wenn das Button Zuhause angeklickt dann wird das Zuhause Form geladen,
-        /// sowie das Zuhause Button im PanelMenu wird aktualisiert
+        /// Ein Eventhandler wenn das Button Home angeklickt dann wird das Home Form geladen,
+        /// sowie das Home Button im PanelMenu wird aktualisiert
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonZuhause_Click(object sender, EventArgs e)
+        private void buttonHome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Home());
+            openChildForm(Home.homeForm);
         }
         /// <summary>
-        /// Ein Eventhandler wenn das Button Sonstiges angeklickt dann wird das Sonstiges Form geladen,
-        /// sowie das Sonstiges Button im PanelMenu wird aktualisiert
+        /// Ein Eventhandler wenn das Button Others angeklickt dann wird das Others Form geladen,
+        /// sowie das Others Button im PanelMenu wird aktualisiert
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void buttonSonstiges_Click(object sender, EventArgs e)
+        private void buttonOthers_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new Others());
+            openChildForm(Others.othersForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Patientsübersicht angeklickt dann wird das Patientsübersicht Form geladen
@@ -228,7 +239,7 @@ namespace CareSolution
         /// <param name="e"></param>
         private void buttonWeiterPatientsübersicht_Click(object sender, EventArgs e)
         {
-            openChildForm(new PatientData());
+            openChildForm(PatientData.patientDataForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Logout angeklickt dann wird das Login Form geladen
@@ -266,7 +277,7 @@ namespace CareSolution
         /// <param name="e"></param>
         private void textBoxSuche_TextChanged(object sender, EventArgs e)
         {
-            var query = "SELECT * FROM PersonSet a WHERE a.LastName   Like '" + textBoxSuche.Text + "%' or a.FirstName like'%" + textBoxSuche.Text + "%'";
+            var query = "SELECT * FROM PersonSet a WHERE a.LastName   Like '" + textBoxSearch.Text + "%' or a.FirstName like'%" + textBoxSearch.Text + "%'";
             using (connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             using (SqlDataAdapter adatpe = new SqlDataAdapter(command))

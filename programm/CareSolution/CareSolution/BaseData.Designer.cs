@@ -1,6 +1,6 @@
 ﻿namespace CareSolution
 {
-    partial class Stammdaten
+    partial class BaseData
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stammdaten));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseData));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.panelReport = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.labelReport = new System.Windows.Forms.Label();
@@ -65,7 +66,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.buttonEdit = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panelReport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
@@ -116,6 +116,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(748, 544);
             this.panel3.TabIndex = 3;
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEdit.FlatAppearance.BorderSize = 0;
+            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonEdit.Location = new System.Drawing.Point(241, 481);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(166, 51);
+            this.buttonEdit.TabIndex = 110;
+            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.UseVisualStyleBackColor = false;
             // 
             // panelReport
             // 
@@ -502,21 +517,6 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Patient ID :";
             // 
-            // buttonEdit
-            // 
-            this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEdit.FlatAppearance.BorderSize = 0;
-            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonEdit.Location = new System.Drawing.Point(241, 481);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(166, 51);
-            this.buttonEdit.TabIndex = 110;
-            this.buttonEdit.Text = "Edit";
-            this.buttonEdit.UseVisualStyleBackColor = false;
-            // 
             // Stammdaten
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -527,6 +527,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Stammdaten";
             this.Text = "Stammdaten";
+            this.Load += new System.EventHandler(this.Stammdaten_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panelReport.ResumeLayout(false);
@@ -542,7 +543,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label labelGeschlecht;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -574,9 +574,10 @@
         public System.Windows.Forms.Label labelAlter;
         private System.Windows.Forms.Panel panelProfil;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelName2;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
         private System.Windows.Forms.Panel panelReport;
         private System.Windows.Forms.Button buttonEdit;
+        public System.Windows.Forms.Label labelGeschlecht;
+        public System.Windows.Forms.Label labelName2;
     }
 }

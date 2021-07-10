@@ -11,6 +11,7 @@ namespace CareSolution
         private SqlConnection _connection;
         private readonly string _connectionString;
         private readonly DataManager<Person> _dataManager = new DataManager<Person>();
+        public static PatientData patientDataForm = new PatientData();
 
         /// speichern das activeForm für OpenChildForm das genau am Anfang ist genau null.
         /// Das heißt anderen OpenChildForm geöffnet oder gedrückt wird 
@@ -34,7 +35,7 @@ namespace CareSolution
         {
             if (_activeForm != null)
             {
-                _activeForm.Close();
+                _activeForm.Hide();
             }
 
             _activeForm = childForm;
@@ -53,7 +54,6 @@ namespace CareSolution
         /// </summary>
         private void textBoxSuche_TextChanged(object sender, EventArgs e)
         {
-            _dataManager.SearchPatient(textBoxSuche.Text);
             var query = "SELECT * FROM PersonSet a WHERE a.LastName   Like '" + textBoxSuche.Text + "%' or a.FirstName like'%" + textBoxSuche.Text + "%'";
             using (_connection = new SqlConnection(_connectionString))
             using (SqlCommand command = new SqlCommand(query, _connection))
@@ -83,7 +83,14 @@ namespace CareSolution
         /// <param name="e"></param>
         private void dataGridViewPatient_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            openChildForm(new Stammdaten());
+            //BaseData sd = new BaseData();
+            ////sd.labelId.Text = this.dataGridViewPatient.CurrentRow.Cells[0].Value.ToString();
+            ////sd.labelName.Text = this.dataGridViewPatient.CurrentRow.Cells[1].Value.ToString();
+            ////sd.labelName2.Text = this.dataGridViewPatient.CurrentRow.Cells[2].Value.ToString() + " " + this.dataGridViewPatient.CurrentRow.Cells[1].Value.ToString();
+            ////sd.labelVorname.Text = this.dataGridViewPatient.CurrentRow.Cells[2].Value.ToString();
+            ////sd.labelGeschlecht.Text = this.dataGridViewPatient.CurrentRow.Cells[4].Value.ToString();
+            //sd.addToList(this.dataGridViewPatient.CurrentRow.Cells[1].Value.ToString());
+            //openChildForm(sd);
 
             //if (e.RowIndex != -1)
             //{

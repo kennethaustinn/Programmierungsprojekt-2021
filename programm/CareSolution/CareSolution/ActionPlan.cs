@@ -12,6 +12,8 @@ namespace CareSolution
 {
     public partial class ActionPlan : Form
     {
+
+        public static ActionPlan actionPlanForm = new ActionPlan();
         /// <summary>
         /// Für das Form Action Plan wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
         /// dem DatenBank erstellt. Auch die DummyTest Patient Data wird mit dem Klasse Patient verbunden und im Labels angezeigt

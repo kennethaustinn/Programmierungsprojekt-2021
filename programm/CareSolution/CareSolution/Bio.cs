@@ -20,6 +20,7 @@ namespace CareSolution
         private Dictionary<string, List<string>> _documentDictionary = new Dictionary<string, List<string>>();
         private List<string> _documentKeys = new List<string>();
         private string _path;
+        public static Bio bioForm = new Bio();
 
         //private readonly string _projectDirectory = Directory.GetParent(Environment.CurrentDirectory)?.Parent?.FullName;
         /// <summary>

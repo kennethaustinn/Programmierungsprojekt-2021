@@ -36,30 +36,29 @@
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelLogout = new System.Windows.Forms.Panel();
             this.buttonLogout = new System.Windows.Forms.Button();
-            this.buttonSonstiges = new System.Windows.Forms.Button();
-            this.buttonZuhause = new System.Windows.Forms.Button();
-            this.buttonMedikamente = new System.Windows.Forms.Button();
-            this.buttonPflegebericht = new System.Windows.Forms.Button();
-            this.buttonGesundheitszustand = new System.Windows.Forms.Button();
-            this.buttonAnamnese = new System.Windows.Forms.Button();
-            this.buttonMaßnahmenplan = new System.Windows.Forms.Button();
-            this.buttonBiographie = new System.Windows.Forms.Button();
-            this.buttonStammdaten = new System.Windows.Forms.Button();
-            this.panelHome = new System.Windows.Forms.Panel();
+            this.buttonOthers = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
+            this.buttonMedication = new System.Windows.Forms.Button();
+            this.buttonCareReport = new System.Windows.Forms.Button();
+            this.buttonHealthData = new System.Windows.Forms.Button();
+            this.buttonCaseHistory = new System.Windows.Forms.Button();
+            this.buttonActionPlan = new System.Windows.Forms.Button();
+            this.buttonBiography = new System.Windows.Forms.Button();
+            this.buttonBaseData = new System.Windows.Forms.Button();
+            this.panelHome = new System.Windows.Forms.Panel();
+            this.buttonMain = new System.Windows.Forms.Button();
             this.panelChildform = new System.Windows.Forms.Panel();
-            this.panelSuche = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBoxSuche = new System.Windows.Forms.TextBox();
+            this.panelSearch = new System.Windows.Forms.Panel();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBox = new System.Windows.Forms.CheckedListBox();
             this.buttonWeiterPatientsübersicht = new System.Windows.Forms.Button();
             this.dataGridViewPatient = new System.Windows.Forms.DataGridView();
             this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ambulantCareDBDataSet = new DataManager.AmbulantCareDBDataSet();
@@ -73,8 +72,8 @@
             this.panelLogout.SuspendLayout();
             this.panelHome.SuspendLayout();
             this.panelChildform.SuspendLayout();
-            this.panelSuche.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
@@ -86,15 +85,15 @@
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
             this.panelMenu.Controls.Add(this.panelLogout);
-            this.panelMenu.Controls.Add(this.buttonSonstiges);
-            this.panelMenu.Controls.Add(this.buttonZuhause);
-            this.panelMenu.Controls.Add(this.buttonMedikamente);
-            this.panelMenu.Controls.Add(this.buttonPflegebericht);
-            this.panelMenu.Controls.Add(this.buttonGesundheitszustand);
-            this.panelMenu.Controls.Add(this.buttonAnamnese);
-            this.panelMenu.Controls.Add(this.buttonMaßnahmenplan);
-            this.panelMenu.Controls.Add(this.buttonBiographie);
-            this.panelMenu.Controls.Add(this.buttonStammdaten);
+            this.panelMenu.Controls.Add(this.buttonOthers);
+            this.panelMenu.Controls.Add(this.buttonHome);
+            this.panelMenu.Controls.Add(this.buttonMedication);
+            this.panelMenu.Controls.Add(this.buttonCareReport);
+            this.panelMenu.Controls.Add(this.buttonHealthData);
+            this.panelMenu.Controls.Add(this.buttonCaseHistory);
+            this.panelMenu.Controls.Add(this.buttonActionPlan);
+            this.panelMenu.Controls.Add(this.buttonBiography);
+            this.panelMenu.Controls.Add(this.buttonBaseData);
             this.panelMenu.Controls.Add(this.panelHome);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -131,198 +130,198 @@
             this.buttonLogout.UseVisualStyleBackColor = true;
             this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
-            // buttonSonstiges
+            // buttonOthers
             // 
-            this.buttonSonstiges.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSonstiges.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonSonstiges.FlatAppearance.BorderSize = 0;
-            this.buttonSonstiges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSonstiges.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonSonstiges.Image = ((System.Drawing.Image)(resources.GetObject("buttonSonstiges.Image")));
-            this.buttonSonstiges.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSonstiges.Location = new System.Drawing.Point(0, 437);
-            this.buttonSonstiges.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSonstiges.Name = "buttonSonstiges";
-            this.buttonSonstiges.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.buttonSonstiges.Size = new System.Drawing.Size(234, 38);
-            this.buttonSonstiges.TabIndex = 9;
-            this.buttonSonstiges.Text = "Sonstiges";
-            this.buttonSonstiges.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSonstiges.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonSonstiges.UseVisualStyleBackColor = true;
-            this.buttonSonstiges.Click += new System.EventHandler(this.buttonSonstiges_Click);
+            this.buttonOthers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOthers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonOthers.FlatAppearance.BorderSize = 0;
+            this.buttonOthers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOthers.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonOthers.Image = ((System.Drawing.Image)(resources.GetObject("buttonOthers.Image")));
+            this.buttonOthers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonOthers.Location = new System.Drawing.Point(0, 437);
+            this.buttonOthers.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonOthers.Name = "buttonOthers";
+            this.buttonOthers.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonOthers.Size = new System.Drawing.Size(234, 38);
+            this.buttonOthers.TabIndex = 9;
+            this.buttonOthers.Text = "Sonstiges";
+            this.buttonOthers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonOthers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonOthers.UseVisualStyleBackColor = true;
+            this.buttonOthers.Click += new System.EventHandler(this.buttonOthers_Click);
             // 
-            // buttonZuhause
+            // buttonHome
             // 
-            this.buttonZuhause.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonZuhause.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonZuhause.FlatAppearance.BorderSize = 0;
-            this.buttonZuhause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonZuhause.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonZuhause.Image = ((System.Drawing.Image)(resources.GetObject("buttonZuhause.Image")));
-            this.buttonZuhause.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonZuhause.Location = new System.Drawing.Point(0, 399);
-            this.buttonZuhause.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonZuhause.Name = "buttonZuhause";
-            this.buttonZuhause.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.buttonZuhause.Size = new System.Drawing.Size(234, 38);
-            this.buttonZuhause.TabIndex = 8;
-            this.buttonZuhause.Text = "Zuhause";
-            this.buttonZuhause.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonZuhause.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonZuhause.UseVisualStyleBackColor = true;
-            this.buttonZuhause.Click += new System.EventHandler(this.buttonZuhause_Click);
+            this.buttonHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHome.FlatAppearance.BorderSize = 0;
+            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHome.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonHome.Image = ((System.Drawing.Image)(resources.GetObject("buttonHome.Image")));
+            this.buttonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHome.Location = new System.Drawing.Point(0, 399);
+            this.buttonHome.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHome.Name = "buttonHome";
+            this.buttonHome.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonHome.Size = new System.Drawing.Size(234, 38);
+            this.buttonHome.TabIndex = 8;
+            this.buttonHome.Text = "Zuhause";
+            this.buttonHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHome.UseVisualStyleBackColor = true;
+            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
             // 
-            // buttonMedikamente
+            // buttonMedication
             // 
-            this.buttonMedikamente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMedikamente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonMedikamente.FlatAppearance.BorderSize = 0;
-            this.buttonMedikamente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMedikamente.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonMedikamente.Image = ((System.Drawing.Image)(resources.GetObject("buttonMedikamente.Image")));
-            this.buttonMedikamente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonMedikamente.Location = new System.Drawing.Point(0, 361);
-            this.buttonMedikamente.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonMedikamente.Name = "buttonMedikamente";
-            this.buttonMedikamente.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.buttonMedikamente.Size = new System.Drawing.Size(234, 38);
-            this.buttonMedikamente.TabIndex = 7;
-            this.buttonMedikamente.Text = "Medikamente";
-            this.buttonMedikamente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonMedikamente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonMedikamente.UseVisualStyleBackColor = true;
-            this.buttonMedikamente.Click += new System.EventHandler(this.buttonMedikamente_Click);
+            this.buttonMedication.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMedication.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonMedication.FlatAppearance.BorderSize = 0;
+            this.buttonMedication.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMedication.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonMedication.Image = ((System.Drawing.Image)(resources.GetObject("buttonMedication.Image")));
+            this.buttonMedication.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMedication.Location = new System.Drawing.Point(0, 361);
+            this.buttonMedication.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMedication.Name = "buttonMedication";
+            this.buttonMedication.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonMedication.Size = new System.Drawing.Size(234, 38);
+            this.buttonMedication.TabIndex = 7;
+            this.buttonMedication.Text = "Medikamente";
+            this.buttonMedication.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonMedication.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonMedication.UseVisualStyleBackColor = true;
+            this.buttonMedication.Click += new System.EventHandler(this.buttonMedication_Click);
             // 
-            // buttonPflegebericht
+            // buttonCareReport
             // 
-            this.buttonPflegebericht.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPflegebericht.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonPflegebericht.FlatAppearance.BorderSize = 0;
-            this.buttonPflegebericht.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPflegebericht.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonPflegebericht.Image = ((System.Drawing.Image)(resources.GetObject("buttonPflegebericht.Image")));
-            this.buttonPflegebericht.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPflegebericht.Location = new System.Drawing.Point(0, 323);
-            this.buttonPflegebericht.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonPflegebericht.Name = "buttonPflegebericht";
-            this.buttonPflegebericht.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.buttonPflegebericht.Size = new System.Drawing.Size(234, 38);
-            this.buttonPflegebericht.TabIndex = 6;
-            this.buttonPflegebericht.Text = "Pflegebericht";
-            this.buttonPflegebericht.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPflegebericht.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonPflegebericht.UseVisualStyleBackColor = true;
-            this.buttonPflegebericht.Click += new System.EventHandler(this.buttonPflegebericht_Click);
+            this.buttonCareReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCareReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCareReport.FlatAppearance.BorderSize = 0;
+            this.buttonCareReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCareReport.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonCareReport.Image = ((System.Drawing.Image)(resources.GetObject("buttonCareReport.Image")));
+            this.buttonCareReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCareReport.Location = new System.Drawing.Point(0, 323);
+            this.buttonCareReport.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCareReport.Name = "buttonCareReport";
+            this.buttonCareReport.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonCareReport.Size = new System.Drawing.Size(234, 38);
+            this.buttonCareReport.TabIndex = 6;
+            this.buttonCareReport.Text = "Pflegebericht";
+            this.buttonCareReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCareReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCareReport.UseVisualStyleBackColor = true;
+            this.buttonCareReport.Click += new System.EventHandler(this.buttonCareReport_Click);
             // 
-            // buttonGesundheitszustand
+            // buttonHealthData
             // 
-            this.buttonGesundheitszustand.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonGesundheitszustand.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonGesundheitszustand.FlatAppearance.BorderSize = 0;
-            this.buttonGesundheitszustand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGesundheitszustand.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonGesundheitszustand.Image = ((System.Drawing.Image)(resources.GetObject("buttonGesundheitszustand.Image")));
-            this.buttonGesundheitszustand.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGesundheitszustand.Location = new System.Drawing.Point(0, 285);
-            this.buttonGesundheitszustand.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonGesundheitszustand.Name = "buttonGesundheitszustand";
-            this.buttonGesundheitszustand.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.buttonGesundheitszustand.Size = new System.Drawing.Size(234, 38);
-            this.buttonGesundheitszustand.TabIndex = 5;
-            this.buttonGesundheitszustand.Text = "Gesundheitszustand";
-            this.buttonGesundheitszustand.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonGesundheitszustand.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonGesundheitszustand.UseVisualStyleBackColor = true;
-            this.buttonGesundheitszustand.Click += new System.EventHandler(this.buttonGesundheitszustand_Click);
+            this.buttonHealthData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHealthData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonHealthData.FlatAppearance.BorderSize = 0;
+            this.buttonHealthData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHealthData.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonHealthData.Image = ((System.Drawing.Image)(resources.GetObject("buttonHealthData.Image")));
+            this.buttonHealthData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHealthData.Location = new System.Drawing.Point(0, 285);
+            this.buttonHealthData.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHealthData.Name = "buttonHealthData";
+            this.buttonHealthData.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonHealthData.Size = new System.Drawing.Size(234, 38);
+            this.buttonHealthData.TabIndex = 5;
+            this.buttonHealthData.Text = "Gesundheitszustand";
+            this.buttonHealthData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonHealthData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonHealthData.UseVisualStyleBackColor = true;
+            this.buttonHealthData.Click += new System.EventHandler(this.buttonHealthData_Click);
             // 
-            // buttonAnamnese
+            // buttonCaseHistory
             // 
-            this.buttonAnamnese.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAnamnese.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAnamnese.FlatAppearance.BorderSize = 0;
-            this.buttonAnamnese.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAnamnese.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonAnamnese.Image = ((System.Drawing.Image)(resources.GetObject("buttonAnamnese.Image")));
-            this.buttonAnamnese.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAnamnese.Location = new System.Drawing.Point(0, 247);
-            this.buttonAnamnese.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAnamnese.Name = "buttonAnamnese";
-            this.buttonAnamnese.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.buttonAnamnese.Size = new System.Drawing.Size(234, 38);
-            this.buttonAnamnese.TabIndex = 4;
-            this.buttonAnamnese.Text = "Anamnese";
-            this.buttonAnamnese.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAnamnese.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAnamnese.UseVisualStyleBackColor = true;
-            this.buttonAnamnese.Click += new System.EventHandler(this.buttonAnamnese_Click);
+            this.buttonCaseHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCaseHistory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCaseHistory.FlatAppearance.BorderSize = 0;
+            this.buttonCaseHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCaseHistory.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonCaseHistory.Image = ((System.Drawing.Image)(resources.GetObject("buttonCaseHistory.Image")));
+            this.buttonCaseHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCaseHistory.Location = new System.Drawing.Point(0, 247);
+            this.buttonCaseHistory.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCaseHistory.Name = "buttonCaseHistory";
+            this.buttonCaseHistory.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonCaseHistory.Size = new System.Drawing.Size(234, 38);
+            this.buttonCaseHistory.TabIndex = 4;
+            this.buttonCaseHistory.Text = "Anamnese";
+            this.buttonCaseHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCaseHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCaseHistory.UseVisualStyleBackColor = true;
+            this.buttonCaseHistory.Click += new System.EventHandler(this.buttonCaseHistory_Click);
             // 
-            // buttonMaßnahmenplan
+            // buttonActionPlan
             // 
-            this.buttonMaßnahmenplan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMaßnahmenplan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonMaßnahmenplan.FlatAppearance.BorderSize = 0;
-            this.buttonMaßnahmenplan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMaßnahmenplan.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonMaßnahmenplan.Image = ((System.Drawing.Image)(resources.GetObject("buttonMaßnahmenplan.Image")));
-            this.buttonMaßnahmenplan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonMaßnahmenplan.Location = new System.Drawing.Point(0, 209);
-            this.buttonMaßnahmenplan.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonMaßnahmenplan.Name = "buttonMaßnahmenplan";
-            this.buttonMaßnahmenplan.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.buttonMaßnahmenplan.Size = new System.Drawing.Size(234, 38);
-            this.buttonMaßnahmenplan.TabIndex = 3;
-            this.buttonMaßnahmenplan.Text = "Maßnahmenplan";
-            this.buttonMaßnahmenplan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonMaßnahmenplan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonMaßnahmenplan.UseVisualStyleBackColor = true;
-            this.buttonMaßnahmenplan.Click += new System.EventHandler(this.buttonMaßnahmenplan_Click);
+            this.buttonActionPlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonActionPlan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonActionPlan.FlatAppearance.BorderSize = 0;
+            this.buttonActionPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonActionPlan.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonActionPlan.Image = ((System.Drawing.Image)(resources.GetObject("buttonActionPlan.Image")));
+            this.buttonActionPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonActionPlan.Location = new System.Drawing.Point(0, 209);
+            this.buttonActionPlan.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonActionPlan.Name = "buttonActionPlan";
+            this.buttonActionPlan.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonActionPlan.Size = new System.Drawing.Size(234, 38);
+            this.buttonActionPlan.TabIndex = 3;
+            this.buttonActionPlan.Text = "Maßnahmenplan";
+            this.buttonActionPlan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonActionPlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonActionPlan.UseVisualStyleBackColor = true;
+            this.buttonActionPlan.Click += new System.EventHandler(this.buttonActionPlan_Click);
             // 
-            // buttonBiographie
+            // buttonBiography
             // 
-            this.buttonBiographie.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBiographie.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonBiographie.FlatAppearance.BorderSize = 0;
-            this.buttonBiographie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBiographie.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonBiographie.Image = ((System.Drawing.Image)(resources.GetObject("buttonBiographie.Image")));
-            this.buttonBiographie.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBiographie.Location = new System.Drawing.Point(0, 171);
-            this.buttonBiographie.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonBiographie.Name = "buttonBiographie";
-            this.buttonBiographie.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.buttonBiographie.Size = new System.Drawing.Size(234, 38);
-            this.buttonBiographie.TabIndex = 2;
-            this.buttonBiographie.Text = "Biografie";
-            this.buttonBiographie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBiographie.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonBiographie.UseVisualStyleBackColor = true;
-            this.buttonBiographie.Click += new System.EventHandler(this.buttonBiography_Click);
+            this.buttonBiography.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBiography.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonBiography.FlatAppearance.BorderSize = 0;
+            this.buttonBiography.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBiography.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonBiography.Image = ((System.Drawing.Image)(resources.GetObject("buttonBiography.Image")));
+            this.buttonBiography.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBiography.Location = new System.Drawing.Point(0, 171);
+            this.buttonBiography.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBiography.Name = "buttonBiography";
+            this.buttonBiography.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonBiography.Size = new System.Drawing.Size(234, 38);
+            this.buttonBiography.TabIndex = 2;
+            this.buttonBiography.Text = "Biografie";
+            this.buttonBiography.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBiography.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBiography.UseVisualStyleBackColor = true;
+            this.buttonBiography.Click += new System.EventHandler(this.buttonBiography_Click);
             // 
-            // buttonStammdaten
+            // buttonBaseData
             // 
-            this.buttonStammdaten.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStammdaten.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonStammdaten.FlatAppearance.BorderSize = 0;
-            this.buttonStammdaten.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStammdaten.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonStammdaten.Image = ((System.Drawing.Image)(resources.GetObject("buttonStammdaten.Image")));
-            this.buttonStammdaten.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStammdaten.Location = new System.Drawing.Point(0, 133);
-            this.buttonStammdaten.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonStammdaten.Name = "buttonStammdaten";
-            this.buttonStammdaten.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
-            this.buttonStammdaten.Size = new System.Drawing.Size(234, 38);
-            this.buttonStammdaten.TabIndex = 1;
-            this.buttonStammdaten.Text = "Stammdaten";
-            this.buttonStammdaten.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStammdaten.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonStammdaten.UseVisualStyleBackColor = true;
-            this.buttonStammdaten.Click += new System.EventHandler(this.buttonPatientData_Click);
+            this.buttonBaseData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBaseData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonBaseData.FlatAppearance.BorderSize = 0;
+            this.buttonBaseData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBaseData.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonBaseData.Image = ((System.Drawing.Image)(resources.GetObject("buttonBaseData.Image")));
+            this.buttonBaseData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBaseData.Location = new System.Drawing.Point(0, 133);
+            this.buttonBaseData.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBaseData.Name = "buttonBaseData";
+            this.buttonBaseData.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonBaseData.Size = new System.Drawing.Size(234, 38);
+            this.buttonBaseData.TabIndex = 1;
+            this.buttonBaseData.Text = "Stammdaten";
+            this.buttonBaseData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBaseData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBaseData.UseVisualStyleBackColor = true;
+            this.buttonBaseData.Click += new System.EventHandler(this.buttonBaseData_Click);
             // 
             // panelHome
             // 
-            this.panelHome.Controls.Add(this.buttonHome);
+            this.panelHome.Controls.Add(this.buttonMain);
             this.panelHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHome.Location = new System.Drawing.Point(0, 0);
             this.panelHome.Margin = new System.Windows.Forms.Padding(2);
@@ -330,29 +329,29 @@
             this.panelHome.Size = new System.Drawing.Size(234, 133);
             this.panelHome.TabIndex = 0;
             // 
-            // buttonHome
+            // buttonMain
             // 
-            this.buttonHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonHome.FlatAppearance.BorderSize = 0;
-            this.buttonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonHome.Font = new System.Drawing.Font("Century Gothic", 14F);
-            this.buttonHome.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.buttonHome.Image = ((System.Drawing.Image)(resources.GetObject("buttonHome.Image")));
-            this.buttonHome.Location = new System.Drawing.Point(0, 0);
-            this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(234, 133);
-            this.buttonHome.TabIndex = 1;
-            this.buttonHome.UseVisualStyleBackColor = true;
-            this.buttonHome.Click += new System.EventHandler(this.buttonHome_Click);
+            this.buttonMain.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonMain.FlatAppearance.BorderSize = 0;
+            this.buttonMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMain.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.buttonMain.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonMain.Image = ((System.Drawing.Image)(resources.GetObject("buttonMain.Image")));
+            this.buttonMain.Location = new System.Drawing.Point(0, 0);
+            this.buttonMain.Name = "buttonMain";
+            this.buttonMain.Size = new System.Drawing.Size(234, 133);
+            this.buttonMain.TabIndex = 1;
+            this.buttonMain.UseVisualStyleBackColor = true;
+            this.buttonMain.Click += new System.EventHandler(this.buttonMain_Click);
             // 
             // panelChildform
             // 
             this.panelChildform.AutoScroll = true;
             this.panelChildform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.panelChildform.Controls.Add(this.panelSuche);
+            this.panelChildform.Controls.Add(this.panelSearch);
             this.panelChildform.Controls.Add(this.label1);
-            this.panelChildform.Controls.Add(this.checkedListBox1);
+            this.panelChildform.Controls.Add(this.checkedListBox);
             this.panelChildform.Controls.Add(this.buttonWeiterPatientsübersicht);
             this.panelChildform.Controls.Add(this.dataGridViewPatient);
             this.panelChildform.Controls.Add(this.labelPatient);
@@ -364,51 +363,51 @@
             this.panelChildform.Size = new System.Drawing.Size(766, 591);
             this.panelChildform.TabIndex = 1;
             // 
-            // panelSuche
+            // panelSearch
             // 
-            this.panelSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.panelSuche.Controls.Add(this.label2);
-            this.panelSuche.Controls.Add(this.pictureBox1);
-            this.panelSuche.Controls.Add(this.textBoxSuche);
-            this.panelSuche.Location = new System.Drawing.Point(345, 171);
-            this.panelSuche.Name = "panelSuche";
-            this.panelSuche.Size = new System.Drawing.Size(409, 38);
-            this.panelSuche.TabIndex = 61;
+            this.panelSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelSearch.Controls.Add(this.labelSearch);
+            this.panelSearch.Controls.Add(this.pictureBoxSearch);
+            this.panelSearch.Controls.Add(this.textBoxSearch);
+            this.panelSearch.Location = new System.Drawing.Point(345, 171);
+            this.panelSearch.Name = "panelSearch";
+            this.panelSearch.Size = new System.Drawing.Size(409, 38);
+            this.panelSearch.TabIndex = 61;
             // 
-            // label2
+            // labelSearch
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(42, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 23);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "Suche :";
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.labelSearch.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.labelSearch.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelSearch.Location = new System.Drawing.Point(42, 6);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(81, 23);
+            this.labelSearch.TabIndex = 60;
+            this.labelSearch.Text = "Suche :";
             // 
-            // pictureBox1
+            // pictureBoxSearch
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 57;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxSearch.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBoxSearch.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxSearch.Image")));
+            this.pictureBoxSearch.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxSearch.Name = "pictureBoxSearch";
+            this.pictureBoxSearch.Size = new System.Drawing.Size(36, 38);
+            this.pictureBoxSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSearch.TabIndex = 57;
+            this.pictureBoxSearch.TabStop = false;
             // 
-            // textBoxSuche
+            // textBoxSearch
             // 
-            this.textBoxSuche.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.textBoxSuche.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxSuche.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSuche.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.textBoxSuche.Location = new System.Drawing.Point(109, 6);
-            this.textBoxSuche.Name = "textBoxSuche";
-            this.textBoxSuche.Size = new System.Drawing.Size(275, 25);
-            this.textBoxSuche.TabIndex = 56;
-            this.textBoxSuche.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
+            this.textBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.textBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSearch.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.textBoxSearch.Location = new System.Drawing.Point(109, 6);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(275, 25);
+            this.textBoxSearch.TabIndex = 56;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
             // 
             // label1
             // 
@@ -421,18 +420,18 @@
             this.label1.TabIndex = 59;
             this.label1.Text = "Welcome !";
             // 
-            // checkedListBox1
+            // checkedListBox
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.checkedListBox1.CheckOnClick = true;
-            this.checkedListBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkedListBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(33, 187);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(293, 54);
-            this.checkedListBox1.TabIndex = 58;
+            this.checkedListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.checkedListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.checkedListBox.CheckOnClick = true;
+            this.checkedListBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkedListBox.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.checkedListBox.FormattingEnabled = true;
+            this.checkedListBox.Location = new System.Drawing.Point(33, 187);
+            this.checkedListBox.Name = "checkedListBox";
+            this.checkedListBox.Size = new System.Drawing.Size(293, 54);
+            this.checkedListBox.TabIndex = 58;
             // 
             // buttonWeiterPatientsübersicht
             // 
@@ -472,7 +471,6 @@
             this.personIDDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn,
             this.firstNameDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn,
             this.phoneDataGridViewTextBoxColumn});
             this.dataGridViewPatient.DataSource = this.personSetBindingSource;
             this.dataGridViewPatient.EnableHeadersVisualStyles = false;
@@ -503,43 +501,35 @@
             // personIDDataGridViewTextBoxColumn
             // 
             this.personIDDataGridViewTextBoxColumn.DataPropertyName = "PersonID";
-            this.personIDDataGridViewTextBoxColumn.HeaderText = "PersonID";
+            this.personIDDataGridViewTextBoxColumn.HeaderText = "ID";
             this.personIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
             this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.personIDDataGridViewTextBoxColumn.Width = 101;
+            this.personIDDataGridViewTextBoxColumn.Width = 52;
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
+            this.lastNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "Nachname";
             this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            this.lastNameDataGridViewTextBoxColumn.Width = 108;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            this.firstNameDataGridViewTextBoxColumn.Width = 106;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.Width = 93;
+            this.firstNameDataGridViewTextBoxColumn.Width = 80;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
+            this.phoneDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Telefon";
             this.phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            this.phoneDataGridViewTextBoxColumn.Width = 83;
             // 
             // personSetBindingSource
             // 
@@ -619,9 +609,9 @@
             this.panelHome.ResumeLayout(false);
             this.panelChildform.ResumeLayout(false);
             this.panelChildform.PerformLayout();
-            this.panelSuche.ResumeLayout(false);
-            this.panelSuche.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelSearch.ResumeLayout(false);
+            this.panelSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
@@ -633,40 +623,39 @@
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button buttonSonstiges;
-        private System.Windows.Forms.Button buttonZuhause;
-        private System.Windows.Forms.Button buttonMedikamente;
-        private System.Windows.Forms.Button buttonPflegebericht;
-        private System.Windows.Forms.Button buttonGesundheitszustand;
-        private System.Windows.Forms.Button buttonAnamnese;
-        private System.Windows.Forms.Button buttonMaßnahmenplan;
-        private System.Windows.Forms.Button buttonBiographie;
-        private System.Windows.Forms.Button buttonStammdaten;
+        private System.Windows.Forms.Button buttonOthers;
+        private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.Button buttonMedication;
+        private System.Windows.Forms.Button buttonCareReport;
+        private System.Windows.Forms.Button buttonHealthData;
+        private System.Windows.Forms.Button buttonCaseHistory;
+        private System.Windows.Forms.Button buttonActionPlan;
+        private System.Windows.Forms.Button buttonBiography;
+        private System.Windows.Forms.Button buttonBaseData;
         private System.Windows.Forms.Panel panelHome;
         private System.Windows.Forms.Panel panelChildform;
         private System.Windows.Forms.Panel panelLogout;
         private System.Windows.Forms.Button buttonLogout;
-        private System.Windows.Forms.Button buttonHome;
+        private System.Windows.Forms.Button buttonMain;
         private System.Windows.Forms.Label labelDatum;
         private System.Windows.Forms.Timer DatumUhr;
         private System.Windows.Forms.Label labelToDoListe;
         private System.Windows.Forms.DataGridView dataGridViewPatient;
         private System.Windows.Forms.Label labelPatient;
         private System.Windows.Forms.Button buttonWeiterPatientsübersicht;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBoxSuche;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.PictureBox pictureBoxSearch;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.CheckedListBox checkedListBox;
         private System.Windows.Forms.Label label1;
         private DataManager.AmbulantCareDBDataSet ambulantCareDBDataSet;
         private System.Windows.Forms.BindingSource personSetBindingSource;
         private DataManager.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter personSetTableAdapter;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelSuche;
+        private System.Windows.Forms.Label labelSearch;
+        private System.Windows.Forms.Panel panelSearch;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.DataGridViewTextBoxColumn personIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
     }
 }

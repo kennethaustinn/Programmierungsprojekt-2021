@@ -128,7 +128,7 @@
         ougBAfmTr0LUqg0AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonSonstiges.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonOthers.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAURJREFUWEft
         lU1qwzAQhU0CPUFO0JAT9CzG9U/v4vN019JLhFDoFQptkoXJuiEL5414g4NiOxDJEU3ywUPSzGhGtmwp
@@ -139,7 +139,7 @@
         vYBLiWUb2oKGFMveuXmiaA+yvJ6Un4qo0QAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonZuhause.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonHome.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAuFJREFUWEft
         lklrFFEUhRNBEEU0im40ivkH7uLCIYpLFw4tnakJQXuprkxiQBsVBBcOP8GAYBa6SXQlhkgWujLkF7hw
@@ -157,7 +157,7 @@
         eH1euf8Ro6npFwszgg8qC04zAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="buttonMedikamente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonMedication.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAqNJREFUWEft
         ljtrVFEUhccHPkDUNDY+IoiNEQsjGrQZjCCDYGyGeQ/TOH/AFKLNNNYiqDNiZyEoKlpErWJlK4iNKD4C
@@ -174,7 +174,7 @@
         v4ce/iESiR9LPiZDnWnFEQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonPflegebericht.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonCareReport.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAARpJREFUWEft
         ks0NwjAMRrMEIHFnADiyR6X+7gYzwAk26BkQezAAOOhzVZmW2FCkIuVJURPb7yOidZFRUhTF/RcL8WG6
@@ -184,7 +184,7 @@
         I2T6coJoxKFmOvlYFMQLxAv8/wWGWojV0xXyzUJsZIw49wCrVvNVN0qpKwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonGesundheitszustand.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonHealthData.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAItJREFUWEft
         kkEKgDAQxPrP/v8delkvOhADVUQ2MAdpZijF0TSfZM653Unp2kdSOaX05y5QnxfO59ZH7KD1ETtofcQO
@@ -192,7 +192,7 @@
         pHJK6esv0DTvMcYOE48QHwbebNkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonAnamnese.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonCaseHistory.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAALpJREFUWEft
         jjEOwjAMRbMgeiwWhpwhGTLlKIVjchMIktvB+Vas4A5FftJf4u8XB+eU1FovKaVHy4uyft9ofDw552f7
@@ -201,7 +201,7 @@
         vc75ZfkefQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonMaßnahmenplan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonActionPlan.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAQNJREFUWEft
         lLENwjAQRdMgmIGeAaCkoqHIBlGSIlVGCYwBM0AFG2QKdmAAcpb+WZFji5NxFAX5SV/E9++fT0pEEpkl
@@ -211,7 +211,7 @@
         lWMb8oswNhIxSJIOJfryeB4M5MwAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="buttonBiographie.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonBiography.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAdlJREFUWEft
         lcFKw0AQhntWRCs+iXdLQTx6UQOmaaFUKYioB0XxJgr6CL6EIvgAFr15EnwQqdqLQqP/hH9Ci9nsbls8
@@ -225,7 +225,7 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="buttonStammdaten.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonBaseData.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAddJREFUWEft
         lr1Kw3AUxYuICuogfryD9AlcStauatSkH4aK6KQO6iQafAM/nkEc7CL6Ei6FuohLXZ381q31HDgtxZqa
@@ -239,7 +239,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="buttonHome.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonMain.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOoAAACFCAYAAABVNmTBAAAABGdBTUEAALGPC/xhBQAAEFBJREFUeF7t
         nXl73FYVxvk20DZ7asdOHK/xHjuJ4yVO7CRe4qQpO3R7WEpLKVBKWyhbNwoFWrrQwicUesfPUY6Ojkaa
@@ -314,13 +314,7 @@
         pAZQqITUAAqVkBpAoRJSAyhUQmoAhUpI5RkN/g8aGtZZqgM06gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="personSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>369, 17</value>
-  </metadata>
-  <metadata name="ambulantCareDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>144, 17</value>
-  </metadata>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBoxSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAfNJREFUWEft
         ls9KG1EYxaP1H2jBhd34BmofIpuKAQXRDk4yCYQsgrVREF8g0O4U7CO0C8FFfZEuUyUa/LPUVRdtQWzB
@@ -334,6 +328,12 @@
         QfPljjXv4vGRSt0AlQZt+YY7RnoAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="personSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>369, 17</value>
+  </metadata>
+  <metadata name="ambulantCareDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>144, 17</value>
+  </metadata>
   <metadata name="ambulantCareDBDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>144, 17</value>
   </metadata>

@@ -12,6 +12,7 @@ namespace CareSolution
 {
     public partial class Medication : Form
     {
+        public static Medication medicationForm = new Medication();
         /// <summary>
         /// Für das Form Medication wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
         /// dem DatenBank erstellt.

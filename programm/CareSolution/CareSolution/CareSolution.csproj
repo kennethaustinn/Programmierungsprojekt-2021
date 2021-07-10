@@ -143,11 +143,11 @@
     <Compile Include="Others.Designer.cs">
       <DependentUpon>Others.cs</DependentUpon>
     </Compile>
-    <Compile Include="Stammdaten.cs">
+    <Compile Include="BaseData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Stammdaten.Designer.cs">
-      <DependentUpon>Stammdaten.cs</DependentUpon>
+    <Compile Include="BaseData.Designer.cs">
+      <DependentUpon>BaseData.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -198,8 +198,8 @@
     <EmbeddedResource Include="Others.resx">
       <DependentUpon>Others.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Stammdaten.resx">
-      <DependentUpon>Stammdaten.cs</DependentUpon>
+    <EmbeddedResource Include="BaseData.resx">
+      <DependentUpon>BaseData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -216,6 +216,26 @@
       <DependentUpon>AmbulantCareDBDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.ActionPlanSetTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.BioSetTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.CareReportSetTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.CaringRelativesSetTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.HealthDataSetTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.HomeSetTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.HospitaliationsSetTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.MedicationSetTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.PatientCaregiverTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.PatientCareReportTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.PatientDoctorTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.PersonSet_CaregiverTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.PersonSet_DoctorTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.PersonSet_PatientTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.PersonSet_WorkerTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.RiskValuesSetTableAdapter.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\DataManager.AmbulantCareDBDataSetTableAdapters.VitalParametersSetTableAdapter.datasource" />
     <None Include="Properties\DataSources\DataManager.HealthData.datasource" />
     <None Include="Properties\DataSources\DataManager.Medication.datasource" />
     <None Include="Properties\DataSources\DataManager.Patient.datasource" />

@@ -12,6 +12,7 @@ namespace CareSolution
 {
     public partial class Others : Form
     {
+        public static Others othersForm = new Others();
         /// <summary>
         /// Für das Form Others wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
         /// dem DatenBank erstellt. Auch die DummyTest Patient Data wird mit dem Klasse Patient verbunden und im Labels angezeigt

@@ -17,7 +17,28 @@ namespace CareSolution
         {
             InitializeComponent();
         }
+        /// speichern das activeForm für OpenChildForm das genau am Anfang ist genau null.
+        /// Das heißt anderen OpenChildForm geöffnet oder gedrückt wird 
+        private Form _activeForm;
 
+        // wird das Form im PanelChilForm hier neue abgerufen und angezeigt. Mit dem Parameter Form
+        // die man gerade gedrückt von dem beliebigen Button
+        private void openChildForm(Form childForm)
+        {
+            if (_activeForm != null)
+            {
+                _activeForm.Hide();
+            }
+
+            _activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelPatient.Controls.Add(childForm);
+            panelPatient.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
         /// <summary>
         /// Beim Laden des Form wird die ComboBox mit den Werten befüllt.
         /// </summary>
@@ -63,8 +84,7 @@ namespace CareSolution
             {
 
             }
-
-            this.Close();
+            openChildForm(new PatientData());
         }
     }
     }
