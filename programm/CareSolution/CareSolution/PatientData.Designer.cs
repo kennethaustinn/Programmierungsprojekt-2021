@@ -30,11 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientData));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelPatient = new System.Windows.Forms.Label();
             this.panelPatient = new System.Windows.Forms.Panel();
+            this.buttonNeueData = new System.Windows.Forms.Button();
             this.panelSuche = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -48,7 +49,6 @@
             this.personSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ambulantCareDBDataSet = new DataManager.AmbulantCareDBDataSet();
             this.personSetTableAdapter = new DataManager.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter();
-            this.buttonNeueData = new System.Windows.Forms.Button();
             this.panelPatient.SuspendLayout();
             this.panelSuche.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,7 +65,7 @@
             this.labelPatient.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelPatient.Location = new System.Drawing.Point(248, 24);
             this.labelPatient.Name = "labelPatient";
-            this.labelPatient.Size = new System.Drawing.Size(225, 34);
+            this.labelPatient.Size = new System.Drawing.Size(174, 25);
             this.labelPatient.TabIndex = 34;
             this.labelPatient.Text = "Patienten Data";
             // 
@@ -82,6 +82,23 @@
             this.panelPatient.Name = "panelPatient";
             this.panelPatient.Size = new System.Drawing.Size(748, 544);
             this.panelPatient.TabIndex = 25;
+            // 
+            // buttonNeueData
+            // 
+            this.buttonNeueData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonNeueData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            this.buttonNeueData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNeueData.FlatAppearance.BorderSize = 0;
+            this.buttonNeueData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNeueData.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonNeueData.Location = new System.Drawing.Point(278, 428);
+            this.buttonNeueData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonNeueData.Name = "buttonNeueData";
+            this.buttonNeueData.Size = new System.Drawing.Size(187, 64);
+            this.buttonNeueData.TabIndex = 70;
+            this.buttonNeueData.Text = "Patient hinzufügen";
+            this.buttonNeueData.UseVisualStyleBackColor = false;
+            this.buttonNeueData.Click += new System.EventHandler(this.buttonNeueData_Click);
             // 
             // panelSuche
             // 
@@ -102,7 +119,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(42, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 23);
+            this.label2.Size = new System.Drawing.Size(66, 21);
             this.label2.TabIndex = 60;
             this.label2.Text = "Suche :";
             // 
@@ -126,7 +143,7 @@
             this.textBoxSuche.Location = new System.Drawing.Point(109, 6);
             this.textBoxSuche.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxSuche.Name = "textBoxSuche";
-            this.textBoxSuche.Size = new System.Drawing.Size(300, 25);
+            this.textBoxSuche.Size = new System.Drawing.Size(300, 20);
             this.textBoxSuche.TabIndex = 54;
             this.textBoxSuche.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
             // 
@@ -138,14 +155,14 @@
             this.dataGridViewPatient.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
             this.dataGridViewPatient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewPatient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewPatient.ColumnHeadersHeight = 30;
             this.dataGridViewPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewPatient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -161,22 +178,22 @@
             this.dataGridViewPatient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewPatient.Name = "dataGridViewPatient";
             this.dataGridViewPatient.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewPatient.RowHeadersVisible = false;
             this.dataGridViewPatient.RowHeadersWidth = 51;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewPatient.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewPatient.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewPatient.RowTemplate.Height = 24;
             this.dataGridViewPatient.Size = new System.Drawing.Size(674, 286);
             this.dataGridViewPatient.TabIndex = 35;
@@ -189,7 +206,7 @@
             this.personIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
             this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.personIDDataGridViewTextBoxColumn.Width = 101;
+            this.personIDDataGridViewTextBoxColumn.Width = 82;
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
@@ -213,7 +230,7 @@
             this.genderDataGridViewTextBoxColumn.HeaderText = "Gender";
             this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.Width = 93;
+            this.genderDataGridViewTextBoxColumn.Width = 76;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
@@ -237,26 +254,9 @@
             // 
             this.personSetTableAdapter.ClearBeforeFill = true;
             // 
-            // buttonNeueData
-            // 
-            this.buttonNeueData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonNeueData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            this.buttonNeueData.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonNeueData.FlatAppearance.BorderSize = 0;
-            this.buttonNeueData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNeueData.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonNeueData.Location = new System.Drawing.Point(278, 467);
-            this.buttonNeueData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonNeueData.Name = "buttonNeueData";
-            this.buttonNeueData.Size = new System.Drawing.Size(187, 64);
-            this.buttonNeueData.TabIndex = 70;
-            this.buttonNeueData.Text = "Neue hinzufügen";
-            this.buttonNeueData.UseVisualStyleBackColor = false;
-            this.buttonNeueData.Click += new System.EventHandler(this.buttonNeueData_Click);
-            // 
             // PatientData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelPatient);

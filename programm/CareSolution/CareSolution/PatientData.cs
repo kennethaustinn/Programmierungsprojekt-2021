@@ -1,21 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataManager;
 
 namespace CareSolution
 {
     public partial class PatientData : Form
     {
-        SqlConnection connection;
-        private string connectionString;
+        private SqlConnection _connection;
+        private readonly string _connectionString;
+        private readonly DataManager<Person> _dataManager = new DataManager<Person>();
+
+        /// speichern das activeForm für OpenChildForm das genau am Anfang ist genau null.
+        /// Das heißt anderen OpenChildForm geöffnet oder gedrückt wird 
+        private Form _activeForm;
+
         /// <summary>
         /// Für das Form PatientData wird erst alle die Sachen von dem Designer initialisiert und auch das
         /// ConnectionString mit dem DatenBank erstellt.
@@ -23,22 +23,21 @@ namespace CareSolution
         public PatientData()
         {
             InitializeComponent();
-            connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
+            _connectionString = _dataManager.ConnectionString;
+            //connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
         }
-        /// speichern das activeForm für OpenChildForm das genau am Anfang ist genau null.
-        /// Das heißt anderen OpenChildForm geöffnet oder gedrückt wird 
-        private Form activeForm = null;
+
 
         // wird das Form im PanelChilForm hier neue abgerufen und angezeigt. Mit dem Parameter Form
         // die man gerade gedrückt von dem beliebigen Button
         private void openChildForm(Form childForm)
         {
-            if (activeForm != null)
+            if (_activeForm != null)
             {
-                activeForm.Close();
+                _activeForm.Close();
             }
 
-            activeForm = childForm;
+            _activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -54,14 +53,15 @@ namespace CareSolution
         /// </summary>
         private void textBoxSuche_TextChanged(object sender, EventArgs e)
         {
+            _dataManager.SearchPatient(textBoxSuche.Text);
             var query = "SELECT * FROM PersonSet a WHERE a.LastName   Like '" + textBoxSuche.Text + "%' or a.FirstName like'%" + textBoxSuche.Text + "%'";
-            using (connection = new SqlConnection(connectionString))
-            using (SqlCommand command = new SqlCommand(query, connection))
+            using (_connection = new SqlConnection(_connectionString))
+            using (SqlCommand command = new SqlCommand(query, _connection))
             using (SqlDataAdapter adatpe = new SqlDataAdapter(command))
             {
-                DataTable Persondt = new DataTable();
-                adatpe.Fill(Persondt);
-                dataGridViewPatient.DataSource = Persondt;
+                DataTable persondt = new DataTable();
+                adatpe.Fill(persondt);
+                dataGridViewPatient.DataSource = persondt;
             }
         }
         /// <summary>
@@ -107,5 +107,6 @@ namespace CareSolution
         {
             openChildForm(new AddPatient());
         }
+
     }
 }
