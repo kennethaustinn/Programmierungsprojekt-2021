@@ -31,13 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bio));
             this.panelBio = new System.Windows.Forms.Panel();
-            this.bioSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ambulantCareDBDataSet = new DataManager.AmbulantCareDBDataSet();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonScanNeueData = new System.Windows.Forms.Button();
             this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
             this.panelProfil = new System.Windows.Forms.Panel();
-            this.labelName2 = new System.Windows.Forms.Label();
+            this.labelFullName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelSprache = new System.Windows.Forms.Label();
             this.labelAusbildung = new System.Windows.Forms.Label();
@@ -58,13 +56,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.bioSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ambulantCareDBDataSet = new DataManager.AmbulantCareDBDataSet();
             this.bioSetTableAdapter = new DataManager.AmbulantCareDBDataSetTableAdapters.BioSetTableAdapter();
             this.panelBio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bioSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.panelProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bioSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBio
@@ -99,16 +99,6 @@
             this.panelBio.Name = "panelBio";
             this.panelBio.Size = new System.Drawing.Size(748, 544);
             this.panelBio.TabIndex = 24;
-            // 
-            // bioSetBindingSource
-            // 
-            this.bioSetBindingSource.DataMember = "BioSet";
-            this.bioSetBindingSource.DataSource = this.ambulantCareDBDataSet;
-            // 
-            // ambulantCareDBDataSet
-            // 
-            this.ambulantCareDBDataSet.DataSetName = "AmbulantCareDBDataSet";
-            this.ambulantCareDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonEdit
             // 
@@ -154,23 +144,23 @@
             // panelProfil
             // 
             this.panelProfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelProfil.Controls.Add(this.labelName2);
+            this.panelProfil.Controls.Add(this.labelFullName);
             this.panelProfil.Controls.Add(this.pictureBox1);
             this.panelProfil.Location = new System.Drawing.Point(548, 3);
             this.panelProfil.Name = "panelProfil";
             this.panelProfil.Size = new System.Drawing.Size(200, 28);
             this.panelProfil.TabIndex = 106;
             // 
-            // labelName2
+            // labelFullName
             // 
-            this.labelName2.AutoSize = true;
-            this.labelName2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelName2.Location = new System.Drawing.Point(33, 5);
-            this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(72, 23);
-            this.labelName2.TabIndex = 58;
-            this.labelName2.Text = "label1";
+            this.labelFullName.AutoSize = true;
+            this.labelFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelFullName.Location = new System.Drawing.Point(33, 5);
+            this.labelFullName.Name = "labelFullName";
+            this.labelFullName.Size = new System.Drawing.Size(57, 21);
+            this.labelFullName.TabIndex = 58;
+            this.labelFullName.Text = "label1";
             // 
             // pictureBox1
             // 
@@ -189,7 +179,7 @@
             this.labelSprache.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelSprache.Location = new System.Drawing.Point(563, 203);
             this.labelSprache.Name = "labelSprache";
-            this.labelSprache.Size = new System.Drawing.Size(18, 21);
+            this.labelSprache.Size = new System.Drawing.Size(16, 19);
             this.labelSprache.TabIndex = 105;
             this.labelSprache.Text = "x";
             // 
@@ -200,7 +190,7 @@
             this.labelAusbildung.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelAusbildung.Location = new System.Drawing.Point(149, 153);
             this.labelAusbildung.Name = "labelAusbildung";
-            this.labelAusbildung.Size = new System.Drawing.Size(18, 21);
+            this.labelAusbildung.Size = new System.Drawing.Size(16, 19);
             this.labelAusbildung.TabIndex = 104;
             this.labelAusbildung.Text = "x";
             // 
@@ -211,7 +201,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Location = new System.Drawing.Point(382, 203);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 21);
+            this.label3.Size = new System.Drawing.Size(75, 19);
             this.label3.TabIndex = 103;
             this.label3.Text = "Sprache :";
             // 
@@ -222,7 +212,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(12, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 21);
+            this.label2.Size = new System.Drawing.Size(93, 19);
             this.label2.TabIndex = 102;
             this.label2.Text = "Ausbildung :";
             // 
@@ -233,7 +223,7 @@
             this.labelFamilieMitglieder.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelFamilieMitglieder.Location = new System.Drawing.Point(563, 153);
             this.labelFamilieMitglieder.Name = "labelFamilieMitglieder";
-            this.labelFamilieMitglieder.Size = new System.Drawing.Size(18, 21);
+            this.labelFamilieMitglieder.Size = new System.Drawing.Size(16, 19);
             this.labelFamilieMitglieder.TabIndex = 101;
             this.labelFamilieMitglieder.Text = "x";
             // 
@@ -244,7 +234,7 @@
             this.labelKinder.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelKinder.Location = new System.Drawing.Point(149, 373);
             this.labelKinder.Name = "labelKinder";
-            this.labelKinder.Size = new System.Drawing.Size(18, 21);
+            this.labelKinder.Size = new System.Drawing.Size(16, 19);
             this.labelKinder.TabIndex = 100;
             this.labelKinder.Text = "x";
             // 
@@ -255,7 +245,7 @@
             this.labelFreizeit.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelFreizeit.Location = new System.Drawing.Point(563, 103);
             this.labelFreizeit.Name = "labelFreizeit";
-            this.labelFreizeit.Size = new System.Drawing.Size(18, 21);
+            this.labelFreizeit.Size = new System.Drawing.Size(16, 19);
             this.labelFreizeit.TabIndex = 99;
             this.labelFreizeit.Text = "x";
             // 
@@ -266,7 +256,7 @@
             this.labelPartnerschaft.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelPartnerschaft.Location = new System.Drawing.Point(149, 313);
             this.labelPartnerschaft.Name = "labelPartnerschaft";
-            this.labelPartnerschaft.Size = new System.Drawing.Size(18, 21);
+            this.labelPartnerschaft.Size = new System.Drawing.Size(16, 19);
             this.labelPartnerschaft.TabIndex = 98;
             this.labelPartnerschaft.Text = "x";
             // 
@@ -278,7 +268,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(284, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 34);
+            this.label4.Size = new System.Drawing.Size(105, 25);
             this.label4.TabIndex = 97;
             this.label4.Text = "Biografie";
             // 
@@ -289,7 +279,7 @@
             this.labelBeruf.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelBeruf.Location = new System.Drawing.Point(149, 258);
             this.labelBeruf.Name = "labelBeruf";
-            this.labelBeruf.Size = new System.Drawing.Size(18, 21);
+            this.labelBeruf.Size = new System.Drawing.Size(16, 19);
             this.labelBeruf.TabIndex = 96;
             this.labelBeruf.Text = "x";
             // 
@@ -300,7 +290,7 @@
             this.labelUni.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelUni.Location = new System.Drawing.Point(149, 203);
             this.labelUni.Name = "labelUni";
-            this.labelUni.Size = new System.Drawing.Size(18, 21);
+            this.labelUni.Size = new System.Drawing.Size(16, 19);
             this.labelUni.TabIndex = 95;
             this.labelUni.Text = "x";
             // 
@@ -311,7 +301,7 @@
             this.labelSchule.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelSchule.Location = new System.Drawing.Point(149, 103);
             this.labelSchule.Name = "labelSchule";
-            this.labelSchule.Size = new System.Drawing.Size(18, 21);
+            this.labelSchule.Size = new System.Drawing.Size(16, 19);
             this.labelSchule.TabIndex = 94;
             this.labelSchule.Text = "x";
             // 
@@ -322,7 +312,7 @@
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label15.Location = new System.Drawing.Point(382, 153);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(173, 21);
+            this.label15.Size = new System.Drawing.Size(146, 19);
             this.label15.TabIndex = 93;
             this.label15.Text = "Familien Mitglieder :";
             // 
@@ -333,7 +323,7 @@
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label14.Location = new System.Drawing.Point(382, 103);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 21);
+            this.label14.Size = new System.Drawing.Size(67, 19);
             this.label14.TabIndex = 92;
             this.label14.Text = "Freizeit : ";
             // 
@@ -344,7 +334,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label9.Location = new System.Drawing.Point(12, 203);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 21);
+            this.label9.Size = new System.Drawing.Size(79, 19);
             this.label9.TabIndex = 91;
             this.label9.Text = "Universität";
             // 
@@ -355,7 +345,7 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label10.Location = new System.Drawing.Point(12, 373);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 21);
+            this.label10.Size = new System.Drawing.Size(60, 19);
             this.label10.TabIndex = 90;
             this.label10.Text = "Kinder :";
             // 
@@ -366,7 +356,7 @@
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label11.Location = new System.Drawing.Point(12, 313);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 21);
+            this.label11.Size = new System.Drawing.Size(108, 19);
             this.label11.TabIndex = 89;
             this.label11.Text = "Partnerschaft :";
             // 
@@ -377,7 +367,7 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label12.Location = new System.Drawing.Point(12, 258);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 21);
+            this.label12.Size = new System.Drawing.Size(51, 19);
             this.label12.TabIndex = 88;
             this.label12.Text = "Beruf :";
             // 
@@ -388,9 +378,19 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label13.Location = new System.Drawing.Point(12, 103);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 21);
+            this.label13.Size = new System.Drawing.Size(63, 19);
             this.label13.TabIndex = 87;
             this.label13.Text = "Schule :";
+            // 
+            // bioSetBindingSource
+            // 
+            this.bioSetBindingSource.DataMember = "BioSet";
+            this.bioSetBindingSource.DataSource = this.ambulantCareDBDataSet;
+            // 
+            // ambulantCareDBDataSet
+            // 
+            this.ambulantCareDBDataSet.DataSetName = "AmbulantCareDBDataSet";
+            this.ambulantCareDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bioSetTableAdapter
             // 
@@ -398,7 +398,7 @@
             // 
             // Bio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelBio);
@@ -410,12 +410,12 @@
             this.Load += new System.EventHandler(this.Bio_Load);
             this.panelBio.ResumeLayout(false);
             this.panelBio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bioSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
             this.panelProfil.ResumeLayout(false);
             this.panelProfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bioSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -425,7 +425,6 @@
         private System.Windows.Forms.Panel panelBio;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
         private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label labelName2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelSprache;
         private System.Windows.Forms.Label labelAusbildung;
@@ -451,5 +450,6 @@
         private DataManager.AmbulantCareDBDataSet ambulantCareDBDataSet;
         private System.Windows.Forms.BindingSource bioSetBindingSource;
         private DataManager.AmbulantCareDBDataSetTableAdapters.BioSetTableAdapter bioSetTableAdapter;
+        public System.Windows.Forms.Label labelFullName;
     }
 }

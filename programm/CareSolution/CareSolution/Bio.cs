@@ -32,7 +32,7 @@ namespace CareSolution
             InitializeComponent();
             //SaveLabelInList();
             var patient = new Patient.Patient().SetTestData();
-            labelName2.Text = patient.FirstName + " " + patient.LastName;
+            labelFullName.Text = patient.FirstName + " " + patient.LastName;
             //labelSchule.Text = patient.Bio.School;
             //labelBeruf.Text = patient.Bio.Job;
             //labelAusbildung.Text = patient.Bio.Training;

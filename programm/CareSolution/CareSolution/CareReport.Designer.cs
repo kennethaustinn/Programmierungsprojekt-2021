@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CareReport));
             this.panelBio = new System.Windows.Forms.Panel();
+            this.checkBoxErfüllungMaßnahmenplan = new System.Windows.Forms.CheckBox();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonScanNeueData = new System.Windows.Forms.Button();
             this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
@@ -44,7 +45,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.checkBoxErfüllungMaßnahmenplan = new System.Windows.Forms.CheckBox();
+            this.labelErfüllung = new System.Windows.Forms.Label();
             this.panelBio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.panelProfil.SuspendLayout();
@@ -54,6 +55,7 @@
             // panelBio
             // 
             this.panelBio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelBio.Controls.Add(this.labelErfüllung);
             this.panelBio.Controls.Add(this.checkBoxErfüllungMaßnahmenplan);
             this.panelBio.Controls.Add(this.buttonEdit);
             this.panelBio.Controls.Add(this.buttonScanNeueData);
@@ -73,6 +75,16 @@
             this.panelBio.Name = "panelBio";
             this.panelBio.Size = new System.Drawing.Size(748, 544);
             this.panelBio.TabIndex = 25;
+            // 
+            // checkBoxErfüllungMaßnahmenplan
+            // 
+            this.checkBoxErfüllungMaßnahmenplan.AutoSize = true;
+            this.checkBoxErfüllungMaßnahmenplan.Location = new System.Drawing.Point(489, 184);
+            this.checkBoxErfüllungMaßnahmenplan.Name = "checkBoxErfüllungMaßnahmenplan";
+            this.checkBoxErfüllungMaßnahmenplan.Size = new System.Drawing.Size(203, 21);
+            this.checkBoxErfüllungMaßnahmenplan.TabIndex = 110;
+            this.checkBoxErfüllungMaßnahmenplan.Text = "Alle Maßnahmenplan erledigt";
+            this.checkBoxErfüllungMaßnahmenplan.UseVisualStyleBackColor = true;
             // 
             // buttonEdit
             // 
@@ -132,7 +144,7 @@
             this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelName2.Location = new System.Drawing.Point(33, 5);
             this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(72, 23);
+            this.labelName2.Size = new System.Drawing.Size(57, 21);
             this.labelName2.TabIndex = 58;
             this.labelName2.Text = "label1";
             // 
@@ -153,7 +165,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(12, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 42);
+            this.label2.Size = new System.Drawing.Size(139, 38);
             this.label2.TabIndex = 102;
             this.label2.Text = "Erfüllung vom\r\nMaßnahmenplan :";
             // 
@@ -165,7 +177,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(270, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 34);
+            this.label4.Size = new System.Drawing.Size(156, 25);
             this.label4.TabIndex = 97;
             this.label4.Text = "Pflegebericht";
             // 
@@ -176,7 +188,7 @@
             this.labelErstelltvon.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelErstelltvon.Location = new System.Drawing.Point(197, 328);
             this.labelErstelltvon.Name = "labelErstelltvon";
-            this.labelErstelltvon.Size = new System.Drawing.Size(18, 21);
+            this.labelErstelltvon.Size = new System.Drawing.Size(16, 19);
             this.labelErstelltvon.TabIndex = 96;
             this.labelErstelltvon.Text = "x";
             // 
@@ -187,7 +199,7 @@
             this.labelAbweichungen.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelAbweichungen.Location = new System.Drawing.Point(197, 251);
             this.labelAbweichungen.Name = "labelAbweichungen";
-            this.labelAbweichungen.Size = new System.Drawing.Size(18, 21);
+            this.labelAbweichungen.Size = new System.Drawing.Size(16, 19);
             this.labelAbweichungen.TabIndex = 95;
             this.labelAbweichungen.Text = "x";
             // 
@@ -198,7 +210,7 @@
             this.labelDatum.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelDatum.Location = new System.Drawing.Point(197, 103);
             this.labelDatum.Name = "labelDatum";
-            this.labelDatum.Size = new System.Drawing.Size(18, 21);
+            this.labelDatum.Size = new System.Drawing.Size(16, 19);
             this.labelDatum.TabIndex = 94;
             this.labelDatum.Text = "x";
             // 
@@ -209,7 +221,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label9.Location = new System.Drawing.Point(12, 251);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(146, 21);
+            this.label9.Size = new System.Drawing.Size(123, 19);
             this.label9.TabIndex = 91;
             this.label9.Text = "Abweichungen :";
             // 
@@ -220,7 +232,7 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label12.Location = new System.Drawing.Point(12, 328);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(132, 21);
+            this.label12.Size = new System.Drawing.Size(106, 19);
             this.label12.TabIndex = 88;
             this.label12.Text = "Erstellt von ID :";
             // 
@@ -231,30 +243,31 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label13.Location = new System.Drawing.Point(12, 103);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 21);
+            this.label13.Size = new System.Drawing.Size(64, 19);
             this.label13.TabIndex = 87;
             this.label13.Text = "Datum :";
             // 
-            // checkBoxErfüllungMaßnahmenplan
+            // labelErfüllung
             // 
-            this.checkBoxErfüllungMaßnahmenplan.AutoSize = true;
-            this.checkBoxErfüllungMaßnahmenplan.Location = new System.Drawing.Point(201, 187);
-            this.checkBoxErfüllungMaßnahmenplan.Name = "checkBoxErfüllungMaßnahmenplan";
-            this.checkBoxErfüllungMaßnahmenplan.Size = new System.Drawing.Size(247, 24);
-            this.checkBoxErfüllungMaßnahmenplan.TabIndex = 110;
-            this.checkBoxErfüllungMaßnahmenplan.Text = "Alle Maßnahmenplan erledigt";
-            this.checkBoxErfüllungMaßnahmenplan.UseVisualStyleBackColor = true;
+            this.labelErfüllung.AutoSize = true;
+            this.labelErfüllung.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErfüllung.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelErfüllung.Location = new System.Drawing.Point(197, 183);
+            this.labelErfüllung.Name = "labelErfüllung";
+            this.labelErfüllung.Size = new System.Drawing.Size(16, 19);
+            this.labelErfüllung.TabIndex = 111;
+            this.labelErfüllung.Text = "x";
             // 
-            // Pflegebericht
+            // CareReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelBio);
             this.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Pflegebericht";
+            this.Name = "CareReport";
             this.Text = "Pflegebericht";
             this.panelBio.ResumeLayout(false);
             this.panelBio.PerformLayout();
@@ -284,5 +297,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.CheckBox checkBoxErfüllungMaßnahmenplan;
+        private System.Windows.Forms.Label labelErfüllung;
     }
 }
