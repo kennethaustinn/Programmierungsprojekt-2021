@@ -896,7 +896,7 @@ SELECT MedicationID, Drug, Dosage, Frequency, AdministeredBy, HealthDataHealthDa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString1;
+            //this._connection.ConnectionString = global::CareSolution.Properties.Settings.Default.AmbulantCareDBConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

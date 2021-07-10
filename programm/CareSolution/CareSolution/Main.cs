@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataManager;
 
 namespace CareSolution
 {
@@ -21,6 +22,8 @@ namespace CareSolution
         private Panel leftBorderBtn;
         SqlConnection connection;
         private string connectionString;
+
+        private DataManager<Person> dm = new DataManager<Person>();
         /// <summary>
         /// Für das Form Main wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
         /// dem DatenBank erstellt. Sowie das Button Border für das Panel Menu wird hier initialisiert.
@@ -29,7 +32,8 @@ namespace CareSolution
         public Main()
         {
             InitializeComponent();
-            connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
+            //connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
+            connectionString = dm.ConnectionString;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 38);
             panelMenu.Controls.Add(leftBorderBtn);

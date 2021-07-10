@@ -7,12 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using CommonInterfaces;
+
 namespace DataManager
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Person
+    public partial class Person : IDataBaseConform
     {
         public int PersonID { get; protected set; }
         public string LastName { get; set; }

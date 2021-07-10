@@ -33,17 +33,19 @@ namespace CareSolution.Properties {
                 return ((string)(this["AmbulantCareDBConnectionString"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\kenne\\source\\repos\\" +
-            "Digitalisierung in der Pflege\\programm\\DataManager\\DataManager\\AmbulantCareDB.md" +
-            "f\";Integrated Security=True")]
-        public string AmbulantCareDBConnectionString1 {
-            get {
-                return ((string)(this["AmbulantCareDBConnectionString1"]));
-            }
-        }
+
+        //[global::System.Configuration.ApplicationScopedSettingAttribute()]
+        //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        //[global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        //[global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\kenne\\source\\repos\\" +
+        //    "Digitalisierung in der Pflege\\programm\\DataManager\\DataManager\\AmbulantCareDB.md" +
+        //    "f\";Integrated Security=True")]
+        //public string AmbulantCareDBConnectionString1
+        //{
+        //    get
+        //    {
+        //        return ((string)(this["AmbulantCareDBConnectionString1"]));
+        //    }
+        //}
     }
 }
