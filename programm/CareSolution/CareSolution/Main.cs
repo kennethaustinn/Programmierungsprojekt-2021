@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
-using System.Drawing.Text;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataManager;
 
@@ -18,10 +9,10 @@ namespace CareSolution
 {
     public partial class Main : Form
     {
-        private Button currentButton;
-        private Panel leftBorderBtn;
-        SqlConnection connection;
-        private string connectionString;
+        private Button _currentButton;
+        private readonly Panel _leftBorderBtn;
+        SqlConnection _connection;
+        private readonly string _connectionString;
 
         private DataManager<Person> dm = new DataManager<Person>();
         /// <summary>
@@ -33,10 +24,10 @@ namespace CareSolution
         {
             InitializeComponent();
             //connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
-            connectionString = dm.ConnectionString;
-            leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 38);
-            panelMenu.Controls.Add(leftBorderBtn);
+            _connectionString = dm.ConnectionString;
+            _leftBorderBtn = new Panel();
+            _leftBorderBtn.Size = new Size(7, 38);
+            panelMenu.Controls.Add(_leftBorderBtn);
             var patient = new Patient.Patient().SetTestData();
             foreach (var item in patient.Doctor)
             {
@@ -45,7 +36,8 @@ namespace CareSolution
         }
         // speichern das activeForm für OpenChildForm das genau am Anfang ist genau am Main. Das heißt keine
         // anderen OpenChildForm geöffnet oder gedrückt wird 
-        private Form activeForm = null;
+        private Form _activeForm;
+        
         /// <summary>
         /// wird das Form im PanelChilForm hier neue abgerufen und angezeigt. Mit dem Parameter Form
         /// die man gerade gedrückt von dem beliebigen Button
@@ -53,11 +45,11 @@ namespace CareSolution
         /// <param name="childForm"> aktuelles Form, das wir angeklickt haben </param>
         private void openChildForm(Form childForm)
         {
-            if (activeForm != null)
+            if (_activeForm != null)
             {
-                activeForm.Hide();
+                _activeForm.Hide();
             }
-            activeForm = childForm;
+            _activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -78,15 +70,15 @@ namespace CareSolution
             if (senderBtn != null)
             {
                 DisableButton();
-                currentButton = (Button) senderBtn;
-                currentButton.BackColor = Color.FromArgb(37, 36, 81);
-                currentButton.TextAlign = ContentAlignment.MiddleCenter;
-                currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentButton.ImageAlign = ContentAlignment.MiddleRight;
-                leftBorderBtn.BackColor = Color.FromArgb(150, 123, 163);
-                leftBorderBtn.Location = new Point(0, currentButton.Location.Y);
-                leftBorderBtn.Visible = true;
-                leftBorderBtn.BringToFront();
+                _currentButton = (Button) senderBtn;
+                _currentButton.BackColor = Color.FromArgb(37, 36, 81);
+                _currentButton.TextAlign = ContentAlignment.MiddleCenter;
+                _currentButton.TextImageRelation = TextImageRelation.TextBeforeImage;
+                _currentButton.ImageAlign = ContentAlignment.MiddleRight;
+                _leftBorderBtn.BackColor = Color.FromArgb(150, 123, 163);
+                _leftBorderBtn.Location = new Point(0, _currentButton.Location.Y);
+                _leftBorderBtn.Visible = true;
+                _leftBorderBtn.BringToFront();
             }
         }
         /// <summary>
@@ -95,12 +87,12 @@ namespace CareSolution
         /// </summary>
         private void DisableButton()
         {
-            if (currentButton != null)
+            if (_currentButton != null)
             {
-                currentButton.BackColor = Color.FromArgb(40, 45, 62);
-                currentButton.TextAlign = ContentAlignment.MiddleLeft;
-                currentButton.TextImageRelation = TextImageRelation.ImageBeforeText;
-                currentButton.ImageAlign = ContentAlignment.MiddleLeft;
+                _currentButton.BackColor = Color.FromArgb(40, 45, 62);
+                _currentButton.TextAlign = ContentAlignment.MiddleLeft;
+                _currentButton.TextImageRelation = TextImageRelation.ImageBeforeText;
+                _currentButton.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
         /// <summary>
@@ -110,7 +102,7 @@ namespace CareSolution
         private void buttonBiography_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(Bio.bioForm);
+            openChildForm(Bio.BioForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button PatientData angeklickt dann wird das PatientData Form geladen,
@@ -130,7 +122,7 @@ namespace CareSolution
         private void buttonMain_Click(object sender, EventArgs e)
         {
             Reset();
-            Bio.bioForm = new Bio();
+            Bio.BioForm = new Bio();
             BaseData.baseDataForm = new BaseData();
             ActionPlan.actionPlanForm = new ActionPlan();
             CaseHistory.caseHistoryForm = new CaseHistory();
@@ -139,10 +131,10 @@ namespace CareSolution
             Medication.medicationForm = new Medication();
             Home.homeForm = new Home();
             Others.othersForm = new Others();
-            PatientData.patientDataForm = new PatientData();
-            if (activeForm != null)
+            PatientData.PatientDataForm = new PatientData();
+            if (_activeForm != null)
             {
-                activeForm.Hide();
+                _activeForm.Hide();
                 Main_Load(null,EventArgs.Empty);
             }
         }
@@ -152,7 +144,7 @@ namespace CareSolution
         private void Reset()
         {
             DisableButton();
-            leftBorderBtn.Visible = false;
+            _leftBorderBtn.Visible = false;
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button ActionPlan angeklickt dann wird das ActionPlan Form geladen,
@@ -239,7 +231,7 @@ namespace CareSolution
         /// <param name="e"></param>
         private void buttonWeiterPatientsübersicht_Click(object sender, EventArgs e)
         {
-            openChildForm(PatientData.patientDataForm);
+            openChildForm(PatientData.PatientDataForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Logout angeklickt dann wird das Login Form geladen
@@ -278,13 +270,13 @@ namespace CareSolution
         private void textBoxSuche_TextChanged(object sender, EventArgs e)
         {
             var query = "SELECT * FROM PersonSet a WHERE a.LastName   Like '" + textBoxSearch.Text + "%' or a.FirstName like'%" + textBoxSearch.Text + "%'";
-            using (connection = new SqlConnection(connectionString))
-            using (SqlCommand command = new SqlCommand(query, connection))
+            using (_connection = new SqlConnection(_connectionString))
+            using (SqlCommand command = new SqlCommand(query, _connection))
             using (SqlDataAdapter adatpe = new SqlDataAdapter(command))
             {
-                DataTable Persondt = new DataTable();
-                adatpe.Fill(Persondt);
-                dataGridViewPatient.DataSource = Persondt;
+                DataTable persondt = new DataTable();
+                adatpe.Fill(persondt);
+                dataGridViewPatient.DataSource = persondt;
             }
         }
 
