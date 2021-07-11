@@ -105,7 +105,7 @@ namespace CareSolution
             BaseData.baseDataForm.labelGeschlecht.Text = gender;
             BaseData.baseDataForm.labelAdresse.Text = testPatient[0].Address;
             BaseData.baseDataForm.labelGeburtsdatum.Text = testPatient[0].BirthDate.ToString(CultureInfo.CurrentCulture);
-            BaseData.baseDataForm.labelHöhe.Text = testPatient[0].Weight.ToString(CultureInfo.CurrentCulture);
+            BaseData.baseDataForm.labelHöhe.Text = testPatient[0].Height.ToString(CultureInfo.CurrentCulture);
             BaseData.baseDataForm.labelGewicht.Text = testPatient[0].Weight.ToString(CultureInfo.CurrentCulture);
             BaseData.baseDataForm.labelKontaktperson.Text = testPatient[0].Contactperson;
             BaseData.baseDataForm.labelPflegegrad.Text = testPatient[0].DegreeOfCare.ToString();

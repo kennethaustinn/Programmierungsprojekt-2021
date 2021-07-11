@@ -7,12 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using CommonInterfaces;
+
 namespace DataManager
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class CareReport
+    public partial class CareReport : IDataBaseConform
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CareReport()

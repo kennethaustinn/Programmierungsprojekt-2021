@@ -129,16 +129,16 @@ namespace CareSolution
         /// </summary>
         private void giveDatabaseDataset()
         {
-            //_dataManager.addBioToDb(Text, _documentKeys[0].Text,
-            //    _documentKeys[1].Text,
-            //    _documentKeys[3].Text,
-            //    _documentKeys[3].Text,
-            //    _documentKeys[4].Text,
-            //    _documentKeys[5].Text,
-            //    _documentKeys[6].Text,
-            //    _documentKeys[7].Text,
-            //    _documentKeys[8].Text
-            //);
+            _dataManager.addBioToDb(Text, _documentKeys[0].Text,
+                _documentKeys[1].Text,
+                _documentKeys[3].Text,
+                _documentKeys[3].Text,
+                _documentKeys[4].Text,
+                _documentKeys[5].Text,
+                _documentKeys[6].Text,
+                _documentKeys[7].Text,
+                _documentKeys[8].Text
+            );
         }
 
         /// <summary>

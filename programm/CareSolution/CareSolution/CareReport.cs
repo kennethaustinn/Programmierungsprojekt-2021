@@ -65,7 +65,7 @@ namespace CareSolution
                 _documentDictionary = _ocrManager.ExecuteOcr(_path);
                 FillLabels();
             }
-            catch (Exception)
+            catch (Exception exception)
             {
                 MessageBox.Show(@"Es wurde schon ein Pflegebericht eingefügt");
             }

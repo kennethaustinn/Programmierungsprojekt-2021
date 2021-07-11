@@ -126,7 +126,7 @@ namespace DataManager
                     CaregiverPersonID = Convert.ToInt32(careGiverid)    //name ala/kenneth
 
                 });
-                connections.Execute("dbo.InsertCareReportFromOc @CreatedOn, @ActionPlanFulfilled, @Deviations, @CaregiverPersonID", NewCareReport);
+                connections.Execute("dbo.InsertCareReportFromOcr @CreatedOn, @ActionPlanFulfilled, @Deviations, @CaregiverPersonID", NewCareReport);
                 //connections.Close();
             }
         }
