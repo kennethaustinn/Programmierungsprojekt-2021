@@ -235,7 +235,7 @@
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
-        private System.Windows.Forms.Label labelFullName;
+        public System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label labelMaßnahmenplanTop;
