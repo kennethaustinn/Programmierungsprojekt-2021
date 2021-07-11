@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CareReport));
             this.panelBio = new System.Windows.Forms.Panel();
+            this.labelErfüllung = new System.Windows.Forms.Label();
             this.checkBoxErfüllungMaßnahmenplan = new System.Windows.Forms.CheckBox();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonScanNeueData = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.labelErfüllung = new System.Windows.Forms.Label();
             this.panelBio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.panelProfil.SuspendLayout();
@@ -75,6 +75,17 @@
             this.panelBio.Name = "panelBio";
             this.panelBio.Size = new System.Drawing.Size(748, 544);
             this.panelBio.TabIndex = 25;
+            // 
+            // labelErfüllung
+            // 
+            this.labelErfüllung.AutoSize = true;
+            this.labelErfüllung.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelErfüllung.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelErfüllung.Location = new System.Drawing.Point(197, 183);
+            this.labelErfüllung.Name = "labelErfüllung";
+            this.labelErfüllung.Size = new System.Drawing.Size(16, 19);
+            this.labelErfüllung.TabIndex = 111;
+            this.labelErfüllung.Text = "x";
             // 
             // checkBoxErfüllungMaßnahmenplan
             // 
@@ -247,17 +258,6 @@
             this.label13.TabIndex = 87;
             this.label13.Text = "Datum :";
             // 
-            // labelErfüllung
-            // 
-            this.labelErfüllung.AutoSize = true;
-            this.labelErfüllung.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelErfüllung.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelErfüllung.Location = new System.Drawing.Point(197, 183);
-            this.labelErfüllung.Name = "labelErfüllung";
-            this.labelErfüllung.Size = new System.Drawing.Size(16, 19);
-            this.labelErfüllung.TabIndex = 111;
-            this.labelErfüllung.Text = "x";
-            // 
             // CareReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -269,6 +269,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CareReport";
             this.Text = "Pflegebericht";
+            this.Load += new System.EventHandler(this.CareReport_Load);
             this.panelBio.ResumeLayout(false);
             this.panelBio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
