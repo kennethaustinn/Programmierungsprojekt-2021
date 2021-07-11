@@ -61,9 +61,12 @@ namespace CareSolution
         {
             try
             {
-                openFile();
-                _documentDictionary = _ocrManager.ExecuteOcr(_path);
-                FillLabels();
+                if (_path!=null)
+                {
+                    openFile();
+                    _documentDictionary = _ocrManager.ExecuteOcr(_path);
+                    FillLabels();
+                }
             }
             catch (Exception exception)
             {

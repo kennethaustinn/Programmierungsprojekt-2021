@@ -79,9 +79,12 @@ namespace CareSolution
             try
             {
                 openFile();
-                _documentDictionary = _ocrManager.ExecuteOcr(_path);
-                 _ocrResult = _ocrManager._ocrResult;
-                FillLabels();
+                if (_path!=null)
+                {
+                    _documentDictionary = _ocrManager.ExecuteOcr(_path);
+                    _ocrResult = _ocrManager._ocrResult;
+                    FillLabels();
+                }
             }
             catch (Exception exception)
             {
@@ -109,6 +112,7 @@ namespace CareSolution
             {
                 _path = ofd.FileName;
             }
+            
         }
 
         /// <summary>
