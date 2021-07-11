@@ -22,8 +22,11 @@ bld/
 [Oo]bj/
 [Ll]og/
 
-!*/CareSolution/bin/Debug/AmbulantCareDB.mdf
-!*/CareSolution/bin/Debug/AmbulantCareDB_log.ldf
+!/CareSolution/[Bb]in/[Dd]ebug
+/CareSolution/[Bb]in/[Dd]ebug/*
+!/CareSolution/[Bb]in/[Dd]ebug/AmbulantCareDB.mdf
+!/CareSolution/[Bb]in/[Dd]ebug/AmbulantCareDB_log.ldf
+
 
 # Visual Studio 2015 cache/options directory
 .vs/
