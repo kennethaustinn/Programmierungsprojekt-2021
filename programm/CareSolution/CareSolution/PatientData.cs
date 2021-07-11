@@ -90,12 +90,20 @@ namespace CareSolution
             var name = this.dataGridViewPatient.CurrentRow?.Cells[1].Value.ToString();
             var firstName = this.dataGridViewPatient.CurrentRow?.Cells[2].Value.ToString();
             var gender = this.dataGridViewPatient.CurrentRow?.Cells[3].Value.ToString();
+            var fullName = firstName + @" " + name;
 
             var testPatient = _dataManager.GetPatient(id);
             //var patient = new Patient.Patient();
 
-            BaseData.baseDataForm.labelFullName.Text = firstName + @" "+ name;
-            Bio.BioForm.labelFullName.Text = firstName + @" " + name;
+            ActionPlan.actionPlanForm.panelProfil.Text = fullName;
+            BaseData.baseDataForm.labelFullName.Text = fullName;
+            Bio.BioForm.labelFullName.Text = fullName;
+            CareReport.CareReportForm.panelProfil.Text = fullName;
+            CaseHistory.caseHistoryForm.panelProfil.Text = fullName;
+            HealthData.healthDataForm.panelProfil.Text = fullName;
+            Home.homeForm.panelProfil.Text = fullName;
+            Medication.medicationForm.panelProfil.Text = fullName;
+            Others.othersForm.panelProfil.Text = fullName;
 
 
             BaseData.baseDataForm.labelId.Text = id;

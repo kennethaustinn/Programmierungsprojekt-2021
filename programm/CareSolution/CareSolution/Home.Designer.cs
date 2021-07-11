@@ -77,7 +77,7 @@
             this.checkBox5.AutoSize = true;
             this.checkBox5.Location = new System.Drawing.Point(41, 401);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(66, 24);
+            this.checkBox5.Size = new System.Drawing.Size(57, 21);
             this.checkBox5.TabIndex = 117;
             this.checkBox5.Text = "Lifter";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@
             this.labelHilfsmittel.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelHilfsmittel.Location = new System.Drawing.Point(198, 95);
             this.labelHilfsmittel.Name = "labelHilfsmittel";
-            this.labelHilfsmittel.Size = new System.Drawing.Size(18, 21);
+            this.labelHilfsmittel.Size = new System.Drawing.Size(16, 19);
             this.labelHilfsmittel.TabIndex = 116;
             this.labelHilfsmittel.Text = "x";
             // 
@@ -98,7 +98,7 @@
             this.checkBox4.AutoSize = true;
             this.checkBox4.Location = new System.Drawing.Point(41, 347);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(94, 24);
+            this.checkBox4.Size = new System.Drawing.Size(79, 21);
             this.checkBox4.TabIndex = 115;
             this.checkBox4.Text = "Fahrstuhl";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(12, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 21);
+            this.label2.Size = new System.Drawing.Size(153, 19);
             this.label2.TabIndex = 114;
             this.label2.Text = "Wohnung Hilfsmittel :";
             // 
@@ -120,7 +120,7 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.Location = new System.Drawing.Point(41, 294);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(131, 24);
+            this.checkBox3.Size = new System.Drawing.Size(108, 21);
             this.checkBox3.TabIndex = 113;
             this.checkBox3.Text = "Wohnbereich";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(41, 241);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(102, 24);
+            this.checkBox2.Size = new System.Drawing.Size(83, 21);
             this.checkBox2.TabIndex = 112;
             this.checkBox2.Text = "Bad / WC";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -140,7 +140,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(41, 190);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 24);
+            this.checkBox1.Size = new System.Drawing.Size(64, 21);
             this.checkBox1.TabIndex = 111;
             this.checkBox1.Text = "Küche";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -153,7 +153,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(12, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 21);
+            this.label1.Size = new System.Drawing.Size(161, 19);
             this.label1.TabIndex = 110;
             this.label1.Text = "Wohnung Barrierefrei :";
             // 
@@ -199,7 +199,7 @@
             this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelFullName.Location = new System.Drawing.Point(33, 5);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(0, 23);
+            this.labelFullName.Size = new System.Drawing.Size(0, 21);
             this.labelFullName.TabIndex = 58;
             // 
             // pictureBox1
@@ -220,13 +220,13 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(288, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 34);
+            this.label4.Size = new System.Drawing.Size(100, 25);
             this.label4.TabIndex = 97;
             this.label4.Text = "Zuhause";
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelBio);
@@ -250,7 +250,6 @@
         private System.Windows.Forms.Panel panelBio;
         private System.Windows.Forms.Button buttonSpeichern;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
-        private System.Windows.Forms.Panel panelProfil;
         private System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
@@ -262,5 +261,6 @@
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.Label labelHilfsmittel;
         private System.Windows.Forms.CheckBox checkBox5;
+        public System.Windows.Forms.Panel panelProfil;
     }
 }
