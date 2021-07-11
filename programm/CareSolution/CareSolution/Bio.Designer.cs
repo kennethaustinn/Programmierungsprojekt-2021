@@ -112,7 +112,7 @@
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(166, 51);
             this.buttonEdit.TabIndex = 109;
-            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.Text = "Bearbeiten";
             this.buttonEdit.UseVisualStyleBackColor = false;
             // 
             // buttonScanNeueData
@@ -127,7 +127,7 @@
             this.buttonScanNeueData.Name = "buttonScanNeueData";
             this.buttonScanNeueData.Size = new System.Drawing.Size(166, 51);
             this.buttonScanNeueData.TabIndex = 108;
-            this.buttonScanNeueData.Text = "Scan Data";
+            this.buttonScanNeueData.Text = "Datei einlesen";
             this.buttonScanNeueData.UseVisualStyleBackColor = false;
             this.buttonScanNeueData.Click += new System.EventHandler(this.buttonScanNeueData_Click);
             // 
@@ -174,10 +174,13 @@
             // 
             // labelSprache
             // 
+            this.labelSprache.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSprache.AutoSize = true;
             this.labelSprache.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSprache.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelSprache.Location = new System.Drawing.Point(563, 203);
+            this.labelSprache.Location = new System.Drawing.Point(563, 329);
             this.labelSprache.Name = "labelSprache";
             this.labelSprache.Size = new System.Drawing.Size(16, 19);
             this.labelSprache.TabIndex = 105;
@@ -199,7 +202,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(382, 203);
+            this.label3.Location = new System.Drawing.Point(382, 329);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 19);
             this.label3.TabIndex = 103;
@@ -221,7 +224,7 @@
             this.labelFamilieMitglieder.AutoSize = true;
             this.labelFamilieMitglieder.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFamilieMitglieder.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelFamilieMitglieder.Location = new System.Drawing.Point(563, 153);
+            this.labelFamilieMitglieder.Location = new System.Drawing.Point(563, 203);
             this.labelFamilieMitglieder.Name = "labelFamilieMitglieder";
             this.labelFamilieMitglieder.Size = new System.Drawing.Size(16, 19);
             this.labelFamilieMitglieder.TabIndex = 101;
@@ -310,7 +313,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label15.Location = new System.Drawing.Point(382, 153);
+            this.label15.Location = new System.Drawing.Point(382, 203);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(146, 19);
             this.label15.TabIndex = 93;
