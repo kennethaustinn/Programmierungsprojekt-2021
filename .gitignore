@@ -12,6 +12,8 @@
 
 # Build results
 [Dd]ebug/
+!/[Dd]ebug/AmbulantCareDB.mdf
+!/[Dd]ebug/AmbulantCareDB_log.ldf
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
@@ -19,7 +21,6 @@ x64/
 x86/
 bld/
 [Bb]in/
-!/CareSolution/[Bb]in/[Dd]ebug
 [Oo]bj/
 [Ll]og/
 
