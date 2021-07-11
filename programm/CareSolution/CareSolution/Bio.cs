@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using DataManager;
+using IronOcr;
 using OCRManager;
 
 namespace CareSolution
@@ -24,6 +25,12 @@ namespace CareSolution
         /// Dictionary mit den Keys und Values des aktuellen Dokuments. Wird an die GUI/Datenbank übergeben.
         /// </summary>
         private Dictionary<string, List<string>> _documentDictionary = new Dictionary<string, List<string>>();
+
+        /// <summary>
+        /// Speichert das Ergniss des Ocr als ein OcrResult Objekt.
+        /// Wird wiederverwendet für die konvertierung der gelesenen Datei in ein PDf.
+        /// </summary>
+        public OcrResult _ocrResult;
 
         /// <summary>
         /// Dateipfad der einzulesenden Datei.
@@ -49,7 +56,6 @@ namespace CareSolution
             InitializeComponent();
         }
 
-        
         /// <summary>
         /// Es wird eine Verbindung mit dem Datenbank automatisch erstellt.
         /// Da man die Datenquelle im DataGridView verknüpft hatte.
@@ -74,6 +80,7 @@ namespace CareSolution
             {
                 openFile();
                 _documentDictionary = _ocrManager.ExecuteOcr(_path);
+                 _ocrResult = _ocrManager._ocrResult;
                 FillLabels();
             }
             catch (Exception exception)
@@ -91,11 +98,10 @@ namespace CareSolution
             OpenFileDialog ofd = new OpenFileDialog
             {
                 AddExtension = true,
-                //DefaultExt = ".drw",
-                //CheckPathExists = true,
+                CheckPathExists = true,
                 Filter = @"  Image Files(*.png; *.jpg)| *.png; *.jpg | PDF File(*.pdf) | *.pdf  ",
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                Title = @"Welche Datei soll geladen werden.",
+                Title = @"Welche Datei soll geladen werden?",
             };
             ofd.InitialDirectory = Directory.GetParent(Environment.CurrentDirectory)?.Parent?.FullName + @"\Resources";
 
@@ -158,5 +164,27 @@ namespace CareSolution
             
         }
 
+        /// <summary>
+        /// Speichert die eingelesene Datei in ein PDf, in der manche die Sachen suchen und kopiern kann.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                AddExtension = true,
+                CheckPathExists = true,
+                Filter = @"  Image Files(*.png; *.jpg)| *.png; *.jpg | PDF File(*.pdf) | *.pdf  ",
+                InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                Title = "Wo soll die Datei gespeichert werden?"
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                _path = sfd.FileName;
+            }
+            _ocrManager.SaveAsPdfAndTextFile(_ocrResult, _path);
+        }
     }
 }
