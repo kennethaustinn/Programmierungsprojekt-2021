@@ -44,7 +44,7 @@ namespace CareSolution.Properties {
         //{
         //    get
         //    {
-        //        return ((string)(this["AmbulantCareDBConnectionString1"]));
+        //        return ((string)(this["AmbulantCareDBConnectionString1"])); test
         //    }
         //}
     }
