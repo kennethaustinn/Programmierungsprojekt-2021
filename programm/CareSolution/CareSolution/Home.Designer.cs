@@ -250,7 +250,7 @@
         private System.Windows.Forms.Panel panelBio;
         private System.Windows.Forms.Button buttonSpeichern;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
-        private System.Windows.Forms.Label labelFullName;
+        public System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;

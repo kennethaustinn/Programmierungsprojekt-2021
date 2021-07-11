@@ -278,7 +278,7 @@
         private System.Windows.Forms.Label labelDatum;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
-        private System.Windows.Forms.Label labelFullName;
+        public System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

@@ -95,15 +95,15 @@ namespace CareSolution
             var testPatient = _dataManager.GetPatient(id);
             //var patient = new Patient.Patient();
 
-            ActionPlan.actionPlanForm.panelProfil.Text = fullName;
+            ActionPlan.actionPlanForm.labelFullName.Text = fullName;
             BaseData.baseDataForm.labelFullName.Text = fullName;
             Bio.BioForm.labelFullName.Text = fullName;
-            CareReport.CareReportForm.panelProfil.Text = fullName;
-            CaseHistory.caseHistoryForm.panelProfil.Text = fullName;
-            HealthData.healthDataForm.panelProfil.Text = fullName;
-            Home.homeForm.panelProfil.Text = fullName;
-            Medication.medicationForm.panelProfil.Text = fullName;
-            Others.othersForm.panelProfil.Text = fullName;
+            CareReport.CareReportForm.labelFullName.Text = fullName;
+            CaseHistory.caseHistoryForm.labelFullName.Text = fullName;
+            HealthData.healthDataForm.labelFullName.Text = fullName;
+            Home.homeForm.labelFullName.Text = fullName;
+            Medication.medicationForm.labelFullName.Text = fullName;
+            Others.othersForm.labelFullName.Text = fullName;
 
 
             BaseData.baseDataForm.labelId.Text = id;

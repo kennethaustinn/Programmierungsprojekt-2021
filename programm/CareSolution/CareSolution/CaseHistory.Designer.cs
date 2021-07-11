@@ -323,7 +323,7 @@
         private System.Windows.Forms.Label labelChronischeKrankheit;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label labelFullName;
+        public System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelDemenz;
         private System.Windows.Forms.Label labelSturzgefahr;
