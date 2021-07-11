@@ -11,7 +11,7 @@
 *.userprefs
 
 # Build results
-[Dd]ebug/
+[Dd]ebug/*
 !/[Dd]ebug/AmbulantCareDB.mdf
 !/[Dd]ebug/AmbulantCareDB_log.ldf
 [Dd]ebugPublic/
