@@ -9,7 +9,7 @@ namespace CommonInterfaces
     // Komponenten, die diese Datenstruktur verwenden, müssen von den Klassen im Datamanger erben und
     // ihre jeweilige Schnittstelle implementieren.
 
-    public interface IDataManager<T> where T: IDataBaseConform
+    public interface IDataManager<T, Patient> where T: IDataBaseConform
     {
         // generische Schnittstelle der Komponente Datamanger
         // Kann Objekte verarbeiten, welche die Schnittstelle IDataBaseConform implementieren
@@ -21,7 +21,7 @@ namespace CommonInterfaces
         bool CreateNew(T careSolutionObject);
 
         // Sucht mit dem übergebenen String in der Datenbank. Gibt als Ergebnis Liste von IDataBaseConform'en Objekten zurück
-        List<T> SearchPatient(string userSearchText);
+        List<Patient> GetPatient(string userSearchText);
     }
 
     public interface IDataBaseConform  
