@@ -19,14 +19,9 @@ x64/
 x86/
 bld/
 [Bb]in/
+!/CareSolution/[Bb]in/[Dd]ebug
 [Oo]bj/
 [Ll]og/
-
-!/CareSolution/[Bb]in/[Dd]ebug
-/CareSolution/[Bb]in/[Dd]ebug/*
-!/CareSolution/[Bb]in/[Dd]ebug/AmbulantCareDB.mdf
-!/CareSolution/[Bb]in/[Dd]ebug/AmbulantCareDB_log.ldf
-
 
 # Visual Studio 2015 cache/options directory
 .vs/
