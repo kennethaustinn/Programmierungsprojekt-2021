@@ -11,18 +11,19 @@ namespace DataManager
 {
     public class DataManager<T> : IDataManager<T, Patient> where T : IDataBaseConform
     {
-        public  Patient Patient = new Patient();
+        public Patient Patient = new Patient();
         /// <summary>
         /// Dieser string stellt die Verbindungszeichungsfolge zu der Datenbank Datei (mdf). Mit dem wird die ganze Zeit weiter gearbeitet.
         /// </summary>
-        public  string ConnectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
+        public string ConnectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
 
         /// <summary>
         /// Liste für die neu hin zugefügten Personen/Patienten.
         /// </summary>
-        public  List<Person> NewPerson = new List<Person>();
+        public List<Person> NewPerson = new List<Person>();
 
         public List<Bio> NewBio = new List<Bio>();
+        public List<CareReport> NewCareReport = new List<CareReport>();
 
         /// <summary>
         /// Diese Methode erstellt einen Neuen Datensatz für Person in der Tabelle PersonSet (s.CommonInterfaces).
@@ -43,7 +44,7 @@ namespace DataManager
                 connections.Execute("dbo.Insert_Patient @LastName, @FirstName, @Gender, @Phone", NewPerson);
                 //connections.Close();
             }
-            
+
             return true;
         }
 
@@ -86,21 +87,48 @@ namespace DataManager
         /// <param name="leisure"></param>
         /// <param name="family"></param>
         /// <param name="languages"></param>
-        //public void addBioToDb(string id, string school, string training, string uni, string job, string partnership, string children, 
-        //    string leisure, string family, string languages)
-        //{
-        //    using(IDbConnection connections = new SqlConnection(ConnectionString))
-        //    {
-        //        //connections.Open();
-        //        NewBio.Add(new Bio()
-        //        {
-        //            School = school, Training = training, University = uni, Job = job, Partnership = partnership, Children = children,
-        //                Leisure = leisure, Family_Members= family, Languages = languages
-        //        });
-        //        connections.Execute("dbo.InsertBioFromOcr @School, @Training, @University, @Job, @Partnership," +
-        //                            "@Children, @Leisure, @Family_Members, @Languages", NewBio);
-        //        //connections.Close();
-        //    }
-        //}
+        public void addBioToDb(string id, string school, string training, string uni, string job, string partnership,
+            string children,
+            string leisure, string family, string languages)
+        {
+            using (IDbConnection connections = new SqlConnection(ConnectionString))
+            {
+                //connections.Open();
+                NewBio.Add(new Bio()
+                {
+                    School = school,
+                    Training = training,
+                    University = uni,
+                    Job = job,
+                    Partnership = partnership,
+                    Children = children,
+                    Leisure = leisure,
+                    Family_Members = family,
+                    Languages = languages
+                });
+                connections.Execute("dbo.InsertBioFromOcr @School, @Training, @University, @Job, @Partnership," +
+                                    "@Children, @Leisure, @Family_Members, @Languages", NewBio);
+                //connections.Close();
+            }
+
+        }
+
+        public void addCareReportToDb(string careGiverid, string date, bool fullFilled, string deviations)
+        {
+            using (IDbConnection connections = new SqlConnection(ConnectionString))
+            {
+                //connections.Open();
+                NewCareReport.Add(new CareReport()
+                {
+                    CreatedOn = Convert.ToDateTime(date),
+                    ActionPlanFulfilled = fullFilled,
+                    Deviations = deviations,
+                    CaregiverPersonID = Convert.ToInt32(careGiverid)    //name ala/kenneth
+
+                });
+                connections.Execute("dbo.InsertCareReportFromOc @CreatedOn, @ActionPlanFulfilled, @Deviations, @CaregiverPersonID", NewCareReport);
+                //connections.Close();
+            }
+        }
     }
 }
