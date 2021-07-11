@@ -26,8 +26,16 @@ namespace CareSolution
         // Es wird eine Verbindung mit dem Datenbank automatisch erstellt. Da man die Datenquelle im DataGridView verknüpft hatte
         private void Medikamente_Load(object sender, EventArgs e)
         {
-            // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.MedicationSet". Sie können sie bei Bedarf verschieben oder entfernen.
-            this.medicationSetTableAdapter.Fill(this.ambulantCareDBDataSet.MedicationSet);
+            var patient = new Patient.Patient().SetTestData();
+            int n = dataGridViewMedikamente.Rows.Add();
+            foreach (var item in patient.HealthData.Medication)
+            {
+                dataGridViewMedikamente.Rows[n].Cells["medikamente"].Value = item.Drug;
+                dataGridViewMedikamente.Rows[n].Cells["dosierung"].Value = item.Dosage;
+                dataGridViewMedikamente.Rows[n].Cells["frequenz"].Value = item.Frequency;
+                dataGridViewMedikamente.Rows[n].Cells["grund"].Value = item.Reason;
+                dataGridViewMedikamente.Rows[n].Cells["verwaltetvon"].Value = item.AdministeredBy;
+            }
         }
     }
 }

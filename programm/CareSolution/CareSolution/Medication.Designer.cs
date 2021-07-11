@@ -28,30 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medication));
             this.panelBio = new System.Windows.Forms.Panel();
             this.dataGridViewMedikamente = new System.Windows.Forms.DataGridView();
-            this.drugDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dosageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frequencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.administeredByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medicationSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ambulantCareDBDataSet = new CareSolution.AmbulantCareDBDataSet();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
             this.panelProfil = new System.Windows.Forms.Panel();
             this.labelFullName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.medicationSetTableAdapter = new CareSolution.AmbulantCareDBDataSetTableAdapters.MedicationSetTableAdapter();
+            this.Medikamente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dosierung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Frequenz = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grund = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Verwaltetvon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedikamente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicationSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.panelProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,7 +71,6 @@
             // 
             this.dataGridViewMedikamente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewMedikamente.AutoGenerateColumns = false;
             this.dataGridViewMedikamente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewMedikamente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewMedikamente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
@@ -93,11 +87,11 @@
             this.dataGridViewMedikamente.ColumnHeadersHeight = 30;
             this.dataGridViewMedikamente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewMedikamente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.drugDataGridViewTextBoxColumn,
-            this.dosageDataGridViewTextBoxColumn,
-            this.frequencyDataGridViewTextBoxColumn,
-            this.administeredByDataGridViewTextBoxColumn});
-            this.dataGridViewMedikamente.DataSource = this.medicationSetBindingSource;
+            this.Medikamente,
+            this.Dosierung,
+            this.Frequenz,
+            this.Grund,
+            this.Verwaltetvon});
             this.dataGridViewMedikamente.EnableHeadersVisualStyles = false;
             this.dataGridViewMedikamente.GridColor = System.Drawing.Color.MediumPurple;
             this.dataGridViewMedikamente.Location = new System.Drawing.Point(28, 101);
@@ -122,48 +116,6 @@
             this.dataGridViewMedikamente.RowTemplate.Height = 24;
             this.dataGridViewMedikamente.Size = new System.Drawing.Size(689, 321);
             this.dataGridViewMedikamente.TabIndex = 110;
-            // 
-            // drugDataGridViewTextBoxColumn
-            // 
-            this.drugDataGridViewTextBoxColumn.DataPropertyName = "Drug";
-            this.drugDataGridViewTextBoxColumn.HeaderText = "Drug";
-            this.drugDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.drugDataGridViewTextBoxColumn.Name = "drugDataGridViewTextBoxColumn";
-            this.drugDataGridViewTextBoxColumn.Width = 59;
-            // 
-            // dosageDataGridViewTextBoxColumn
-            // 
-            this.dosageDataGridViewTextBoxColumn.DataPropertyName = "Dosage";
-            this.dosageDataGridViewTextBoxColumn.HeaderText = "Dosage";
-            this.dosageDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dosageDataGridViewTextBoxColumn.Name = "dosageDataGridViewTextBoxColumn";
-            this.dosageDataGridViewTextBoxColumn.Width = 77;
-            // 
-            // frequencyDataGridViewTextBoxColumn
-            // 
-            this.frequencyDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.frequencyDataGridViewTextBoxColumn.DataPropertyName = "Frequency";
-            this.frequencyDataGridViewTextBoxColumn.HeaderText = "Frequency";
-            this.frequencyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.frequencyDataGridViewTextBoxColumn.Name = "frequencyDataGridViewTextBoxColumn";
-            // 
-            // administeredByDataGridViewTextBoxColumn
-            // 
-            this.administeredByDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.administeredByDataGridViewTextBoxColumn.DataPropertyName = "AdministeredBy";
-            this.administeredByDataGridViewTextBoxColumn.HeaderText = "AdministeredBy";
-            this.administeredByDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.administeredByDataGridViewTextBoxColumn.Name = "administeredByDataGridViewTextBoxColumn";
-            // 
-            // medicationSetBindingSource
-            // 
-            this.medicationSetBindingSource.DataMember = "MedicationSet";
-            this.medicationSetBindingSource.DataSource = this.ambulantCareDBDataSet;
-            // 
-            // ambulantCareDBDataSet
-            // 
-            this.ambulantCareDBDataSet.DataSetName = "AmbulantCareDBDataSet";
-            this.ambulantCareDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // buttonEdit
             // 
@@ -207,7 +159,7 @@
             this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelFullName.Location = new System.Drawing.Point(33, 5);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(0, 21);
+            this.labelFullName.Size = new System.Drawing.Size(0, 23);
             this.labelFullName.TabIndex = 58;
             // 
             // pictureBox1
@@ -228,17 +180,48 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(258, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 25);
+            this.label4.Size = new System.Drawing.Size(206, 34);
             this.label4.TabIndex = 97;
             this.label4.Text = "Medikamente";
             // 
-            // medicationSetTableAdapter
+            // Medikamente
             // 
-            this.medicationSetTableAdapter.ClearBeforeFill = true;
+            this.Medikamente.HeaderText = "Medikamente";
+            this.Medikamente.MinimumWidth = 6;
+            this.Medikamente.Name = "Medikamente";
+            this.Medikamente.Width = 139;
+            // 
+            // Dosierung
+            // 
+            this.Dosierung.HeaderText = "Dosierung";
+            this.Dosierung.MinimumWidth = 6;
+            this.Dosierung.Name = "Dosierung";
+            this.Dosierung.Width = 109;
+            // 
+            // Frequenz
+            // 
+            this.Frequenz.HeaderText = "Frequenz";
+            this.Frequenz.MinimumWidth = 6;
+            this.Frequenz.Name = "Frequenz";
+            this.Frequenz.Width = 102;
+            // 
+            // Grund
+            // 
+            this.Grund.HeaderText = "Grund";
+            this.Grund.MinimumWidth = 6;
+            this.Grund.Name = "Grund";
+            this.Grund.Width = 82;
+            // 
+            // Verwaltetvon
+            // 
+            this.Verwaltetvon.HeaderText = "Verwaltet von";
+            this.Verwaltetvon.MinimumWidth = 6;
+            this.Verwaltetvon.Name = "Verwaltetvon";
+            this.Verwaltetvon.Width = 142;
             // 
             // Medication
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelBio);
@@ -251,8 +234,6 @@
             this.panelBio.ResumeLayout(false);
             this.panelBio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedikamente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicationSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
             this.panelProfil.ResumeLayout(false);
             this.panelProfil.PerformLayout();
@@ -270,13 +251,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridViewMedikamente;
-        private AmbulantCareDBDataSet ambulantCareDBDataSet;
-        private System.Windows.Forms.BindingSource medicationSetBindingSource;
-        private AmbulantCareDBDataSetTableAdapters.MedicationSetTableAdapter medicationSetTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn drugDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dosageDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn frequencyDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn administeredByDataGridViewTextBoxColumn;
         public System.Windows.Forms.Panel panelProfil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medikamente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dosierung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Frequenz;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grund;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Verwaltetvon;
     }
 }
