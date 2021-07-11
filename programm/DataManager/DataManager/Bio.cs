@@ -7,12 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using CommonInterfaces;
+
 namespace DataManager
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Bio
+    public partial class Bio : IDataBaseConform
     {
         public int BioID { get; set; }
         public string School { get; set; }

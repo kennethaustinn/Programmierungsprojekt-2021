@@ -90,12 +90,20 @@ namespace CareSolution
             var name = this.dataGridViewPatient.CurrentRow?.Cells[1].Value.ToString();
             var firstName = this.dataGridViewPatient.CurrentRow?.Cells[2].Value.ToString();
             var gender = this.dataGridViewPatient.CurrentRow?.Cells[3].Value.ToString();
+            var fullName = firstName + @" " + name;
 
             var testPatient = _dataManager.GetPatient(id);
             //var patient = new Patient.Patient();
 
-            BaseData.baseDataForm.labelFullName.Text = firstName + @" "+ name;
-            Bio.BioForm.labelFullName.Text = firstName + @" " + name;
+            ActionPlan.actionPlanForm.labelFullName.Text = fullName;
+            BaseData.baseDataForm.labelFullName.Text = fullName;
+            Bio.BioForm.labelFullName.Text = fullName;
+            CareReport.CareReportForm.labelFullName.Text = fullName;
+            CaseHistory.caseHistoryForm.labelFullName.Text = fullName;
+            HealthData.healthDataForm.labelFullName.Text = fullName;
+            Home.homeForm.labelFullName.Text = fullName;
+            Medication.medicationForm.labelFullName.Text = fullName;
+            Others.othersForm.labelFullName.Text = fullName;
 
 
             BaseData.baseDataForm.labelId.Text = id;
@@ -105,7 +113,7 @@ namespace CareSolution
             BaseData.baseDataForm.labelGeschlecht.Text = gender;
             BaseData.baseDataForm.labelAdresse.Text = testPatient[0].Address;
             BaseData.baseDataForm.labelGeburtsdatum.Text = testPatient[0].BirthDate.ToString(CultureInfo.CurrentCulture);
-            BaseData.baseDataForm.labelHöhe.Text = testPatient[0].Weight.ToString(CultureInfo.CurrentCulture);
+            BaseData.baseDataForm.labelHöhe.Text = testPatient[0].Height.ToString(CultureInfo.CurrentCulture);
             BaseData.baseDataForm.labelGewicht.Text = testPatient[0].Weight.ToString(CultureInfo.CurrentCulture);
             BaseData.baseDataForm.labelKontaktperson.Text = testPatient[0].Contactperson;
             BaseData.baseDataForm.labelPflegegrad.Text = testPatient[0].DegreeOfCare.ToString();

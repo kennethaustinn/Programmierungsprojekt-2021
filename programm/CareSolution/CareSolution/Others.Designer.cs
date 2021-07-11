@@ -83,7 +83,7 @@
             this.labelBesuch.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelBesuch.Location = new System.Drawing.Point(107, 272);
             this.labelBesuch.Name = "labelBesuch";
-            this.labelBesuch.Size = new System.Drawing.Size(18, 21);
+            this.labelBesuch.Size = new System.Drawing.Size(16, 19);
             this.labelBesuch.TabIndex = 120;
             this.labelBesuch.Text = "x";
             // 
@@ -92,7 +92,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(349, 332);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(64, 24);
+            this.checkBox2.Size = new System.Drawing.Size(54, 21);
             this.checkBox2.TabIndex = 119;
             this.checkBox2.Text = "Nein";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(230, 332);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(48, 24);
+            this.checkBox1.Size = new System.Drawing.Size(41, 21);
             this.checkBox1.TabIndex = 118;
             this.checkBox1.Text = "Ja";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@
             this.labelBeruf.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelBeruf.Location = new System.Drawing.Point(107, 213);
             this.labelBeruf.Name = "labelBeruf";
-            this.labelBeruf.Size = new System.Drawing.Size(18, 21);
+            this.labelBeruf.Size = new System.Drawing.Size(16, 19);
             this.labelBeruf.TabIndex = 117;
             this.labelBeruf.Text = "x";
             // 
@@ -125,7 +125,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label6.Location = new System.Drawing.Point(22, 213);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 21);
+            this.label6.Size = new System.Drawing.Size(51, 19);
             this.label6.TabIndex = 116;
             this.label6.Text = "Beruf :";
             // 
@@ -136,7 +136,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(22, 272);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 21);
+            this.label2.Size = new System.Drawing.Size(66, 19);
             this.label2.TabIndex = 115;
             this.label2.Text = "Besuch :";
             // 
@@ -147,7 +147,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(22, 332);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 21);
+            this.label1.Size = new System.Drawing.Size(169, 19);
             this.label1.TabIndex = 114;
             this.label1.Text = "Im Haushalt wohnend?";
             // 
@@ -158,7 +158,7 @@
             this.labelName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelName.Location = new System.Drawing.Point(107, 157);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(18, 21);
+            this.labelName.Size = new System.Drawing.Size(16, 19);
             this.labelName.TabIndex = 113;
             this.labelName.Text = "x";
             // 
@@ -169,7 +169,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label5.Location = new System.Drawing.Point(22, 157);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 21);
+            this.label5.Size = new System.Drawing.Size(59, 19);
             this.label5.TabIndex = 112;
             this.label5.Text = "Name :";
             // 
@@ -215,7 +215,7 @@
             this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelFullName.Location = new System.Drawing.Point(33, 5);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(0, 23);
+            this.labelFullName.Size = new System.Drawing.Size(0, 21);
             this.labelFullName.TabIndex = 58;
             // 
             // pictureBox1
@@ -236,7 +236,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(274, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(140, 34);
+            this.label4.Size = new System.Drawing.Size(109, 25);
             this.label4.TabIndex = 97;
             this.label4.Text = "Sonstiges";
             // 
@@ -247,13 +247,13 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label13.Location = new System.Drawing.Point(12, 103);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(229, 22);
+            this.label13.Size = new System.Drawing.Size(184, 20);
             this.label13.TabIndex = 87;
             this.label13.Text = "Pflegende Angehorige :";
             // 
             // Others
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelBio);
@@ -277,8 +277,7 @@
         private System.Windows.Forms.Panel panelBio;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
-        private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label labelFullName;
+        public System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label13;
@@ -291,5 +290,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label labelBeruf;
         private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Panel panelProfil;
     }
 }

@@ -123,7 +123,7 @@
             this.labelWert.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelWert.Location = new System.Drawing.Point(180, 236);
             this.labelWert.Name = "labelWert";
-            this.labelWert.Size = new System.Drawing.Size(18, 21);
+            this.labelWert.Size = new System.Drawing.Size(16, 19);
             this.labelWert.TabIndex = 71;
             this.labelWert.Text = "x";
             // 
@@ -134,7 +134,7 @@
             "Puls"});
             this.comboBox1.Location = new System.Drawing.Point(184, 162);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.Size = new System.Drawing.Size(121, 25);
             this.comboBox1.TabIndex = 70;
             // 
             // label2
@@ -144,7 +144,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(22, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 21);
+            this.label2.Size = new System.Drawing.Size(50, 19);
             this.label2.TabIndex = 69;
             this.label2.Text = "Wert :";
             // 
@@ -155,7 +155,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(22, 169);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 21);
+            this.label1.Size = new System.Drawing.Size(125, 19);
             this.label1.TabIndex = 68;
             this.label1.Text = "Art der Messung :";
             // 
@@ -176,7 +176,7 @@
             this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelFullName.Location = new System.Drawing.Point(33, 5);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(0, 23);
+            this.labelFullName.Size = new System.Drawing.Size(0, 21);
             this.labelFullName.TabIndex = 58;
             // 
             // pictureBox1
@@ -222,7 +222,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(245, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(289, 34);
+            this.label4.Size = new System.Drawing.Size(225, 25);
             this.label4.TabIndex = 34;
             this.label4.Text = "Gesundheitszustand";
             // 
@@ -233,7 +233,7 @@
             this.labelDatum.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelDatum.Location = new System.Drawing.Point(180, 106);
             this.labelDatum.Name = "labelDatum";
-            this.labelDatum.Size = new System.Drawing.Size(18, 21);
+            this.labelDatum.Size = new System.Drawing.Size(16, 19);
             this.labelDatum.TabIndex = 26;
             this.labelDatum.Text = "x";
             // 
@@ -244,13 +244,13 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label13.Location = new System.Drawing.Point(22, 106);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 21);
+            this.label13.Size = new System.Drawing.Size(64, 19);
             this.label13.TabIndex = 16;
             this.label13.Text = "Datum :";
             // 
             // HealthData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelBio);
@@ -278,13 +278,13 @@
         private System.Windows.Forms.Label labelDatum;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
-        private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label labelFullName;
+        public System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label labelWert;
         private System.Windows.Forms.DataGridView dataGridViewPatient;
+        public System.Windows.Forms.Panel panelProfil;
     }
 }

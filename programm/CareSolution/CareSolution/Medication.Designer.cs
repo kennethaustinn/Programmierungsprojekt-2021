@@ -129,7 +129,7 @@
             this.drugDataGridViewTextBoxColumn.HeaderText = "Drug";
             this.drugDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.drugDataGridViewTextBoxColumn.Name = "drugDataGridViewTextBoxColumn";
-            this.drugDataGridViewTextBoxColumn.Width = 71;
+            this.drugDataGridViewTextBoxColumn.Width = 59;
             // 
             // dosageDataGridViewTextBoxColumn
             // 
@@ -137,7 +137,7 @@
             this.dosageDataGridViewTextBoxColumn.HeaderText = "Dosage";
             this.dosageDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dosageDataGridViewTextBoxColumn.Name = "dosageDataGridViewTextBoxColumn";
-            this.dosageDataGridViewTextBoxColumn.Width = 93;
+            this.dosageDataGridViewTextBoxColumn.Width = 77;
             // 
             // frequencyDataGridViewTextBoxColumn
             // 
@@ -207,7 +207,7 @@
             this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelFullName.Location = new System.Drawing.Point(33, 5);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(0, 23);
+            this.labelFullName.Size = new System.Drawing.Size(0, 21);
             this.labelFullName.TabIndex = 58;
             // 
             // pictureBox1
@@ -228,7 +228,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(258, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 34);
+            this.label4.Size = new System.Drawing.Size(165, 25);
             this.label4.TabIndex = 97;
             this.label4.Text = "Medikamente";
             // 
@@ -238,7 +238,7 @@
             // 
             // Medication
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelBio);
@@ -266,8 +266,7 @@
         private System.Windows.Forms.Panel panelBio;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
-        private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label labelFullName;
+        public System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridViewMedikamente;
@@ -278,5 +277,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dosageDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn frequencyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn administeredByDataGridViewTextBoxColumn;
+        public System.Windows.Forms.Panel panelProfil;
     }
 }

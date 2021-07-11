@@ -112,8 +112,9 @@
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(166, 51);
             this.buttonEdit.TabIndex = 109;
-            this.buttonEdit.Text = "Bearbeiten";
+            this.buttonEdit.Text = "In PDf";
             this.buttonEdit.UseVisualStyleBackColor = false;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonScanNeueData
             // 
@@ -158,7 +159,7 @@
             this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelFullName.Location = new System.Drawing.Point(33, 5);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(0, 23);
+            this.labelFullName.Size = new System.Drawing.Size(0, 21);
             this.labelFullName.TabIndex = 58;
             // 
             // pictureBox1
@@ -182,7 +183,7 @@
             this.labelSprache.Location = new System.Drawing.Point(497, 241);
             this.labelSprache.MaximumSize = new System.Drawing.Size(250, 85);
             this.labelSprache.Name = "labelSprache";
-            this.labelSprache.Size = new System.Drawing.Size(18, 21);
+            this.labelSprache.Size = new System.Drawing.Size(16, 19);
             this.labelSprache.TabIndex = 105;
             this.labelSprache.Text = "x";
             // 
@@ -194,7 +195,7 @@
             this.labelAusbildung.Location = new System.Drawing.Point(138, 164);
             this.labelAusbildung.MaximumSize = new System.Drawing.Size(240, 55);
             this.labelAusbildung.Name = "labelAusbildung";
-            this.labelAusbildung.Size = new System.Drawing.Size(18, 21);
+            this.labelAusbildung.Size = new System.Drawing.Size(16, 19);
             this.labelAusbildung.TabIndex = 104;
             this.labelAusbildung.Text = "x";
             // 
@@ -205,7 +206,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Location = new System.Drawing.Point(382, 241);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 21);
+            this.label3.Size = new System.Drawing.Size(75, 19);
             this.label3.TabIndex = 103;
             this.label3.Text = "Sprache :";
             // 
@@ -216,7 +217,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(12, 164);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 21);
+            this.label2.Size = new System.Drawing.Size(93, 19);
             this.label2.TabIndex = 102;
             this.label2.Text = "Ausbildung :";
             // 
@@ -228,7 +229,7 @@
             this.labelFamilieMitglieder.Location = new System.Drawing.Point(497, 164);
             this.labelFamilieMitglieder.MaximumSize = new System.Drawing.Size(250, 75);
             this.labelFamilieMitglieder.Name = "labelFamilieMitglieder";
-            this.labelFamilieMitglieder.Size = new System.Drawing.Size(18, 21);
+            this.labelFamilieMitglieder.Size = new System.Drawing.Size(16, 19);
             this.labelFamilieMitglieder.TabIndex = 101;
             this.labelFamilieMitglieder.Text = "x";
             // 
@@ -240,7 +241,7 @@
             this.labelKinder.Location = new System.Drawing.Point(497, 298);
             this.labelKinder.MaximumSize = new System.Drawing.Size(230, 45);
             this.labelKinder.Name = "labelKinder";
-            this.labelKinder.Size = new System.Drawing.Size(18, 21);
+            this.labelKinder.Size = new System.Drawing.Size(16, 19);
             this.labelKinder.TabIndex = 100;
             this.labelKinder.Text = "x";
             // 
@@ -252,7 +253,7 @@
             this.labelFreizeit.Location = new System.Drawing.Point(497, 103);
             this.labelFreizeit.MaximumSize = new System.Drawing.Size(250, 85);
             this.labelFreizeit.Name = "labelFreizeit";
-            this.labelFreizeit.Size = new System.Drawing.Size(18, 21);
+            this.labelFreizeit.Size = new System.Drawing.Size(16, 19);
             this.labelFreizeit.TabIndex = 99;
             this.labelFreizeit.Text = "x";
             // 
@@ -264,7 +265,7 @@
             this.labelPartnerschaft.Location = new System.Drawing.Point(138, 354);
             this.labelPartnerschaft.MaximumSize = new System.Drawing.Size(240, 55);
             this.labelPartnerschaft.Name = "labelPartnerschaft";
-            this.labelPartnerschaft.Size = new System.Drawing.Size(18, 21);
+            this.labelPartnerschaft.Size = new System.Drawing.Size(16, 19);
             this.labelPartnerschaft.TabIndex = 98;
             this.labelPartnerschaft.Text = "x";
             // 
@@ -276,7 +277,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(284, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 34);
+            this.label4.Size = new System.Drawing.Size(105, 25);
             this.label4.TabIndex = 97;
             this.label4.Text = "Biografie";
             // 
@@ -288,7 +289,7 @@
             this.labelBeruf.Location = new System.Drawing.Point(138, 287);
             this.labelBeruf.MaximumSize = new System.Drawing.Size(240, 55);
             this.labelBeruf.Name = "labelBeruf";
-            this.labelBeruf.Size = new System.Drawing.Size(18, 21);
+            this.labelBeruf.Size = new System.Drawing.Size(16, 19);
             this.labelBeruf.TabIndex = 96;
             this.labelBeruf.Text = "x";
             // 
@@ -300,7 +301,7 @@
             this.labelUni.Location = new System.Drawing.Point(138, 224);
             this.labelUni.MaximumSize = new System.Drawing.Size(240, 55);
             this.labelUni.Name = "labelUni";
-            this.labelUni.Size = new System.Drawing.Size(18, 21);
+            this.labelUni.Size = new System.Drawing.Size(16, 19);
             this.labelUni.TabIndex = 95;
             this.labelUni.Text = "x";
             // 
@@ -312,7 +313,7 @@
             this.labelSchule.Location = new System.Drawing.Point(138, 103);
             this.labelSchule.MaximumSize = new System.Drawing.Size(280, 55);
             this.labelSchule.Name = "labelSchule";
-            this.labelSchule.Size = new System.Drawing.Size(18, 21);
+            this.labelSchule.Size = new System.Drawing.Size(16, 19);
             this.labelSchule.TabIndex = 94;
             this.labelSchule.Text = "x";
             // 
@@ -323,7 +324,7 @@
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label15.Location = new System.Drawing.Point(382, 164);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(103, 42);
+            this.label15.Size = new System.Drawing.Size(85, 38);
             this.label15.TabIndex = 93;
             this.label15.Text = "Familien\r\nMitglieder :";
             // 
@@ -334,7 +335,7 @@
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label14.Location = new System.Drawing.Point(382, 103);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(80, 21);
+            this.label14.Size = new System.Drawing.Size(67, 19);
             this.label14.TabIndex = 92;
             this.label14.Text = "Freizeit : ";
             // 
@@ -345,7 +346,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label9.Location = new System.Drawing.Point(12, 224);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 21);
+            this.label9.Size = new System.Drawing.Size(87, 19);
             this.label9.TabIndex = 91;
             this.label9.Text = "Universität :";
             // 
@@ -356,7 +357,7 @@
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label10.Location = new System.Drawing.Point(382, 298);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 21);
+            this.label10.Size = new System.Drawing.Size(60, 19);
             this.label10.TabIndex = 90;
             this.label10.Text = "Kinder :";
             // 
@@ -367,7 +368,7 @@
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label11.Location = new System.Drawing.Point(12, 354);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 21);
+            this.label11.Size = new System.Drawing.Size(108, 19);
             this.label11.TabIndex = 89;
             this.label11.Text = "Partnerschaft :";
             // 
@@ -378,7 +379,7 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label12.Location = new System.Drawing.Point(12, 287);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 21);
+            this.label12.Size = new System.Drawing.Size(51, 19);
             this.label12.TabIndex = 88;
             this.label12.Text = "Beruf :";
             // 
@@ -389,7 +390,7 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label13.Location = new System.Drawing.Point(12, 103);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 21);
+            this.label13.Size = new System.Drawing.Size(63, 19);
             this.label13.TabIndex = 87;
             this.label13.Text = "Schule :";
             // 
@@ -409,7 +410,7 @@
             // 
             // Bio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelBio);

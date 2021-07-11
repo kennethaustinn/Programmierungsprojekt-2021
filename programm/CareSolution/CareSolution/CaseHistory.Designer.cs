@@ -89,7 +89,7 @@
             this.labelDemenz.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelDemenz.Location = new System.Drawing.Point(224, 387);
             this.labelDemenz.Name = "labelDemenz";
-            this.labelDemenz.Size = new System.Drawing.Size(18, 21);
+            this.labelDemenz.Size = new System.Drawing.Size(16, 19);
             this.labelDemenz.TabIndex = 77;
             this.labelDemenz.Text = "x";
             // 
@@ -100,7 +100,7 @@
             this.labelSturzgefahr.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelSturzgefahr.Location = new System.Drawing.Point(224, 332);
             this.labelSturzgefahr.Name = "labelSturzgefahr";
-            this.labelSturzgefahr.Size = new System.Drawing.Size(18, 21);
+            this.labelSturzgefahr.Size = new System.Drawing.Size(16, 19);
             this.labelSturzgefahr.TabIndex = 76;
             this.labelSturzgefahr.Text = "x";
             // 
@@ -111,7 +111,7 @@
             this.labelSchmerz.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelSchmerz.Location = new System.Drawing.Point(224, 278);
             this.labelSchmerz.Name = "labelSchmerz";
-            this.labelSchmerz.Size = new System.Drawing.Size(18, 21);
+            this.labelSchmerz.Size = new System.Drawing.Size(16, 19);
             this.labelSchmerz.TabIndex = 75;
             this.labelSchmerz.Text = "x";
             // 
@@ -122,7 +122,7 @@
             this.labelDekubitus.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelDekubitus.Location = new System.Drawing.Point(224, 222);
             this.labelDekubitus.Name = "labelDekubitus";
-            this.labelDekubitus.Size = new System.Drawing.Size(18, 21);
+            this.labelDekubitus.Size = new System.Drawing.Size(16, 19);
             this.labelDekubitus.TabIndex = 74;
             this.labelDekubitus.Text = "x";
             // 
@@ -133,7 +133,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label6.Location = new System.Drawing.Point(23, 461);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 54);
+            this.label6.Size = new System.Drawing.Size(105, 48);
             this.label6.TabIndex = 73;
             this.label6.Text = "*vom Skala 1 - 5 \r\n1 - sehr gering\r\n5 - sehr stark";
             // 
@@ -144,7 +144,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(22, 387);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 21);
+            this.label4.Size = new System.Drawing.Size(73, 19);
             this.label4.TabIndex = 71;
             this.label4.Text = "Demenz :";
             // 
@@ -155,7 +155,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Location = new System.Drawing.Point(22, 332);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 21);
+            this.label3.Size = new System.Drawing.Size(93, 19);
             this.label3.TabIndex = 70;
             this.label3.Text = "Sturzgefahr :";
             // 
@@ -166,7 +166,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(22, 278);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 21);
+            this.label2.Size = new System.Drawing.Size(74, 19);
             this.label2.TabIndex = 69;
             this.label2.Text = "Schmerz :";
             // 
@@ -177,7 +177,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(22, 222);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 21);
+            this.label1.Size = new System.Drawing.Size(84, 19);
             this.label1.TabIndex = 68;
             this.label1.Text = "Dekubitus :";
             // 
@@ -198,7 +198,7 @@
             this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelFullName.Location = new System.Drawing.Point(33, 5);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(0, 23);
+            this.labelFullName.Size = new System.Drawing.Size(0, 21);
             this.labelFullName.TabIndex = 58;
             // 
             // pictureBox1
@@ -244,7 +244,7 @@
             this.labelAnamnese.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelAnamnese.Location = new System.Drawing.Point(295, 24);
             this.labelAnamnese.Name = "labelAnamnese";
-            this.labelAnamnese.Size = new System.Drawing.Size(162, 34);
+            this.labelAnamnese.Size = new System.Drawing.Size(129, 25);
             this.labelAnamnese.TabIndex = 34;
             this.labelAnamnese.Text = "Anamnese";
             // 
@@ -255,7 +255,7 @@
             this.labelKrankengeschichte.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelKrankengeschichte.Location = new System.Drawing.Point(224, 106);
             this.labelKrankengeschichte.Name = "labelKrankengeschichte";
-            this.labelKrankengeschichte.Size = new System.Drawing.Size(18, 21);
+            this.labelKrankengeschichte.Size = new System.Drawing.Size(16, 19);
             this.labelKrankengeschichte.TabIndex = 28;
             this.labelKrankengeschichte.Text = "x";
             // 
@@ -266,7 +266,7 @@
             this.labelChronischeKrankheit.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelChronischeKrankheit.Location = new System.Drawing.Point(224, 166);
             this.labelChronischeKrankheit.Name = "labelChronischeKrankheit";
-            this.labelChronischeKrankheit.Size = new System.Drawing.Size(18, 21);
+            this.labelChronischeKrankheit.Size = new System.Drawing.Size(16, 19);
             this.labelChronischeKrankheit.TabIndex = 27;
             this.labelChronischeKrankheit.Text = "x";
             // 
@@ -277,7 +277,7 @@
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label9.Location = new System.Drawing.Point(22, 166);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(194, 21);
+            this.label9.Size = new System.Drawing.Size(162, 19);
             this.label9.TabIndex = 20;
             this.label9.Text = "Chronische Krankheit :";
             // 
@@ -288,13 +288,13 @@
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label12.Location = new System.Drawing.Point(22, 106);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(179, 21);
+            this.label12.Size = new System.Drawing.Size(149, 19);
             this.label12.TabIndex = 17;
             this.label12.Text = "Krankengeschichte :";
             // 
             // CaseHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelBio);
@@ -323,8 +323,7 @@
         private System.Windows.Forms.Label labelChronischeKrankheit;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label labelFullName;
+        public System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelDemenz;
         private System.Windows.Forms.Label labelSturzgefahr;
@@ -335,5 +334,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Panel panelProfil;
     }
 }

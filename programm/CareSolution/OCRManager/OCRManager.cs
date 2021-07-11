@@ -9,10 +9,11 @@ namespace OCRManager
 {
     public class OcrManager : IOcrManager
     {
-        ///// <summary>
-        ///// Dateipfad der einzulesenden Datei.
-        ///// </summary>
-        //private string _path;
+        /// <summary>
+        /// Speichert das Ergniss des Ocr als ein OcrResult Objekt.
+        /// Wird wiederverwendet für die konvertierung der gelesenen Datei in ein PDf.
+        /// </summary>
+        public OcrResult _ocrResult;
 
         /// <summary>
         /// Aktuelles einzulesendes Dokument z.B. Biografie oder Pflegebericht.
@@ -93,17 +94,23 @@ namespace OCRManager
         }
 
         /// <summary>
+        /// Dies ist eine Methode, der Schnittstelle IOCRManager des CommonInterfaces.
         /// Die Methode führt den Kompletten Prozess des OCR-Teils durch. Dabei ruft sie drei Methoden auf:
         /// OpenFile(): Öffnet das einzulesende Dokument aus den Ordner.                                       
         /// StartSearchForItems(): Startet die Suche nach den Keys und den zugehörigen Elemente/Values.
         /// AddToDictionary(): Fügt die gefundenen Elemente/Values den Keys hinzu.
         /// </summary>
-        private void ExecuteOcr()
+        /// <param name="path"> Dateipfad der einzulesenden Datei.</param>
+        /// <returns>Dictionary mit den Keys und Values des Dokuments.</returns>
+        public Dictionary<string, List<string>> ExecuteOcr(string path)
         {
+            //throw new NotImplementedException();
             AddKeyToRecognize();
-            //OpenFile();
+            OpenFile(path);
             StartSearchForItems();
             AddToDictionary();
+
+            return _currentDocumentDictionary;
         }
 
         /// <summary>
@@ -116,8 +123,8 @@ namespace OCRManager
             var ocr = ConfigurationOcr();
             var input = new OcrInput(path);
             input.Deskew();
-            var ocrResult = ocr.Read(input);
-            var allResultLines = ocrResult.Lines;
+            _ocrResult = ocr.Read(input);
+            var allResultLines = _ocrResult.Lines;
 
             _resultFromOcr = allResultLines.Cast<object>().Select(x => x.ToString()).ToList();
 
@@ -128,6 +135,16 @@ namespace OCRManager
             _currentDocumentKeys = _recognizeDocumentKeys[_currentDocumentName];
 
             Console.WriteLine("Datei wurde geladen!");
+        }
+
+        /// <summary>
+        /// Die Methode erstellt von der eingelesnen Datei ein Pdf, in der man die Handschriftlichen Stellen
+        /// markieren kann und zb. kopieren kann.
+        /// </summary>
+        /// <param name="ocrResult"></param>
+        public void SaveAsPdfAndTextFile(OcrResult ocrResult, string path)
+        {
+            ocrResult.SaveAsSearchablePdf(path);
         }
 
         /// <summary>
@@ -379,21 +396,6 @@ namespace OCRManager
 
         #endregion
 
-        /// <summary>
-        /// Dies ist eine Methode, der Schnittstelle IOCRManager des CommonInterfaces.
-        /// </summary>
-        /// <param name="path"> Dateipfad der einzulesenden Datei.</param>
-        /// <returns>Dictionary mit den Keys und Values des Dokuments.</returns>
-        public Dictionary<string, List<string>> ExecuteOcr(string path)
-        {
-            //throw new NotImplementedException();
-            AddKeyToRecognize();
-            OpenFile(path);
-            StartSearchForItems();
-            AddToDictionary();
-
-            return _currentDocumentDictionary;
-        }
 
     }
 }

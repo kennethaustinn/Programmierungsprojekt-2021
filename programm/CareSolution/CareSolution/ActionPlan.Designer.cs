@@ -90,7 +90,7 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(289, 21);
+            this.label3.Size = new System.Drawing.Size(245, 19);
             this.label3.TabIndex = 58;
             this.label3.Text = "Maßnahmenplan für heute noch :";
             // 
@@ -102,7 +102,7 @@
             this.labelMaßnahmenplan.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelMaßnahmenplan.Location = new System.Drawing.Point(27, 50);
             this.labelMaßnahmenplan.Name = "labelMaßnahmenplan";
-            this.labelMaßnahmenplan.Size = new System.Drawing.Size(338, 21);
+            this.labelMaßnahmenplan.Size = new System.Drawing.Size(282, 19);
             this.labelMaßnahmenplan.TabIndex = 65;
             this.labelMaßnahmenplan.Text = "was muss heute noch gemacht werden";
             // 
@@ -112,9 +112,9 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 10.2F);
             this.checkBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox1.Location = new System.Drawing.Point(8, 285);
+            this.checkBox1.Location = new System.Drawing.Point(8, 287);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(77, 25);
+            this.checkBox1.Size = new System.Drawing.Size(65, 23);
             this.checkBox1.TabIndex = 60;
             this.checkBox1.Text = "Fertig";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -127,7 +127,7 @@
             this.labelErstellt.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelErstellt.Location = new System.Drawing.Point(138, 131);
             this.labelErstellt.Name = "labelErstellt";
-            this.labelErstellt.Size = new System.Drawing.Size(18, 21);
+            this.labelErstellt.Size = new System.Drawing.Size(16, 19);
             this.labelErstellt.TabIndex = 68;
             this.labelErstellt.Text = "x";
             // 
@@ -138,7 +138,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label5.Location = new System.Drawing.Point(36, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 21);
+            this.label5.Size = new System.Drawing.Size(86, 19);
             this.label5.TabIndex = 67;
             this.label5.Text = "Erstellt am :";
             // 
@@ -149,7 +149,7 @@
             this.labelDatum.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelDatum.Location = new System.Drawing.Point(29, 74);
             this.labelDatum.Name = "labelDatum";
-            this.labelDatum.Size = new System.Drawing.Size(115, 37);
+            this.labelDatum.Size = new System.Drawing.Size(94, 30);
             this.labelDatum.TabIndex = 64;
             this.labelDatum.Text = "Datum";
             // 
@@ -179,7 +179,7 @@
             this.labelFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFullName.Location = new System.Drawing.Point(33, 5);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(0, 23);
+            this.labelFullName.Size = new System.Drawing.Size(0, 21);
             this.labelFullName.TabIndex = 58;
             // 
             // pictureBox1
@@ -200,7 +200,7 @@
             this.labelMaßnahmenplanTop.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelMaßnahmenplanTop.Location = new System.Drawing.Point(236, 22);
             this.labelMaßnahmenplanTop.Name = "labelMaßnahmenplanTop";
-            this.labelMaßnahmenplanTop.Size = new System.Drawing.Size(250, 34);
+            this.labelMaßnahmenplanTop.Size = new System.Drawing.Size(201, 25);
             this.labelMaßnahmenplanTop.TabIndex = 35;
             this.labelMaßnahmenplanTop.Text = "Maßnahmenplan";
             // 
@@ -211,7 +211,7 @@
             // 
             // ActionPlan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panel3);
@@ -235,8 +235,7 @@
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
-        private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label labelFullName;
+        public System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label labelMaßnahmenplanTop;
@@ -247,5 +246,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelMaßnahmenplan;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel panelProfil;
     }
 }
