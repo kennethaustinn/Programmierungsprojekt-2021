@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Windows.Forms;
-using CommonInterfaces;
 using DataManager;
-using Patient;
 
 namespace CareSolution
 {
@@ -13,7 +12,7 @@ namespace CareSolution
         private SqlConnection _connection;
         private readonly string _connectionString;
         private readonly DataManager<Person> _dataManager = new DataManager<Person>();
-        public static PatientData patientDataForm = new PatientData();
+        public static PatientData PatientDataForm = new PatientData();
         
 
         /// speichern das activeForm für OpenChildForm das genau am Anfang ist genau null.
@@ -87,16 +86,16 @@ namespace CareSolution
         private void dataGridViewPatient_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
            
-            var id = this.dataGridViewPatient.CurrentRow.Cells[0].Value.ToString();
-            var name = this.dataGridViewPatient.CurrentRow.Cells[1].Value.ToString();
-            var firstName = this.dataGridViewPatient.CurrentRow.Cells[2].Value.ToString();
-            var gender = this.dataGridViewPatient.CurrentRow.Cells[3].Value.ToString();
+            var id = this.dataGridViewPatient.CurrentRow?.Cells[0].Value.ToString();
+            var name = this.dataGridViewPatient.CurrentRow?.Cells[1].Value.ToString();
+            var firstName = this.dataGridViewPatient.CurrentRow?.Cells[2].Value.ToString();
+            var gender = this.dataGridViewPatient.CurrentRow?.Cells[3].Value.ToString();
 
             var testPatient = _dataManager.GetPatient(id);
-            var patient = new Patient.Patient();
+            //var patient = new Patient.Patient();
 
-            BaseData.baseDataForm.labelName2.Text = firstName +" "+ name;
-            Bio.bioForm.labelFullName.Text = firstName + " " + name;
+            BaseData.baseDataForm.labelName2.Text = firstName + @" "+ name;
+            Bio.BioForm.labelFullName.Text = firstName + @" " + name;
 
 
             BaseData.baseDataForm.labelId.Text = id;
@@ -105,33 +104,13 @@ namespace CareSolution
             //BaseData.baseDataForm.labelAlter.Text = patient.CalculateAge(testPatient[0].BirthDate).ToString();
             BaseData.baseDataForm.labelGeschlecht.Text = gender;
             BaseData.baseDataForm.labelAdresse.Text = testPatient[0].Address;
-            BaseData.baseDataForm.labelGeburtsdatum.Text = testPatient[0].BirthDate.ToString();
-            BaseData.baseDataForm.labelHöhe.Text = testPatient[0].Weight.ToString();
-            BaseData.baseDataForm.labelGewicht.Text = testPatient[0].Weight.ToString();
+            BaseData.baseDataForm.labelGeburtsdatum.Text = testPatient[0].BirthDate.ToString(CultureInfo.CurrentCulture);
+            BaseData.baseDataForm.labelHöhe.Text = testPatient[0].Weight.ToString(CultureInfo.CurrentCulture);
+            BaseData.baseDataForm.labelGewicht.Text = testPatient[0].Weight.ToString(CultureInfo.CurrentCulture);
             BaseData.baseDataForm.labelKontaktperson.Text = testPatient[0].Contactperson;
             BaseData.baseDataForm.labelPflegegrad.Text = testPatient[0].DegreeOfCare.ToString();
-            BaseData.baseDataForm.labelVerischerung.Text = testPatient[0].HealthInsurance.ToString();
+            BaseData.baseDataForm.labelVerischerung.Text = testPatient[0].HealthInsurance;
             openChildForm(BaseData.baseDataForm);
-
-            ////sd.labelId.Text = this.dataGridViewPatient.CurrentRow.Cells[0].Value.ToString();
-            ////sd.labelName.Text = this.dataGridViewPatient.CurrentRow.Cells[1].Value.ToString();
-            ////sd.labelName2.Text = this.dataGridViewPatient.CurrentRow.Cells[2].Value.ToString() + " " + this.dataGridViewPatient.CurrentRow.Cells[1].Value.ToString();
-            ////sd.labelVorname.Text = this.dataGridViewPatient.CurrentRow.Cells[2].Value.ToString();
-            ////sd.labelGeschlecht.Text = this.dataGridViewPatient.CurrentRow.Cells[4].Value.ToString();
-            //sd.addToList(this.dataGridViewPatient.CurrentRow.Cells[1].Value.ToString());
-            //openChildForm(sd);
-
-            //if (e.RowIndex != -1)
-            //{
-            //    dataGridViewPatient.CurrentRow.Selected = true;
-            //    cc.labelId.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
-            //    cc.labelName.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
-            //    cc.labelName2.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["name"].FormattedValue.ToString();
-            //    cc.labelVorname.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["vorname"].FormattedValue.ToString();
-            //    cc.labelAlter.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["alt"].FormattedValue.ToString();
-            //    cc.labelAdresse.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["adresse"].FormattedValue.ToString();
-            //    cc.labelArzt.Text = dataGridViewPatient.Rows[e.RowIndex].Cells["arzt"].FormattedValue.ToString();
-            //}
 
         }
         /// <summary>
