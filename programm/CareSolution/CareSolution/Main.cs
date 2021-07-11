@@ -127,7 +127,7 @@ namespace CareSolution
             ActionPlan.actionPlanForm = new ActionPlan();
             CaseHistory.caseHistoryForm = new CaseHistory();
             HealthData.healthDataForm = new HealthData();
-            CareReport.careReportForm = new CareReport();
+            CareReport.CareReportForm = new CareReport();
             Medication.medicationForm = new Medication();
             Home.homeForm = new Home();
             Others.othersForm = new Others();
@@ -188,7 +188,7 @@ namespace CareSolution
         private void buttonCareReport_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(CareReport.careReportForm);
+            openChildForm(CareReport.CareReportForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Medication angeklickt dann wird das Medication Form geladen,
