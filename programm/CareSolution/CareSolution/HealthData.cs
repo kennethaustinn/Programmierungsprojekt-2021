@@ -21,7 +21,7 @@ namespace CareSolution
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();
-            labelName2.Text = patient.FirstName + " " + patient.LastName;
+            labelFullName.Text = patient.FirstName + " " + patient.LastName;
 
             foreach (var item in patient.HealthData.VitalParameters)
             {

@@ -22,7 +22,7 @@ namespace CareSolution
         {
             InitializeComponent(); 
             var patient = new Patient.Patient().SetTestData();
-            labelName2.Text = patient.FirstName + " " + patient.LastName;
+            labelFullName.Text = patient.FirstName + " " + patient.LastName;
             labelKrankengeschichte.Text = patient.HealthData.MedicalHistory;
             labelChronischeKrankheit.Text = patient.HealthData.ChronicDiseases;
             foreach (var item in patient.HealthData.RiskValues)

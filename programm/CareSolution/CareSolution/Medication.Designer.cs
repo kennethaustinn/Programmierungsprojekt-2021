@@ -35,26 +35,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medication));
             this.panelBio = new System.Windows.Forms.Panel();
             this.dataGridViewMedikamente = new System.Windows.Forms.DataGridView();
-            this.buttonEdit = new System.Windows.Forms.Button();
-            this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
-            this.panelProfil = new System.Windows.Forms.Panel();
-            this.labelName2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ambulantCareDBDataSet = new CareSolution.AmbulantCareDBDataSet();
-            this.medicationSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.medicationSetTableAdapter = new CareSolution.AmbulantCareDBDataSetTableAdapters.MedicationSetTableAdapter();
             this.drugDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dosageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.frequencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.administeredByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medicationSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ambulantCareDBDataSet = new CareSolution.AmbulantCareDBDataSet();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
+            this.panelProfil = new System.Windows.Forms.Panel();
+            this.labelFullName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.medicationSetTableAdapter = new CareSolution.AmbulantCareDBDataSetTableAdapters.MedicationSetTableAdapter();
             this.panelBio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedikamente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicationSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.panelProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicationSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBio
@@ -123,88 +123,6 @@
             this.dataGridViewMedikamente.Size = new System.Drawing.Size(689, 321);
             this.dataGridViewMedikamente.TabIndex = 110;
             // 
-            // buttonEdit
-            // 
-            this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEdit.FlatAppearance.BorderSize = 0;
-            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonEdit.Location = new System.Drawing.Point(278, 481);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(166, 51);
-            this.buttonEdit.TabIndex = 109;
-            this.buttonEdit.Text = "Edit";
-            this.buttonEdit.UseVisualStyleBackColor = false;
-            // 
-            // pictureBoxTopMenu
-            // 
-            this.pictureBoxTopMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTopMenu.Image")));
-            this.pictureBoxTopMenu.Location = new System.Drawing.Point(220, 26);
-            this.pictureBoxTopMenu.Name = "pictureBoxTopMenu";
-            this.pictureBoxTopMenu.Size = new System.Drawing.Size(32, 32);
-            this.pictureBoxTopMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxTopMenu.TabIndex = 107;
-            this.pictureBoxTopMenu.TabStop = false;
-            // 
-            // panelProfil
-            // 
-            this.panelProfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelProfil.Controls.Add(this.labelName2);
-            this.panelProfil.Controls.Add(this.pictureBox1);
-            this.panelProfil.Location = new System.Drawing.Point(548, 3);
-            this.panelProfil.Name = "panelProfil";
-            this.panelProfil.Size = new System.Drawing.Size(200, 28);
-            this.panelProfil.TabIndex = 106;
-            // 
-            // labelName2
-            // 
-            this.labelName2.AutoSize = true;
-            this.labelName2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelName2.Location = new System.Drawing.Point(33, 5);
-            this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(72, 23);
-            this.labelName2.TabIndex = 58;
-            this.labelName2.Text = "label1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 28);
-            this.pictureBox1.TabIndex = 57;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(258, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 34);
-            this.label4.TabIndex = 97;
-            this.label4.Text = "Medikamente";
-            // 
-            // ambulantCareDBDataSet
-            // 
-            this.ambulantCareDBDataSet.DataSetName = "AmbulantCareDBDataSet";
-            this.ambulantCareDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // medicationSetBindingSource
-            // 
-            this.medicationSetBindingSource.DataMember = "MedicationSet";
-            this.medicationSetBindingSource.DataSource = this.ambulantCareDBDataSet;
-            // 
-            // medicationSetTableAdapter
-            // 
-            this.medicationSetTableAdapter.ClearBeforeFill = true;
-            // 
             // drugDataGridViewTextBoxColumn
             // 
             this.drugDataGridViewTextBoxColumn.DataPropertyName = "Drug";
@@ -237,6 +155,87 @@
             this.administeredByDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.administeredByDataGridViewTextBoxColumn.Name = "administeredByDataGridViewTextBoxColumn";
             // 
+            // medicationSetBindingSource
+            // 
+            this.medicationSetBindingSource.DataMember = "MedicationSet";
+            this.medicationSetBindingSource.DataSource = this.ambulantCareDBDataSet;
+            // 
+            // ambulantCareDBDataSet
+            // 
+            this.ambulantCareDBDataSet.DataSetName = "AmbulantCareDBDataSet";
+            this.ambulantCareDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            this.buttonEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEdit.FlatAppearance.BorderSize = 0;
+            this.buttonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEdit.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonEdit.Location = new System.Drawing.Point(278, 481);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(166, 51);
+            this.buttonEdit.TabIndex = 109;
+            this.buttonEdit.Text = "Edit";
+            this.buttonEdit.UseVisualStyleBackColor = false;
+            // 
+            // pictureBoxTopMenu
+            // 
+            this.pictureBoxTopMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTopMenu.Image")));
+            this.pictureBoxTopMenu.Location = new System.Drawing.Point(220, 26);
+            this.pictureBoxTopMenu.Name = "pictureBoxTopMenu";
+            this.pictureBoxTopMenu.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxTopMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxTopMenu.TabIndex = 107;
+            this.pictureBoxTopMenu.TabStop = false;
+            // 
+            // panelProfil
+            // 
+            this.panelProfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelProfil.Controls.Add(this.labelFullName);
+            this.panelProfil.Controls.Add(this.pictureBox1);
+            this.panelProfil.Location = new System.Drawing.Point(548, 3);
+            this.panelProfil.Name = "panelProfil";
+            this.panelProfil.Size = new System.Drawing.Size(200, 28);
+            this.panelProfil.TabIndex = 106;
+            // 
+            // labelFullName
+            // 
+            this.labelFullName.AutoSize = true;
+            this.labelFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelFullName.Location = new System.Drawing.Point(33, 5);
+            this.labelFullName.Name = "labelFullName";
+            this.labelFullName.Size = new System.Drawing.Size(0, 23);
+            this.labelFullName.TabIndex = 58;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 28);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.Location = new System.Drawing.Point(258, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(206, 34);
+            this.label4.TabIndex = 97;
+            this.label4.Text = "Medikamente";
+            // 
+            // medicationSetTableAdapter
+            // 
+            this.medicationSetTableAdapter.ClearBeforeFill = true;
+            // 
             // Medication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -252,12 +251,12 @@
             this.panelBio.ResumeLayout(false);
             this.panelBio.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedikamente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medicationSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).EndInit();
             this.panelProfil.ResumeLayout(false);
             this.panelProfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ambulantCareDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.medicationSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,7 +267,7 @@
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
         private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label labelName2;
+        private System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridViewMedikamente;

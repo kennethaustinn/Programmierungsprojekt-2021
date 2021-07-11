@@ -30,25 +30,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CaseHistory));
             this.panelBio = new System.Windows.Forms.Panel();
+            this.labelDemenz = new System.Windows.Forms.Label();
+            this.labelSturzgefahr = new System.Windows.Forms.Label();
+            this.labelSchmerz = new System.Windows.Forms.Label();
+            this.labelDekubitus = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelProfil = new System.Windows.Forms.Panel();
-            this.labelName2 = new System.Windows.Forms.Label();
+            this.labelFullName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.labelAnamnese = new System.Windows.Forms.Label();
             this.labelKrankengeschichte = new System.Windows.Forms.Label();
             this.labelChronischeKrankheit = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelDekubitus = new System.Windows.Forms.Label();
-            this.labelSchmerz = new System.Windows.Forms.Label();
-            this.labelSturzgefahr = new System.Windows.Forms.Label();
-            this.labelDemenz = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
             this.panelBio.SuspendLayout();
             this.panelProfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,26 +82,144 @@
             this.panelBio.Size = new System.Drawing.Size(748, 544);
             this.panelBio.TabIndex = 26;
             // 
+            // labelDemenz
+            // 
+            this.labelDemenz.AutoSize = true;
+            this.labelDemenz.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDemenz.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelDemenz.Location = new System.Drawing.Point(224, 387);
+            this.labelDemenz.Name = "labelDemenz";
+            this.labelDemenz.Size = new System.Drawing.Size(18, 21);
+            this.labelDemenz.TabIndex = 77;
+            this.labelDemenz.Text = "x";
+            // 
+            // labelSturzgefahr
+            // 
+            this.labelSturzgefahr.AutoSize = true;
+            this.labelSturzgefahr.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSturzgefahr.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelSturzgefahr.Location = new System.Drawing.Point(224, 332);
+            this.labelSturzgefahr.Name = "labelSturzgefahr";
+            this.labelSturzgefahr.Size = new System.Drawing.Size(18, 21);
+            this.labelSturzgefahr.TabIndex = 76;
+            this.labelSturzgefahr.Text = "x";
+            // 
+            // labelSchmerz
+            // 
+            this.labelSchmerz.AutoSize = true;
+            this.labelSchmerz.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSchmerz.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelSchmerz.Location = new System.Drawing.Point(224, 278);
+            this.labelSchmerz.Name = "labelSchmerz";
+            this.labelSchmerz.Size = new System.Drawing.Size(18, 21);
+            this.labelSchmerz.TabIndex = 75;
+            this.labelSchmerz.Text = "x";
+            // 
+            // labelDekubitus
+            // 
+            this.labelDekubitus.AutoSize = true;
+            this.labelDekubitus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDekubitus.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelDekubitus.Location = new System.Drawing.Point(224, 222);
+            this.labelDekubitus.Name = "labelDekubitus";
+            this.labelDekubitus.Size = new System.Drawing.Size(18, 21);
+            this.labelDekubitus.TabIndex = 74;
+            this.labelDekubitus.Text = "x";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label6.Location = new System.Drawing.Point(23, 461);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(126, 54);
+            this.label6.TabIndex = 73;
+            this.label6.Text = "*vom Skala 1 - 5 \r\n1 - sehr gering\r\n5 - sehr stark";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.Location = new System.Drawing.Point(22, 387);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 21);
+            this.label4.TabIndex = 71;
+            this.label4.Text = "Demenz :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label3.Location = new System.Drawing.Point(22, 332);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 21);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "Sturzgefahr :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(22, 278);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 21);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "Schmerz :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(22, 222);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 21);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Dekubitus :";
+            // 
             // panelProfil
             // 
             this.panelProfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelProfil.Controls.Add(this.labelName2);
+            this.panelProfil.Controls.Add(this.labelFullName);
             this.panelProfil.Controls.Add(this.pictureBox1);
             this.panelProfil.Location = new System.Drawing.Point(548, 3);
             this.panelProfil.Name = "panelProfil";
             this.panelProfil.Size = new System.Drawing.Size(200, 28);
             this.panelProfil.TabIndex = 67;
             // 
-            // labelName2
+            // labelFullName
             // 
-            this.labelName2.AutoSize = true;
-            this.labelName2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelName2.Location = new System.Drawing.Point(33, 5);
-            this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(72, 23);
-            this.labelName2.TabIndex = 58;
-            this.labelName2.Text = "label1";
+            this.labelFullName.AutoSize = true;
+            this.labelFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelFullName.Location = new System.Drawing.Point(33, 5);
+            this.labelFullName.Name = "labelFullName";
+            this.labelFullName.Size = new System.Drawing.Size(0, 23);
+            this.labelFullName.TabIndex = 58;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 28);
+            this.pictureBox1.TabIndex = 57;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBoxTopMenu
+            // 
+            this.pictureBoxTopMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTopMenu.Image")));
+            this.pictureBoxTopMenu.Location = new System.Drawing.Point(257, 26);
+            this.pictureBoxTopMenu.Name = "pictureBoxTopMenu";
+            this.pictureBoxTopMenu.Size = new System.Drawing.Size(32, 32);
+            this.pictureBoxTopMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBoxTopMenu.TabIndex = 66;
+            this.pictureBoxTopMenu.TabStop = false;
             // 
             // button1
             // 
@@ -174,126 +292,7 @@
             this.label12.TabIndex = 17;
             this.label12.Text = "Krankengeschichte :";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(22, 222);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 21);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "Dekubitus :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(22, 278);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 21);
-            this.label2.TabIndex = 69;
-            this.label2.Text = "Schmerz :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(22, 332);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 21);
-            this.label3.TabIndex = 70;
-            this.label3.Text = "Sturzgefahr :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(22, 387);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 21);
-            this.label4.TabIndex = 71;
-            this.label4.Text = "Demenz :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(23, 461);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 54);
-            this.label6.TabIndex = 73;
-            this.label6.Text = "*vom Skala 1 - 5 \r\n1 - sehr gering\r\n5 - sehr stark";
-            // 
-            // labelDekubitus
-            // 
-            this.labelDekubitus.AutoSize = true;
-            this.labelDekubitus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDekubitus.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelDekubitus.Location = new System.Drawing.Point(224, 222);
-            this.labelDekubitus.Name = "labelDekubitus";
-            this.labelDekubitus.Size = new System.Drawing.Size(18, 21);
-            this.labelDekubitus.TabIndex = 74;
-            this.labelDekubitus.Text = "x";
-            // 
-            // labelSchmerz
-            // 
-            this.labelSchmerz.AutoSize = true;
-            this.labelSchmerz.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSchmerz.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelSchmerz.Location = new System.Drawing.Point(224, 278);
-            this.labelSchmerz.Name = "labelSchmerz";
-            this.labelSchmerz.Size = new System.Drawing.Size(18, 21);
-            this.labelSchmerz.TabIndex = 75;
-            this.labelSchmerz.Text = "x";
-            // 
-            // labelSturzgefahr
-            // 
-            this.labelSturzgefahr.AutoSize = true;
-            this.labelSturzgefahr.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSturzgefahr.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelSturzgefahr.Location = new System.Drawing.Point(224, 332);
-            this.labelSturzgefahr.Name = "labelSturzgefahr";
-            this.labelSturzgefahr.Size = new System.Drawing.Size(18, 21);
-            this.labelSturzgefahr.TabIndex = 76;
-            this.labelSturzgefahr.Text = "x";
-            // 
-            // labelDemenz
-            // 
-            this.labelDemenz.AutoSize = true;
-            this.labelDemenz.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDemenz.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelDemenz.Location = new System.Drawing.Point(224, 387);
-            this.labelDemenz.Name = "labelDemenz";
-            this.labelDemenz.Size = new System.Drawing.Size(18, 21);
-            this.labelDemenz.TabIndex = 77;
-            this.labelDemenz.Text = "x";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 28);
-            this.pictureBox1.TabIndex = 57;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBoxTopMenu
-            // 
-            this.pictureBoxTopMenu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxTopMenu.Image")));
-            this.pictureBoxTopMenu.Location = new System.Drawing.Point(257, 26);
-            this.pictureBoxTopMenu.Name = "pictureBoxTopMenu";
-            this.pictureBoxTopMenu.Size = new System.Drawing.Size(32, 32);
-            this.pictureBoxTopMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBoxTopMenu.TabIndex = 66;
-            this.pictureBoxTopMenu.TabStop = false;
-            // 
-            // Anamnese
+            // CaseHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -301,7 +300,7 @@
             this.Controls.Add(this.panelBio);
             this.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Anamnese";
+            this.Name = "CaseHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anamnese";
             this.panelBio.ResumeLayout(false);
@@ -325,7 +324,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label labelName2;
+        private System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelDemenz;
         private System.Windows.Forms.Label labelSturzgefahr;

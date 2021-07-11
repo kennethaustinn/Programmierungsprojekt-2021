@@ -94,7 +94,7 @@ namespace CareSolution
             var testPatient = _dataManager.GetPatient(id);
             //var patient = new Patient.Patient();
 
-            BaseData.baseDataForm.labelName2.Text = firstName + @" "+ name;
+            BaseData.baseDataForm.labelFullName.Text = firstName + @" "+ name;
             Bio.BioForm.labelFullName.Text = firstName + @" " + name;
 
 

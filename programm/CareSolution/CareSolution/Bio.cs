@@ -70,9 +70,17 @@ namespace CareSolution
         /// <param name="e"></param>
         private void buttonScanNeueData_Click(object sender, EventArgs e)
         {
-            openFile();
-            _documentDictionary = _ocrManager.ExecuteOcr(_path);
-            FillLabels();
+            try
+            {
+                openFile();
+                _documentDictionary = _ocrManager.ExecuteOcr(_path);
+                FillLabels();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Es wurde schon ein Biografie eingefügt");
+            }
+            
         }
 
         /// <summary>

@@ -21,7 +21,7 @@ namespace CareSolution
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();
-            labelName2.Text = patient.FirstName + " " + patient.LastName;
+            labelFullName.Text = patient.FirstName + " " + patient.LastName;
         }
         // Es wird eine Verbindung mit dem Datenbank automatisch erstellt. Da man die Datenquelle im DataGridView verknüpft hatte
         private void Medikamente_Load(object sender, EventArgs e)
