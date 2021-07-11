@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panelBio = new System.Windows.Forms.Panel();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.labelHilfsmittel = new System.Windows.Forms.Label();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonSpeichern = new System.Windows.Forms.Button();
             this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
             this.panelProfil = new System.Windows.Forms.Panel();
-            this.labelName2 = new System.Windows.Forms.Label();
+            this.labelFullName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.labelHilfsmittel = new System.Windows.Forms.Label();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.panelBio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTopMenu)).BeginInit();
             this.panelProfil.SuspendLayout();
@@ -71,6 +71,91 @@
             this.panelBio.Name = "panelBio";
             this.panelBio.Size = new System.Drawing.Size(748, 544);
             this.panelBio.TabIndex = 25;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(41, 401);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(66, 24);
+            this.checkBox5.TabIndex = 117;
+            this.checkBox5.Text = "Lifter";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // labelHilfsmittel
+            // 
+            this.labelHilfsmittel.AutoSize = true;
+            this.labelHilfsmittel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHilfsmittel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelHilfsmittel.Location = new System.Drawing.Point(198, 95);
+            this.labelHilfsmittel.Name = "labelHilfsmittel";
+            this.labelHilfsmittel.Size = new System.Drawing.Size(18, 21);
+            this.labelHilfsmittel.TabIndex = 116;
+            this.labelHilfsmittel.Text = "x";
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(41, 347);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(94, 24);
+            this.checkBox4.TabIndex = 115;
+            this.checkBox4.Text = "Fahrstuhl";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(12, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(180, 21);
+            this.label2.TabIndex = 114;
+            this.label2.Text = "Wohnung Hilfsmittel :";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(41, 294);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(131, 24);
+            this.checkBox3.TabIndex = 113;
+            this.checkBox3.Text = "Wohnbereich";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(41, 241);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(102, 24);
+            this.checkBox2.TabIndex = 112;
+            this.checkBox2.Text = "Bad / WC";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(41, 190);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(78, 24);
+            this.checkBox1.TabIndex = 111;
+            this.checkBox1.Text = "Küche";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label1.Location = new System.Drawing.Point(12, 144);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(190, 21);
+            this.label1.TabIndex = 110;
+            this.label1.Text = "Wohnung Barrierefrei :";
             // 
             // buttonSpeichern
             // 
@@ -100,23 +185,22 @@
             // panelProfil
             // 
             this.panelProfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelProfil.Controls.Add(this.labelName2);
+            this.panelProfil.Controls.Add(this.labelFullName);
             this.panelProfil.Controls.Add(this.pictureBox1);
             this.panelProfil.Location = new System.Drawing.Point(548, 3);
             this.panelProfil.Name = "panelProfil";
             this.panelProfil.Size = new System.Drawing.Size(200, 28);
             this.panelProfil.TabIndex = 106;
             // 
-            // labelName2
+            // labelFullName
             // 
-            this.labelName2.AutoSize = true;
-            this.labelName2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelName2.Location = new System.Drawing.Point(33, 5);
-            this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(72, 23);
-            this.labelName2.TabIndex = 58;
-            this.labelName2.Text = "label1";
+            this.labelFullName.AutoSize = true;
+            this.labelFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelFullName.Location = new System.Drawing.Point(33, 5);
+            this.labelFullName.Name = "labelFullName";
+            this.labelFullName.Size = new System.Drawing.Size(0, 23);
+            this.labelFullName.TabIndex = 58;
             // 
             // pictureBox1
             // 
@@ -140,92 +224,7 @@
             this.label4.TabIndex = 97;
             this.label4.Text = "Zuhause";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(12, 144);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(190, 21);
-            this.label1.TabIndex = 110;
-            this.label1.Text = "Wohnung Barrierefrei :";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(41, 190);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 24);
-            this.checkBox1.TabIndex = 111;
-            this.checkBox1.Text = "Küche";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(41, 241);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(102, 24);
-            this.checkBox2.TabIndex = 112;
-            this.checkBox2.Text = "Bad / WC";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(41, 294);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(131, 24);
-            this.checkBox3.TabIndex = 113;
-            this.checkBox3.Text = "Wohnbereich";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(12, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 21);
-            this.label2.TabIndex = 114;
-            this.label2.Text = "Wohnung Hilfsmittel :";
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(41, 347);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(94, 24);
-            this.checkBox4.TabIndex = 115;
-            this.checkBox4.Text = "Fahrstuhl";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // labelHilfsmittel
-            // 
-            this.labelHilfsmittel.AutoSize = true;
-            this.labelHilfsmittel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHilfsmittel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelHilfsmittel.Location = new System.Drawing.Point(198, 95);
-            this.labelHilfsmittel.Name = "labelHilfsmittel";
-            this.labelHilfsmittel.Size = new System.Drawing.Size(18, 21);
-            this.labelHilfsmittel.TabIndex = 116;
-            this.labelHilfsmittel.Text = "x";
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(41, 401);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(66, 24);
-            this.checkBox5.TabIndex = 117;
-            this.checkBox5.Text = "Lifter";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // Zuhause
+            // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -234,7 +233,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Zuhause";
+            this.Name = "Home";
             this.Text = "Wichtiges";
             this.panelBio.ResumeLayout(false);
             this.panelBio.PerformLayout();
@@ -252,7 +251,7 @@
         private System.Windows.Forms.Button buttonSpeichern;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
         private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label labelName2;
+        private System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;

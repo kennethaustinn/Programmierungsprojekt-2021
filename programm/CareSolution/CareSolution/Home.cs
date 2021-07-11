@@ -22,7 +22,7 @@ namespace CareSolution
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();
-            labelName2.Text = patient.FirstName + " " + patient.LastName;
+            labelFullName.Text = patient.FirstName + " " + patient.LastName;
             labelHilfsmittel.Text = patient.Home.Tools;
             checkBox1.Checked = patient.Home.Barrier_Free_Kitchen;
             checkBox2.Checked = patient.Home.Barrier_Free_Bath;

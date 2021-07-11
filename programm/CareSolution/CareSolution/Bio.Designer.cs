@@ -158,9 +158,8 @@
             this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelFullName.Location = new System.Drawing.Point(33, 5);
             this.labelFullName.Name = "labelFullName";
-            this.labelFullName.Size = new System.Drawing.Size(57, 21);
+            this.labelFullName.Size = new System.Drawing.Size(0, 23);
             this.labelFullName.TabIndex = 58;
-            this.labelFullName.Text = "label1";
             // 
             // pictureBox1
             // 
@@ -180,9 +179,10 @@
             this.labelSprache.AutoSize = true;
             this.labelSprache.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSprache.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelSprache.Location = new System.Drawing.Point(563, 329);
+            this.labelSprache.Location = new System.Drawing.Point(497, 241);
+            this.labelSprache.MaximumSize = new System.Drawing.Size(250, 85);
             this.labelSprache.Name = "labelSprache";
-            this.labelSprache.Size = new System.Drawing.Size(16, 19);
+            this.labelSprache.Size = new System.Drawing.Size(18, 21);
             this.labelSprache.TabIndex = 105;
             this.labelSprache.Text = "x";
             // 
@@ -191,9 +191,10 @@
             this.labelAusbildung.AutoSize = true;
             this.labelAusbildung.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAusbildung.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelAusbildung.Location = new System.Drawing.Point(149, 153);
+            this.labelAusbildung.Location = new System.Drawing.Point(138, 164);
+            this.labelAusbildung.MaximumSize = new System.Drawing.Size(240, 55);
             this.labelAusbildung.Name = "labelAusbildung";
-            this.labelAusbildung.Size = new System.Drawing.Size(16, 19);
+            this.labelAusbildung.Size = new System.Drawing.Size(18, 21);
             this.labelAusbildung.TabIndex = 104;
             this.labelAusbildung.Text = "x";
             // 
@@ -202,9 +203,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(382, 329);
+            this.label3.Location = new System.Drawing.Point(382, 241);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 19);
+            this.label3.Size = new System.Drawing.Size(89, 21);
             this.label3.TabIndex = 103;
             this.label3.Text = "Sprache :";
             // 
@@ -213,9 +214,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(12, 153);
+            this.label2.Location = new System.Drawing.Point(12, 164);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 19);
+            this.label2.Size = new System.Drawing.Size(111, 21);
             this.label2.TabIndex = 102;
             this.label2.Text = "Ausbildung :";
             // 
@@ -224,9 +225,10 @@
             this.labelFamilieMitglieder.AutoSize = true;
             this.labelFamilieMitglieder.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFamilieMitglieder.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelFamilieMitglieder.Location = new System.Drawing.Point(563, 203);
+            this.labelFamilieMitglieder.Location = new System.Drawing.Point(497, 164);
+            this.labelFamilieMitglieder.MaximumSize = new System.Drawing.Size(250, 75);
             this.labelFamilieMitglieder.Name = "labelFamilieMitglieder";
-            this.labelFamilieMitglieder.Size = new System.Drawing.Size(16, 19);
+            this.labelFamilieMitglieder.Size = new System.Drawing.Size(18, 21);
             this.labelFamilieMitglieder.TabIndex = 101;
             this.labelFamilieMitglieder.Text = "x";
             // 
@@ -235,9 +237,10 @@
             this.labelKinder.AutoSize = true;
             this.labelKinder.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKinder.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelKinder.Location = new System.Drawing.Point(149, 373);
+            this.labelKinder.Location = new System.Drawing.Point(497, 298);
+            this.labelKinder.MaximumSize = new System.Drawing.Size(230, 45);
             this.labelKinder.Name = "labelKinder";
-            this.labelKinder.Size = new System.Drawing.Size(16, 19);
+            this.labelKinder.Size = new System.Drawing.Size(18, 21);
             this.labelKinder.TabIndex = 100;
             this.labelKinder.Text = "x";
             // 
@@ -246,9 +249,10 @@
             this.labelFreizeit.AutoSize = true;
             this.labelFreizeit.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFreizeit.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelFreizeit.Location = new System.Drawing.Point(563, 103);
+            this.labelFreizeit.Location = new System.Drawing.Point(497, 103);
+            this.labelFreizeit.MaximumSize = new System.Drawing.Size(250, 85);
             this.labelFreizeit.Name = "labelFreizeit";
-            this.labelFreizeit.Size = new System.Drawing.Size(16, 19);
+            this.labelFreizeit.Size = new System.Drawing.Size(18, 21);
             this.labelFreizeit.TabIndex = 99;
             this.labelFreizeit.Text = "x";
             // 
@@ -257,9 +261,10 @@
             this.labelPartnerschaft.AutoSize = true;
             this.labelPartnerschaft.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPartnerschaft.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelPartnerschaft.Location = new System.Drawing.Point(149, 313);
+            this.labelPartnerschaft.Location = new System.Drawing.Point(138, 354);
+            this.labelPartnerschaft.MaximumSize = new System.Drawing.Size(240, 55);
             this.labelPartnerschaft.Name = "labelPartnerschaft";
-            this.labelPartnerschaft.Size = new System.Drawing.Size(16, 19);
+            this.labelPartnerschaft.Size = new System.Drawing.Size(18, 21);
             this.labelPartnerschaft.TabIndex = 98;
             this.labelPartnerschaft.Text = "x";
             // 
@@ -271,7 +276,7 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label4.Location = new System.Drawing.Point(284, 24);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 25);
+            this.label4.Size = new System.Drawing.Size(136, 34);
             this.label4.TabIndex = 97;
             this.label4.Text = "Biografie";
             // 
@@ -280,9 +285,10 @@
             this.labelBeruf.AutoSize = true;
             this.labelBeruf.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBeruf.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelBeruf.Location = new System.Drawing.Point(149, 258);
+            this.labelBeruf.Location = new System.Drawing.Point(138, 287);
+            this.labelBeruf.MaximumSize = new System.Drawing.Size(240, 55);
             this.labelBeruf.Name = "labelBeruf";
-            this.labelBeruf.Size = new System.Drawing.Size(16, 19);
+            this.labelBeruf.Size = new System.Drawing.Size(18, 21);
             this.labelBeruf.TabIndex = 96;
             this.labelBeruf.Text = "x";
             // 
@@ -291,9 +297,10 @@
             this.labelUni.AutoSize = true;
             this.labelUni.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUni.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelUni.Location = new System.Drawing.Point(149, 203);
+            this.labelUni.Location = new System.Drawing.Point(138, 224);
+            this.labelUni.MaximumSize = new System.Drawing.Size(240, 55);
             this.labelUni.Name = "labelUni";
-            this.labelUni.Size = new System.Drawing.Size(16, 19);
+            this.labelUni.Size = new System.Drawing.Size(18, 21);
             this.labelUni.TabIndex = 95;
             this.labelUni.Text = "x";
             // 
@@ -302,9 +309,10 @@
             this.labelSchule.AutoSize = true;
             this.labelSchule.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSchule.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelSchule.Location = new System.Drawing.Point(149, 103);
+            this.labelSchule.Location = new System.Drawing.Point(138, 103);
+            this.labelSchule.MaximumSize = new System.Drawing.Size(280, 55);
             this.labelSchule.Name = "labelSchule";
-            this.labelSchule.Size = new System.Drawing.Size(16, 19);
+            this.labelSchule.Size = new System.Drawing.Size(18, 21);
             this.labelSchule.TabIndex = 94;
             this.labelSchule.Text = "x";
             // 
@@ -313,11 +321,11 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label15.Location = new System.Drawing.Point(382, 203);
+            this.label15.Location = new System.Drawing.Point(382, 164);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(146, 19);
+            this.label15.Size = new System.Drawing.Size(103, 42);
             this.label15.TabIndex = 93;
-            this.label15.Text = "Familien Mitglieder :";
+            this.label15.Text = "Familien\r\nMitglieder :";
             // 
             // label14
             // 
@@ -326,7 +334,7 @@
             this.label14.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label14.Location = new System.Drawing.Point(382, 103);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 19);
+            this.label14.Size = new System.Drawing.Size(80, 21);
             this.label14.TabIndex = 92;
             this.label14.Text = "Freizeit : ";
             // 
@@ -335,20 +343,20 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label9.Location = new System.Drawing.Point(12, 203);
+            this.label9.Location = new System.Drawing.Point(12, 224);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 19);
+            this.label9.Size = new System.Drawing.Size(108, 21);
             this.label9.TabIndex = 91;
-            this.label9.Text = "Universität";
+            this.label9.Text = "Universität :";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label10.Location = new System.Drawing.Point(12, 373);
+            this.label10.Location = new System.Drawing.Point(382, 298);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 19);
+            this.label10.Size = new System.Drawing.Size(71, 21);
             this.label10.TabIndex = 90;
             this.label10.Text = "Kinder :";
             // 
@@ -357,9 +365,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label11.Location = new System.Drawing.Point(12, 313);
+            this.label11.Location = new System.Drawing.Point(12, 354);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 19);
+            this.label11.Size = new System.Drawing.Size(132, 21);
             this.label11.TabIndex = 89;
             this.label11.Text = "Partnerschaft :";
             // 
@@ -368,9 +376,9 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label12.Location = new System.Drawing.Point(12, 258);
+            this.label12.Location = new System.Drawing.Point(12, 287);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(51, 19);
+            this.label12.Size = new System.Drawing.Size(61, 21);
             this.label12.TabIndex = 88;
             this.label12.Text = "Beruf :";
             // 
@@ -381,7 +389,7 @@
             this.label13.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label13.Location = new System.Drawing.Point(12, 103);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(63, 19);
+            this.label13.Size = new System.Drawing.Size(73, 21);
             this.label13.TabIndex = 87;
             this.label13.Text = "Schule :";
             // 
@@ -401,7 +409,7 @@
             // 
             // Bio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelBio);

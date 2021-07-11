@@ -39,7 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelProfil = new System.Windows.Forms.Panel();
-            this.labelName2 = new System.Windows.Forms.Label();
+            this.labelFullName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBoxTopMenu = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -162,23 +162,22 @@
             // panelProfil
             // 
             this.panelProfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelProfil.Controls.Add(this.labelName2);
+            this.panelProfil.Controls.Add(this.labelFullName);
             this.panelProfil.Controls.Add(this.pictureBox1);
             this.panelProfil.Location = new System.Drawing.Point(548, 3);
             this.panelProfil.Name = "panelProfil";
             this.panelProfil.Size = new System.Drawing.Size(200, 28);
             this.panelProfil.TabIndex = 67;
             // 
-            // labelName2
+            // labelFullName
             // 
-            this.labelName2.AutoSize = true;
-            this.labelName2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelName2.Location = new System.Drawing.Point(33, 5);
-            this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(72, 23);
-            this.labelName2.TabIndex = 58;
-            this.labelName2.Text = "label1";
+            this.labelFullName.AutoSize = true;
+            this.labelFullName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFullName.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelFullName.Location = new System.Drawing.Point(33, 5);
+            this.labelFullName.Name = "labelFullName";
+            this.labelFullName.Size = new System.Drawing.Size(0, 23);
+            this.labelFullName.TabIndex = 58;
             // 
             // pictureBox1
             // 
@@ -280,7 +279,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBoxTopMenu;
         private System.Windows.Forms.Panel panelProfil;
-        private System.Windows.Forms.Label labelName2;
+        private System.Windows.Forms.Label labelFullName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
