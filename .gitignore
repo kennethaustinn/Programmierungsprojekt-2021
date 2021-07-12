@@ -11,16 +11,14 @@
 *.userprefs
 
 # Build results
-[Dd]ebug/*
-!/[Dd]ebug/AmbulantCareDB.mdf
-!/[Dd]ebug/AmbulantCareDB_log.ldf
+#[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
 x64/
 x86/
 bld/
-[Bb]in/
+#[Bb]in/
 [Oo]bj/
 [Ll]og/
 
@@ -252,3 +250,8 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# Änderung damit die DB in CareSolution immer geupdatet wird.
+**/[Dd]ebug/*
+!**/programm/CareSolution/CareSolution/bin/Debug/AmbulantCareDB.mdf
+!**/programm/CareSolution/CareSolution/bin/Debug/AmbulantCareDB_log.ldf
