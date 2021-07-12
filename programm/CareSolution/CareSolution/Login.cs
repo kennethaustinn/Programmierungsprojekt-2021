@@ -1,22 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataManager;
 
 namespace CareSolution
 {
     public partial class Login : Form
     {
-        SqlConnection connection;
-        private string connectionString;
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die ab.
+        /// </summary>
+        private SqlConnection _connection;
+        /// <summary>
+        /// Dieser string stellt die Verbindungszeichungsfolge zu der Datenbank Datei (mdf).
+        /// </summary>
+        private readonly string _connectionString;
+
+        /// <summary>
+        /// Instanz von DataManager
+        /// </summary>
+        private readonly DataManager<Person> _dataManager = new DataManager<Person>();
+        
         /// <summary>
         /// Für das Form Login wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
         /// dem DatenBank erstellt.
@@ -24,7 +30,7 @@ namespace CareSolution
         public Login()
         {
             InitializeComponent();
-            connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
+            _connectionString = _dataManager.ConnectionString;
         }
         /// <summary>
         /// Ein Eventhandler wenn man das Textbox Username rein geht, dann wird das BackColor von Textbox geandert
@@ -65,7 +71,7 @@ namespace CareSolution
         /// </summary>
         private void pictureBoxPassword_MouseUp(object sender, MouseEventArgs e)
         {
-            if (textBoxPassword.Text == "Password")
+            if (textBoxPassword.Text == @"Password")
             {
                 textBoxPassword.UseSystemPasswordChar = false;
             }
@@ -82,8 +88,8 @@ namespace CareSolution
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             var query = "SELECT * FROM PersonSet_Worker a WHERE a.Username  = '" + textBoxUsername.Text + "'and a.Password='" + textBoxPassword.Text + "'";
-            using (connection = new SqlConnection(connectionString))
-            using (SqlCommand command = new SqlCommand(query, connection))
+            using (_connection = new SqlConnection(_connectionString))
+            using (SqlCommand command = new SqlCommand(query, _connection))
             using (SqlDataAdapter adatpe = new SqlDataAdapter(command))
             {
                 DataSet ds = new DataSet();
@@ -98,8 +104,8 @@ namespace CareSolution
                 else
                 {
                     MessageBox.Show(@"Falsche Username und oder Password");
-                    textBoxUsername.Text = "Username";
-                    textBoxPassword.Text = "Password";
+                    textBoxUsername.Text = @"Username";
+                    textBoxPassword.Text = @"Password";
                     textBoxPassword.UseSystemPasswordChar = false;
                 }
             }
@@ -110,7 +116,7 @@ namespace CareSolution
         /// </summary>
         private void textBoxUsername_Enter(object sender, EventArgs e)
         {
-            if (textBoxUsername.Text == "Username")
+            if (textBoxUsername.Text == @"Username")
                 textBoxUsername.Text = "";
 
             textBoxUsername.ForeColor = Color.Black;
@@ -121,7 +127,7 @@ namespace CareSolution
         private void textBoxUsername_Leave(object sender, EventArgs e)
         {
             if (textBoxUsername.Text == "")
-                textBoxUsername.Text = "Username";
+                textBoxUsername.Text = @"Username";
 
             textBoxUsername.ForeColor = Color.Gray;
         }
@@ -131,7 +137,7 @@ namespace CareSolution
         /// </summary>
         private void textBoxPassword_Enter(object sender, EventArgs e)
         {
-            if (textBoxPassword.Text == "Password")
+            if (textBoxPassword.Text == @"Password")
             {
                 textBoxPassword.Text = "";
                 textBoxPassword.UseSystemPasswordChar = true;
@@ -146,7 +152,7 @@ namespace CareSolution
         {
             if (textBoxPassword.Text == "")
             {
-                textBoxPassword.Text = "Password";
+                textBoxPassword.Text = @"Password";
                 textBoxPassword.UseSystemPasswordChar = false;
             }
             textBoxPassword.ForeColor = Color.Gray;

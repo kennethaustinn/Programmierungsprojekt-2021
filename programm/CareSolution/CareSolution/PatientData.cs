@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
@@ -9,9 +10,24 @@ namespace CareSolution
 {
     public partial class PatientData : Form
     {
+        
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die ab.
+        /// </summary>
         private SqlConnection _connection;
+        /// <summary>
+        /// Dieser string stellt die Verbindungszeichungsfolge zu der Datenbank Datei (mdf).
+        /// </summary>
         private readonly string _connectionString;
+
+        /// <summary>
+        /// Instanz von DataManager
+        /// </summary>
         private readonly DataManager<Person> _dataManager = new DataManager<Person>();
+
+        /// <summary>
+        /// Form der PatientData
+        /// </summary>
         public static PatientData PatientDataForm = new PatientData();
         
 
@@ -85,7 +101,6 @@ namespace CareSolution
         /// <param name="e"></param>
         private void dataGridViewPatient_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-           
             var id = this.dataGridViewPatient.CurrentRow?.Cells[0].Value.ToString();
             var name = this.dataGridViewPatient.CurrentRow?.Cells[1].Value.ToString();
             var firstName = this.dataGridViewPatient.CurrentRow?.Cells[2].Value.ToString();
@@ -95,32 +110,53 @@ namespace CareSolution
             var testPatient = _dataManager.GetPatient(id);
             //var patient = new Patient.Patient();
 
-            ActionPlan.actionPlanForm.labelFullName.Text = fullName;
-            BaseData.baseDataForm.labelFullName.Text = fullName;
-            Bio.BioForm.labelFullName.Text = fullName;
-            CareReport.CareReportForm.labelFullName.Text = fullName;
-            CaseHistory.caseHistoryForm.labelFullName.Text = fullName;
-            HealthData.healthDataForm.labelFullName.Text = fullName;
-            Home.homeForm.labelFullName.Text = fullName;
-            Medication.medicationForm.labelFullName.Text = fullName;
-            Others.othersForm.labelFullName.Text = fullName;
-
-
-            BaseData.baseDataForm.labelId.Text = id;
-            BaseData.baseDataForm.labelName.Text = name;
-            BaseData.baseDataForm.labelVorname.Text = firstName;
-            //BaseData.baseDataForm.labelAlter.Text = patient.CalculateAge(testPatient[0].BirthDate).ToString();
-            BaseData.baseDataForm.labelGeschlecht.Text = gender;
-            BaseData.baseDataForm.labelAdresse.Text = testPatient[0].Address;
-            BaseData.baseDataForm.labelGeburtsdatum.Text = testPatient[0].BirthDate.ToString(CultureInfo.CurrentCulture);
-            BaseData.baseDataForm.labelHöhe.Text = testPatient[0].Height.ToString(CultureInfo.CurrentCulture);
-            BaseData.baseDataForm.labelGewicht.Text = testPatient[0].Weight.ToString(CultureInfo.CurrentCulture);
-            BaseData.baseDataForm.labelKontaktperson.Text = testPatient[0].Contactperson;
-            BaseData.baseDataForm.labelPflegegrad.Text = testPatient[0].DegreeOfCare.ToString();
-            BaseData.baseDataForm.labelVerischerung.Text = testPatient[0].HealthInsurance;
-            openChildForm(BaseData.baseDataForm);
+            showFullNameInAllForms(fullName);
+            fillBaseDataInformation(id, name, firstName, gender, testPatient);
+            openChildForm(BaseData.BaseDataForm);
 
         }
+
+        /// <summary>
+        /// Gibt die Inforamtionenn des Aktuellen Patienten an die BasaData Form.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="firstName"></param>
+        /// <param name="gender"></param>
+        /// <param name="testPatient"></param>
+        private static void fillBaseDataInformation(string id, string name, string firstName, string gender, List<DataManager.Patient> testPatient)
+        {
+            BaseData.BaseDataForm.labelId.Text = id;
+            BaseData.BaseDataForm.labelName.Text = name;
+            BaseData.BaseDataForm.labelVorname.Text = firstName;
+            //BaseData.baseDataForm.labelAlter.Text = patient.CalculateAge(testPatient[0].BirthDate).ToString();
+            BaseData.BaseDataForm.labelGeschlecht.Text = gender;
+            BaseData.BaseDataForm.labelAdresse.Text = testPatient[0].Address;
+            BaseData.BaseDataForm.labelGeburtsdatum.Text = testPatient[0].BirthDate.ToString(CultureInfo.CurrentCulture);
+            BaseData.BaseDataForm.labelHöhe.Text = testPatient[0].Height.ToString(CultureInfo.CurrentCulture);
+            BaseData.BaseDataForm.labelGewicht.Text = testPatient[0].Weight.ToString(CultureInfo.CurrentCulture);
+            BaseData.BaseDataForm.labelKontaktperson.Text = testPatient[0].Contactperson;
+            BaseData.BaseDataForm.labelPflegegrad.Text = testPatient[0].DegreeOfCare.ToString();
+            BaseData.BaseDataForm.labelVerischerung.Text = testPatient[0].HealthInsurance;
+        }
+
+        /// <summary>
+        /// Gibt den Namen des Aktuellen Patienten an die Forms
+        /// </summary>
+        /// <param name="fullName"> Ganzer Name</param>
+        private static void showFullNameInAllForms(string fullName)
+        {
+            ActionPlan.ActionPlanForm.labelFullName.Text = fullName;
+            BaseData.BaseDataForm.labelFullName.Text = fullName;
+            Bio.BioForm.labelFullName.Text = fullName;
+            CareReport.CareReportForm.labelFullName.Text = fullName;
+            CaseHistory.CaseHistoryForm.labelFullName.Text = fullName;
+            HealthData.HealthDataForm.labelFullName.Text = fullName;
+            Home.HomeForm.labelFullName.Text = fullName;
+            Medication.MedicationForm.labelFullName.Text = fullName;
+            Others.OthersForm.labelFullName.Text = fullName;
+        }
+
         /// <summary>
         /// Ein neue Form wird geöffnet wenn man das Button Neue hinzufügen drücken und zur Form AddPatient
         /// </summary>

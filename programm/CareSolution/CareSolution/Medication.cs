@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CareSolution
 {
     public partial class Medication : Form
     {
-        public static Medication medicationForm = new Medication();
+        /// <summary>
+        /// Form der Medication
+        /// </summary>
+        public static Medication MedicationForm = new Medication();
+
         /// <summary>
         /// Für das Form Medication wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
         /// dem DatenBank erstellt.
@@ -21,9 +18,15 @@ namespace CareSolution
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();
-            labelFullName.Text = patient.FirstName + " " + patient.LastName;
+            labelFullName.Text = patient.FirstName + @" " + patient.LastName;
         }
-        // Es wird eine Verbindung mit dem Datenbank automatisch erstellt. Da man die Datenquelle im DataGridView verknüpft hatte
+
+        /// <summary>
+        /// Es wird eine Verbindung mit dem Datenbank automatisch erstellt.
+        /// Da man die Datenquelle im DataGridView verknüpft hatte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Medikamente_Load(object sender, EventArgs e)
         {
             var patient = new Patient.Patient().SetTestData();

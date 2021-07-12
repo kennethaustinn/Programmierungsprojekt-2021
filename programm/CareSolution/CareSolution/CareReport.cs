@@ -68,7 +68,7 @@ namespace CareSolution
                     FillLabels();
                 }
             }
-            catch (Exception exception)
+            catch (Exception)
             {
                 MessageBox.Show(@"Es wurde schon ein Pflegebericht eingefügt");
             }

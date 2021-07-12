@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using System.Windows.Forms;
 
 namespace CareSolution
 {
     public partial class Home : Form
     {
-        public static Home homeForm =new Home();
+        /// <summary>
+        /// Form der Home
+        /// </summary>
+        public static Home HomeForm =new Home();
+
         /// <summary>
         /// Für das Form Home wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
         /// dem DatenBank erstellt. Auch die DummyTest Patient Data wird mit dem Klasse Patient verbunden und im Labels
@@ -22,7 +19,7 @@ namespace CareSolution
         {
             InitializeComponent();
             var patient = new Patient.Patient().SetTestData();
-            labelFullName.Text = patient.FirstName + " " + patient.LastName;
+            labelFullName.Text = patient.FirstName + @" " + patient.LastName;
             labelHilfsmittel.Text = patient.Home.Tools;
             checkBox1.Checked = patient.Home.Barrier_Free_Kitchen;
             checkBox2.Checked = patient.Home.Barrier_Free_Bath;

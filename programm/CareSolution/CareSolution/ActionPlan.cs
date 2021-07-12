@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CareSolution
@@ -13,7 +6,11 @@ namespace CareSolution
     public partial class ActionPlan : Form
     {
 
-        public static ActionPlan actionPlanForm = new ActionPlan();
+        /// <summary>
+        /// Form der ActionPlan
+        /// </summary>
+        public static ActionPlan ActionPlanForm = new ActionPlan();
+        
         /// <summary>
         /// Für das Form Action Plan wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
         /// dem DatenBank erstellt. Auch die DummyTest Patient Data wird mit dem Klasse Patient verbunden und im Labels angezeigt

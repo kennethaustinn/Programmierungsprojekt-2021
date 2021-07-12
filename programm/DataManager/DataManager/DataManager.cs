@@ -12,6 +12,7 @@ namespace DataManager
     public class DataManager<T> : IDataManager<T, Patient> where T : IDataBaseConform
     {
         public Patient Patient = new Patient();
+
         /// <summary>
         /// Dieser string stellt die Verbindungszeichungsfolge zu der Datenbank Datei (mdf). Mit dem wird die ganze Zeit weiter gearbeitet.
         /// </summary>
@@ -23,6 +24,7 @@ namespace DataManager
         public List<Person> NewPerson = new List<Person>();
 
         public List<Bio> NewBio = new List<Bio>();
+
         public List<CareReport> NewCareReport = new List<CareReport>();
 
         /// <summary>

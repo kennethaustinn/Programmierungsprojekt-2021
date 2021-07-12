@@ -6,7 +6,9 @@ namespace CareSolution
 {
     public partial class AddPatient : Form
     {
-
+        /// <summary>
+        /// Instanz von DataManger
+        /// </summary>
         private readonly DataManager<Person> _dataManager = new DataManager<Person>();
         
         /// <summary>
@@ -17,12 +19,18 @@ namespace CareSolution
         {
             InitializeComponent();
         }
+
+        /// <summary>
         /// speichern das activeForm für OpenChildForm das genau am Anfang ist genau null.
-        /// Das heißt anderen OpenChildForm geöffnet oder gedrückt wird 
+        /// Das heißt anderen OpenChildForm geöffnet oder gedrückt wird
+        /// </summary>
         private Form _activeForm;
 
-        // wird das Form im PanelChilForm hier neue abgerufen und angezeigt. Mit dem Parameter Form
-        // die man gerade gedrückt von dem beliebigen Button
+        /// <summary>
+        /// wird das Form im PanelChilForm hier neue abgerufen und angezeigt. Mit dem Parameter Form
+        /// die man gerade gedrückt von dem beliebigen Button
+        /// </summary>
+        /// <param name="childForm"></param>
         private void openChildForm(Form childForm)
         {
             if (_activeForm != null)
@@ -39,6 +47,7 @@ namespace CareSolution
             childForm.BringToFront();
             childForm.Show();
         }
+
         /// <summary>
         /// Beim Laden des Form wird die ComboBox mit den Werten befüllt.
         /// </summary>
@@ -67,7 +76,7 @@ namespace CareSolution
         private void buttonNeueData_Click(object sender, EventArgs e)
         {
 
-            DialogResult dialogResult = MessageBox.Show(@"Soll der Patient wirklich hinzugefügt werden?", "Speicherung",
+            DialogResult dialogResult = MessageBox.Show(@"Soll der Patient wirklich hinzugefügt werden?", @"Speicherung",
                 MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

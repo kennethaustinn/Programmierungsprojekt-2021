@@ -9,12 +9,24 @@ namespace CareSolution
 {
     public partial class Main : Form
     {
+
         private Button _currentButton;
         private readonly Panel _leftBorderBtn;
-        SqlConnection _connection;
+        
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die ab.
+        /// </summary>
+        private SqlConnection _connection;
+        /// <summary>
+        /// Dieser string stellt die Verbindungszeichungsfolge zu der Datenbank Datei (mdf).
+        /// </summary>
         private readonly string _connectionString;
 
-        private DataManager<Person> dm = new DataManager<Person>();
+        /// <summary>
+        /// Instanz von DataManager
+        /// </summary>
+        private readonly DataManager<Person> _dataManager = new DataManager<Person>();
+
         /// <summary>
         /// Für das Form Main wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
         /// dem DatenBank erstellt. Sowie das Button Border für das Panel Menu wird hier initialisiert.
@@ -24,7 +36,7 @@ namespace CareSolution
         {
             InitializeComponent();
             //connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
-            _connectionString = dm.ConnectionString;
+            _connectionString = _dataManager.ConnectionString;
             _leftBorderBtn = new Panel();
             _leftBorderBtn.Size = new Size(7, 38);
             panelMenu.Controls.Add(_leftBorderBtn);
@@ -34,8 +46,11 @@ namespace CareSolution
                 checkedListBox.Items.Add(item.ToDoList);
             }
         }
-        // speichern das activeForm für OpenChildForm das genau am Anfang ist genau am Main. Das heißt keine
-        // anderen OpenChildForm geöffnet oder gedrückt wird 
+
+        /// <summary>
+        /// speichern das activeForm für OpenChildForm das genau am Anfang ist genau am Main. Das heißt keine
+        /// anderen OpenChildForm geöffnet oder gedrückt wird 
+        /// </summary>
         private Form _activeForm;
         
         /// <summary>
@@ -111,7 +126,7 @@ namespace CareSolution
         private void buttonBaseData_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(BaseData.baseDataForm);
+            openChildForm(BaseData.BaseDataForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Home angeklickt dann wird das Home Form geladen,
@@ -123,14 +138,14 @@ namespace CareSolution
         {
             Reset();
             Bio.BioForm = new Bio();
-            BaseData.baseDataForm = new BaseData();
-            ActionPlan.actionPlanForm = new ActionPlan();
-            CaseHistory.caseHistoryForm = new CaseHistory();
-            HealthData.healthDataForm = new HealthData();
+            BaseData.BaseDataForm = new BaseData();
+            ActionPlan.ActionPlanForm = new ActionPlan();
+            CaseHistory.CaseHistoryForm = new CaseHistory();
+            HealthData.HealthDataForm = new HealthData();
             CareReport.CareReportForm = new CareReport();
-            Medication.medicationForm = new Medication();
-            Home.homeForm = new Home();
-            Others.othersForm = new Others();
+            Medication.MedicationForm = new Medication();
+            Home.HomeForm = new Home();
+            Others.OthersForm = new Others();
             PatientData.PatientDataForm = new PatientData();
             if (_activeForm != null)
             {
@@ -155,7 +170,7 @@ namespace CareSolution
         private void buttonActionPlan_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(ActionPlan.actionPlanForm);
+            openChildForm(ActionPlan.ActionPlanForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button CaseHistory angeklickt dann wird das CaseHistory Form geladen,
@@ -166,7 +181,7 @@ namespace CareSolution
         private void buttonCaseHistory_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(CaseHistory.caseHistoryForm);
+            openChildForm(CaseHistory.CaseHistoryForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button HealthData angeklickt dann wird das HealthData Form geladen,
@@ -177,7 +192,7 @@ namespace CareSolution
         private void buttonHealthData_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(HealthData.healthDataForm);
+            openChildForm(HealthData.HealthDataForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button CareReport angeklickt dann wird das CareReport Form geladen,
@@ -199,7 +214,7 @@ namespace CareSolution
         private void buttonMedication_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(Medication.medicationForm);
+            openChildForm(Medication.MedicationForm);
 
         }
         /// <summary>
@@ -211,7 +226,7 @@ namespace CareSolution
         private void buttonHome_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(Home.homeForm);
+            openChildForm(Home.HomeForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Others angeklickt dann wird das Others Form geladen,
@@ -222,7 +237,7 @@ namespace CareSolution
         private void buttonOthers_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(Others.othersForm);
+            openChildForm(Others.OthersForm);
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Patientsübersicht angeklickt dann wird das Patientsübersicht Form geladen
