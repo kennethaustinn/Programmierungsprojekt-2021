@@ -35,6 +35,9 @@ namespace CareSolution
         /// Das heißt anderen OpenChildForm geöffnet oder gedrückt wird 
         private Form _activeForm;
 
+        private DataGridView _dataGridView = new DataGridView();
+
+
         /// <summary>
         /// Für das Form PatientData wird erst alle die Sachen von dem Designer initialisiert und auch das
         /// ConnectionString mit dem DatenBank erstellt.
@@ -43,6 +46,7 @@ namespace CareSolution
         {
             InitializeComponent();
             _connectionString = _dataManager.ConnectionString;
+            showRestOfTable();
             //connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
         }
 
@@ -65,6 +69,7 @@ namespace CareSolution
             childForm.BringToFront();
             childForm.Show();
         }
+        
         /// <summary>
         /// ist ein Event so wenn man das Text in TextboxSuche geändert, wird eine Verbindung zur Datenbank erstellt
         /// danach wird die Datei in der Tabelle abgerufen und man vergleicht die mit dem Text in TextboxSuche.
@@ -87,33 +92,89 @@ namespace CareSolution
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
+        
         private void PatientData_Load(object sender, EventArgs e)
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.PersonSet". Sie können sie bei Bedarf verschieben oder entfernen.
             this.personSetTableAdapter.Fill(this.ambulantCareDBDataSet.PersonSet);
-            dataGridViewPatient.Update();
-            dataGridViewPatient.Refresh();
+            
+            
+            //showRestOfTable();
+            //dataGridViewPatient.Update();
+            //dataGridViewPatient.Refresh();
         }
+
         /// <summary>
         /// Ein Event wird ausgeführt wenn man beliebige Zelle doppelklicken und öffnet das Form von OpenChildForm von Stammdaten 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void dataGridViewPatient_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        public void dataGridViewPatient_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            var id = this.dataGridViewPatient.CurrentRow?.Cells[0].Value.ToString();
-            var name = this.dataGridViewPatient.CurrentRow?.Cells[1].Value.ToString();
-            var firstName = this.dataGridViewPatient.CurrentRow?.Cells[2].Value.ToString();
-            var gender = this.dataGridViewPatient.CurrentRow?.Cells[3].Value.ToString();
+            showDataInformationFromMainForm(this.dataGridViewPatient);
+            openChildForm(BaseData.BaseDataForm);
+
+        }
+
+        /// <summary>
+        /// Die Information vom gewählten Patient werden übernommen
+        /// </summary>
+        /// <param name="dataGridView"></param>
+        public void showDataInformationFromMainForm(DataGridView dataGridView)
+        {
+            _dataGridView = dataGridView;
+            var id = dataGridView.CurrentRow?.Cells[0].Value.ToString();
+            var name = dataGridView.CurrentRow?.Cells[1].Value.ToString();
+            var firstName = dataGridView.CurrentRow?.Cells[2].Value.ToString();
+            var gender = dataGridView.CurrentRow?.Cells[3].Value.ToString();
             var fullName = firstName + @" " + name;
 
-            var testPatient = _dataManager.GetPatient(id);
+            var patient = _dataManager.GetPatient(id);
+
+            checkIfPatientIsFound(patient);
             //var patient = new Patient.Patient();
 
             showFullNameInAllForms(fullName);
-            fillBaseDataInformation(id, name, firstName, gender, testPatient);
-            openChildForm(BaseData.BaseDataForm);
+            fillBaseDataInformation(id, name, firstName, gender, patient);
+        }
 
+        private static void checkIfPatientIsFound(List<DataManager.Patient> patient)
+        {
+            if (patient.Count == 0)
+            {
+                patient.Add(new DataManager.Patient()
+                {
+                    Address = "Keine Angabe",
+                    BirthDate = null,
+                    Height = null,
+                    Weight = null,
+                    Contactperson = "Keine Angabe",
+                    DegreeOfCare = null,
+                    HealthInsurance = "Keine Angabe",
+                });
+            }
+        }
+
+        public void showRestOfTable()
+        {
+            //var id = dataGridViewPatient.Rows[0].Cells["personIDDataGridViewTextBoxColumn"].Value.ToString();
+            //var pat = _dataManager.GetPatient(id);
+            //dataGridView1.Rows[0].Cells["ad1"].Value = pat[0].Address;
+
+            //for (int i = 0; i < 1; i++)
+            //{
+                //var id = dataGridViewPatient.Rows[i].Cells["personIDDataGridViewTextBoxColumn"].Value.ToString();
+                var id = dataGridViewPatient.CurrentRow?.Cells[0].Value.ToString();
+                var pat = _dataManager.GetPatient(id);
+                checkIfPatientIsFound(pat);
+                dataGridViewPatient.Rows[0].Cells["Alter"].Value = pat[0].BirthDate?.ToString(CultureInfo.CurrentCulture);
+                dataGridViewPatient.Rows[0].Cells["adresse"].Value = pat[0].Address;
+                dataGridViewPatient.Rows[0].Cells["Pflegegrad"].Value = pat[0].DegreeOfCare.ToString();
+
+                //BaseData.BaseDataForm.labelAdresse.Text = pat[0].Address;
+                //BaseData.BaseDataForm.labelGeburtsdatum.Text = pat[0].BirthDate.ToString(CultureInfo.CurrentCulture);
+                //BaseData.BaseDataForm.labelPflegegrad.Text = pat[0].DegreeOfCare.ToString();
+            //}
         }
 
         /// <summary>
@@ -132,10 +193,11 @@ namespace CareSolution
             //BaseData.baseDataForm.labelAlter.Text = patient.CalculateAge(testPatient[0].BirthDate).ToString();
             BaseData.BaseDataForm.labelGeschlecht.Text = gender;
             BaseData.BaseDataForm.labelAdresse.Text = testPatient[0].Address;
-            BaseData.BaseDataForm.labelGeburtsdatum.Text = testPatient[0].BirthDate.ToString(CultureInfo.CurrentCulture);
-            BaseData.BaseDataForm.labelHöhe.Text = testPatient[0].Height.ToString(CultureInfo.CurrentCulture);
-            BaseData.BaseDataForm.labelGewicht.Text = testPatient[0].Weight.ToString(CultureInfo.CurrentCulture);
+            BaseData.BaseDataForm.labelGeburtsdatum.Text = testPatient[0].BirthDate?.ToString(CultureInfo.CurrentCulture);
+            BaseData.BaseDataForm.labelHöhe.Text = testPatient[0].Height?.ToString(CultureInfo.CurrentCulture);
+            BaseData.BaseDataForm.labelGewicht.Text = testPatient[0].Weight?.ToString(CultureInfo.CurrentCulture);
             BaseData.BaseDataForm.labelKontaktperson.Text = testPatient[0].Contactperson;
+            BaseData.BaseDataForm.labelKontakNummer.Text = testPatient[0].ContactpersonPhone;
             BaseData.BaseDataForm.labelPflegegrad.Text = testPatient[0].DegreeOfCare.ToString();
             BaseData.BaseDataForm.labelVerischerung.Text = testPatient[0].HealthInsurance;
         }
