@@ -9,12 +9,24 @@ namespace CareSolution
 {
     public partial class Main : Form
     {
+
         private Button _currentButton;
         private readonly Panel _leftBorderBtn;
-        SqlConnection _connection;
+        
+        /// <summary>
+        /// Sucht die Connection bzw. ruft die ab.
+        /// </summary>
+        private SqlConnection _connection;
+        /// <summary>
+        /// Dieser string stellt die Verbindungszeichungsfolge zu der Datenbank Datei (mdf).
+        /// </summary>
         private readonly string _connectionString;
 
-        private DataManager<Person> dm = new DataManager<Person>();
+        /// <summary>
+        /// Instanz von DataManager
+        /// </summary>
+        private readonly DataManager<Person> _dataManager = new DataManager<Person>();
+
         /// <summary>
         /// Für das Form Main wird erst alle die Sachen von dem Designer initialisiert und auch das ConnectionString mit
         /// dem DatenBank erstellt. Sowie das Button Border für das Panel Menu wird hier initialisiert.
@@ -24,7 +36,7 @@ namespace CareSolution
         {
             InitializeComponent();
             //connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
-            _connectionString = dm.ConnectionString;
+            _connectionString = _dataManager.ConnectionString;
             _leftBorderBtn = new Panel();
             _leftBorderBtn.Size = new Size(7, 38);
             panelMenu.Controls.Add(_leftBorderBtn);
@@ -34,8 +46,11 @@ namespace CareSolution
                 checkedListBox.Items.Add(item.ToDoList);
             }
         }
-        // speichern das activeForm für OpenChildForm das genau am Anfang ist genau am Main. Das heißt keine
-        // anderen OpenChildForm geöffnet oder gedrückt wird 
+
+        /// <summary>
+        /// speichern das activeForm für OpenChildForm das genau am Anfang ist genau am Main. Das heißt keine
+        /// anderen OpenChildForm geöffnet oder gedrückt wird 
+        /// </summary>
         private Form _activeForm;
         
         /// <summary>
@@ -101,8 +116,15 @@ namespace CareSolution
         /// </summary>
         private void buttonBiography_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            openChildForm(Bio.BioForm);
+            if (!BaseData.BaseDataForm.labelFullName.Text.Equals(""))
+            {
+                ActivateButton(sender);
+                openChildForm(Bio.BioForm);
+            }
+            else
+            {
+                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+            }
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button PatientData angeklickt dann wird das PatientData Form geladen,
@@ -110,8 +132,16 @@ namespace CareSolution
         /// </summary>
         private void buttonBaseData_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            openChildForm(BaseData.baseDataForm);
+            if (!BaseData.BaseDataForm.labelFullName.Text.Equals(""))
+            {
+                ActivateButton(sender);
+                openChildForm(BaseData.BaseDataForm);
+            }
+            else
+            {
+                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+            }
+            
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Home angeklickt dann wird das Home Form geladen,
@@ -123,14 +153,14 @@ namespace CareSolution
         {
             Reset();
             Bio.BioForm = new Bio();
-            BaseData.baseDataForm = new BaseData();
-            ActionPlan.actionPlanForm = new ActionPlan();
-            CaseHistory.caseHistoryForm = new CaseHistory();
-            HealthData.healthDataForm = new HealthData();
+            BaseData.BaseDataForm = new BaseData();
+            ActionPlan.ActionPlanForm = new ActionPlan();
+            CaseHistory.CaseHistoryForm = new CaseHistory();
+            HealthData.HealthDataForm = new HealthData();
             CareReport.CareReportForm = new CareReport();
-            Medication.medicationForm = new Medication();
-            Home.homeForm = new Home();
-            Others.othersForm = new Others();
+            Medication.MedicationForm = new Medication();
+            Home.HomeForm = new Home();
+            Others.OthersForm = new Others();
             PatientData.PatientDataForm = new PatientData();
             if (_activeForm != null)
             {
@@ -154,8 +184,15 @@ namespace CareSolution
         /// <param name="e"></param>
         private void buttonActionPlan_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            openChildForm(ActionPlan.actionPlanForm);
+            if (!BaseData.BaseDataForm.labelFullName.Text.Equals(""))
+            {
+                ActivateButton(sender);
+                openChildForm(ActionPlan.ActionPlanForm);
+            }
+            else
+            {
+                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+            }
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button CaseHistory angeklickt dann wird das CaseHistory Form geladen,
@@ -165,8 +202,15 @@ namespace CareSolution
         /// <param name="e"></param>
         private void buttonCaseHistory_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            openChildForm(CaseHistory.caseHistoryForm);
+            if (!BaseData.BaseDataForm.labelFullName.Text.Equals(""))
+            {
+                ActivateButton(sender);
+                openChildForm(CaseHistory.CaseHistoryForm);
+            }
+            else
+            {
+                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+            }
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button HealthData angeklickt dann wird das HealthData Form geladen,
@@ -176,8 +220,15 @@ namespace CareSolution
         /// <param name="e"></param>
         private void buttonHealthData_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            openChildForm(HealthData.healthDataForm);
+            if (!BaseData.BaseDataForm.labelFullName.Text.Equals(""))
+            {
+                ActivateButton(sender);
+                openChildForm(HealthData.HealthDataForm);
+            }
+            else
+            {
+                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+            }
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button CareReport angeklickt dann wird das CareReport Form geladen,
@@ -187,8 +238,15 @@ namespace CareSolution
         /// <param name="e"></param>
         private void buttonCareReport_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            openChildForm(CareReport.CareReportForm);
+            if (!BaseData.BaseDataForm.labelFullName.Text.Equals(""))
+            {
+                ActivateButton(sender);
+                openChildForm(CareReport.CareReportForm);
+            }
+            else
+            {
+                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+            }
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Medication angeklickt dann wird das Medication Form geladen,
@@ -198,8 +256,15 @@ namespace CareSolution
         /// <param name="e"></param>
         private void buttonMedication_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            openChildForm(Medication.medicationForm);
+            if (!BaseData.BaseDataForm.labelFullName.Text.Equals(""))
+            {
+                ActivateButton(sender);
+                openChildForm(Medication.MedicationForm);
+            }
+            else
+            {
+                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+            }
 
         }
         /// <summary>
@@ -210,8 +275,15 @@ namespace CareSolution
         /// <param name="e"></param>
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            openChildForm(Home.homeForm);
+            if (!BaseData.BaseDataForm.labelFullName.Text.Equals(""))
+            {
+                ActivateButton(sender);
+                openChildForm(Home.HomeForm);
+            }
+            else
+            {
+                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+            }
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Others angeklickt dann wird das Others Form geladen,
@@ -221,8 +293,15 @@ namespace CareSolution
         /// <param name="e"></param>
         private void buttonOthers_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
-            openChildForm(Others.othersForm);
+            if (!BaseData.BaseDataForm.labelFullName.Text.Equals(""))
+            {
+                ActivateButton(sender);
+                openChildForm(Others.OthersForm);
+            }
+            else
+            {
+                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+            }
         }
         /// <summary>
         /// Ein Eventhandler wenn das Button Patientsübersicht angeklickt dann wird das Patientsübersicht Form geladen
@@ -280,6 +359,16 @@ namespace CareSolution
             }
         }
 
+        /// <summary>
+        /// Ein Event wird ausgeführt wenn man beliebige Zelle doppelklicken und öffnet das Form von OpenChildForm von Stammdaten 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dataGridViewPatient_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PatientData.PatientDataForm.showDataInformationFromMainForm(this.dataGridViewPatient);
+            openChildForm(BaseData.BaseDataForm);
+        }
     }
 
 }

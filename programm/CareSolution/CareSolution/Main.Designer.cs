@@ -56,6 +56,10 @@
             this.checkedListBox = new System.Windows.Forms.CheckedListBox();
             this.buttonWeiterPatientsübersicht = new System.Windows.Forms.Button();
             this.dataGridViewPatient = new System.Windows.Forms.DataGridView();
+            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ambulantCareDBDataSet = new DataManager.AmbulantCareDBDataSet();
             this.labelPatient = new System.Windows.Forms.Label();
@@ -64,10 +68,6 @@
             this.DatumUhr = new System.Windows.Forms.Timer(this.components);
             this.personSetTableAdapter = new DataManager.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.personIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMenu.SuspendLayout();
             this.panelLogout.SuspendLayout();
             this.panelHome.SuspendLayout();
@@ -382,7 +382,7 @@
             this.labelSearch.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelSearch.Location = new System.Drawing.Point(42, 6);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(81, 23);
+            this.labelSearch.Size = new System.Drawing.Size(66, 21);
             this.labelSearch.TabIndex = 60;
             this.labelSearch.Text = "Suche :";
             // 
@@ -405,7 +405,7 @@
             this.textBoxSearch.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.textBoxSearch.Location = new System.Drawing.Point(109, 6);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(275, 25);
+            this.textBoxSearch.Size = new System.Drawing.Size(275, 20);
             this.textBoxSearch.TabIndex = 56;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
             // 
@@ -416,7 +416,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(19, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 37);
+            this.label1.Size = new System.Drawing.Size(145, 30);
             this.label1.TabIndex = 59;
             this.label1.Text = "Welcome !";
             // 
@@ -430,7 +430,7 @@
             this.checkedListBox.FormattingEnabled = true;
             this.checkedListBox.Location = new System.Drawing.Point(33, 187);
             this.checkedListBox.Name = "checkedListBox";
-            this.checkedListBox.Size = new System.Drawing.Size(293, 54);
+            this.checkedListBox.Size = new System.Drawing.Size(293, 44);
             this.checkedListBox.TabIndex = 58;
             // 
             // buttonWeiterPatientsübersicht
@@ -497,63 +497,7 @@
             this.dataGridViewPatient.RowTemplate.Height = 24;
             this.dataGridViewPatient.Size = new System.Drawing.Size(411, 251);
             this.dataGridViewPatient.TabIndex = 4;
-            // 
-            // personSetBindingSource
-            // 
-            this.personSetBindingSource.DataMember = "PersonSet";
-            this.personSetBindingSource.DataSource = this.ambulantCareDBDataSet;
-            // 
-            // ambulantCareDBDataSet
-            // 
-            this.ambulantCareDBDataSet.DataSetName = "AmbulantCareDBDataSet";
-            this.ambulantCareDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // labelPatient
-            // 
-            this.labelPatient.AutoSize = true;
-            this.labelPatient.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPatient.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelPatient.Location = new System.Drawing.Point(336, 128);
-            this.labelPatient.Name = "labelPatient";
-            this.labelPatient.Size = new System.Drawing.Size(156, 37);
-            this.labelPatient.TabIndex = 3;
-            this.labelPatient.Text = "Patienten";
-            // 
-            // labelToDoListe
-            // 
-            this.labelToDoListe.AutoSize = true;
-            this.labelToDoListe.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelToDoListe.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelToDoListe.Location = new System.Drawing.Point(19, 128);
-            this.labelToDoListe.Name = "labelToDoListe";
-            this.labelToDoListe.Size = new System.Drawing.Size(169, 37);
-            this.labelToDoListe.TabIndex = 2;
-            this.labelToDoListe.Text = "To do Liste";
-            // 
-            // labelDatum
-            // 
-            this.labelDatum.AutoSize = true;
-            this.labelDatum.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDatum.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelDatum.Location = new System.Drawing.Point(183, 22);
-            this.labelDatum.Name = "labelDatum";
-            this.labelDatum.Size = new System.Drawing.Size(115, 37);
-            this.labelDatum.TabIndex = 1;
-            this.labelDatum.Text = "Datum";
-            // 
-            // DatumUhr
-            // 
-            this.DatumUhr.Enabled = true;
-            this.DatumUhr.Tick += new System.EventHandler(this.DatumUhr_Tick);
-            // 
-            // personSetTableAdapter
-            // 
-            this.personSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
+            this.dataGridViewPatient.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPatient_CellDoubleClick);
             // 
             // personIDDataGridViewTextBoxColumn
             // 
@@ -562,7 +506,7 @@
             this.personIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
             this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.personIDDataGridViewTextBoxColumn.Width = 52;
+            this.personIDDataGridViewTextBoxColumn.Width = 43;
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
@@ -588,9 +532,66 @@
             this.phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
             // 
+            // personSetBindingSource
+            // 
+            this.personSetBindingSource.DataMember = "PersonSet";
+            this.personSetBindingSource.DataSource = this.ambulantCareDBDataSet;
+            // 
+            // ambulantCareDBDataSet
+            // 
+            this.ambulantCareDBDataSet.DataSetName = "AmbulantCareDBDataSet";
+            this.ambulantCareDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // labelPatient
+            // 
+            this.labelPatient.AutoSize = true;
+            this.labelPatient.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPatient.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelPatient.Location = new System.Drawing.Point(336, 128);
+            this.labelPatient.Name = "labelPatient";
+            this.labelPatient.Size = new System.Drawing.Size(127, 30);
+            this.labelPatient.TabIndex = 3;
+            this.labelPatient.Text = "Patienten";
+            // 
+            // labelToDoListe
+            // 
+            this.labelToDoListe.AutoSize = true;
+            this.labelToDoListe.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelToDoListe.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelToDoListe.Location = new System.Drawing.Point(19, 128);
+            this.labelToDoListe.Name = "labelToDoListe";
+            this.labelToDoListe.Size = new System.Drawing.Size(137, 30);
+            this.labelToDoListe.TabIndex = 2;
+            this.labelToDoListe.Text = "To do Liste";
+            // 
+            // labelDatum
+            // 
+            this.labelDatum.AutoSize = true;
+            this.labelDatum.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDatum.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelDatum.Location = new System.Drawing.Point(183, 22);
+            this.labelDatum.Name = "labelDatum";
+            this.labelDatum.Size = new System.Drawing.Size(94, 30);
+            this.labelDatum.TabIndex = 1;
+            this.labelDatum.Text = "Datum";
+            // 
+            // DatumUhr
+            // 
+            this.DatumUhr.Enabled = true;
+            this.DatumUhr.Tick += new System.EventHandler(this.DatumUhr_Tick);
+            // 
+            // personSetTableAdapter
+            // 
+            this.personSetTableAdapter.ClearBeforeFill = true;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 591);
             this.Controls.Add(this.panelChildform);

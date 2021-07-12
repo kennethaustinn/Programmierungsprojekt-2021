@@ -30,7 +30,7 @@ namespace CareSolution
         /// Speichert das Ergniss des Ocr als ein OcrResult Objekt.
         /// Wird wiederverwendet für die konvertierung der gelesenen Datei in ein PDf.
         /// </summary>
-        public OcrResult _ocrResult;
+        public OcrResult OcrResult;
 
         /// <summary>
         /// Dateipfad der einzulesenden Datei.
@@ -82,13 +82,13 @@ namespace CareSolution
                 if (_path!=null)
                 {
                     _documentDictionary = _ocrManager.ExecuteOcr(_path);
-                    _ocrResult = _ocrManager._ocrResult;
+                    OcrResult = _ocrManager._ocrResult;
                     FillLabels();
                 }
             }
-            catch (Exception exception)
+            catch (Exception)
             {
-                MessageBox.Show("Es wurde schon ein Biografie eingefügt");
+                MessageBox.Show(@"Es wurde schon ein Biografie eingefügt");
             }
             
         }
@@ -180,15 +180,15 @@ namespace CareSolution
                 AddExtension = true,
                 CheckPathExists = true,
                 Filter = @"  Image Files(*.png; *.jpg)| *.png; *.jpg | PDF File(*.pdf) | *.pdf  ",
-                InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                Title = "Wo soll die Datei gespeichert werden?"
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
+                Title = @"Wo soll die Datei gespeichert werden?"
             };
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 _path = sfd.FileName;
             }
-            _ocrManager.SaveAsPdfAndTextFile(_ocrResult, _path);
+            _ocrManager.SaveAsPdfAndTextFile(OcrResult, _path);
         }
     }
 }

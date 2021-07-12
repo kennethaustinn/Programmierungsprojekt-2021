@@ -24,14 +24,14 @@ namespace DataManager
             this.CaringRelatives = new HashSet<CaringRelatives>();
         }
     
-        public System.DateTime BirthDate { get; set; }
+        public DateTime? BirthDate { get; set; }
         public string Address { get; set; }
         public string Contactperson { get; set; }
         public string ContactpersonPhone { get; set; }
         public string HealthInsurance { get; set; }
-        public int Height { get; set; }
-        public double Weight { get; set; }
-        public int DegreeOfCare { get; set; }
+        public int? Height { get; set; }
+        public double? Weight { get; set; }
+        public int? DegreeOfCare { get; set; }
         public string PowerOfAttorney { get; set; }
     
         public virtual Bio Bio { get; set; }
