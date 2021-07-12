@@ -39,6 +39,9 @@
             this.labelPatient = new System.Windows.Forms.Label();
             this.panelPatient = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Alter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pflegegrad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonNeueData = new System.Windows.Forms.Button();
             this.panelSuche = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,9 +60,6 @@
             this.ambulantCareDBDataSet1 = new CareSolution.AmbulantCareDBDataSet();
             this.ambulantCareDBDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fKPatientinheritsPersonBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Alter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pflegegrad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPatient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelSuche.SuspendLayout();
@@ -123,7 +123,7 @@
             this.Pflegegrad});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.MediumPurple;
-            this.dataGridView1.Location = new System.Drawing.Point(428, 145);
+            this.dataGridView1.Location = new System.Drawing.Point(471, 428);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -144,8 +144,27 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(379, 286);
+            this.dataGridView1.Size = new System.Drawing.Size(348, 235);
             this.dataGridView1.TabIndex = 71;
+            this.dataGridView1.Visible = false;
+            // 
+            // Adresse
+            // 
+            this.Adresse.HeaderText = "Adresse";
+            this.Adresse.Name = "Adresse";
+            this.Adresse.Width = 78;
+            // 
+            // Alter
+            // 
+            this.Alter.HeaderText = "Alter";
+            this.Alter.Name = "Alter";
+            this.Alter.Width = 60;
+            // 
+            // Pflegegrad
+            // 
+            this.Pflegegrad.HeaderText = "Pflegegrad";
+            this.Pflegegrad.Name = "Pflegegrad";
+            this.Pflegegrad.Width = 97;
             // 
             // buttonNeueData
             // 
@@ -238,7 +257,7 @@
             this.dataGridViewPatient.DataSource = this.personSetBindingSource;
             this.dataGridViewPatient.EnableHeadersVisualStyles = false;
             this.dataGridViewPatient.GridColor = System.Drawing.Color.MediumPurple;
-            this.dataGridViewPatient.Location = new System.Drawing.Point(43, 145);
+            this.dataGridViewPatient.Location = new System.Drawing.Point(140, 134);
             this.dataGridViewPatient.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewPatient.Name = "dataGridViewPatient";
             this.dataGridViewPatient.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -259,7 +278,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewPatient.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewPatient.RowTemplate.Height = 24;
-            this.dataGridViewPatient.Size = new System.Drawing.Size(379, 286);
+            this.dataGridViewPatient.Size = new System.Drawing.Size(467, 286);
             this.dataGridViewPatient.TabIndex = 35;
             this.dataGridViewPatient.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPatient_CellDoubleClick);
             // 
@@ -337,24 +356,6 @@
             this.fKPatientinheritsPersonBindingSource.DataMember = "FK_Patient_inherits_Person";
             this.fKPatientinheritsPersonBindingSource.DataSource = this.personSetBindingSource;
             // 
-            // Adresse
-            // 
-            this.Adresse.HeaderText = "Adresse";
-            this.Adresse.Name = "Adresse";
-            this.Adresse.Width = 78;
-            // 
-            // Alter
-            // 
-            this.Alter.HeaderText = "Alter";
-            this.Alter.Name = "Alter";
-            this.Alter.Width = 60;
-            // 
-            // Pflegegrad
-            // 
-            this.Pflegegrad.HeaderText = "Pflegegrad";
-            this.Pflegegrad.Name = "Pflegegrad";
-            this.Pflegegrad.Width = 97;
-            // 
             // PatientData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -399,15 +400,15 @@
         private AmbulantCareDBDataSet ambulantCareDBDataSet1;
         private System.Windows.Forms.BindingSource ambulantCareDBDataSet1BindingSource;
         private System.Windows.Forms.BindingSource fKPatientinheritsPersonBindingSource1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn personIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource fKPatientinheritsPersonBindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Adresse;
         private System.Windows.Forms.DataGridViewTextBoxColumn Alter;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pflegegrad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn personIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
     }
 }
