@@ -65,6 +65,7 @@ namespace CareSolution
         {
             comboBoxGender.Items.Add("M");
             comboBoxGender.Items.Add("W");
+            comboBoxGender.Items.Add("D");
         }
 
         /// <summary>
