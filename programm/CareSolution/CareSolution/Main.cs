@@ -369,6 +369,12 @@ namespace CareSolution
             PatientData.PatientDataForm.showDataInformationFromMainForm(this.dataGridViewPatient);
             openChildForm(BaseData.BaseDataForm);
         }
+
+        private void buttonPatientOverview_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            openChildForm(PatientData.PatientDataForm);
+        }
     }
 
 }

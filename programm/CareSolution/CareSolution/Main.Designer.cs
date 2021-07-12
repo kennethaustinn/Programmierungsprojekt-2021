@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonPatientOverview = new System.Windows.Forms.Button();
             this.panelLogout = new System.Windows.Forms.Panel();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.buttonOthers = new System.Windows.Forms.Button();
@@ -68,6 +69,7 @@
             this.DatumUhr = new System.Windows.Forms.Timer(this.components);
             this.personSetTableAdapter = new DataManager.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.panelMenu.SuspendLayout();
             this.panelLogout.SuspendLayout();
             this.panelHome.SuspendLayout();
@@ -84,6 +86,7 @@
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(62)))));
+            this.panelMenu.Controls.Add(this.buttonPatientOverview);
             this.panelMenu.Controls.Add(this.panelLogout);
             this.panelMenu.Controls.Add(this.buttonOthers);
             this.panelMenu.Controls.Add(this.buttonHome);
@@ -101,6 +104,27 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(234, 591);
             this.panelMenu.TabIndex = 0;
+            // 
+            // buttonPatientOverview
+            // 
+            this.buttonPatientOverview.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPatientOverview.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonPatientOverview.FlatAppearance.BorderSize = 0;
+            this.buttonPatientOverview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPatientOverview.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonPatientOverview.Image = ((System.Drawing.Image)(resources.GetObject("buttonPatientOverview.Image")));
+            this.buttonPatientOverview.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPatientOverview.Location = new System.Drawing.Point(0, 475);
+            this.buttonPatientOverview.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonPatientOverview.Name = "buttonPatientOverview";
+            this.buttonPatientOverview.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.buttonPatientOverview.Size = new System.Drawing.Size(234, 38);
+            this.buttonPatientOverview.TabIndex = 11;
+            this.buttonPatientOverview.Text = "Patientenübersicht";
+            this.buttonPatientOverview.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPatientOverview.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPatientOverview.UseVisualStyleBackColor = true;
+            this.buttonPatientOverview.Click += new System.EventHandler(this.buttonPatientOverview_Click);
             // 
             // panelLogout
             // 
@@ -349,6 +373,7 @@
             // 
             this.panelChildform.AutoScroll = true;
             this.panelChildform.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            this.panelChildform.Controls.Add(this.monthCalendar);
             this.panelChildform.Controls.Add(this.panelSearch);
             this.panelChildform.Controls.Add(this.label1);
             this.panelChildform.Controls.Add(this.checkedListBox);
@@ -382,7 +407,7 @@
             this.labelSearch.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelSearch.Location = new System.Drawing.Point(42, 6);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(66, 21);
+            this.labelSearch.Size = new System.Drawing.Size(81, 23);
             this.labelSearch.TabIndex = 60;
             this.labelSearch.Text = "Suche :";
             // 
@@ -405,7 +430,7 @@
             this.textBoxSearch.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.textBoxSearch.Location = new System.Drawing.Point(109, 6);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(275, 20);
+            this.textBoxSearch.Size = new System.Drawing.Size(275, 25);
             this.textBoxSearch.TabIndex = 56;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
             // 
@@ -416,7 +441,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(19, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 30);
+            this.label1.Size = new System.Drawing.Size(174, 37);
             this.label1.TabIndex = 59;
             this.label1.Text = "Welcome !";
             // 
@@ -430,7 +455,7 @@
             this.checkedListBox.FormattingEnabled = true;
             this.checkedListBox.Location = new System.Drawing.Point(33, 187);
             this.checkedListBox.Name = "checkedListBox";
-            this.checkedListBox.Size = new System.Drawing.Size(293, 44);
+            this.checkedListBox.Size = new System.Drawing.Size(293, 27);
             this.checkedListBox.TabIndex = 58;
             // 
             // buttonWeiterPatientsübersicht
@@ -506,7 +531,7 @@
             this.personIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
             this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.personIDDataGridViewTextBoxColumn.Width = 43;
+            this.personIDDataGridViewTextBoxColumn.Width = 52;
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
@@ -549,7 +574,7 @@
             this.labelPatient.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelPatient.Location = new System.Drawing.Point(336, 128);
             this.labelPatient.Name = "labelPatient";
-            this.labelPatient.Size = new System.Drawing.Size(127, 30);
+            this.labelPatient.Size = new System.Drawing.Size(156, 37);
             this.labelPatient.TabIndex = 3;
             this.labelPatient.Text = "Patienten";
             // 
@@ -560,7 +585,7 @@
             this.labelToDoListe.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelToDoListe.Location = new System.Drawing.Point(19, 128);
             this.labelToDoListe.Name = "labelToDoListe";
-            this.labelToDoListe.Size = new System.Drawing.Size(137, 30);
+            this.labelToDoListe.Size = new System.Drawing.Size(169, 37);
             this.labelToDoListe.TabIndex = 2;
             this.labelToDoListe.Text = "To do Liste";
             // 
@@ -571,7 +596,7 @@
             this.labelDatum.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelDatum.Location = new System.Drawing.Point(183, 22);
             this.labelDatum.Name = "labelDatum";
-            this.labelDatum.Size = new System.Drawing.Size(94, 30);
+            this.labelDatum.Size = new System.Drawing.Size(115, 37);
             this.labelDatum.TabIndex = 1;
             this.labelDatum.Text = "Datum";
             // 
@@ -589,9 +614,15 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
+            // monthCalendar
+            // 
+            this.monthCalendar.Location = new System.Drawing.Point(33, 285);
+            this.monthCalendar.Name = "monthCalendar";
+            this.monthCalendar.TabIndex = 62;
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 591);
             this.Controls.Add(this.panelChildform);
@@ -658,5 +689,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button buttonPatientOverview;
+        private System.Windows.Forms.MonthCalendar monthCalendar;
     }
 }
