@@ -35,8 +35,6 @@ namespace CareSolution
         /// Das heißt anderen OpenChildForm geöffnet oder gedrückt wird 
         private Form _activeForm;
 
-        private DataGridView _dataGridView = new DataGridView();
-
 
         /// <summary>
         /// Für das Form PatientData wird erst alle die Sachen von dem Designer initialisiert und auch das
@@ -46,10 +44,8 @@ namespace CareSolution
         {
             InitializeComponent();
             _connectionString = _dataManager.ConnectionString;
-            showRestOfTable();
             //connectionString = ConfigurationManager.ConnectionStrings["CareSolution.Properties.Settings.AmbulantCareDBConnectionString"].ConnectionString;
         }
-
 
         // wird das Form im PanelChilForm hier neue abgerufen und angezeigt. Mit dem Parameter Form
         // die man gerade gedrückt von dem beliebigen Button
@@ -86,22 +82,22 @@ namespace CareSolution
                 adatpe.Fill(persondt);
                 dataGridViewPatient.DataSource = persondt;
             }
+
+
+
         }
         /// <summary>
         ///  Es wird eine Verbindung mit dem Datenbank automatisch erstellt. Da man die Datenquelle im DataGridView verknüpft hatte
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        
+
         private void PatientData_Load(object sender, EventArgs e)
         {
             // TODO: Diese Codezeile lädt Daten in die Tabelle "ambulantCareDBDataSet.PersonSet". Sie können sie bei Bedarf verschieben oder entfernen.
             this.personSetTableAdapter.Fill(this.ambulantCareDBDataSet.PersonSet);
-            
-            
             //showRestOfTable();
-            //dataGridViewPatient.Update();
-            //dataGridViewPatient.Refresh();
+            
         }
 
         /// <summary>
@@ -122,7 +118,6 @@ namespace CareSolution
         /// <param name="dataGridView"></param>
         public void showDataInformationFromMainForm(DataGridView dataGridView)
         {
-            _dataGridView = dataGridView;
             var id = dataGridView.CurrentRow?.Cells[0].Value.ToString();
             var name = dataGridView.CurrentRow?.Cells[1].Value.ToString();
             var firstName = dataGridView.CurrentRow?.Cells[2].Value.ToString();
@@ -138,6 +133,11 @@ namespace CareSolution
             fillBaseDataInformation(id, name, firstName, gender, patient);
         }
 
+        /// <summary>
+        /// Überprüft ob bei der Sql Abfrage ein Patient gefunden wurde.
+        /// Falls nicht wird ein neuer mitt leeren Werten erstellt(Das sind die îndemfall die Ärzte und Pfleger)
+        /// </summary>
+        /// <param name="patient"></param>
         private static void checkIfPatientIsFound(List<DataManager.Patient> patient)
         {
             if (patient.Count == 0)
@@ -155,27 +155,26 @@ namespace CareSolution
             }
         }
 
-        public void showRestOfTable()
-        {
-            //var id = dataGridViewPatient.Rows[0].Cells["personIDDataGridViewTextBoxColumn"].Value.ToString();
-            //var pat = _dataManager.GetPatient(id);
-            //dataGridView1.Rows[0].Cells["ad1"].Value = pat[0].Address;
+        /// <summary>
+        /// Teigt einen weiteren Auschnitt vom Patient in der Tabele.
+        /// </summary>
+        //public void showRestOfTable()
+        //{
+        //    //var id = dataGridViewPatient.Rows[0].Cells["personIDDataGridViewTextBoxColumn"].Value.ToString();
+        //    //var pat = _dataManager.GetPatient(id);
+        //    //dataGridView1.Rows[0].Cells["ad1"].Value = pat[0].Address;
+        //    dataGridView1.RowCount = dataGridViewPatient.RowCount;
+        //    for (int i = 0; i < dataGridViewPatient.RowCount-1; i++)
+        //    {
 
-            //for (int i = 0; i < 1; i++)
-            //{
-                //var id = dataGridViewPatient.Rows[i].Cells["personIDDataGridViewTextBoxColumn"].Value.ToString();
-                var id = dataGridViewPatient.CurrentRow?.Cells[0].Value.ToString();
-                var pat = _dataManager.GetPatient(id);
-                checkIfPatientIsFound(pat);
-                dataGridViewPatient.Rows[0].Cells["Alter"].Value = pat[0].BirthDate?.ToString(CultureInfo.CurrentCulture);
-                dataGridViewPatient.Rows[0].Cells["adresse"].Value = pat[0].Address;
-                dataGridViewPatient.Rows[0].Cells["Pflegegrad"].Value = pat[0].DegreeOfCare.ToString();
-
-                //BaseData.BaseDataForm.labelAdresse.Text = pat[0].Address;
-                //BaseData.BaseDataForm.labelGeburtsdatum.Text = pat[0].BirthDate.ToString(CultureInfo.CurrentCulture);
-                //BaseData.BaseDataForm.labelPflegegrad.Text = pat[0].DegreeOfCare.ToString();
-            //}
-        }
+        //            var id = dataGridViewPatient.Rows[i].Cells["personIDDataGridViewTextBoxColumn"].Value.ToString();
+        //            var pat = _dataManager.GetPatient(id);
+        //            checkIfPatientIsFound(pat);
+        //            dataGridView1.Rows[i].Cells["alter"].Value = pat[0].BirthDate?.ToString(CultureInfo.CurrentCulture);
+        //            dataGridView1.Rows[i].Cells["adresse"].Value = pat[0].Address;
+        //            dataGridView1.Rows[i].Cells["pflegegrad"].Value = pat[0].DegreeOfCare.ToString();
+        //    }
+        //}
 
         /// <summary>
         /// Gibt die Inforamtionenn des Aktuellen Patienten an die BasaData Form.
@@ -229,5 +228,6 @@ namespace CareSolution
             openChildForm(new AddPatient());
         }
 
+        
     }
 }
