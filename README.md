@@ -17,39 +17,41 @@ Durch Texterkennung, mittels Ocr von IronOcr, können handschriftliche Dokumente
 
 Die Installation sollte über das Klonen des ganzen Projekts erfolgen.
 Dabei sollten keine Probleme auftauchen. Falls doch dann einmal im VS Installer ein neues Workload hinzufügen:
-VS Installer -> Ändern -> "Datenspeicherung und -verarbeitung" installieren. Dieses Tool wird für das arbeiten mit der Datenbank gebraucht.
+VS Installer -> Ändern -> "Datenspeicherung und -verarbeitung" installieren. Dieses Tool wird für das Arbeiten mit der Datenbank gebraucht.
 
-Falls die Installation über das downloaden der Zip Datei erfolgt, dann sind zwei Schritte zu beachten.
-1. Nach dem downloaden rechtsklick auf den Zip Ordner und auf Eigenschaften klicken.
+Falls die Installation über das downloaden der Zip Datei erfolgt, dann sind zwei Schritte möglicherweise zu beachten.
+1. Nach dem Downloaden rechtsklick auf den Zip Ordner und auf Eigenschaften klicken.
 2. Dann die Sicherheit, ganz unten, beim Häcken Zulassen anklicken.
-
-Somit wird sichergestellt, dass die Forms laden. Da sonst alle .resx Datei aus Sicherheitsgründen von VS ignoriert werden,
-weil die aus dem Internet(gitLab) runtergeladen sind. Auch hier den Fehler für den Workload beachten (s.oben).
+Somit wird sichergestellt, dass die Forms laden. Da sonst alle .resx Datei aus Sicherheitsgründen (Virenschutzprogramme von Windwos etc.) von VS ignoriert werden, weil die aus dem Internet(gitLab) runtergeladen sind. 
+3. Dann den Ordner jetzt normal extrahieren und Programm starten.
+4. Auch hier den Fehler für den Workload beachten (s.oben).
 
 ## Verwendung der Software
-Wie verwendet man diese Software? Welches Programm muss man starten?
-Um die Software zu benutzen muss man die .sln Datei unter /programm/CareSolution/CareSolution.sln erstmal öffnen.
+
+Um die Software zu benutzen, muss man die .sln Datei unter /programm/CareSolution/CareSolution.sln erstmal öffnen.
 Nach Starten der Software, kommt man im Login bereich. Da einmal "ala" als Username und "123" als Passwort eingeben.
 Zum Testen der Software empfehlt es sich:
-- Einen Pateinten in die Datenabnk einfügen
+- Einen Pateinten in die Datenbank einfügen
 - Patient auswählen, indem seine zugehörigen Stammdaten angezeigt werden. (Dies gilt nur für die PersonID 1,7,8,10)
 - Das einlesen der Biografie und Pflegeberichts aus den Vorhandenen Vorlagen
 - Nach Konvertierung der Biografie Datei in eine Pdf, lässt sich in der neuen Pdf nach Wörtern suchen.
 
 Falls geguckt werden soll, ob die neuen Daten (neuer Patient, Bio und Pflegebericht) oder die alten in der Datenbank eingefügt wurden sind, muss folgendens gemacht werden:
-1. Einmal den SQL-Server-Explorer in der Ansicht öffnen (entweder unten oder Oben über den Reiter Ansicht öffen)
-2. Dann die Datenbank mit den Tabellen (unter /programm/CareSolution/CareSolution/bin/Debug/AmbulantCare.mdf) öffnen und gucken ob die neuen Daten hinzugefügt wurden (aktulisieren).
-3. Falls nochmal das Programm gestartet werden soll oder der SQL-Explorer parallel offen ist, dann bitte die Ansicht des SQL-Explorer verlassen. Da sonst SQL und VS parallel arbeiten würden. ->Fehlermedlung.
+1. Einmal den SQL-Server-Explorer in der Ansicht öffnen (entweder unten oder oben über den Reiter Ansicht öffen)
+2. Dann die Datenbank mit den Tabellen (welche unter /programm/CareSolution/CareSolution/bin/Debug/AmbulantCare.mdf gepeichert ist) öffnen und gucken, ob die neuen Daten hinzugefügt wurden (aktulisieren).
+3. Dazu rechtsklick auf eine Tabelle zb. bioSet und dann "Daten anzeigen".
+3. Falls nochmal das Programm gestartet werden soll oder der SQL-Explorer parallel offen ist, dann bitte die Ansicht des SQL-Explorer verlassen. Da sonst SQL und VS parallel arbeiten würden, möglicherweise muss auch das Programm neu gestartet werden. -> Fehlermeldung.
 
 ## Verwendung des Auswertungsprogramm
-Um das Auswertungsprogrammzu benutzen muss man die .sln Datei unter /programm/DummyFoOCR/DummyForOCR.sln erstmal öffnen.
+
+Um das Auswertungsprogramm zu benutzen muss man die .sln Datei unter /programm/DummyFoOCR/DummyForOCR.sln erstmal öffnen.
 Nach Starten des Auswertungsprogramm erscheint die Konsolenanwendnung.
 Zum Testen des Auswertungsprogramm empfehlt es sich:
-- Eine Datei einlesen  -> (Eingabe 0)
+- Eine Datei einlesen -> (Eingabe 0)
 - BioTest0.png bis BioTest9.png wählen -> (Eingabe 0-10), Außer BioTest1--> Ausreisser, welcher zu einer Fehlermeldung führt.
-- Konsolenausgabe ansehen -> Auswertung
+- Konsolenausgabe ansehen -> (Eingabe 4) -> Auswertung
 
-Die Ergbnisse des Auswertungsprogramm sind in der ReadME Datei unter	/programm	
+Die Ergbnisse des Auswertungsprogramm sind in der ReadME Datei unter	/programm. Also einen weiteren Unterordner bzw. im nächsten.
 	       				
 ## Links, Hinweise etc.
 
