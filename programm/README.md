@@ -3,7 +3,7 @@
 Name	| Fehler	|Gesmatlänge der Datei[chars] |**Fehlerabweichung[%]**
 ------------------------------------------------------------------------------------------
 BioTest0	|86	|	189		|	 45,5
-**BioTest1 ---> Ausreisser (führt zu einer Fehlermeldung. bitte nicht anklicken)**	
+BioTest1 ---> Ausreisser (führt zu einer Fehlermeldung. bitte nicht anklicken)
 BioTest2	|78	|	121		|	46,46
 BioTest3	|68	|	194		|	35,05
 BioTest4	|67	|	104		|	64,42
