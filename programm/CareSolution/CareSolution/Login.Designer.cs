@@ -84,7 +84,7 @@ namespace CareSolution
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label2.Location = new System.Drawing.Point(57, 253);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 33);
+            this.label2.Size = new System.Drawing.Size(290, 40);
             this.label2.TabIndex = 1;
             this.label2.Text = "bei Care Solution";
             // 
@@ -98,7 +98,7 @@ namespace CareSolution
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label1.Location = new System.Drawing.Point(26, 197);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(326, 33);
+            this.label1.Size = new System.Drawing.Size(391, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Hey! Wilkommen zurück";
             // 
@@ -147,11 +147,12 @@ namespace CareSolution
             this.textBoxPassword.ForeColor = System.Drawing.Color.Gray;
             this.textBoxPassword.Location = new System.Drawing.Point(48, 12);
             this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.Size = new System.Drawing.Size(507, 20);
+            this.textBoxPassword.Size = new System.Drawing.Size(507, 25);
             this.textBoxPassword.TabIndex = 1;
             this.textBoxPassword.Text = "Password";
             this.textBoxPassword.Click += new System.EventHandler(this.textBoxPassword_Click);
             this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
+            this.textBoxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPassword_KeyPress);
             this.textBoxPassword.Leave += new System.EventHandler(this.textBoxPassword_Leave);
             // 
             // buttonLogin
@@ -200,7 +201,7 @@ namespace CareSolution
             this.textBoxUsername.ForeColor = System.Drawing.Color.Gray;
             this.textBoxUsername.Location = new System.Drawing.Point(48, 13);
             this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(515, 20);
+            this.textBoxUsername.Size = new System.Drawing.Size(515, 25);
             this.textBoxUsername.TabIndex = 0;
             this.textBoxUsername.Text = "Username";
             this.textBoxUsername.Click += new System.EventHandler(this.textBoxUsername_Click);
@@ -216,13 +217,13 @@ namespace CareSolution
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
             this.label4.Location = new System.Drawing.Point(42, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(230, 25);
+            this.label4.Size = new System.Drawing.Size(298, 34);
             this.label4.TabIndex = 3;
             this.label4.Text = "Login zu ihrem Konto";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(982, 591);
             this.Controls.Add(this.panel1);

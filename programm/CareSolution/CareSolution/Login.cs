@@ -81,13 +81,23 @@ namespace CareSolution
             }
         }
         /// <summary>
-        /// Ein Event wenn man das Button anklicken dann wird das Verbindung mit dem DatenBank und zwar MySql 
-        /// gebaut und die Daten in jeweiligen TextBox Username und Password mit dem Datenbank Tabelle bei
-        /// PersonSet_Worker vergleichen.
+        /// Ein Event wenn man das Button anklicken dann wird zur Methode getLoginData weiterleiten um
+        /// das Login Verfahren zu bekommen
         /// </summary>
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            var query = "SELECT * FROM PersonSet_Worker a WHERE a.Username  = '" + textBoxUsername.Text + "'and a.Password='" + textBoxPassword.Text + "'";
+            getLoginData();
+        }
+
+        /// <summary>
+        /// Rüft die Username und Password von der Datenbank. Er stellt eine Verbindung mit dem DatenBank und zwar MySql 
+        /// und die Daten für jeweiligen TextBox Username und Password mit dem Datenbank Tabelle bei
+        /// PersonSet_Worker vergleichen.
+        /// </summary>
+        private void getLoginData()
+        {
+            var query = "SELECT * FROM PersonSet_Worker a WHERE a.Username  = '" + textBoxUsername.Text + "'and a.Password='" +
+                        textBoxPassword.Text + "'";
             using (_connection = new SqlConnection(_connectionString))
             using (SqlCommand command = new SqlCommand(query, _connection))
             using (SqlDataAdapter adatpe = new SqlDataAdapter(command))
@@ -95,7 +105,7 @@ namespace CareSolution
                 DataSet ds = new DataSet();
                 adatpe.Fill(ds);
                 int count = ds.Tables[0].Rows.Count;
-                if (count ==1)
+                if (count == 1)
                 {
                     this.Hide();
                     Main ss = new Main();
@@ -110,6 +120,7 @@ namespace CareSolution
                 }
             }
         }
+
         /// <summary>
         /// Ein Event wenn man im TextBox rein geht dann wird das Username Text weg und die Farbe auch nach Schwarz
         /// gewechselt so als Watermark
@@ -156,6 +167,20 @@ namespace CareSolution
                 textBoxPassword.UseSystemPasswordChar = false;
             }
             textBoxPassword.ForeColor = Color.Gray;
+        }
+        /// <summary>
+        /// Ein Event wenn man das Enter drückt dann wird zur Methode getLoginData weiterleiten um
+        /// das Login Verfahren zu bekommen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void textBoxPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+               getLoginData();
+            }
+
         }
     }
 }

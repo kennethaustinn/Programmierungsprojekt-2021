@@ -7,6 +7,7 @@ using DataManager;
 
 namespace CareSolution
 {
+    // Zu Hilfe für die Interaktion jeweilige Forms und Panel wurde diese Quelle verwendet : 
     public partial class Main : Form
     {
 
@@ -55,7 +56,7 @@ namespace CareSolution
         
         /// <summary>
         /// wird das Form im PanelChilForm hier neue abgerufen und angezeigt. Mit dem Parameter Form
-        /// die man gerade gedrückt von dem beliebigen Button
+        /// die man gerade gedrückt von dem beliebigen Button.
         /// </summary>
         /// <param name="childForm"> aktuelles Form, das wir angeklickt haben </param>
         private void openChildForm(Form childForm)
