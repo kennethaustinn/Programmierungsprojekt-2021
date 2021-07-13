@@ -14,6 +14,6 @@
 
 
 
-**Endergebniss: -->	(243,99/7) = 30,45**
+**Endergebniss: -->	(243,99/8) = 30,45**
 Damit ist zu sehen, dass die durchschnittliche Fehlerabweichung des ausgewählten OCR's bei **ca. 30%** ist.	
 
