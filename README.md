@@ -23,10 +23,11 @@ VS Installer -> Ändern -> "Datenspeicherung und -verarbeitung" installieren. Di
 Wie verwendet man diese Software? Welches Programm muss man starten?
 Um die Software zu benutzen muss man die .sln Datei unter /programm/CareSolution/CareSolution.sln erstmal öffnen.
 Nach Starten der Software, kommt man im Login bereich. Da einmal "ala" als Username und "123" als Passwort eingeben.
-Zum Testen der Software empfehlt es sich:   - Einen Pateinten in die Datenabnk einfügen
-				    - Patient auswählen, indem seine zugehörigen Stammdaten angezeigt werden. (Dies gilt nur für die PersonID 1,7,8,10)
-				    - Das einlesen der Biografie und Pflegeberichts aus den Vorhandenen Vorlagen
-				    - Nach Konvertierung der Biografie Datei in eine Pdf, lässt sich in der neuen Pdf nach Wörtern suchen.
+Zum Testen der Software empfehlt es sich:
+- Einen Pateinten in die Datenabnk einfügen
+- Patient auswählen, indem seine zugehörigen Stammdaten angezeigt werden. (Dies gilt nur für die PersonID 1,7,8,10)
+- Das einlesen der Biografie und Pflegeberichts aus den Vorhandenen Vorlagen
+- Nach Konvertierung der Biografie Datei in eine Pdf, lässt sich in der neuen Pdf nach Wörtern suchen.
 
 Falls geguckt werden soll, ob die neuen Daten (neuer Patient, Bio und Pflegebericht) oder die alten in der Datenbank eingefügt wurden sind, muss folgendens gemacht werden:
 1. Einmal den SQL-Server-Explorer in der Ansicht öffnen (entweder unten oder Oben über den Reiter Ansicht öffen)
@@ -35,11 +36,14 @@ Falls geguckt werden soll, ob die neuen Daten (neuer Patient, Bio und Pflegeberi
 
 ## Verwendung des Auswertungsprogramm
 Um das Auswertungsprogrammzu benutzen muss man die .sln Datei unter /programm/DummyFoOCR/DummyForOCR.sln erstmal öffnen.
-Nach Starten des Auswertungsprogramm zu erscheint die Konsolenanwednung
-Zum Testen des Auswertungsprogramm empfehlt sich:   - Eine Datei einlesen  -> (Eingabe 0)
-					       - BioTest0.png bis BioTest9.png wählen -> (Eingabe 0-10)
-					       - Konsolenausgabe ansehen -> Auswertung
-					       				
+Nach Starten des Auswertungsprogramm erscheint die Konsolenanwendnung.
+Zum Testen des Auswertungsprogramm empfehlt es sich:
+- Eine Datei einlesen  -> (Eingabe 0)
+- BioTest0.png bis BioTest9.png wählen -> (Eingabe 0-10), Außer BioTest1--> Ausreisser, welcher zu einer Fehlermeldung führt.
+- Konsolenausgabe ansehen -> Auswertung
+
+Die Ergbnisse des Auswertungsprogramm sind in der ReadME Datei unter	/programm	
+	       				
 ## Links, Hinweise etc.
 
 1. Markdown Syntax: https://docs.gitlab.com/ee/user/markdown.html
