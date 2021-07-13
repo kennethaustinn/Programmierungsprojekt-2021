@@ -528,10 +528,10 @@ namespace DummyForOCR
                         }
                         break;
                     case 4:
-                        Environment.Exit(0);
+                        CompareHandWithExpected();
                         break;
                     case 5:
-                        CompareHandWithExpected();
+                        Environment.Exit(0);
                         break;
                     default:
                         {
@@ -551,8 +551,12 @@ namespace DummyForOCR
             Console.WriteLine("\n================================================================================");
             string[] menuItems =
             {
-                "\n(00) Lade die Datei hoch. \n", "(01) Gib das Ergbnis zurück\n",
-                "(02) Speicher das Ergebnis im Objekt \n", "(03) Gibe das Ergebnis weiter an DataBase\n", "(04) Beenden\n", "(05) Value Ausgabe\n"
+                "\n(0) Lade die Datei hoch. \n", 
+                "(1) Gib das Ergbnis zurück\n",
+                "(2) Speicher das Ergebnis im Objekt \n", 
+                "(3) Gibe das Ergebnis weiter an DataBase\n", 
+                "(4) Auswertungsprgamm starten\n", 
+                "(5) Beenden\n"
             };
 
             for (int i = 0; i < menuItems.Length; i++)
@@ -614,10 +618,6 @@ namespace DummyForOCR
                         _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest8.png";
                         _keyForCompareDictionary = 9;
                         return;
-                    case 10:
-                        _path = _projectDirectory + @"\Files\Biopattern for Analysis Tests\BioTest9.png";
-                        _keyForCompareDictionary = 10;
-                        return;
                     default:
                         {
                             Console.WriteLine("Ungueltige Eingabe. Bitte ueberpruefen Sie Ihre Eingabe");
@@ -635,8 +635,8 @@ namespace DummyForOCR
             Console.WriteLine("\n================================================================================");
             string[] menuItems =
             {
-                "\n(00) Dokument aus dem Ordner Pictures\n\nFolgende Dokumente werden zum Testen benutzt","\n(01) BioTest0\t",
-                "(02) BioTest1 (Ausreißer)\t", "(03) BioTest2\t", "(04) BioTest3\t", "(05) BioTest4\t", "(06) BioTest5\t", "(07) BioTest6\t", "(08) BioTest7\t", "(09) BioTest8\t", "(10) BioTest9\t"
+                "\n(0) Dokument aus dem Ordner Pictures\n\nFolgende Dokumente werden zum Testen fürs Auswertungsprogramm benutzt","\n(1) BioTest0\t",
+                "(2) BioTest1 (Ausreißer --> wird nicht Benutzt, sonst Fehlermeldung)\t", "(3) BioTest2\t", "(4) BioTest3\t", "(5) BioTest4\t", "(6) BioTest5\t", "(7) BioTest6\t", "(8) BioTest7\t", "(9) BioTest8\t",
             };
 
             for (int i = 0; i < menuItems.Length; i++)
