@@ -123,7 +123,7 @@ namespace CareSolution
             }
             else
             {
-                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+                MessageBox.Show(@"Bitte Wählen Sie erst einen Patienten aus.");
             }
         }
         /// <summary>
@@ -139,7 +139,7 @@ namespace CareSolution
             }
             else
             {
-                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+                MessageBox.Show(@"Bitte Wählen Sie erst einen Patienten aus.");
             }
             
         }
@@ -191,7 +191,7 @@ namespace CareSolution
             }
             else
             {
-                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+                MessageBox.Show(@"Bitte Wählen Sie erst einen Patienten aus.");
             }
         }
         /// <summary>
@@ -209,7 +209,7 @@ namespace CareSolution
             }
             else
             {
-                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+                MessageBox.Show(@"Bitte Wählen Sie erst einen Patienten aus.");
             }
         }
         /// <summary>
@@ -227,7 +227,7 @@ namespace CareSolution
             }
             else
             {
-                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+                MessageBox.Show(@"Bitte Wählen Sie erst einen Patienten aus.");
             }
         }
         /// <summary>
@@ -245,7 +245,7 @@ namespace CareSolution
             }
             else
             {
-                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+                MessageBox.Show(@"Bitte Wählen Sie erst einen Patienten aus.");
             }
         }
         /// <summary>
@@ -263,7 +263,7 @@ namespace CareSolution
             }
             else
             {
-                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+                MessageBox.Show(@"Bitte Wählen Sie erst einen Patienten aus.");
             }
 
         }
@@ -282,7 +282,7 @@ namespace CareSolution
             }
             else
             {
-                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+                MessageBox.Show(@"Bitte Wählen Sie erst einen Patienten aus.");
             }
         }
         /// <summary>
@@ -300,7 +300,7 @@ namespace CareSolution
             }
             else
             {
-                MessageBox.Show("Bitte Wählen Sie erst einen Patienten aus.");
+                MessageBox.Show(@"Bitte Wählen Sie erst einen Patienten aus.");
             }
         }
         /// <summary>
@@ -370,10 +370,25 @@ namespace CareSolution
             openChildForm(BaseData.BaseDataForm);
         }
 
+        /// <summary>
+        /// Ein Eventhandler wenn das Button Patientübersicht angeklickt dann wird die Patientübersicht Form geladen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonPatientOverview_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
             openChildForm(PatientData.PatientDataForm);
+        }
+
+        /// <summary>
+        /// Schließt das Programm
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 
