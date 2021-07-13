@@ -61,16 +61,16 @@ namespace CareSolution
         {
             try
             {
+                openFile();
                 if (_path!=null)
                 {
-                    openFile();
                     _documentDictionary = _ocrManager.ExecuteOcr(_path);
                     FillLabels();
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show(@"Es wurde schon ein Pflegebericht eingefügt");
+                //MessageBox.Show(@"Es wurde schon ein Pflegebericht eingefügt");
             }
 
         }

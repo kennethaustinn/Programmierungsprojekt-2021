@@ -88,7 +88,7 @@ namespace CareSolution
             this.labelGender.Location = new System.Drawing.Point(27, 287);
             this.labelGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelGender.Name = "labelGender";
-            this.labelGender.Size = new System.Drawing.Size(166, 30);
+            this.labelGender.Size = new System.Drawing.Size(126, 22);
             this.labelGender.TabIndex = 68;
             this.labelGender.Text = "Geschlecht :";
             // 
@@ -100,7 +100,7 @@ namespace CareSolution
             this.labelFirstName.Location = new System.Drawing.Point(27, 202);
             this.labelFirstName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelFirstName.Name = "labelFirstName";
-            this.labelFirstName.Size = new System.Drawing.Size(138, 30);
+            this.labelFirstName.Size = new System.Drawing.Size(107, 22);
             this.labelFirstName.TabIndex = 67;
             this.labelFirstName.Text = "Vorname :";
             // 
@@ -110,11 +110,11 @@ namespace CareSolution
             this.labelPatient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
             this.labelPatient.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPatient.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelPatient.Location = new System.Drawing.Point(225, 21);
+            this.labelPatient.Location = new System.Drawing.Point(197, 21);
             this.labelPatient.Name = "labelPatient";
-            this.labelPatient.Size = new System.Drawing.Size(251, 34);
+            this.labelPatient.Size = new System.Drawing.Size(331, 25);
             this.labelPatient.TabIndex = 66;
-            this.labelPatient.Text = "Add New Patient";
+            this.labelPatient.Text = "Einfügen des Neuen Patienten";
             // 
             // comboBoxGender
             // 
@@ -124,7 +124,7 @@ namespace CareSolution
             this.comboBoxGender.Location = new System.Drawing.Point(248, 286);
             this.comboBoxGender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBoxGender.Name = "comboBoxGender";
-            this.comboBoxGender.Size = new System.Drawing.Size(76, 31);
+            this.comboBoxGender.Size = new System.Drawing.Size(76, 29);
             this.comboBoxGender.TabIndex = 65;
             // 
             // AddPhone
@@ -133,7 +133,7 @@ namespace CareSolution
             this.AddPhone.Location = new System.Drawing.Point(248, 365);
             this.AddPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddPhone.Name = "AddPhone";
-            this.AddPhone.Size = new System.Drawing.Size(228, 32);
+            this.AddPhone.Size = new System.Drawing.Size(228, 27);
             this.AddPhone.TabIndex = 63;
             // 
             // AddLFirstName
@@ -142,7 +142,7 @@ namespace CareSolution
             this.AddLFirstName.Location = new System.Drawing.Point(248, 200);
             this.AddLFirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddLFirstName.Name = "AddLFirstName";
-            this.AddLFirstName.Size = new System.Drawing.Size(228, 32);
+            this.AddLFirstName.Size = new System.Drawing.Size(228, 27);
             this.AddLFirstName.TabIndex = 62;
             // 
             // AddLastName
@@ -151,7 +151,7 @@ namespace CareSolution
             this.AddLastName.Location = new System.Drawing.Point(248, 114);
             this.AddLastName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddLastName.Name = "AddLastName";
-            this.AddLastName.Size = new System.Drawing.Size(228, 32);
+            this.AddLastName.Size = new System.Drawing.Size(228, 27);
             this.AddLastName.TabIndex = 61;
             // 
             // labelPhone
@@ -162,7 +162,7 @@ namespace CareSolution
             this.labelPhone.Location = new System.Drawing.Point(27, 367);
             this.labelPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPhone.Name = "labelPhone";
-            this.labelPhone.Size = new System.Drawing.Size(115, 30);
+            this.labelPhone.Size = new System.Drawing.Size(85, 22);
             this.labelPhone.TabIndex = 60;
             this.labelPhone.Text = "Telefon :";
             // 
@@ -174,13 +174,13 @@ namespace CareSolution
             this.labelLastName.Location = new System.Drawing.Point(25, 116);
             this.labelLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(163, 30);
+            this.labelLastName.Size = new System.Drawing.Size(125, 22);
             this.labelLastName.TabIndex = 57;
             this.labelLastName.Text = "Nachname :";
             // 
             // AddPatient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(748, 544);
             this.Controls.Add(this.panelPatient);

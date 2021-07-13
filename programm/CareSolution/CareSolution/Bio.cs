@@ -179,7 +179,7 @@ namespace CareSolution
             {
                 AddExtension = true,
                 CheckPathExists = true,
-                Filter = @"  Image Files(*.png; *.jpg)| *.png; *.jpg | PDF File(*.pdf) | *.pdf  ",
+                Filter = @"  PDF File(*.pdf) | *.pdf  ",
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
                 Title = @"Wo soll die Datei gespeichert werden?"
             };

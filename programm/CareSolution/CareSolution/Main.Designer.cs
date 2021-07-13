@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonPatientOverview = new System.Windows.Forms.Button();
             this.panelLogout = new System.Windows.Forms.Panel();
@@ -49,6 +49,7 @@
             this.panelHome = new System.Windows.Forms.Panel();
             this.buttonMain = new System.Windows.Forms.Button();
             this.panelChildform = new System.Windows.Forms.Panel();
+            this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.panelSearch = new System.Windows.Forms.Panel();
             this.labelSearch = new System.Windows.Forms.Label();
             this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
@@ -69,7 +70,6 @@
             this.DatumUhr = new System.Windows.Forms.Timer(this.components);
             this.personSetTableAdapter = new DataManager.AmbulantCareDBDataSetTableAdapters.PersonSetTableAdapter();
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.panelMenu.SuspendLayout();
             this.panelLogout.SuspendLayout();
             this.panelHome.SuspendLayout();
@@ -388,6 +388,12 @@
             this.panelChildform.Size = new System.Drawing.Size(766, 591);
             this.panelChildform.TabIndex = 1;
             // 
+            // monthCalendar
+            // 
+            this.monthCalendar.Location = new System.Drawing.Point(33, 285);
+            this.monthCalendar.Name = "monthCalendar";
+            this.monthCalendar.TabIndex = 62;
+            // 
             // panelSearch
             // 
             this.panelSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
@@ -407,7 +413,7 @@
             this.labelSearch.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelSearch.Location = new System.Drawing.Point(42, 6);
             this.labelSearch.Name = "labelSearch";
-            this.labelSearch.Size = new System.Drawing.Size(81, 23);
+            this.labelSearch.Size = new System.Drawing.Size(66, 21);
             this.labelSearch.TabIndex = 60;
             this.labelSearch.Text = "Suche :";
             // 
@@ -430,7 +436,7 @@
             this.textBoxSearch.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.textBoxSearch.Location = new System.Drawing.Point(109, 6);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(275, 25);
+            this.textBoxSearch.Size = new System.Drawing.Size(275, 20);
             this.textBoxSearch.TabIndex = 56;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSuche_TextChanged);
             // 
@@ -441,7 +447,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(19, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 37);
+            this.label1.Size = new System.Drawing.Size(145, 30);
             this.label1.TabIndex = 59;
             this.label1.Text = "Welcome !";
             // 
@@ -455,7 +461,7 @@
             this.checkedListBox.FormattingEnabled = true;
             this.checkedListBox.Location = new System.Drawing.Point(33, 187);
             this.checkedListBox.Name = "checkedListBox";
-            this.checkedListBox.Size = new System.Drawing.Size(293, 27);
+            this.checkedListBox.Size = new System.Drawing.Size(293, 22);
             this.checkedListBox.TabIndex = 58;
             // 
             // buttonWeiterPatientsübersicht
@@ -482,14 +488,14 @@
             this.dataGridViewPatient.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
             this.dataGridViewPatient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewPatient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuBar;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(104)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.MenuBar;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewPatient.ColumnHeadersHeight = 30;
             this.dataGridViewPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewPatient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -503,22 +509,22 @@
             this.dataGridViewPatient.Location = new System.Drawing.Point(343, 233);
             this.dataGridViewPatient.Name = "dataGridViewPatient";
             this.dataGridViewPatient.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPatient.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewPatient.RowHeadersVisible = false;
             this.dataGridViewPatient.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridViewPatient.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(45)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(123)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridViewPatient.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewPatient.RowTemplate.Height = 24;
             this.dataGridViewPatient.Size = new System.Drawing.Size(411, 251);
             this.dataGridViewPatient.TabIndex = 4;
@@ -531,7 +537,7 @@
             this.personIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.personIDDataGridViewTextBoxColumn.Name = "personIDDataGridViewTextBoxColumn";
             this.personIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.personIDDataGridViewTextBoxColumn.Width = 52;
+            this.personIDDataGridViewTextBoxColumn.Width = 43;
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
@@ -574,7 +580,7 @@
             this.labelPatient.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelPatient.Location = new System.Drawing.Point(336, 128);
             this.labelPatient.Name = "labelPatient";
-            this.labelPatient.Size = new System.Drawing.Size(156, 37);
+            this.labelPatient.Size = new System.Drawing.Size(127, 30);
             this.labelPatient.TabIndex = 3;
             this.labelPatient.Text = "Patienten";
             // 
@@ -585,7 +591,7 @@
             this.labelToDoListe.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelToDoListe.Location = new System.Drawing.Point(19, 128);
             this.labelToDoListe.Name = "labelToDoListe";
-            this.labelToDoListe.Size = new System.Drawing.Size(169, 37);
+            this.labelToDoListe.Size = new System.Drawing.Size(137, 30);
             this.labelToDoListe.TabIndex = 2;
             this.labelToDoListe.Text = "To do Liste";
             // 
@@ -596,7 +602,7 @@
             this.labelDatum.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelDatum.Location = new System.Drawing.Point(183, 22);
             this.labelDatum.Name = "labelDatum";
-            this.labelDatum.Size = new System.Drawing.Size(115, 37);
+            this.labelDatum.Size = new System.Drawing.Size(94, 30);
             this.labelDatum.TabIndex = 1;
             this.labelDatum.Text = "Datum";
             // 
@@ -614,15 +620,9 @@
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // monthCalendar
-            // 
-            this.monthCalendar.Location = new System.Drawing.Point(33, 285);
-            this.monthCalendar.Name = "monthCalendar";
-            this.monthCalendar.TabIndex = 62;
-            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 591);
             this.Controls.Add(this.panelChildform);
