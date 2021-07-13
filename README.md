@@ -19,6 +19,13 @@ Die Installation sollte über das Klonen des ganzen Projekts erfolgen.
 Dabei sollten keine Probleme auftauchen. Falls doch dann einmal im VS Installer ein neues Workload hinzufügen:
 VS Installer -> Ändern -> "Datenspeicherung und -verarbeitung" installieren. Dieses Tool wird für das arbeiten mit der Datenbank gebraucht.
 
+Falls die Installation über das downloaden der Zip Datei erfolgt, dann sind zwei Schritte zu beachten.
+1. Nach dem downloaden rechtsklick auf den Zip Ordner und auf Eigenschaften klicken.
+2. Dann die Sicherheit, ganz unten, beim Häcken Zulassen anklicken.
+
+Somit wird sichergestellt, dass die Forms laden. Da sonst alle .resx Datei aus Sicherheitsgründen von VS ignoriert werden,
+weil die aus dem Internet(gitLab) runtergeladen sind. Auch hier den Fehler für den Workload beachten (s.oben).
+
 ## Verwendung der Software
 Wie verwendet man diese Software? Welches Programm muss man starten?
 Um die Software zu benutzen muss man die .sln Datei unter /programm/CareSolution/CareSolution.sln erstmal öffnen.
